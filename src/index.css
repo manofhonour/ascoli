@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --color-travertine-50: #FCFAF7;
+  --color-travertine-100: #F6F1EA;
+  --color-travertine-200: #EFE6DA;
+  --color-travertine-300: #E2D3C1;
+  --color-travertine-400: #CBB49C;
+  
+  --color-olive-50: #F7F8F5;
+  --color-olive-100: #EAECE2;
+  --color-olive-200: #D3D9C1;
+  --color-olive-700: #4B5742;
+  --color-olive-800: #384232;
+  --color-olive-900: #272E23;
+  
+  --color-terracotta-50: #FAF2F0;
+  --color-terracotta-100: #F4E2DE;
+  --color-terracotta-500: #CE6A4E;
+  --color-terracotta-600: #B75237;
+  --color-terracotta-700: #933E27;
+  
+  --color-charcoal-50: #F4F4F4;
+  --color-charcoal-100: #E9E9E9;
+  --color-charcoal-800: #262626;
+  --color-charcoal-950: #121212;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-travertine-50);
+    color: var(--color-charcoal-950);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Luxury custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-travertine-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-travertine-300);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-travertine-400);
+}
+
