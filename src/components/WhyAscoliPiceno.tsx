@@ -2,53 +2,30 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { ascoliHighlights, contactInfo, images } from '../data/officialContent';
 
 export default function WhyAscoliPiceno() {
   const { language, t } = useLanguage();
 
-  const statsEN = [
-    { value: "Quiet", label: "Authentic Italian", detail: "A historic city outside mass-tourism circuits" },
-    { value: "Dual", label: "Sea & Mountains", detail: "Between Adriatic beaches and the Apennines" },
-    { value: "Walkable", label: "Daily Immersion", detail: "Cafes, markets, and lessons within easy reach" },
-    { value: "Stone", label: "Travertine City", detail: "Medieval architecture shaped by local material" }
+  const stats = [
+    { value: 'Historic', label: 'Art and streets', detail: 'A city known for history, architecture, churches, museums, and theatre' },
+    { value: 'Marche', label: 'Coast and mountains', detail: 'A region of beaches, hill towns, vineyards, olive groves, and Apennine landscapes' },
+    { value: 'Walkable', label: 'Daily immersion', detail: 'A compact setting for cafes, markets, lessons, and local conversation' },
+    { value: 'Festive', label: 'Local calendar', detail: 'Quintana, Carnival, and Sant Emidio mark the civic year' },
   ];
-
-  const statsIT = [
-    { value: "Calma", label: "Autentico Italiano", detail: "Una città storica lontana dai circuiti del turismo di massa" },
-    { value: "Doppio", label: "Mare e Montagna", detail: "Tra spiagge dell'Adriatico e Appennini" },
-    { value: "A piedi", label: "Immersione Quotidiana", detail: "Caffè, mercati e lezioni sempre vicini" },
-    { value: "Pietra", label: "Città di Travertino", detail: "Architettura medievale modellata dal materiale locale" }
-  ];
-
-  const gemsEN = [
-    { name: "Caffè Meletti", type: "Art Nouveau Café", desc: "A gorgeous 1907 historic café in Piazza del Popolo where Hemingway and Sartre sipped Anisetta." },
-    { name: "Tempietto di Sant'Emidio", type: "Cave Temple", desc: "A secret 18th-century temple carved directly into a natural tufa cave on the city margins." },
-    { name: "Ponte di Cecco", type: "Roman Bridge", desc: "A majestic Roman stone bridge spanning a lush gorge, steeped in medieval wizardry legends." },
-    { name: "Chiostro di San Francesco", type: "Gothic Cloister", desc: "A quiet travertine monastery courtyard holding daily fresh flower and organic herb markets." }
-  ];
-
-  const gemsIT = [
-    { name: "Caffè Meletti", type: "Caffè Liberty Storico", desc: "Un magnifico caffè storico del 1907 in Piazza del Popolo, dove Hemingway e Sartre sorseggiavano Anisetta." },
-    { name: "Tempietto di Sant'Emidio", type: "Tempio in Grotta", desc: "Un tempio segreto del XVIII secolo scavato direttamente in una grotta di tufo naturale ai margini della città." },
-    { name: "Ponte di Cecco", type: "Ponte Romano", desc: "Un maestoso ponte romano in pietra che sovrasta una gola rigogliosa, intriso di leggende sulla magia medievale." },
-    { name: "Chiostro di San Francesco", type: "Chiostro Gotico", desc: "Un tranquillo cortile di un monastero in travertino che ospita mercati giornalieri di fiori freschi ed erbe biologiche." }
-  ];
-
-  const stats = language === 'IT' ? statsIT : statsEN;
-  const gems = language === 'IT' ? gemsIT : gemsEN;
 
   return (
     <section id="why-ascoli" className="py-24 md:py-32 bg-travertine-100">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        
-        {/* Magazine Spread Heading */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16">
           <div className="lg:col-span-7 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
               {t('ascoli.section_tag')}
             </span>
             <h2 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-[1.05] tracking-tight">
-              {t('ascoli.section_title_part1')} <span className="italic">{t('ascoli.section_title_italic')}</span> {t('ascoli.section_title_part2')}
+              {t('ascoli.section_title_part1')}{' '}
+              <span className="italic">{t('ascoli.section_title_italic')}</span>{' '}
+              {t('ascoli.section_title_part2')}
             </h2>
           </div>
           <div className="lg:col-span-5 pb-2">
@@ -58,22 +35,21 @@ export default function WhyAscoliPiceno() {
           </div>
         </div>
 
-        {/* Large Panoramic Image Block */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 1.2 }}
           className="relative h-[380px] md:h-[500px] w-full bg-travertine-200 overflow-hidden shadow-2xl mb-16 border border-travertine-300"
         >
           <img
-            src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1600&q=80"
+            src={images.ascoli}
             alt="Historic travertine architecture in Piazza del Popolo, Ascoli Piceno"
             className="w-full h-full object-cover grayscale brightness-95 hover:grayscale-0 hover:scale-102 transition-all duration-[2s] ease-out"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/70 via-transparent to-transparent" />
-          
+
           <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row md:items-end justify-between gap-4 text-travertine-50">
             <div className="space-y-1 max-w-md">
               <span className="font-serif italic text-xs text-terracotta-100">{t('ascoli.image_tag')}</span>
@@ -82,7 +58,7 @@ export default function WhyAscoliPiceno() {
                 {t('ascoli.image_desc')}
               </p>
             </div>
-            
+
             <div className="flex items-center gap-2 text-[10px] tracking-widest font-mono uppercase text-olive-100 bg-olive-900/60 backdrop-blur-sm px-4 py-2 border border-olive-700/50">
               <MapPin className="w-3.5 h-3.5 text-terracotta-500" />
               <span>Ascoli Piceno, Marche</span>
@@ -90,56 +66,45 @@ export default function WhyAscoliPiceno() {
           </div>
         </motion.div>
 
-        {/* Spread Layout: Stats & Handdrawn-style Map & Gems */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          
-          {/* Left Block: Stats Grid & Map (7 cols) */}
           <div className="lg:col-span-7 space-y-12">
-            
-            {/* Stats Grid */}
             <div className="grid grid-cols-2 gap-8 pt-4 border-t border-travertine-300">
-              {stats.map((stat, i) => (
-                <div key={i} className="space-y-1.5">
+              {stats.map((stat) => (
+                <div key={stat.value} className="space-y-1.5">
                   <span className="block font-serif text-3xl md:text-4xl text-olive-800 font-light">
                     {stat.value}
                   </span>
                   <span className="block text-[11px] tracking-wider font-semibold text-charcoal-950 uppercase">
                     {stat.label}
                   </span>
-                  <p className="text-xs text-charcoal-800 font-light">
-                    {stat.detail}
-                  </p>
+                  <p className="text-xs text-charcoal-800 font-light">{stat.detail}</p>
                 </div>
               ))}
             </div>
 
-            {/* Walking route sketch */}
             <div className="border border-travertine-300 p-6 md:p-8 bg-travertine-50/50 space-y-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
               <div className="space-y-1.5">
                 <span className="text-[10px] tracking-widest font-mono text-terracotta-600 uppercase font-bold">
                   {t('ascoli.map_tag')}
                 </span>
-                <h4 className="font-serif text-xl text-charcoal-950">
-                  {t('ascoli.map_title')}
-                </h4>
+                <h4 className="font-serif text-xl text-charcoal-950">{t('ascoli.map_title')}</h4>
                 <p className="text-xs text-charcoal-800 font-light leading-relaxed max-w-xl">
                   {t('ascoli.map_desc')}
                 </p>
               </div>
 
-              {/* Graphical representation of the walking course map */}
               <div className="relative border border-travertine-300/80 bg-travertine-100 h-44 flex items-center justify-center">
-                {/* Visual dotted paths */}
                 <svg className="absolute inset-0 w-full h-full text-travertine-400" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 50 80 Q 150 20 250 120 T 450 60" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
                   <path d="M 120 150 C 180 50, 300 160, 400 40" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="2 4" />
                 </svg>
 
-                {/* Hotspots */}
                 <div className="absolute top-8 left-4 sm:left-1/4 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
                   <span className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-ping" />
-                  <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">Palazzo Accademia</span>
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">
+                    {contactInfo.addressLine1}
+                  </span>
                 </div>
 
                 <div className="absolute bottom-12 left-4 sm:left-1/2 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
@@ -149,61 +114,51 @@ export default function WhyAscoliPiceno() {
 
                 <div className="absolute top-24 right-12 hidden sm:flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
                   <span className="w-1.5 h-1.5 bg-charcoal-800 rounded-full" />
-                  <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">{language === 'IT' ? 'Porte Romane' : 'Roman Gates'}</span>
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">
+                    {language === 'IT' ? 'Centro storico' : 'Historic centre'}
+                  </span>
                 </div>
 
                 <div className="absolute bottom-4 left-10 text-[9px] font-mono text-charcoal-800 opacity-60">
-                  {language === 'IT' ? 'Fiume Castellano, sud' : 'Castellano River, south'}
+                  Castellano / Tronto
                 </div>
                 <div className="absolute top-4 right-10 text-[9px] font-mono text-charcoal-800 opacity-60">
-                  {language === 'IT' ? 'Fiume Tronto, nord' : 'Tronto River, north'}
+                  {language === 'IT' ? 'Marche' : 'Le Marche'}
                 </div>
               </div>
             </div>
-
           </div>
 
-          {/* Right Block: Hidden Gems List (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             <div className="border-b border-travertine-300 pb-4">
               <span className="text-[10px] tracking-widest font-mono text-olive-700 uppercase font-bold">
                 {t('ascoli.gems_tag')}
               </span>
-              <h4 className="font-serif text-2xl font-light text-charcoal-950 mt-1">
-                {t('ascoli.gems_title')}
-              </h4>
+              <h4 className="font-serif text-2xl font-light text-charcoal-950 mt-1">{t('ascoli.gems_title')}</h4>
             </div>
 
             <div className="space-y-6">
-              {gems.map((gem, index) => (
-                <div key={index} className="space-y-1.5 group cursor-pointer">
-                  <div className="flex items-center justify-between">
+              {ascoliHighlights.map((gem) => (
+                <div key={gem.title} className="space-y-1.5 group">
+                  <div className="flex items-center justify-between gap-4">
                     <span className="font-serif text-lg font-normal text-charcoal-950 group-hover:text-terracotta-500 transition-colors">
-                      {gem.name}
+                      {gem.title}
                     </span>
                     <span className="text-[9px] font-mono uppercase tracking-wider text-olive-800 bg-olive-50 px-2 py-0.5 border border-olive-200">
                       {gem.type}
                     </span>
                   </div>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">
-                    {gem.desc}
-                  </p>
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">{gem.description}</p>
                 </div>
               ))}
             </div>
-            
+
             <div className="bg-olive-900 text-travertine-100 p-6 border border-olive-800 space-y-3">
-              <h5 className="font-serif text-lg font-normal text-travertine-50">
-                {t('ascoli.purity_title')}
-              </h5>
-              <p className="text-xs text-olive-100 font-light leading-relaxed">
-                {t('ascoli.purity_desc')}
-              </p>
+              <h5 className="font-serif text-lg font-normal text-travertine-50">{t('ascoli.purity_title')}</h5>
+              <p className="text-xs text-olive-100 font-light leading-relaxed">{t('ascoli.purity_desc')}</p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

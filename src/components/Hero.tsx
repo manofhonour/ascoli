@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles, BookOpen } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { contactInfo, images } from '../data/officialContent';
+import accademiaLogo from '../assets/accademia-logo.png';
 
 interface HeroProps {
   onInquireClick: () => void;
@@ -37,7 +39,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
               </span>
             </div>
             
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-charcoal-950 leading-[1.08] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-charcoal-950 leading-[1.08] tracking-tight max-w-full text-balance">
               {t('hero.title_part1')} <br />
               {t('hero.title_part2')} <br />
               <span className="italic font-light text-olive-800">{t('hero.title_italic')}</span>
@@ -58,11 +60,11 @@ export default function Hero({ onInquireClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.19, 1, 0.22, 1] }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
+            className="flex flex-col md:flex-row items-stretch md:items-center gap-4 w-full md:w-auto"
           >
             <a
               href="#courses"
-              className="bg-olive-800 hover:bg-olive-900 text-travertine-50 px-7 sm:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase transition-all duration-500 shadow-xl flex items-center justify-center gap-2 border border-olive-700/50 rounded-none text-center whitespace-nowrap"
+              className="bg-olive-800 hover:bg-olive-900 text-travertine-50 px-7 md:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase transition-all duration-500 shadow-xl flex items-center justify-center gap-2 border border-olive-700/50 rounded-none text-center whitespace-nowrap"
             >
               {t('hero.explore_courses')}
               <ArrowRight className="w-3.5 h-3.5" />
@@ -70,21 +72,24 @@ export default function Hero({ onInquireClick }: HeroProps) {
             
             <button
               onClick={onInquireClick}
-              className="border border-charcoal-950/20 hover:border-charcoal-950 px-7 sm:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase text-charcoal-800 hover:text-charcoal-950 transition-all duration-500 text-center rounded-none cursor-pointer bg-transparent whitespace-nowrap"
+              className="border border-charcoal-950/20 hover:border-charcoal-950 px-7 md:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase text-charcoal-800 hover:text-charcoal-950 transition-all duration-500 text-center rounded-none cursor-pointer bg-transparent whitespace-nowrap"
             >
               {t('hero.book_consultation')}
             </button>
           </motion.div>
 
-          {/* Luxury descriptive callout */}
+          {/* Official address callout */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="border-l border-travertine-300 pl-5 py-1.5 italic font-serif text-[11px] text-charcoal-700 max-w-xs space-y-1"
+            className="border-l border-travertine-300 pl-5 py-1.5 text-[11px] text-charcoal-700 max-w-sm space-y-2"
           >
-            <span className="block not-italic font-sans text-[8px] tracking-[0.25em] uppercase font-bold text-olive-700">{t('hero.salon_title')}</span>
-            {t('hero.salon_desc')}
+            <span className="block font-sans text-[8px] tracking-[0.25em] uppercase font-bold text-olive-700">{t('hero.salon_title')}</span>
+            <span className="block font-serif italic">{t('hero.salon_desc')}</span>
+            <span className="block font-sans text-[10px] tracking-wide text-charcoal-800">
+              {contactInfo.email} - WhatsApp {contactInfo.whatsapp}
+            </span>
           </motion.div>
         </div>
 
@@ -99,7 +104,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             className="relative w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/40"
           >
             <img
-              src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1400&q=80"
+              src={images.ascoli}
               alt="Travertine facade and historic clock in Piazza del Popolo, Ascoli Piceno"
               className="w-full h-full object-cover transition-transform duration-[6s] ease-out hover:scale-103"
               referrerPolicy="no-referrer"
@@ -108,6 +113,17 @@ export default function Hero({ onInquireClick }: HeroProps) {
             {/* Elegant vignette overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/20 via-transparent to-transparent pointer-events-none" />
             <div className="absolute inset-0 border border-white/10 pointer-events-none m-4" />
+            <div className="absolute bottom-6 right-6 bg-travertine-50/95 backdrop-blur-sm border border-travertine-300/70 shadow-xl px-4 py-3 flex items-center gap-3">
+              <img src={accademiaLogo} alt="" className="w-10 h-10 object-contain" />
+              <div>
+                <span className="block text-[9px] font-mono uppercase tracking-widest text-olive-800 font-bold">
+                  Accademia Italiana
+                </span>
+                <span className="block font-serif text-sm text-charcoal-950">
+                  {contactInfo.director}
+                </span>
+              </div>
+            </div>
           </motion.div>
 
           {/* Floating Luxury Badges */}

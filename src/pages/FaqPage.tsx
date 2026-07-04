@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Plus, Minus, HelpCircle, Heart } from 'lucide-react';
+import { Plus, Minus, Heart } from 'lucide-react';
+import { contactInfo } from '../data/officialContent';
 
 interface FaqItem {
   id: string;
@@ -10,44 +11,53 @@ interface FaqItem {
 }
 
 export default function FaqPage() {
-  const [activeFaq, setActiveFaq] = useState<string | null>(null);
+  const [activeFaq, setActiveFaq] = useState<string | null>('courses');
 
   const faqs: FaqItem[] = [
     {
-      id: 'visa',
-      category: 'Admissions & Visas',
-      question: 'Do I need a student visa to study in Ascoli Piceno?',
-      answer: 'For citizens of the United States, United Kingdom, Canada, Australia, and New Zealand, a tourist stay (Schengen) allows you to reside and study with us for up to 90 days without a formal visa. For stays longer than 12 weeks, our team provides full custom supporting documents and letters of admission to facilitate your long-term study visa application at your local Italian Consulate.',
+      id: 'courses',
+      category: 'Courses',
+      question: 'Which Italian courses are listed by the school?',
+      answer:
+        'The official offer includes standard courses, intensive courses, individual lessons, extensive courses, refresher courses for teachers, and custom-made courses in Ascoli Piceno or online.',
     },
     {
-      id: 'levels',
-      category: 'Academic Details',
-      question: 'What if I am an absolute beginner? Will I feel left out?',
-      answer: 'Not at all. Many guests arrive with no Italian. Because we limit class size to a maximum of 6 and offer private 1:1 support, beginners can learn without pressure. You will practice useful phrases at Caffè Meletti from your first morning.',
+      id: 'prices',
+      category: 'Pricing',
+      question: 'What prices are published for 2024/2025?',
+      answer:
+        'Published examples include standard courses at EUR 220 per week, individual lessons at EUR 30 per hour, 20 individual hours at EUR 550, and intensive courses from EUR 370 for one week. Final prices and availability should be confirmed with the school.',
     },
     {
-      id: 'inclusive',
-      category: 'Social Environment',
-      question: 'Is the academy LGBTQ+ friendly, and welcoming to solo travelers?',
-      answer: 'Yes, absolutely. Accademia Italiana is built on the values of safety, openness, and sincere community care. We are a proud LGBTQ+ welcoming space. Whether you are traveling solo, with a partner, or seeking a quiet transitional sabbatical, our small communal dinners, group walks, and friendly guides ensure you are integrated with natural warmth from day one.',
+      id: 'accommodation',
+      category: 'Accommodation',
+      question: 'What accommodation can the school help reserve?',
+      answer:
+        'The school lists host-family accommodation, B&B, and hotel options in Ascoli Piceno. Host-family weekly prices are published, while B&B and hotel prices are on request.',
     },
     {
-      id: 'lodging',
-      category: 'Lodging & Stays',
-      question: 'What is included in my private historic residence?',
-      answer: 'Every private apartment inside Palazzo Sgariglia or a nearby historic estate includes high-speed fiber Wi-Fi, premium French linen sheets, fluffy bath towels, a stocked kitchen with local essentials, and a spacious writing desk. Bi-weekly housekeeping and fresh linens are included.',
+      id: 'travel',
+      category: 'Travel',
+      question: 'How do students reach Ascoli Piceno?',
+      answer:
+        'Official guidance mentions travel by train via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports. Timetables should be checked before travel.',
     },
     {
-      id: 'cancel',
-      category: 'Policies & Booking',
-      question: 'What is your refund and cancellation policy?',
-      answer: 'We understand that travel parameters shift. Because we pre-book noble historic apartments, we require a 30% deposit to secure your stay. Stays can be fully rescheduled or cancelled with a full refund up to 45 days prior to your arrival date. Cancellations inside 45 days can be rolled forward into any future season within 18 months.',
+      id: 'culture',
+      category: 'Culture',
+      question: 'Which culture courses or add-ons are available?',
+      answer:
+        'Published add-ons include Italian cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, current affairs, business Italian, tourism and hotel management, university entrance preparation, certification exam preparation, history, art history, literature, and Italy today.',
+    },
+    {
+      id: 'contact',
+      category: 'Contact',
+      question: 'What are the official contact details?',
+      answer: `${contactInfo.schoolName} is at ${contactInfo.addressLine1}, ${contactInfo.cityLine}. Email ${contactInfo.email}, phone ${contactInfo.phone}, WhatsApp ${contactInfo.whatsapp}. Office hours are ${contactInfo.hours}.`,
     },
   ];
 
-  const toggleFaq = (id: string) => {
-    setActiveFaq(activeFaq === id ? null : id);
-  };
+  const toggleFaq = (id: string) => setActiveFaq(activeFaq === id ? null : id);
 
   return (
     <motion.div
@@ -57,7 +67,6 @@ export default function FaqPage() {
       transition={{ duration: 0.6 }}
       className="bg-travertine-50 min-h-screen"
     >
-      {/* Editorial Header */}
       <section className="relative py-24 md:py-32 bg-travertine-100 overflow-hidden border-b border-travertine-200">
         <div className="absolute inset-0 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
@@ -66,35 +75,24 @@ export default function FaqPage() {
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             Practical answers <br />
-            <span className="italic text-terracotta-600">for your stay.</span>
+            <span className="italic text-terracotta-600">from the official offer.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about preparing for your Italian chapter, from local visa parameters to structural apartment details and safety guidelines.
+            Course, accommodation, travel, culture, and contact details aligned with the official Accademia websites.
           </p>
         </div>
       </section>
 
-      {/* Accordions List Section */}
       <section className="py-24 max-w-4xl mx-auto px-6 md:px-12">
         <div className="space-y-6">
           {faqs.map((faq) => {
             const isOpen = activeFaq === faq.id;
             return (
-              <div
-                key={faq.id}
-                className="bg-travertine-100 border border-travertine-200 hover:border-travertine-300 transition-all duration-300 shadow-sm overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-4 cursor-pointer"
-                >
+              <div key={faq.id} className="bg-travertine-100 border border-travertine-200 hover:border-travertine-300 transition-all duration-300 shadow-sm overflow-hidden">
+                <button onClick={() => toggleFaq(faq.id)} className="w-full text-left p-6 md:p-8 flex items-center justify-between gap-4 cursor-pointer">
                   <div className="space-y-2">
-                    <span className="text-[9px] tracking-wider uppercase font-bold text-olive-800 block">
-                      {faq.category}
-                    </span>
-                    <h3 className="font-serif text-lg md:text-xl text-charcoal-950 font-normal leading-snug">
-                      {faq.question}
-                    </h3>
+                    <span className="text-[9px] tracking-wider uppercase font-bold text-olive-800 block">{faq.category}</span>
+                    <h3 className="font-serif text-lg md:text-xl text-charcoal-950 font-normal leading-snug">{faq.question}</h3>
                   </div>
 
                   <div className="w-8 h-8 rounded-full bg-travertine-200 flex items-center justify-center shrink-0 text-charcoal-950 transition-colors">
@@ -122,19 +120,18 @@ export default function FaqPage() {
           })}
         </div>
 
-        {/* Safety & Welcoming Callout */}
         <div className="mt-16 bg-olive-50 border border-olive-200/80 p-8 flex flex-col md:flex-row gap-6 items-start">
           <Heart className="w-8 h-8 text-olive-800 shrink-0 stroke-[1.25]" />
           <div className="space-y-2">
             <h4 className="font-serif text-base text-charcoal-950 font-semibold">
-              Looking for a custom consultation or special requirements?
+              Need a final confirmation?
             </h4>
             <p className="text-xs text-olive-900 leading-relaxed font-light">
-              We specialize in accommodating custom timelines, corporate sabbaticals, specific accessibility requirements, or food allergies. Reach out directly to our concierge team at <span className="font-medium text-charcoal-950">concierge@accademia-ascoli.it</span>.
+              Contact the school directly at <span className="font-medium text-charcoal-950">{contactInfo.email}</span> or WhatsApp{' '}
+              <span className="font-medium text-charcoal-950">{contactInfo.whatsapp}</span>.
             </p>
           </div>
         </div>
-
       </section>
     </motion.div>
   );

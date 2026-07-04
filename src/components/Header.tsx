@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import accademiaLogo from '../assets/accademia-logo.png';
 
 interface HeaderProps {
   currentTab: string;
@@ -41,13 +42,20 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
             onTabChange('home');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="group flex flex-col items-start gap-0.5 text-left cursor-pointer"
+          className="group flex items-center gap-3 text-left cursor-pointer min-w-0"
         >
-          <span className="font-serif text-sm sm:text-lg md:text-xl tracking-[0.14em] sm:tracking-[0.18em] text-charcoal-950 font-medium uppercase transition-colors duration-300 group-hover:text-olive-800">
-            Accademia Italiana
-          </span>
-          <span className="text-[8px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.25em] font-sans text-olive-700 uppercase font-medium">
-            Ascoli Piceno - Boutique School
+          <img
+            src={accademiaLogo}
+            alt="Accademia Italiana logo"
+            className="h-10 w-10 md:h-12 md:w-12 object-contain shrink-0"
+          />
+          <span className="flex flex-col min-w-0">
+            <span className="font-serif text-sm sm:text-lg md:text-xl tracking-[0.1em] sm:tracking-[0.14em] text-charcoal-950 font-medium uppercase transition-colors duration-300 group-hover:text-olive-800 truncate">
+              Accademia Italiana
+            </span>
+            <span className="text-[8px] sm:text-[9px] tracking-[0.12em] sm:tracking-[0.2em] font-sans text-olive-700 uppercase font-medium truncate">
+              Ascoli Piceno - dal 1997
+            </span>
           </span>
         </button>
 
