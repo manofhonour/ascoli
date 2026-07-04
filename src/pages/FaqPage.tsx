@@ -23,7 +23,7 @@ export default function FaqPage() {
       id: 'levels',
       category: 'Academic Details',
       question: 'What if I am an absolute beginner? Will I feel left out?',
-      answer: 'Not at all. In fact, many of our guests begin with absolute zero Italian. Because we limit class size to a maximum of 6 (and emphasize private 1:1 sessions), we can accommodate absolute novices without pressure. We teach you immediate survival phrases for Caffè Meletti on your first morning so you can practice instantly.',
+      answer: 'Not at all. Many guests arrive with no Italian. Because we limit class size to a maximum of 6 and offer private 1:1 support, beginners can learn without pressure. You will practice useful phrases at Caffè Meletti from your first morning.',
     },
     {
       id: 'inclusive',
@@ -35,7 +35,7 @@ export default function FaqPage() {
       id: 'lodging',
       category: 'Lodging & Stays',
       question: 'What is included in my private historic residence?',
-      answer: 'Every private apartment (inside Palazzo Sgariglia or nearby nobles estates) includes high-speed fiber Wi-Fi, premium French linen sheets, fluffly bath towels, a fully stocked gourmet kitchen (oil, coffee, water, regional wine), and a spacious writing desk. Bi-weekly professional housekeeping and fresh linens are fully included in your stay.',
+      answer: 'Every private apartment inside Palazzo Sgariglia or a nearby historic estate includes high-speed fiber Wi-Fi, premium French linen sheets, fluffy bath towels, a stocked kitchen with local essentials, and a spacious writing desk. Bi-weekly housekeeping and fresh linens are included.',
     },
     {
       id: 'cancel',
@@ -65,8 +65,8 @@ export default function FaqPage() {
             Domande Frequenti
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Answering your <br />
-            <span className="italic text-terracotta-600">travel concerns.</span>
+            Practical answers <br />
+            <span className="italic text-terracotta-600">for your stay.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about preparing for your Italian chapter, from local visa parameters to structural apartment details and safety guidelines.

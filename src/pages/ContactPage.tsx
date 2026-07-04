@@ -33,11 +33,11 @@ export default function ContactPage() {
             Liaison Concierge
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Schedule a customized <br />
-            <span className="italic text-olive-800">linguistic audit.</span>
+            Schedule a private <br />
+            <span className="italic text-olive-800">study consultation.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Every entry begins with a private conversation. Let us understand your professional parameters, housing preferences, and learning objectives.
+            Every stay begins with a private conversation about your goals, preferred pace, housing needs, and ideal time in Ascoli.
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 Reach our administration inside Palazzo Sgariglia.
               </h2>
               <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                We maintain active lines for curious global minds, professionals, and travel concierge agencies looking to book private custom calendars.
+                We welcome thoughtful learners, professionals, and travel advisors looking to arrange tailored Italian study in Ascoli Piceno.
               </p>
             </div>
 
@@ -106,7 +106,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-serif text-sm font-semibold text-charcoal-950">Office Hours</h4>
                   <p className="text-xs text-charcoal-850 font-light leading-relaxed mt-1">
-                    Monday — Friday: 09:00 - 17:00 (CET)
+                    Monday - Friday: 09:00 - 17:00 (CET)
                   </p>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                   {/* Message */}
                   <div className="space-y-2">
                     <label htmlFor="message" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                      Message Vision
+                      Message
                     </label>
                     <textarea
                       id="message"

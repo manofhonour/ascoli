@@ -33,8 +33,8 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-travertine-50/80 backdrop-blur-md border-b border-travertine-200/50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-travertine-50/90 backdrop-blur-md border-b border-travertine-200/50 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 xl:px-12 h-16 md:h-20 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <button
           onClick={() => {
@@ -43,16 +43,16 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
           }}
           className="group flex flex-col items-start gap-0.5 text-left cursor-pointer"
         >
-          <span className="font-serif text-lg md:text-xl tracking-[0.18em] text-charcoal-950 font-medium uppercase transition-colors duration-300 group-hover:text-olive-800">
+          <span className="font-serif text-sm sm:text-lg md:text-xl tracking-[0.14em] sm:tracking-[0.18em] text-charcoal-950 font-medium uppercase transition-colors duration-300 group-hover:text-olive-800">
             Accademia Italiana
           </span>
-          <span className="text-[9px] tracking-[0.25em] font-sans text-olive-700 uppercase font-medium">
-            Ascoli Piceno • Boutique School
+          <span className="text-[8px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.25em] font-sans text-olive-700 uppercase font-medium">
+            Ascoli Piceno - Boutique School
           </span>
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden xl:flex items-center gap-6">
           {mainNav.map((item) => (
             <button
               key={item.id}
@@ -118,7 +118,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
         </nav>
 
         {/* Call to Actions */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-5">
           <button 
             onClick={() => setLanguage(lang === 'EN' ? 'IT' : 'EN')}
             className="flex items-center gap-1.5 text-xs font-semibold tracking-[0.1em] text-charcoal-800 hover:text-terracotta-600 transition-colors duration-300 cursor-pointer"
@@ -136,7 +136,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
         </div>
 
         {/* Mobile Menu Trigger */}
-        <div className="flex lg:hidden items-center gap-4">
+        <div className="flex xl:hidden items-center gap-4">
           <button 
             onClick={() => setLanguage(lang === 'EN' ? 'IT' : 'EN')}
             className="text-xs font-bold tracking-[0.1em] text-charcoal-800 mr-2 cursor-pointer"
@@ -161,7 +161,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="absolute top-20 left-0 w-full bg-travertine-50 border-b border-travertine-200/80 shadow-lg lg:hidden z-40 overflow-y-auto max-h-[80vh]"
+            className="absolute top-16 md:top-20 left-0 w-full bg-travertine-50 border-b border-travertine-200/80 shadow-lg xl:hidden z-40 overflow-y-auto max-h-[80vh]"
           >
             <div className="px-8 py-10 flex flex-col gap-5">
               {/* Combine main and secondary */}

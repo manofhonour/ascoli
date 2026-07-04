@@ -8,7 +8,7 @@ export default function AscoliPage() {
       title: 'Piazza del Popolo',
       italianTitle: 'Il Salotto d’Italia',
       description: 'Often called the "living room of Italy", this entirely travertine-paved square is framed by Renaissance arches and Gothic towers. At golden hour, the floor behaves like a massive mirror, throwing warm amber light onto visitors.',
-      image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80',
     },
     {
       title: 'Caffè Meletti',
@@ -44,7 +44,7 @@ export default function AscoliPage() {
             <span className="italic text-terracotta-600">sculpted in travertine.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Unlike Florence or Venice, Ascoli Piceno has resisted mass tourism. It remains an untouched, high-end Italian community where the local bakers and sommeliers know you by name within a week.
+            Unlike Italy’s busiest art cities, Ascoli Piceno has kept a slower civic rhythm. Students can become familiar faces at the market, the cafe, and the evening passeggiata within days.
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function AscoliPage() {
               Every arch, alley, and doorway tells a 2,000-year-old story.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Ascoli is constructed entirely of premium travertine marble quarried from the surrounding Apennine canyons. The material absorbs the sun’s rays, turning a bright blinding white in the midday heat and a warm, glowing rose gold at twilight.
+              Ascoli is built from warm travertine quarried from the surrounding Apennine landscape. The stone shifts throughout the day, pale in the midday sun and softly golden at twilight.
             </p>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               As you wander the quiet medieval alleys (called "rue"), look up. Many Renaissance doorframes are carved with custom Latin and old Italian mottos, left by philosophers, artists, and merchants centuries ago to welcome thoughtful travelers.
@@ -70,8 +70,8 @@ export default function AscoliPage() {
           <div className="lg:col-span-6">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
               <img
-                src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
-                alt="Travertine details"
+                src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80"
+                alt="Travertine details in Ascoli Piceno"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -137,7 +137,7 @@ export default function AscoliPage() {
               <Landmark className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">From Rome</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Take the comfortable direct luxury bus (Roma-Ascoli) right from Tiburtina station. It winds through the majestic Apennine mountains in under 3 hours.
+                Take the direct Roma-Ascoli coach from Tiburtina station. The route crosses the Apennines and reaches the city in under 3 hours.
               </p>
             </div>
 
@@ -145,7 +145,7 @@ export default function AscoliPage() {
               <Compass className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">By Train</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Arrive via Ancona or Pescara along the stunning Adriatic sea railway line, then catch the regional local train directly into Ascoli Central Station.
+                Arrive via Ancona or Pescara along the Adriatic railway line, then connect by regional train to Ascoli Piceno.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export default function AscoliPage() {
               <Award className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Concierge Car</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Our team can arrange private luxury Mercedes sedan transfers directly from Rome Fiumicino airport straight to your Palazzo residence.
+                Our team can arrange a private car transfer from Rome Fiumicino airport directly to your residence.
               </p>
             </div>
           </div>

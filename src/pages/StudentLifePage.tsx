@@ -15,7 +15,7 @@ export default function StudentLifePage() {
       id: 'cooking',
       title: 'The Alchemy of Olive all’Ascolana',
       tagline: 'Private Culinary Workshops with Nonna Luisa',
-      description: 'Ascoli Piceno is famous across Italy for its legendary stuffed, fried olives. Under the guidance of our beloved local grandmother, Luisa, learn the exact carving, meat-stuffing, and crispy breading secrets—using only slow Italian commands.',
+      description: 'Ascoli Piceno is famous across Italy for its stuffed, fried olives. Under Luisa’s patient guidance, learn the carving, filling, and breading process while practicing clear Italian kitchen commands.',
       image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80',
     },
     {
@@ -43,11 +43,11 @@ export default function StudentLifePage() {
             Vita da Studente
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            An elegant community of <br />
-            <span className="italic text-olive-800">inquisitive global souls.</span>
+            A thoughtful community <br />
+            <span className="italic text-olive-800">built through daily Italian.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Our student life is structured around intellectual collaboration, slow culinary practices, and beautiful authentic connections that turn absolute strangers into life-long travel companions.
+            Student life is built around conversation, shared meals, local craft, and the kind of calm connection that makes language feel natural.
           </p>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function StudentLifePage() {
             "I joined Accademia seeking to brush up on my Italian verbs. I left with an entire community of sophisticated global friends, private memories inside ancient vineyards, and a soul completely restored."
           </p>
           <span className="block text-[10px] tracking-wider uppercase text-olive-800 font-bold">
-            — Eleanor Vance, Architectural Designer (Sojourn Fall 2025)
+            - Eleanor Vance, Architectural Designer (Fall Sojourn)
           </span>
         </div>
       </section>

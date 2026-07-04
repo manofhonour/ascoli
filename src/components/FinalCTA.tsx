@@ -15,8 +15,8 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
       {/* Cinematic photograph background with dark overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80"
-          alt="Golden Italian hills of Marche"
+          src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1600&q=80"
+          alt="Ascoli Piceno travertine facade in golden light"
           className="w-full h-full object-cover grayscale brightness-40"
           referrerPolicy="no-referrer"
         />

@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      quote: "Most language schools feel like standard SaaS dashboards or crowded university lecture halls. Accademia feels like a private, luxurious writer's residency. I learned more in ten days here than in months of virtual classes.",
+      quote: "Most language schools feel institutional or crowded. Accademia feels like a private writer's residency. I learned more in ten days here than in months of virtual classes.",
       author: "Marielle Laurent",
       role: "Interior Architect",
       country: "France",
@@ -91,7 +91,7 @@ export default function TestimonialsSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 border-b border-travertine-200 pb-16 mb-24">
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-3">
             <span className="text-[10px] tracking-[0.25em] font-bold text-terracotta-600 uppercase">
-              {language === 'IT' ? 'Recensioni Eccellenti' : 'Excellent Reviews'}
+              {t('testimonials.excellent_reviews')}
             </span>
             <div className="flex items-center gap-1.5">
               <Star className="w-4 h-4 fill-olive-800 text-olive-800 stroke-none" />
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
               <span className="font-serif text-xl text-charcoal-950 font-light ml-2">4.9 / 5.0</span>
             </div>
             <p className="text-xs text-charcoal-800 font-light">
-              {language === 'IT' ? 'Basato su 248 recensioni verificate su Google Education e Trustpilot' : 'Based on 248 verified reviews on Google Education & Trustpilot'}
+              {t('testimonials.based_on')}
             </p>
           </div>
 
@@ -115,13 +115,13 @@ export default function TestimonialsSection() {
                 ))}
               </div>
               <span className="text-[9px] text-charcoal-800 uppercase tracking-[0.18em] mt-2">
-                {language === 'IT' ? 'Valutazione 5.0 Stelle' : '5.0 Star Rating'}
+                {t('testimonials.google_rating')}
               </span>
             </div>
 
             <div className="flex flex-col items-center px-6 pl-12">
               <span className="text-xs font-sans font-bold text-olive-800 tracking-wider uppercase">
-                ★ Trustpilot
+                {language === 'IT' ? 'Note Alumni' : 'Student Notes'}
               </span>
               <div className="flex items-center gap-0.5 mt-1.5">
                 {[...Array(5)].map((_, i) => (
@@ -129,7 +129,7 @@ export default function TestimonialsSection() {
                 ))}
               </div>
               <span className="text-[9px] text-charcoal-800 uppercase tracking-[0.18em] mt-2">
-                {language === 'IT' ? 'Stato Eccellente' : 'Excellent Status'}
+                {t('testimonials.trustpilot_status')}
               </span>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function TestimonialsSection() {
                       {activeTestimonial.author}
                     </h4>
                     <span className="block text-[11px] text-charcoal-800 font-light font-sans tracking-wide mt-1">
-                      {activeTestimonial.role} — <span className="font-medium text-charcoal-950">{activeTestimonial.country}</span>
+                      {activeTestimonial.role} - <span className="font-medium text-charcoal-950">{activeTestimonial.country}</span>
                     </span>
                   </div>
                 </motion.div>
@@ -221,10 +221,10 @@ export default function TestimonialsSection() {
                   <div className="absolute bottom-6 left-6 right-6 text-travertine-50 flex items-center justify-between">
                     <div>
                       <span className="block text-[8px] tracking-[0.25em] font-mono uppercase text-terracotta-200">
-                        {language === 'IT' ? 'Diario Video' : 'Video Diary'}
+                        {t('testimonials.video_diary')}
                       </span>
                       <span className="font-serif text-sm italic">
-                        {language === 'IT' ? '"Imparare all\'interno del Palazzo storico"' : '"Learning inside the historic Palazzo"'}
+                        {t('testimonials.video_quote')}
                       </span>
                     </div>
                     <span className="text-[10px] font-mono bg-olive-900/90 backdrop-blur-sm px-2.5 py-1.5 border border-olive-700/50">
@@ -235,18 +235,16 @@ export default function TestimonialsSection() {
               ) : (
                 <div className="absolute inset-0 bg-charcoal-950 flex flex-col items-center justify-center p-8 text-center text-travertine-100 space-y-4">
                   <span className="text-[10px] font-mono text-terracotta-500 tracking-widest uppercase font-bold">
-                    {language === 'IT' ? 'Feed Video Simulato' : 'Mock Video Feed'}
+                    {t('testimonials.story_label')}
                   </span>
                   <p className="font-serif text-lg italic max-w-xs leading-relaxed">
-                    {language === 'IT' 
-                      ? '"Mi svegliavo, bevevo un espresso, discutevo di letteratura e vivevo il sogno italiano. Grazie, Accademia!"' 
-                      : '"I woke up, drank espresso, debated literature, and lived the Italian dream. Thank you, Accademia!"'}
+                    {t('testimonials.story_text')}
                   </p>
                   <button
                     onClick={() => setIsVideoPlaying(false)}
                     className="border border-travertine-100/30 hover:border-travertine-100 px-5 py-2.5 text-[10px] uppercase tracking-[0.2em] font-semibold bg-travertine-100/10 hover:bg-travertine-100/20 transition-all duration-300 rounded-none cursor-pointer"
                   >
-                    {language === 'IT' ? 'Chiudi Video Feed' : 'Close Video Feed'}
+                    {t('testimonials.close_video')}
                   </button>
                 </div>
               )}

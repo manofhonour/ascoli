@@ -11,7 +11,7 @@ export default function GalleryPage() {
       category: 'architecture',
       title: 'Piazza del Popolo at Golden Hour',
       location: 'Ascoli Piceno',
-      image: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80',
     },
     {
       id: 'espresso',
@@ -39,7 +39,7 @@ export default function GalleryPage() {
       category: 'architecture',
       title: 'Quiet Medieval Rue',
       location: 'Ascoli Old Center',
-      image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80',
     },
     {
       id: 'stroll',
@@ -82,8 +82,8 @@ export default function GalleryPage() {
             The Travertine Archive
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Cinematic moments, <br />
-            <span className="italic text-terracotta-600">frozen in light.</span>
+            A visual archive <br />
+            <span className="italic text-terracotta-600">of Ascoli light.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             Take a silent, visual journey through the sun-bleached plazas, vintage coffee bars, quiet reading rooms, and vineyard hills of our boutique language sanctuary.
@@ -94,7 +94,7 @@ export default function GalleryPage() {
       {/* Filter Tabs and Mosaic Grid */}
       <section className="py-20 max-w-7xl mx-auto px-6 md:px-12">
         {/* Category Controls */}
-        <div className="flex flex-wrap justify-center items-center gap-3 mb-16 border-b border-travertine-200 pb-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-stretch sm:items-center gap-3 mb-16 border-b border-travertine-200 pb-8">
           <button
             onClick={() => setFilter('all')}
             className={`px-6 py-2.5 text-xs font-semibold tracking-widest uppercase transition-all duration-300 rounded-none ${
@@ -133,7 +133,7 @@ export default function GalleryPage() {
                 : 'text-charcoal-800 hover:text-charcoal-950 hover:bg-travertine-100'
             }`}
           >
-            Daily Lifepractices
+            Daily Life
           </button>
         </div>
 

@@ -7,7 +7,7 @@ export default function AboutPage() {
     {
       name: 'Dr. Francesca Moretti',
       role: 'Director & Co-Founder',
-      quote: 'Linguistic immersion is the art of feeling home in another culture.',
+      quote: 'Linguistic immersion is the art of feeling at home in another culture.',
       bio: 'Francesca holds a Doctorate in Italian Literature from the University of Bologna. She spent 15 years designing custom language immersions for diplomats before returning to her hometown of Ascoli Piceno to establish Accademia Italiana.',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
     },
@@ -15,7 +15,7 @@ export default function AboutPage() {
       name: 'Stefano Bertoni',
       role: 'Master of Gastronomy & Wine Educator',
       quote: 'To understand Italian syntax, you must first taste the soil of Marche.',
-      bio: 'Stefano is a certified Sommelier and slow-food scholar. He coordinates our specialized food-and-wine curriculums, connecting local producers, vineyards, and chefs directly with our student cohort.',
+      bio: 'Stefano is a certified sommelier and slow-food scholar. He coordinates our specialized food-and-wine curricula, connecting local producers, vineyards, and chefs directly with each student cohort.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
     },
     {
@@ -72,8 +72,8 @@ export default function AboutPage() {
         <div className="lg:col-span-6 relative">
           <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
             <img
-              src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
-              alt="Ancient Italian stone architecture"
+              src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80"
+              alt="Historic travertine architecture in Ascoli Piceno"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <Heart className="w-6 h-6 text-olive-800 stroke-[1.25]" />
               <h3 className="font-serif text-lg text-charcoal-950">Inclusive Community</h3>
               <p className="text-xs text-charcoal-800 leading-relaxed font-light">
-                A warm, safe sanctuary welcoming all walks of life—including mature professionals, solo creatives, and LGBTQ+ global travelers seeking deep, beautiful connections.
+                A warm, safe sanctuary welcoming mature professionals, solo creatives, and LGBTQ+ global travelers seeking meaningful connection.
               </p>
             </div>
 
@@ -144,7 +144,7 @@ export default function AboutPage() {
             Luminaries of Marche heritage.
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            Our private coaches and local guides are passionate scholars, sommeliers, and historians dedicated to delivering conversational fluidness.
+            Our private coaches and local guides are scholars, sommeliers, and historians dedicated to confident conversational fluency.
           </p>
         </div>
 

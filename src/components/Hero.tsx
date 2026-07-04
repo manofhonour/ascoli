@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles, BookOpen, ChevronDown } from 'lucide-react';
+import { ArrowRight, Sparkles, BookOpen } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface HeroProps {
@@ -11,7 +11,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[90vh] lg:h-[95vh] w-full bg-travertine-50 flex items-center overflow-hidden border-b border-travertine-200/60 py-20 lg:py-0">
+    <section className="relative min-h-[calc(100dvh-4rem)] md:min-h-[calc(100dvh-5rem)] w-full bg-travertine-50 flex items-center overflow-hidden border-b border-travertine-200/60 py-14 md:py-20">
       
       {/* Delicate background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(#CBB49C_1px,transparent_1px)] [background-size:40px_40px] opacity-10 pointer-events-none z-0" />
@@ -19,10 +19,10 @@ export default function Hero({ onInquireClick }: HeroProps) {
       <div className="absolute right-[35%] top-0 bottom-0 w-[1px] bg-travertine-200/40 pointer-events-none hidden lg:block" />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center relative z-10">
         
         {/* Left Column: Premium Editorial Content */}
-        <div className="lg:col-span-5 flex flex-col justify-center space-y-10 lg:pr-6">
+        <div className="lg:col-span-5 flex flex-col justify-center space-y-8 lg:space-y-10 lg:pr-6">
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
               </span>
             </div>
             
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-extralight text-charcoal-950 leading-[1.05] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight text-charcoal-950 leading-[1.08] tracking-tight">
               {t('hero.title_part1')} <br />
               {t('hero.title_part2')} <br />
               <span className="italic font-light text-olive-800">{t('hero.title_italic')}</span>
@@ -48,7 +48,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
-            className="text-xs md:text-sm lg:text-base text-charcoal-800 font-light leading-relaxed max-w-sm"
+            className="text-sm lg:text-base text-charcoal-800 font-light leading-relaxed max-w-md"
           >
             {t('hero.desc')}
           </motion.p>
@@ -62,7 +62,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
           >
             <a
               href="#courses"
-              className="bg-olive-800 hover:bg-olive-900 text-travertine-50 px-8 py-4.5 text-[11px] tracking-[0.2em] font-medium uppercase transition-all duration-500 shadow-xl flex items-center justify-center gap-2 border border-olive-700/50 rounded-none text-center"
+              className="bg-olive-800 hover:bg-olive-900 text-travertine-50 px-7 sm:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase transition-all duration-500 shadow-xl flex items-center justify-center gap-2 border border-olive-700/50 rounded-none text-center whitespace-nowrap"
             >
               {t('hero.explore_courses')}
               <ArrowRight className="w-3.5 h-3.5" />
@@ -70,7 +70,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             
             <button
               onClick={onInquireClick}
-              className="border border-charcoal-950/20 hover:border-charcoal-950 px-8 py-4.5 text-[11px] tracking-[0.2em] font-medium uppercase text-charcoal-800 hover:text-charcoal-950 transition-all duration-500 text-center rounded-none cursor-pointer bg-transparent"
+              className="border border-charcoal-950/20 hover:border-charcoal-950 px-7 sm:px-8 py-4 text-[11px] tracking-[0.18em] font-medium uppercase text-charcoal-800 hover:text-charcoal-950 transition-all duration-500 text-center rounded-none cursor-pointer bg-transparent whitespace-nowrap"
             >
               {t('hero.book_consultation')}
             </button>
@@ -99,8 +99,8 @@ export default function Hero({ onInquireClick }: HeroProps) {
             className="relative w-full aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/40"
           >
             <img
-              src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=80"
-              alt="Cinematic Piazza del Popolo in Ascoli Piceno during Golden Hour"
+              src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1400&q=80"
+              alt="Travertine facade and historic clock in Piazza del Popolo, Ascoli Piceno"
               className="w-full h-full object-cover transition-transform duration-[6s] ease-out hover:scale-103"
               referrerPolicy="no-referrer"
             />
@@ -143,19 +143,6 @@ export default function Hero({ onInquireClick }: HeroProps) {
 
         </div>
 
-      </div>
-
-      {/* Soft animated scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 z-20 pointer-events-none">
-        <span className="text-[8px] font-mono tracking-[0.2em] uppercase text-charcoal-800/80">
-          {t('hero.scroll_down')}
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-        >
-          <ChevronDown className="w-4 h-4 text-olive-800 stroke-[1.25]" />
-        </motion.div>
       </div>
 
     </section>

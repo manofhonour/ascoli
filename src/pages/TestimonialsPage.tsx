@@ -7,7 +7,7 @@ export default function TestimonialsPage() {
     {
       id: 'professional',
       name: 'Julian Vance',
-      role: 'Creative Director at Aman Group',
+      role: 'Luxury Hospitality Creative Director',
       cohort: 'L’Artigiano (Remote Retreat)',
       quote: 'Accademia is not a school; it is an intellectual sanctuary. As a creative lead, I could balance global campaign launches with 1:1 linguistic coaching under original Renaissance frescoes. An elite, restorative experience.',
       rating: 5,
@@ -59,14 +59,14 @@ export default function TestimonialsPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            Admissions Vocabularies
+            Student Reflections
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Journals of the <br />
+            Stories from the <br />
             <span className="italic text-olive-800">Ascoli cohort.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Read original diaries, insights, and heartfelt reflections from our sophisticated community of professionals, writers, and curious global explorers.
+            Read reflections from professionals, writers, and curious travelers who found confidence through slow Italian immersion.
           </p>
         </div>
       </section>
@@ -98,7 +98,7 @@ export default function TestimonialsPage() {
                 <div>
                   <h4 className="font-serif text-sm text-charcoal-950 font-semibold">{rev.name}</h4>
                   <p className="text-[10px] text-charcoal-800 font-light leading-relaxed mt-0.5">
-                    {rev.role} • <span className="font-semibold text-olive-800">{rev.cohort}</span>
+                    {rev.role} - <span className="font-semibold text-olive-800">{rev.cohort}</span>
                   </p>
                 </div>
               </div>

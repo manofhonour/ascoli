@@ -20,7 +20,7 @@ export default function BlogPage() {
   const posts: BlogPost[] = [
     {
       id: 'rituale',
-      title: 'The Ritual of the Italian Morning: espresso, paper & silent rules',
+      title: 'The Ritual of the Italian Morning: espresso, paper, and silent rules',
       excerpt: 'At Caffè Meletti, a morning coffee is not a quick caffeine fix. It is a slow, elegant sequence of greetings, specific cup temperatures, and unspoken local codes.',
       category: 'Lifestyle',
       date: 'June 28, 2026',
@@ -29,8 +29,8 @@ export default function BlogPage() {
       image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
       content: [
         'To walk into Caffè Meletti on a misty autumn morning is to enter a theater of manners. The travertine floor clicks softly underfoot. The air is thick with roasted coffee beans and a faint hint of Meletti’s signature anisetta liqueur.',
-        'Here, ordering coffee requires understanding a few sacred codes. A "caffè" is always an espresso. To order a cappuccino after 11:00 AM is considered a minor cultural faux pas—locals believe hot milk interferes with digestive rhythms.',
-        'Sit on the heritage green velvet chairs. Greet the barista with a calm, polite "Buongiorno". Take your time. Watch the light play on the travertine arches outside. In Ascoli, the morning coffee is a small, daily meditation—and the absolute best time to practice your direct conversational phrases.',
+        'Here, ordering coffee requires understanding a few local codes. A "caffè" is always an espresso. A cappuccino after 11:00 AM is usually avoided because locals prefer milk only in the morning.',
+        'Sit on the heritage green velvet chairs. Greet the barista with a calm, polite "Buongiorno". Take your time. Watch the light play on the travertine arches outside. In Ascoli, morning coffee is a daily meditation and the best time to practice direct conversational phrases.',
       ],
     },
     {
@@ -41,11 +41,11 @@ export default function BlogPage() {
       date: 'May 14, 2026',
       author: 'Matteo Rossini',
       readTime: '8 min read',
-      image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=900&q=80',
       content: [
-        'Marche is often described as "Italy in one province"—featuring rolling Apennine mountain ridges, medieval hill towns, and quiet sandy Adriatic beaches. Yet, its historic centerpiece, Ascoli Piceno, is still largely overlooked by mass global tourism.',
-        'This has left the city’s heart beautifully, pristine. When you buy fresh pecorino cheese at the old market, the vendor does not treat you as a customer, but as a guest. Residents talk with a slow, clear, melodic accent that acts as a perfect training ground for language learners.',
-        'Walking across Piazza del Popolo at midnight, surrounded by families stroll arm-in-arm, you understand that this is not a postcard or an artificial tourist village. This is real, elegant, raw Italian life—persisting inside beautiful stone arches.',
+        'Marche is often described as "Italy in one province" because it gathers Apennine ridges, medieval hill towns, and quiet Adriatic beaches into one region. Yet its historic centerpiece, Ascoli Piceno, is still largely overlooked by mass tourism.',
+        'This has kept the city’s heart beautifully intact. When you buy fresh pecorino at the old market, the vendor does not treat you as a transaction, but as a guest. Residents speak with a slow, clear accent that gives language learners a generous training ground.',
+        'Walking across Piazza del Popolo at midnight, surrounded by families strolling arm in arm, you understand that this is not a postcard or an artificial tourist village. This is real Italian life, persisting inside beautiful stone arches.',
       ],
     },
     {
@@ -94,7 +94,7 @@ export default function BlogPage() {
                 </span>
                 <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
                   Letters on language, <br />
-                  <span className="italic text-olive-800">slow travel & heritage.</span>
+                  <span className="italic text-olive-800">slow travel and heritage.</span>
                 </h1>
                 <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
                   Deep, literary reflections curated by our instructors and guest writers, charting the quiet aesthetics of life inside Marche.
@@ -129,7 +129,7 @@ export default function BlogPage() {
                             <Calendar className="w-3.5 h-3.5" />
                             {post.date}
                           </span>
-                          <span>•</span>
+                  <span>-</span>
                           <span>{post.readTime}</span>
                         </div>
                         <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal leading-snug group-hover:text-olive-800 transition-colors">
@@ -196,9 +196,9 @@ export default function BlogPage() {
                       <User className="w-3.5 h-3.5 text-olive-800" />
                       <span>Written by <span className="font-semibold text-charcoal-950">{selectedPost.author}</span></span>
                     </div>
-                    <span>•</span>
+                    <span>-</span>
                     <span>{selectedPost.date}</span>
-                    <span>•</span>
+                    <span>-</span>
                     <span className="font-mono text-[10px] bg-travertine-200 px-2.5 py-1 font-semibold">{selectedPost.readTime}</span>
                   </div>
                 </div>
@@ -228,7 +228,7 @@ export default function BlogPage() {
                   <div className="space-y-1">
                     <h4 className="font-serif text-sm font-semibold text-charcoal-950">About {selectedPost.author}</h4>
                     <p className="text-xs text-charcoal-800 font-light leading-relaxed">
-                      Director or scholar representing the authentic educational framework of Accademia Italiana in Ascoli Piceno, Marche.
+                      A member of the Accademia Italiana teaching circle, writing from Ascoli Piceno about language, culture, and daily life in Marche.
                     </p>
                   </div>
                 </div>

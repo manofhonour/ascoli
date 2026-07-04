@@ -7,17 +7,17 @@ export default function WhyAscoliPiceno() {
   const { language, t } = useLanguage();
 
   const statsEN = [
-    { value: "100%", label: "Authentic Italian", detail: "Zero mass commercial tourism" },
-    { value: "25 min", label: "Sea & Mountains", detail: "Between Adriatic beaches & Apennines" },
-    { value: "1st", label: "Safety Index", detail: "Ranked among safest cities in Italy" },
-    { value: "100+", label: "Travertine Towers", detail: "Medieval stone architecture towers" }
+    { value: "Quiet", label: "Authentic Italian", detail: "A historic city outside mass-tourism circuits" },
+    { value: "Dual", label: "Sea & Mountains", detail: "Between Adriatic beaches and the Apennines" },
+    { value: "Walkable", label: "Daily Immersion", detail: "Cafes, markets, and lessons within easy reach" },
+    { value: "Stone", label: "Travertine City", detail: "Medieval architecture shaped by local material" }
   ];
 
   const statsIT = [
-    { value: "100%", label: "Autentico Italiano", detail: "Zero turismo di massa commerciale" },
-    { value: "25 min", label: "Mare e Montagna", detail: "Tra spiagge dell'Adriatico e Appennini" },
-    { value: "1°", label: "Indice di Sicurezza", detail: "Classificata tra le città più sicure d'Italia" },
-    { value: "100+", label: "Torri in Travertino", detail: "Torri d'architettura in pietra medievale" }
+    { value: "Calma", label: "Autentico Italiano", detail: "Una città storica lontana dai circuiti del turismo di massa" },
+    { value: "Doppio", label: "Mare e Montagna", detail: "Tra spiagge dell'Adriatico e Appennini" },
+    { value: "A piedi", label: "Immersione Quotidiana", detail: "Caffè, mercati e lezioni sempre vicini" },
+    { value: "Pietra", label: "Città di Travertino", detail: "Architettura medievale modellata dal materiale locale" }
   ];
 
   const gemsEN = [
@@ -67,8 +67,8 @@ export default function WhyAscoliPiceno() {
           className="relative h-[380px] md:h-[500px] w-full bg-travertine-200 overflow-hidden shadow-2xl mb-16 border border-travertine-300"
         >
           <img
-            src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80"
-            alt="Ascoli Piceno panorama at sunset"
+            src="https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1600&q=80"
+            alt="Historic travertine architecture in Piazza del Popolo, Ascoli Piceno"
             className="w-full h-full object-cover grayscale brightness-95 hover:grayscale-0 hover:scale-102 transition-all duration-[2s] ease-out"
             referrerPolicy="no-referrer"
           />
@@ -85,7 +85,7 @@ export default function WhyAscoliPiceno() {
             
             <div className="flex items-center gap-2 text-[10px] tracking-widest font-mono uppercase text-olive-100 bg-olive-900/60 backdrop-blur-sm px-4 py-2 border border-olive-700/50">
               <MapPin className="w-3.5 h-3.5 text-terracotta-500" />
-              <span>42°51'N • 13°34'E</span>
+              <span>Ascoli Piceno, Marche</span>
             </div>
           </div>
         </motion.div>
@@ -113,7 +113,7 @@ export default function WhyAscoliPiceno() {
               ))}
             </div>
 
-            {/* Walking Map illustration mock */}
+            {/* Walking route sketch */}
             <div className="border border-travertine-300 p-6 md:p-8 bg-travertine-50/50 space-y-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
               <div className="space-y-1.5">
@@ -137,26 +137,26 @@ export default function WhyAscoliPiceno() {
                 </svg>
 
                 {/* Hotspots */}
-                <div className="absolute top-8 left-1/4 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
+                <div className="absolute top-8 left-4 sm:left-1/4 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
                   <span className="w-1.5 h-1.5 bg-terracotta-500 rounded-full animate-ping" />
                   <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">Palazzo Accademia</span>
                 </div>
 
-                <div className="absolute bottom-12 left-1/2 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
+                <div className="absolute bottom-12 left-4 sm:left-1/2 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
                   <span className="w-1.5 h-1.5 bg-olive-700 rounded-full" />
                   <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">Piazza del Popolo</span>
                 </div>
 
-                <div className="absolute top-24 right-12 flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
+                <div className="absolute top-24 right-12 hidden sm:flex items-center gap-1.5 bg-travertine-50 px-2 py-1 shadow-sm border border-travertine-300">
                   <span className="w-1.5 h-1.5 bg-charcoal-800 rounded-full" />
                   <span className="text-[9px] font-mono uppercase tracking-wider text-charcoal-900 font-semibold">{language === 'IT' ? 'Porte Romane' : 'Roman Gates'}</span>
                 </div>
 
                 <div className="absolute bottom-4 left-10 text-[9px] font-mono text-charcoal-800 opacity-60">
-                  {language === 'IT' ? '← Fiume Castellano (Sud)' : '← Castellano River (South)'}
+                  {language === 'IT' ? 'Fiume Castellano, sud' : 'Castellano River, south'}
                 </div>
                 <div className="absolute top-4 right-10 text-[9px] font-mono text-charcoal-800 opacity-60">
-                  {language === 'IT' ? 'Fiume Tronto (Nord) →' : 'Tronto River (North) →'}
+                  {language === 'IT' ? 'Fiume Tronto, nord' : 'Tronto River, north'}
                 </div>
               </div>
             </div>

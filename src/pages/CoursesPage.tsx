@@ -10,7 +10,7 @@ export default function CoursesPage() {
       { day: 'Monday', topic: 'The Syntax of Architecture: Reading Travertine doorframes', activity: 'Walk to Piazza del Popolo with Dr. Moretti' },
       { day: 'Tuesday', topic: 'Cinema & Light: Deciphering Fellini’s early metaphors', activity: 'Vintage screening at the palazzo cinema room' },
       { day: 'Wednesday', topic: 'The Musical Verse: Petrarca and the Marche poets', activity: 'Acoustic reading inside Romanesque chapel' },
-      { day: 'Thursday', topic: 'Non-verbal elegance: The choreography of Italian hands', activity: 'Mock dialogue workshop with local craftsmen' },
+      { day: 'Thursday', topic: 'Non-verbal elegance: The choreography of Italian hands', activity: 'Guided dialogue workshop with local craftspeople' },
       { day: 'Friday', topic: 'The Modern Dialogue: Modern Italian editorial style', activity: 'Writing essays in custom linen notebooks' },
     ],
     banquet: [
@@ -25,7 +25,7 @@ export default function CoursesPage() {
       { day: 'Tuesday', topic: 'The Art of Negotiation: Elegant business structures', activity: '1:1 syntax review tailored to your enterprise' },
       { day: 'Wednesday', topic: 'Marche’s Global Footprint: local artisans going worldwide', activity: 'Evening aperitivo with local footwear designers' },
       { day: 'Thursday', topic: 'The Modern Narrative: Creative writing for digital nomads', activity: 'Substack writing hour on your sunny balcony' },
-      { day: 'Friday', topic: 'Digital Detox & Connection: Face-to-face linguistic mastery', activity: 'Scenic twilight walk to the castle view points' },
+      { day: 'Friday', topic: 'Digital Detox & Connection: Face-to-face linguistic mastery', activity: 'Scenic twilight walk to the castle viewpoints' },
     ],
   };
 
@@ -56,10 +56,10 @@ export default function CoursesPage() {
 
       {/* Interactive Selector Tabs Section */}
       <section className="py-20 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4 mb-16">
           <button
             onClick={() => setActiveCourse('humanist')}
-            className={`px-8 py-4 text-xs tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-4 text-xs tracking-[0.16em] sm:tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
               activeCourse === 'humanist'
                 ? 'bg-charcoal-950 text-travertine-50 border-charcoal-950 shadow-md'
                 : 'bg-travertine-100 text-charcoal-800 border-travertine-300 hover:text-charcoal-950 hover:bg-travertine-200/50'
@@ -69,7 +69,7 @@ export default function CoursesPage() {
           </button>
           <button
             onClick={() => setActiveCourse('banquet')}
-            className={`px-8 py-4 text-xs tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-4 text-xs tracking-[0.16em] sm:tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
               activeCourse === 'banquet'
                 ? 'bg-charcoal-950 text-travertine-50 border-charcoal-950 shadow-md'
                 : 'bg-travertine-100 text-charcoal-800 border-travertine-300 hover:text-charcoal-950 hover:bg-travertine-200/50'
@@ -79,7 +79,7 @@ export default function CoursesPage() {
           </button>
           <button
             onClick={() => setActiveCourse('artisan')}
-            className={`px-8 py-4 text-xs tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-4 text-xs tracking-[0.16em] sm:tracking-[0.18em] font-semibold uppercase transition-all duration-300 border rounded-none ${
               activeCourse === 'artisan'
                 ? 'bg-charcoal-950 text-travertine-50 border-charcoal-950 shadow-md'
                 : 'bg-travertine-100 text-charcoal-800 border-travertine-300 hover:text-charcoal-950 hover:bg-travertine-200/50'
@@ -127,7 +127,7 @@ export default function CoursesPage() {
               <div className="space-y-2">
                 <Award className="w-5 h-5 text-olive-800" />
                 <h4 className="font-serif text-sm text-charcoal-950">Certificate</h4>
-                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">Official portfolio and certified levels of linguistic mastery.</p>
+                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">A clear certificate documenting your completed level and study focus.</p>
               </div>
             </div>
 
@@ -238,7 +238,7 @@ export default function CoursesPage() {
               <div className="flex gap-3 items-start text-xs text-charcoal-800">
                 <span className="w-5 h-5 bg-charcoal-950 text-travertine-50 flex items-center justify-center text-[10px] font-bold rounded-full shrink-0">3</span>
                 <div>
-                  <h4 className="font-semibold text-charcoal-950">Immersion Embarkment</h4>
+                  <h4 className="font-semibold text-charcoal-950">Immersion Arrival</h4>
                   <p className="font-light mt-0.5">Arrive in Ascoli Piceno. Step into your high-ceilinged palazzo residence and begin living the language with complete serenity.</p>
                 </div>
               </div>

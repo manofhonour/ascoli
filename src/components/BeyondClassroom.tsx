@@ -37,7 +37,7 @@ export default function BeyondClassroom() {
     {
       title: "Sommelier-led Vineyard Tastings",
       subTitle: "L'Arte del Vino",
-      tagline: "ExploringPasserina and Pecorino vintage notes",
+      tagline: "Exploring Passerina and Pecorino tasting notes",
       description: "Delve into the historic wine caves of Marche. Sample the crisp minerality of Passerina and Pecorino, and the deep, structured red of Rosso Piceno. Learn to describe color, scent, body, and heritage like a certified Italian sommelier, practicing complex adjectives over shared cheese boards.",
       image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
       quote: "Wine is bottled poetry, and in Italy, poetry is spoken with elegant grammar.",
@@ -145,7 +145,7 @@ export default function BeyondClassroom() {
                   <div className="border-l border-terracotta-500 pl-4 py-1 italic font-serif text-xs md:text-sm text-charcoal-900 bg-travertine-100/50">
                     "{exp.quote}"
                     <span className="block text-[9px] tracking-wider uppercase font-semibold text-olive-800 not-italic mt-1.5 font-sans">
-                      — {exp.author}
+                      - {exp.author}
                     </span>
                   </div>
                 </div>

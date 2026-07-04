@@ -25,7 +25,7 @@ export default function StudentStories() {
       quote: "At Accademia Italiana, language ceased to be a mechanical catalog of verb conjugations. I began to sense the golden light hitting Piazza del Popolo, and my prose bloomed. I came for a brief course and found a lifetime's inspiration.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&h=400&q=80",
       before: "Conjugating stiff verb tables inside high-walled classrooms.",
-      after: "Expressing lyrical dialogue, nuances of art history, and local humors."
+      after: "Expressing lyrical dialogue, art-history nuance, and local humor."
     },
     {
       name: "Dr. Hiroshi Tanaka",
@@ -51,7 +51,7 @@ export default function StudentStories() {
       journey: "Graphic Designer",
       quote: "As a designer, the pure typographic environment and lack of commercial clutter in Ascoli was a sanctuary. The professors adjusted their lessons around my specific creative vocabulary and research on Renaissance printing.",
       image: "https://images.unsplash.com/photo-1534751516642-a131fed10495?auto=format&fit=crop&w=400&h=400&q=80",
-      before: "Basic tourist pleasantries with zero conversational continuity.",
+      before: "Basic tourist pleasantries without conversational continuity.",
       after: "Negotiating with local print makers and debating typeface design over wine."
     }
   ];
@@ -155,7 +155,7 @@ export default function StudentStories() {
               {/* Top Quote Icon */}
               <div className="flex items-start justify-between">
                 <Quote className="w-10 h-10 text-terracotta-500/20 stroke-[1.25]" />
-                <div className="text-[10px] font-mono tracking-widest text-olive-800 bg-olive-50 px-2 py-0.5 border border-olive-200 uppercase font-semibold">
+                <div className="text-[10px] font-mono tracking-widest text-olive-800 bg-olive-50 px-2 py-0.5 border border-olive-200 uppercase font-semibold max-w-[180px] text-right leading-relaxed">
                   {story.journey}
                 </div>
               </div>

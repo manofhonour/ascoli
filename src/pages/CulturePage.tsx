@@ -41,10 +41,10 @@ export default function CulturePage() {
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             Italian culture, <br />
-            <span className="italic text-olive-800">deconstructed and lived.</span>
+            <span className="italic text-olive-800">practiced in daily life.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            We reject the idea that language is a mere set of tools. It is a philosophy, a design framework, and a direct expression of slow, beautiful Mediterranean existence.
+            Language is more than vocabulary. It carries rhythm, gesture, memory, and the social habits that make daily Italian life feel alive.
           </p>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default function CulturePage() {
               The silent vocabulary: A masterclass in body language.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Over 50% of Italian communication is entirely non-verbal. We host a signature weekly seminar deciphering the precise grammar of micro-gestures, physical space, hand shapes, and elegant pauses that distinguish native conversationalists.
+              Italian conversation is rich with gesture, posture, timing, and silence. Our weekly seminar helps students read these subtle cues and use them with care.
             </p>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               Learn how to express surprise, appreciation, doubt, or passion without saying a single word. Practice these subtle rules with local merchants, feeling completely in tune with Italian social codes.

@@ -12,7 +12,7 @@ export default function AccommodationPage() {
       view: 'Piazza Ventidio Basso',
       perks: ['16th-Century restored frescoes', 'Private travertine bathtub', 'French linen bedding', 'Double-height vaulted ceilings'],
       image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
-      description: 'Dwell directly inside history. This exceptional master suite is located in the noble wing of Palazzo Sgariglia. Retain original Renaissance artwork on your bedroom ceiling while enjoying modern premium amenities.',
+      description: 'Stay directly inside history. This refined master suite sits in the noble wing of Palazzo Sgariglia, pairing restored Renaissance details with modern comfort.',
     },
     {
       id: 'terrace',
@@ -22,7 +22,7 @@ export default function AccommodationPage() {
       view: 'Ascoli Towers & Olive Hills',
       perks: ['Private rooftop terrace', 'Artisanal writing study', 'Rustic chestnut wood beams', 'Local terracotta flooring'],
       image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80',
-      description: 'A sun-drenched loft featuring panoramic views of Ascoli’s medieval stone towers and rolling organic olive groves. Features a stunning private terrace perfect for evening studies or writing.',
+      description: 'A sun-drenched loft with views of Ascoli’s medieval towers and the olive hills beyond. The private terrace is ideal for evening study, reading, or quiet writing.',
     },
     {
       id: 'courtyard',
@@ -32,7 +32,7 @@ export default function AccommodationPage() {
       view: 'Private Stone Courtyard',
       perks: ['Direct courtyard access', 'Stone fireplace hearth', 'Premium chef kitchen', 'Custom travertine sinks'],
       image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
-      description: 'A quiet, secluded ground-floor retreat hidden behind majestic hand-carved oak doors. Ideal for writers and solo travelers seeking complete tranquility and immediate access to a private botanical garden.',
+      description: 'A secluded ground-floor retreat behind hand-carved oak doors. Ideal for writers and solo travelers who want quiet, privacy, and direct access to a stone courtyard.',
     },
   ];
 
@@ -56,7 +56,7 @@ export default function AccommodationPage() {
             <span className="italic text-terracotta-600">in medieval stone.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Every guest is housed in hand-selected, luxury-tier apartments located inside our restored 16th-century Palazzo Sgariglia or neighboring historic estates.
+            Every guest is housed in a carefully selected apartment inside our restored 16th-century Palazzo Sgariglia or a nearby historic residence.
           </p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function AccommodationPage() {
               A private hotel standard, inside a historic residence.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              We understand that the comfort of your sanctuary directly impacts your focus and serenity. Accademia offers full, discrete concierge care that blends the independence of an apartment with the premium touches of an Aman resort.
+              The comfort of your residence directly affects the quality of your study. Accademia offers discreet concierge care that blends apartment independence with polished boutique-hotel touches.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function AccommodationPage() {
               <MapPin className="w-4 h-4 text-terracotta-600" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Culinary Stocking</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Arrive to a kitchen pre-stocked with artisanal local olive oil, fresh focaccia, dynamic seasonal fruit, and fine local Marche wine.
+                Arrive to a kitchen stocked with local olive oil, fresh focaccia, seasonal fruit, coffee, and selected Marche wine.
               </p>
             </div>
 

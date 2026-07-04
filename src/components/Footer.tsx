@@ -26,7 +26,7 @@ export default function Footer({ onTabChange }: FooterProps) {
                 : "A bespoke, luxury-tier linguistic institute located in Ascoli Piceno, Marche. We celebrate authentic Italian heritage through mindful language learning and slow living."}
             </p>
             <div className="text-[10px] font-mono tracking-widest uppercase text-olive-200">
-              Ascoli Piceno • Marche • Italia
+              Ascoli Piceno - Marche - Italia
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function Footer({ onTabChange }: FooterProps) {
                 "Un'altra lingua è una diversa visione della vita."
               </p>
               <span className="block text-[9px] tracking-wider uppercase text-olive-200 font-medium font-mono">
-                — Federico Fellini
+                - Federico Fellini
               </span>
             </div>
           </div>

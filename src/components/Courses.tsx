@@ -73,7 +73,7 @@ export default function Courses() {
       image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80",
       duration: "2 Weeks",
       hoursPerWeek: "15 Hours/week",
-      description: "Specially designed for golden-age travelers. Blend standard language learning with high-end food, wine tasting, and relaxed historical walking tours.",
+      description: "Designed for mature travelers who want language study, regional food, wine tasting, and relaxed historical walking tours.",
       hoverDetails: [
         "Shared with a peer cohort of mature travelers",
         "Daily culinary activities and wine tastings",
@@ -89,11 +89,11 @@ export default function Courses() {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
       duration: "1 - 4 Weeks",
       hoursPerWeek: "25 Hours/week",
-      description: "An intensive, high-level vocabulary dive designed for corporate executives, diplomat services, lawyers, and design industry leaders.",
+      description: "An intensive, high-level vocabulary pathway for executives, diplomats, lawyers, and design-industry leaders.",
       hoverDetails: [
         "Focus on negotiation, syntax, and business culture",
         "Drafting luxury marketing & technical documentation",
-        "Mock Italian boardroom presentations",
+        "Guided Italian presentation practice",
         "Individual analysis of sector-specific jargon",
         "Includes networking dinners with local business owners"
       ]
@@ -107,7 +107,7 @@ export default function Courses() {
       hoursPerWeek: "Customizable",
       description: "Prepare for your Italian sojourn before departure, or maintain your fluency from home after leaving Ascoli Piceno.",
       hoverDetails: [
-        "Interactive virtual boardrooms via high-speed feeds",
+        "Interactive online lessons with the same teaching team",
         "Direct continuity with your same in-person tutors",
         "Online grammar modules & conversation homework",
         "Access to digital media and streaming libraries",
@@ -243,7 +243,7 @@ export default function Courses() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="group relative bg-travertine-50 border border-travertine-300/75 h-[480px] overflow-hidden flex flex-col justify-end p-8 cursor-pointer"
+              className="group relative bg-travertine-50 border border-travertine-300/75 min-h-[460px] md:h-[500px] overflow-hidden flex flex-col justify-end p-6 sm:p-8 cursor-pointer"
             >
               {/* Outer image background */}
               <div className="absolute inset-0 z-0">
@@ -284,7 +284,7 @@ export default function Courses() {
               </div>
 
               {/* Hover Overlay Reveal (Slide In) */}
-              <div className="absolute inset-0 bg-olive-900/95 p-8 flex flex-col justify-between z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out border-t-4 border-terracotta-600">
+              <div className="absolute inset-0 bg-olive-900/95 p-8 hidden md:flex flex-col justify-between z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out border-t-4 border-terracotta-600">
                 <div className="space-y-6">
                   <div>
                     <span className="font-serif italic text-xs text-terracotta-100/80 block">
