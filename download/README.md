@@ -1,13 +1,13 @@
-# Accademia Italiana Static Site
+# Accademia Italiana Offline HTML
 
-Bu klasordeki `accademia-italiana-static-site.zip` dosyasi sitenin indirilebilir statik paketidir.
+Bu klasordeki onerilen dosya `accademia-italiana-offline.html` dosyasidir.
 
 Kullanma:
 
-1. Zip dosyasini indir.
-2. Zip dosyasini bir klasore cikart.
-3. Cikan klasordeki `index.html` dosyasini tarayicida ac.
+1. `accademia-italiana-offline.html` dosyasini indir.
+2. Dosyaya cift tikla veya tarayiciya surukle.
+3. Internet ya da sunucu gerekmeden acilmalidir.
 
-Bu paket sunucu kurmadan yerel HTML olarak acilacak sekilde hazirlanmistir. Foto, stil ve uygulama dosyalari zip icindedir.
+Alternatif olarak `accademia-italiana-offline-html.zip` dosyasini indirip icindeki HTML dosyasini acabilirsin.
 
 Not: Paket statik onizleme icindir. Form gonderimi veya canli sunucu ozellikleri gerektiren islemler icin GitHub reposundaki React projesi kullanilmalidir.
