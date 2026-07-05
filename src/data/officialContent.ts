@@ -43,7 +43,7 @@ export const officialCourses = [
     price: 'EUR 220/week',
     image: images.classroom,
     description:
-      'Small-group Italian study in Ascoli Piceno for students who want a steady weekly rhythm, conversation practice, and clear grammatical progress.',
+      'Small-group Italian course in Ascoli Piceno with 20 hours per week and groups of 3-6 students.',
     highlights: ['3-6 students per group', '20 lessons per week', 'Communicative method', 'Authentic teaching materials'],
   },
   {
@@ -55,7 +55,7 @@ export const officialCourses = [
     price: 'From EUR 370/week',
     image: images.conversation,
     description:
-      'A stronger weekly format combining 20 group hours with 5 individual lessons for learners who want faster progress.',
+      'Intensive course with 20 group hours and 5 individual hours each week.',
     highlights: ['20 group hours plus 5 individual hours', '1 week EUR 370', '2 weeks EUR 700', 'Additional weeks EUR 330'],
   },
   {
@@ -67,7 +67,7 @@ export const officialCourses = [
     price: 'EUR 30/hour',
     image: images.study,
     description:
-      'One-to-one lessons shaped around your level, schedule, professional needs, or cultural interests, in Ascoli Piceno or online.',
+      'One-to-one lessons available by appointment, with hourly and package pricing.',
     highlights: ['1 hour EUR 30', '20 hours EUR 550', '30 hours EUR 780', '50 hours EUR 1200'],
   },
   {
@@ -79,8 +79,8 @@ export const officialCourses = [
     price: 'EUR 10-14/hour',
     image: images.piazza,
     description:
-      'A lighter schedule for students living locally or staying longer, with one or two meetings each week.',
-    highlights: ['3-6 students per group', '1-2 meetings each week', 'Good for longer stays', 'Steady speaking practice'],
+      'Extensive course for groups of 3-6 students, with 4-6 hours per week and one or two weekly meetings.',
+    highlights: ['3-6 students per group', '4-6 hours per week', '1-2 meetings each week', 'EUR 10-14 per hour'],
   },
   {
     id: 'teacher-refresher',
@@ -91,7 +91,7 @@ export const officialCourses = [
     price: 'From EUR 430',
     image: images.classroom,
     description:
-      'Professional development for teachers who want to refresh Italian language, culture, and classroom practice.',
+      'Refresher course for teachers with 30 hours per week and one- or two-week formats.',
     highlights: ['30 hours per week', 'Language and culture focus', 'Available as one or two weeks', 'Designed for teachers'],
   },
   {
@@ -103,8 +103,8 @@ export const officialCourses = [
     price: 'Quote on request',
     image: images.cooking,
     description:
-      'A tailored course built around specific interests, goals, dates, and preferred pace, available in Ascoli Piceno or online.',
-    highlights: ['Personal schedule', 'Special-interest vocabulary', 'In-person or online', 'Quote prepared by the school'],
+      'Custom-made Italian course available in Ascoli Piceno or online, with pricing prepared on request.',
+    highlights: ['Personal schedule', 'Special-interest vocabulary', 'In-person or online', 'Quote on request'],
   },
 ];
 
@@ -167,7 +167,7 @@ export const accommodationOptions = [
     id: 'host-family',
     name: 'Host Family',
     italianName: 'Famiglia Ospitante',
-    tagline: 'Daily Italian at home',
+    tagline: 'Stay with a host family',
     image: images.accommodation,
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
@@ -176,27 +176,29 @@ export const accommodationOptions = [
       'Single room with half board: EUR 230/week',
       'Single room with full board: EUR 280/week',
       'Double room per student with breakfast: EUR 125/week',
+      'Double room per student with half board: EUR 185/week',
+      'Double room per student with full board: EUR 235/week',
     ],
   },
   {
     id: 'bnb',
     name: 'Bed and Breakfast',
     italianName: 'B&B',
-    tagline: 'Independent stay in town',
+    tagline: 'Town-centre accommodation',
     image: images.piazza,
     description:
-      'The school lists B&B accommodation in the town centre as an available option, with pricing provided on request.',
-    features: ['Town-centre options', 'Prices on request', 'Reservation support through the school', 'Good for independent learners'],
+      'B&B accommodation in the town centre can be requested through the school, with pricing on request.',
+    features: ['Town-centre options', 'Prices on request', 'Reservation support through the school'],
   },
   {
     id: 'hotel',
     name: 'Hotel',
     italianName: 'Hotel',
-    tagline: 'Comfort with simple planning',
+    tagline: 'Hotel stay in town',
     image: images.study,
     description:
       'Hotel accommodation in the town centre can be arranged on request for students who prefer a more conventional stay.',
-    features: ['Central Ascoli Piceno', 'Prices on request', 'Suitable for short stays', 'Reservation support through the school'],
+    features: ['Central Ascoli Piceno', 'Prices on request', 'Reservation support through the school'],
   },
 ];
 
@@ -205,7 +207,7 @@ export const ascoliHighlights = [
     title: 'Piazza del Popolo',
     type: 'Historic centre',
     description:
-      'The travertine heart of Ascoli Piceno, surrounded by the daily rhythms that make the city a strong setting for language immersion.',
+      'The travertine heart of Ascoli Piceno and one of the city landmarks.',
   },
   {
     title: 'History, art and theatre',

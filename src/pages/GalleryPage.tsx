@@ -9,14 +9,14 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState<Filter>('all');
 
   const photos = [
-    { id: 'piazza', category: 'architecture', title: 'Piazza del Popolo', location: 'Ascoli Piceno', image: images.ascoli },
-    { id: 'streets', category: 'architecture', title: 'Historic Centre', location: 'Ascoli Piceno', image: images.piazza },
+    { id: 'architecture', category: 'architecture', title: 'Historic Architecture', location: 'City setting', image: images.ascoli },
+    { id: 'streets', category: 'architecture', title: 'Town-Centre Streets', location: 'Italian daily life', image: images.piazza },
     { id: 'cooking', category: 'gastronomy', title: 'Italian Cooking', location: 'Culture add-on', image: images.cooking },
     { id: 'wine', category: 'gastronomy', title: 'Wine Tasting', location: 'Culture add-on', image: images.wine },
     { id: 'lesson', category: 'study', title: 'Small-Group Study', location: 'Italian course', image: images.classroom },
     { id: 'individual', category: 'study', title: 'Individual Lessons', location: 'Custom study', image: images.conversation },
     { id: 'reading', category: 'study', title: 'Reading and Writing', location: 'Italian practice', image: images.study },
-    { id: 'accommodation', category: 'study', title: 'Stay in Ascoli', location: 'Accommodation support', image: images.accommodation },
+    { id: 'accommodation', category: 'study', title: 'Accommodation Support', location: 'Student stay', image: images.accommodation },
   ];
 
   const filteredPhotos = filter === 'all' ? photos : photos.filter((p) => p.category === filter);
@@ -47,7 +47,7 @@ export default function GalleryPage() {
             <span className="italic text-terracotta-600">and Italian study.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            A visual overview of the site concept: Ascoli Piceno, cultural add-ons, small courses, and accommodation support.
+            A visual overview of the Accademia experience: Ascoli Piceno, cultural add-ons, small courses, and accommodation support.
           </p>
         </div>
       </section>

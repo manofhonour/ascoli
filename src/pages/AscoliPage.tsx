@@ -23,7 +23,7 @@ export default function AscoliPage() {
             <span className="italic text-terracotta-600">for Italian immersion.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            The official school location page presents Ascoli Piceno as a city of history, culture, natural beauty, food, festivals, theatre, and access to the wider Marche region.
+            Ascoli Piceno brings together history, culture, natural beauty, food, festivals, theatre, and access to the wider Marche region.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function AscoliPage() {
 
           <div className="lg:col-span-6">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
-              <img src={images.ascoli} alt="Travertine details in Ascoli Piceno" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={images.ascoli} alt="Historic Italian city details" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function AscoliPage() {
               Reaching Ascoli Piceno.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Official travel guidance lists train, bus, car, and airport routes. Students should confirm current timetables before travelling.
+              Students can plan routes by train, bus, car, and nearby airports. Current timetables should be checked before travelling.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function AscoliPage() {
               <Landmark className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">From Rome</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                By bus or car, Rome to Ascoli Piceno is described as about 2.5 hours, with routes via S4 or A24/E80.
+                By bus or car, Rome to Ascoli Piceno is about 2.5 hours, with routes via S4 or A24/E80.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ export default function AscoliPage() {
               <Train className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">By Train</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                From Milan, the route is listed via San Benedetto del Tronto, with onward local transport.
+                From Milan, the route goes via San Benedetto del Tronto, with onward local transport.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ export default function AscoliPage() {
               <Plane className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Airports</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                The school lists Ancona-Falconara at about 130 km and Pescara at about 90 km.
+                Ancona-Falconara is about 130 km away and Pescara is about 90 km away.
               </p>
             </div>
           </div>

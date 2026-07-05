@@ -42,11 +42,11 @@ export default function TestimonialsPage() {
             Method and Voice
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Official messages from <br />
+            Messages from <br />
             <span className="italic text-olive-800">the Accademia.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            This page avoids unverified student reviews and instead presents published institutional messages and service areas.
+            A concise view of the school method, director voice, and language-service areas.
           </p>
         </div>
       </section>

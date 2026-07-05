@@ -5,10 +5,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { contactInfo, directorQuote, services } from '../data/officialContent';
 import accademiaLogo from '../assets/accademia-logo.png';
 
-const officialNotes = [
+const schoolNotes = [
   {
     title: 'Open up to the world',
-    detail: 'Accademia Internazionale presents language teaching and translation services under this international message.',
+    detail: 'Accademia Internazionale connects language teaching, translation, and international communication.',
   },
   {
     title: 'Precision in translation',
@@ -25,9 +25,9 @@ export default function TestimonialsSection() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
-  const handleNext = () => setActiveIdx((prev) => (prev + 1) % officialNotes.length);
-  const handlePrev = () => setActiveIdx((prev) => (prev - 1 + officialNotes.length) % officialNotes.length);
-  const activeNote = officialNotes[activeIdx];
+  const handleNext = () => setActiveIdx((prev) => (prev + 1) % schoolNotes.length);
+  const handlePrev = () => setActiveIdx((prev) => (prev - 1 + schoolNotes.length) % schoolNotes.length);
+  const activeNote = schoolNotes[activeIdx];
 
   return (
     <section id="testimonials" className="py-32 md:py-44 bg-travertine-50">
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
                 <ArrowLeft className="w-4 h-4 stroke-[1.25]" />
               </button>
               <span className="text-[10px] font-mono text-charcoal-800/80 tracking-widest">
-                0{activeIdx + 1} / 0{officialNotes.length}
+                0{activeIdx + 1} / 0{schoolNotes.length}
               </span>
               <button
                 onClick={handleNext}
@@ -137,7 +137,7 @@ export default function TestimonialsSection() {
                   <button
                     onClick={() => setIsQuoteOpen(true)}
                     className="absolute inset-0 m-auto w-16 h-16 rounded-full bg-travertine-50/95 backdrop-blur-md flex items-center justify-center text-olive-800 shadow-xl transition-all duration-500 hover:scale-105 cursor-pointer border border-travertine-300/50"
-                    aria-label="Open official quote"
+                    aria-label="Open director quote"
                   >
                     <Play className="w-5 h-5 fill-olive-800 stroke-none translate-x-0.5" />
                   </button>

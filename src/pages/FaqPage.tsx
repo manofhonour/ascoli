@@ -17,42 +17,42 @@ export default function FaqPage() {
     {
       id: 'courses',
       category: 'Courses',
-      question: 'Which Italian courses are listed by the school?',
+      question: 'Which Italian courses does the school offer?',
       answer:
-        'The official offer includes standard courses, intensive courses, individual lessons, extensive courses, refresher courses for teachers, and custom-made courses in Ascoli Piceno or online.',
+        'The course offer includes standard courses, intensive courses, individual lessons, extensive courses, refresher courses for teachers, and custom-made courses in Ascoli Piceno or online.',
     },
     {
       id: 'prices',
       category: 'Pricing',
-      question: 'What prices are published for 2024/2025?',
+      question: 'What are the 2024/2025 prices?',
       answer:
-        'Published examples include standard courses at EUR 220 per week, individual lessons at EUR 30 per hour, 20 individual hours at EUR 550, and intensive courses from EUR 370 for one week. Final prices and availability should be confirmed with the school.',
+        'Prices include standard courses at EUR 220 per week, individual lessons at EUR 30 per hour, 20 individual hours at EUR 550, and intensive courses from EUR 370 for one week. Contact the school for current availability.',
     },
     {
       id: 'accommodation',
       category: 'Accommodation',
       question: 'What accommodation can the school help reserve?',
       answer:
-        'The school lists host-family accommodation, B&B, and hotel options in Ascoli Piceno. Host-family weekly prices are published, while B&B and hotel prices are on request.',
+        'The school can help reserve host-family accommodation, B&B, and hotel options in Ascoli Piceno. Host-family weekly prices are listed, while B&B and hotel prices are on request.',
     },
     {
       id: 'travel',
       category: 'Travel',
       question: 'How do students reach Ascoli Piceno?',
       answer:
-        'Official guidance mentions travel by train via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports. Timetables should be checked before travel.',
+        'Students can travel by train via San Benedetto del Tronto, by bus or car from Rome in about 2.5 hours, or through Ancona-Falconara and Pescara airports. Timetables should be checked before travel.',
     },
     {
       id: 'culture',
       category: 'Culture',
       question: 'Which culture courses or add-ons are available?',
       answer:
-        'Published add-ons include Italian cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, current affairs, business Italian, tourism and hotel management, university entrance preparation, certification exam preparation, history, art history, literature, and Italy today.',
+        'Add-ons include Italian cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, current affairs, business Italian, tourism and hotel management, university entrance preparation, certification exam preparation, history, art history, literature, and Italy today.',
     },
     {
       id: 'contact',
       category: 'Contact',
-      question: 'What are the official contact details?',
+      question: 'What are the contact details?',
       answer: `${contactInfo.schoolName} is at ${contactInfo.addressLine1}, ${contactInfo.cityLine}. Email ${contactInfo.email}, phone ${contactInfo.phone}, WhatsApp ${contactInfo.whatsapp}. Office hours are ${contactInfo.hours}.`,
     },
   ];
@@ -75,10 +75,10 @@ export default function FaqPage() {
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             Practical answers <br />
-            <span className="italic text-terracotta-600">from the official offer.</span>
+            <span className="italic text-terracotta-600">for planning your course.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Course, accommodation, travel, culture, and contact details aligned with the official Accademia websites.
+            Course, accommodation, travel, culture, and contact details for Accademia Italiana in Ascoli Piceno.
           </p>
         </div>
       </section>

@@ -43,7 +43,7 @@ export default function Teachers() {
                 <h3 className="font-serif text-3xl text-charcoal-950 font-light">{contactInfo.director}</h3>
               </div>
               <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                The official school profile identifies Dr. Antonella Valentini as director and describes a long-standing commitment to Italian language teaching and language services.
+                Dr. Antonella Valentini directs the school, which combines Italian language teaching with wider language services.
               </p>
             </div>
             <div className="pt-6 border-t border-travertine-300/70 text-[10px] uppercase tracking-widest text-olive-800 font-bold">

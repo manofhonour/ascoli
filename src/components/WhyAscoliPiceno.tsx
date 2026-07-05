@@ -44,7 +44,7 @@ export default function WhyAscoliPiceno() {
         >
           <img
             src={images.ascoli}
-            alt="Historic travertine architecture in Piazza del Popolo, Ascoli Piceno"
+            alt="Historic Italian architecture"
             className="w-full h-full object-cover grayscale brightness-95 hover:grayscale-0 hover:scale-102 transition-all duration-[2s] ease-out"
             referrerPolicy="no-referrer"
           />

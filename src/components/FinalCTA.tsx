@@ -16,7 +16,7 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
       <div className="absolute inset-0 z-0">
         <img
           src={images.ascoli}
-          alt="Ascoli Piceno travertine facade in golden light"
+          alt="Historic Italian architecture"
           className="w-full h-full object-cover grayscale brightness-40"
           referrerPolicy="no-referrer"
         />

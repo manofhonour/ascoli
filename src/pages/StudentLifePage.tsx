@@ -55,7 +55,7 @@ export default function StudentLifePage() {
             Small classes, local context, and optional culture.
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The concept remains premium and personal, but the content is grounded in published course options rather than fictional events.
+            The student experience centres on course formats, local conversation, and optional cultural study.
           </p>
         </div>
 

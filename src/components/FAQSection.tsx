@@ -31,19 +31,19 @@ export default function FAQSection() {
     {
       question: 'What are the main course prices?',
       answer:
-        'The 2024/2025 information lists the standard course at EUR 220 per week, intensive course from EUR 370 for one week, and individual lessons at EUR 30 per hour with package prices available.',
+        'For 2024/2025, the standard course is EUR 220 per week, the intensive course starts from EUR 370 for one week, and individual lessons are EUR 30 per hour, with package prices available.',
       category: 'Pricing',
     },
     {
       question: 'Can the school help with accommodation?',
       answer:
-        'Yes. The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno without additional reservation cost. Host-family prices are published; B&B and hotel prices are on request.',
+        'Yes. The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno without additional reservation cost. Host-family prices are listed; B&B and hotel prices are on request.',
       category: 'Accommodation',
     },
     {
       question: 'How can I reach Ascoli Piceno?',
       answer:
-        'Official travel guidance lists train connections via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports.',
+        'Travel options include train connections via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports.',
       category: 'Travel',
     },
     {

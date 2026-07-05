@@ -29,7 +29,7 @@ export default function BlogPage() {
       readTime: '4 min read',
       image: officialCourses[0].image,
       content: [
-        'Accademia Italiana publishes a flexible course offer for students with different goals and schedules.',
+        'Accademia Italiana offers flexible course formats for students with different goals and schedules.',
         'The standard course is a small-group format, while intensive study adds individual hours. Students who need a tailored schedule can choose individual or custom-made lessons.',
         'The right choice depends on level, dates, pace, and whether the student wants cultural add-ons or exam preparation.',
       ],
@@ -37,7 +37,7 @@ export default function BlogPage() {
     {
       id: 'culture',
       title: 'Culture add-ons: food, wine, art, history, and exams',
-      excerpt: 'The school lists cultural and specialist topics that can extend Italian language study.',
+      excerpt: 'Cultural and specialist topics can extend Italian language study.',
       category: 'Culture',
       date: 'Updated 2026',
       author: 'Accademia Italiana',
@@ -45,8 +45,8 @@ export default function BlogPage() {
       image: culturalOfferings[0].image,
       content: [
         'Italian learning becomes stronger when vocabulary is connected with lived contexts.',
-        'Published add-ons include cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, business Italian, tourism, university preparation, certification preparation, history, art history, literature, and Italy today.',
-        'Exact availability should be confirmed with the school for the student dates and language level.',
+        'Add-ons include cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, business Italian, tourism, university preparation, certification preparation, history, art history, literature, and Italy today.',
+        'Availability depends on dates, level, and course format.',
       ],
     },
     {
@@ -90,7 +90,7 @@ export default function BlogPage() {
                   <span className="italic text-olive-800">culture and Ascoli.</span>
                 </h1>
                 <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-                  Short institutional notes based on the official course and location information.
+                  Short institutional notes on courses, culture, and the Ascoli Piceno setting.
                 </p>
               </div>
             </section>
@@ -150,7 +150,7 @@ export default function BlogPage() {
               </button>
               <div className="flex items-center gap-1.5 text-xs text-olive-800">
                 <Share2 className="w-4 h-4" />
-                <span className="font-semibold uppercase tracking-widest text-[10px]">Official Note</span>
+                <span className="font-semibold uppercase tracking-widest text-[10px]">School Note</span>
               </div>
             </div>
 

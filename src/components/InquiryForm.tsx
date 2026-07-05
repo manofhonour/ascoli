@@ -108,7 +108,7 @@ export default function InquiryForm() {
                       Course Inquiry
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
-                      This form prepares your message. For official confirmation, contact the school office directly.
+                      This form prepares your message. Contact the school office directly for booking confirmation.
                     </p>
                   </div>
 
@@ -237,7 +237,7 @@ export default function InquiryForm() {
                     <h3 className="font-serif text-3xl text-charcoal-950 font-light">Inquiry Noted</h3>
                     <p className="text-xs md:text-sm text-charcoal-800 font-light max-w-md leading-relaxed">
                       Please contact the school at <span className="font-medium text-charcoal-950">{contactInfo.email}</span> or WhatsApp{' '}
-                      <span className="font-medium text-charcoal-950">{contactInfo.whatsapp}</span> for official booking confirmation.
+                      <span className="font-medium text-charcoal-950">{contactInfo.whatsapp}</span> for booking confirmation.
                     </p>
                   </div>
 

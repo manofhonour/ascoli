@@ -37,7 +37,7 @@ export default function ContactPage() {
             <span className="italic text-olive-800">in Ascoli Piceno.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Use the official phone, WhatsApp, and email contacts below to confirm courses, dates, prices, and accommodation.
+            Use the phone, WhatsApp, and email contacts below to confirm courses, dates, prices, and accommodation.
           </p>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                       Message Preview
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
-                      This on-page form is a visual aid. Use the official contacts for confirmed booking.
+                      This on-page form is a visual aid. Use the school contacts for booking confirmation.
                     </p>
                   </div>
 

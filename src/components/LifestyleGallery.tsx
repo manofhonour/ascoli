@@ -17,7 +17,7 @@ export default function LifestyleGallery() {
     {
       id: 1,
       url: images.ascoli,
-      caption: 'Piazza del Popolo and the travertine centre of Ascoli Piceno.',
+      caption: 'Historic architecture and the atmosphere of central Italy.',
       span: 'md:col-span-4 h-[280px]',
     },
     {
@@ -41,7 +41,7 @@ export default function LifestyleGallery() {
     {
       id: 5,
       url: images.piazza,
-      caption: 'Conversation grows naturally in cafes, streets, and cultural visits.',
+      caption: 'Conversation practice connects lessons with everyday Italian settings.',
       span: 'md:col-span-5 h-[320px]',
     },
     {
@@ -68,7 +68,7 @@ export default function LifestyleGallery() {
 
           <div className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-widest uppercase text-charcoal-950 py-2 border-b border-charcoal-950/20">
             <Camera className="w-4 h-4 stroke-[1.25]" />
-            <span>Accademia Visual Notes</span>
+            <span>Italian Study Notes</span>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function LifestyleGallery() {
 
               <div className="absolute inset-0 bg-charcoal-950/75 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-between text-travertine-100 text-[10px] tracking-wider font-mono uppercase">
-                  <span>Study in Ascoli</span>
+                  <span>Study in Italy</span>
                   <Camera className="w-3.5 h-3.5" />
                 </div>
 

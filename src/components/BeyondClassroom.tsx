@@ -42,7 +42,7 @@ export default function BeyondClassroom() {
 
                   <div className="border-l border-terracotta-500 pl-4 py-2 bg-travertine-100/50">
                     <p className="text-[11px] md:text-xs text-charcoal-800 leading-relaxed">
-                      Availability and exact schedules are confirmed by the school according to dates, level, and course format.
+                      Contact the school for availability, schedules, level placement, and course format.
                     </p>
                   </div>
                 </div>

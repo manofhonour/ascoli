@@ -25,7 +25,7 @@ export default function CulturePage() {
             <span className="italic text-olive-800">that support language.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Accademia Italiana lists Italian culture courses and specialist topics that can extend standard or intensive Italian study.
+            Accademia Italiana offers Italian culture courses and specialist topics that can extend standard or intensive Italian study.
           </p>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function CulturePage() {
               Business, tourism, exams, university, and Italian culture.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Published add-ons include current affairs, business Italian, tourism and hotel management, university admission preparation, certification exam preparation, Italian history, art history, literature, and Italy today.
+              Add-ons include current affairs, business Italian, tourism and hotel management, university admission preparation, certification exam preparation, Italian history, art history, literature, and Italy today.
             </p>
           </div>
 

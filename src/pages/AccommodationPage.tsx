@@ -29,7 +29,7 @@ export default function AccommodationPage() {
             <span className="italic text-terracotta-600">with school support.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            The school can help reserve host-family, B&B, or hotel accommodation in the town centre. Host-family prices are published; B&B and hotel prices are available on request.
+            The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Host-family prices are listed below; B&B and hotel prices are available on request.
           </p>
         </div>
       </section>
@@ -102,13 +102,13 @@ export default function AccommodationPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-              Booking Notes
+              Booking
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-tight">
               Confirm availability directly with the school.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Accommodation availability, exact address, house rules, payment conditions, and final prices should be confirmed with the Accademia office before booking travel.
+              Contact the Accademia office for accommodation availability, address details, house rules, payment conditions, and final prices before booking travel.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export default function AccommodationPage() {
               <MapPin className="w-4 h-4 text-terracotta-600" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Town-Centre Focus</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                The official accommodation page refers to options in Ascoli Piceno and town-centre B&B or hotel stays.
+                Accommodation options include host family, B&B, and hotel stays in Ascoli Piceno.
               </p>
             </div>
 
@@ -125,7 +125,7 @@ export default function AccommodationPage() {
               <Info className="w-4 h-4 text-terracotta-600" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">No Extra Reservation Cost</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                The school states that it can reserve accommodation for students without an additional reservation cost.
+                The school can reserve accommodation for students without an additional reservation cost.
               </p>
             </div>
           </div>

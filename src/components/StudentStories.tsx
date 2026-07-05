@@ -29,7 +29,7 @@ const pathways = [
     title: 'Teacher or exam candidate',
     focus: 'Refresher and exam preparation',
     need: 'Prepare for CILS, I.T., university entrance, or refresh Italian teaching practice.',
-    fit: 'The school lists teacher-refresher courses and certification preparation among its services.',
+    fit: 'Teacher-refresher courses and certification preparation are part of the course and service offer.',
   },
 ];
 

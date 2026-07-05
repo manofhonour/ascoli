@@ -19,14 +19,14 @@ export default function CoursesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.08] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            Official Course Offer
+            Course Offer
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             Italian courses shaped <br />
             <span className="italic text-olive-800">around level and purpose.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            The school publishes standard, intensive, individual, extensive, teacher-refresher, and custom-made course formats for learners in Ascoli Piceno or online.
+            The school offers standard, intensive, individual, extensive, teacher-refresher, and custom-made course formats in Ascoli Piceno or online.
           </p>
         </div>
       </section>
@@ -93,7 +93,7 @@ export default function CoursesPage() {
             </div>
 
             <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal border-b border-travertine-300 pb-4">
-              Published information for this format
+              Details for this format
             </h3>
 
             <div className="space-y-4 pt-2">
@@ -107,7 +107,7 @@ export default function CoursesPage() {
 
             <div className="bg-olive-50 p-4 border border-olive-200 mt-6">
               <p className="text-[11px] text-olive-900 font-light leading-relaxed">
-                Exact dates, level placement, availability, and booking conditions should be confirmed directly with the school office.
+                Contact the school office for current dates, level placement, availability, and booking conditions.
               </p>
             </div>
           </div>

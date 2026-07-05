@@ -9,12 +9,12 @@ export default function AboutPage() {
     {
       icon: Compass,
       title: 'Language Services Since 1997',
-      text: 'The official profile presents the Accademia as a language-services organisation active since 1997.',
+      text: 'Accademia has worked as a language-services organisation since 1997.',
     },
     {
       icon: ShieldCheck,
       title: 'Directed by Dr. Antonella Valentini',
-      text: 'The school identifies Dr. Antonella Valentini as director and highlights long experience in language teaching.',
+      text: 'The school is directed by Dr. Antonella Valentini and supported by qualified teachers.',
     },
     {
       icon: Heart,
@@ -62,7 +62,7 @@ export default function AboutPage() {
             A long-standing language centre led by {contactInfo.director}.
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The official site describes an institution dedicated to language services since 1997, with Italian courses for foreigners, language services, teacher training, tutoring, exam preparation, and international support.
+            The institution has been dedicated to language services since 1997, with Italian courses for foreigners, language courses, teacher training, tutoring, exam preparation, and international support.
           </p>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
             The Italian course offer is practical and flexible: small standard groups, intensive courses, individual lessons, extensive courses, teacher-refreshers, and custom-made study plans in Ascoli Piceno or online.
@@ -73,7 +73,7 @@ export default function AboutPage() {
           <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
             <img
               src={images.ascoli}
-              alt="Historic travertine architecture in Ascoli Piceno"
+              alt="Historic Italian city architecture"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -90,7 +90,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase">
-              Official Commitments
+              School Commitments
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal-950">
               What the school stands on.

@@ -78,7 +78,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             </button>
           </motion.div>
 
-          {/* Official address callout */}
+          {/* Address callout */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -105,7 +105,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
           >
             <img
               src={images.ascoli}
-              alt="Travertine facade and historic clock in Piazza del Popolo, Ascoli Piceno"
+              alt="Historic Italian architecture"
               className="w-full h-full object-cover transition-transform duration-[6s] ease-out hover:scale-103"
               referrerPolicy="no-referrer"
             />
