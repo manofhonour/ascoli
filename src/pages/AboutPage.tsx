@@ -2,29 +2,43 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Heart, Sparkles, Compass } from 'lucide-react';
 import { contactInfo, images, services } from '../data/officialContent';
+import { useLanguage } from '../context/LanguageContext';
 import accademiaLogo from '../assets/accademia-logo.png';
 
 export default function AboutPage() {
+  const { language } = useLanguage();
   const pillars = [
     {
       icon: Compass,
-      title: 'Language Services Since 1997',
-      text: 'Accademia has worked as a language-services organisation since 1997.',
+      title: language === 'IT' ? 'Servizi linguistici dal 1997' : 'Language Services Since 1997',
+      text:
+        language === 'IT'
+          ? 'Accademia opera come organizzazione di servizi linguistici dal 1997.'
+          : 'Accademia has worked as a language-services organisation since 1997.',
     },
     {
       icon: ShieldCheck,
-      title: 'Directed by Dr. Antonella Valentini',
-      text: 'The school is directed by Dr. Antonella Valentini and supported by qualified teachers.',
+      title: language === 'IT' ? 'Direzione della Dr. Antonella Valentini' : 'Directed by Dr. Antonella Valentini',
+      text:
+        language === 'IT'
+          ? 'La scuola e diretta dalla Dr. Antonella Valentini e supportata da docenti qualificati.'
+          : 'The school is directed by Dr. Antonella Valentini and supported by qualified teachers.',
     },
     {
       icon: Heart,
-      title: 'Tailor-Made Learning',
-      text: 'Lessons can be customized by level, goals, dates, and interest area, including online or in-person formats.',
+      title: language === 'IT' ? 'Apprendimento su misura' : 'Tailor-Made Learning',
+      text:
+        language === 'IT'
+          ? 'Le lezioni possono essere personalizzate per livello, obiettivi, date e interessi, online o in presenza.'
+          : 'Lessons can be customized by level, goals, dates, and interest area, including online or in-person formats.',
     },
     {
       icon: Sparkles,
-      title: 'Italian Culture in Context',
-      text: 'Language study can connect with Ascoli Piceno, food, wine, art, literature, history, and local traditions.',
+      title: language === 'IT' ? 'Cultura italiana nel contesto' : 'Italian Culture in Context',
+      text:
+        language === 'IT'
+          ? 'Lo studio della lingua puo collegarsi ad Ascoli Piceno, cucina, vino, arte, letteratura, storia e tradizioni locali.'
+          : 'Language study can connect with Ascoli Piceno, food, wine, art, literature, history, and local traditions.',
     },
   ];
 
@@ -44,11 +58,15 @@ export default function AboutPage() {
             Chi siamo
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Italian teaching and language services <br />
-            <span className="italic text-olive-800">in Ascoli Piceno.</span>
+            {language === 'IT' ? 'Insegnamento dell italiano e servizi linguistici' : 'Italian teaching and language services'} <br />
+            <span className="italic text-olive-800">
+              {language === 'IT' ? 'ad Ascoli Piceno.' : 'in Ascoli Piceno.'}
+            </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Accademia Italiana and Accademia Internazionale share a practical mission: teaching languages, supporting communication, and helping students experience Italian culture with care.
+            {language === 'IT'
+              ? 'Accademia Italiana e Accademia Internazionale condividono una missione pratica: insegnare lingue, sostenere la comunicazione e accompagnare gli studenti nella cultura italiana con cura.'
+              : 'Accademia Italiana and Accademia Internazionale share a practical mission: teaching languages, supporting communication, and helping students experience Italian culture with care.'}
           </p>
         </div>
       </section>
@@ -56,16 +74,22 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-6 space-y-6">
           <span className="text-[10px] tracking-widest uppercase font-bold text-olive-800 block">
-            The School
+            {language === 'IT' ? 'La scuola' : 'The School'}
           </span>
           <h2 className="font-serif text-2xl md:text-4xl text-charcoal-950 font-light leading-snug">
-            A long-standing language centre led by {contactInfo.director}.
+            {language === 'IT'
+              ? `Un centro linguistico storico diretto da ${contactInfo.director}.`
+              : `A long-standing language centre led by ${contactInfo.director}.`}
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The institution has been dedicated to language services since 1997, with Italian courses for foreigners, language courses, teacher training, tutoring, exam preparation, and international support.
+            {language === 'IT'
+              ? 'L istituzione e dedicata ai servizi linguistici dal 1997, con corsi di italiano per stranieri, corsi di lingue, formazione docenti, tutoraggio, preparazione esami e supporto internazionale.'
+              : 'The institution has been dedicated to language services since 1997, with Italian courses for foreigners, language courses, teacher training, tutoring, exam preparation, and international support.'}
           </p>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The Italian course offer is practical and flexible: small standard groups, intensive courses, individual lessons, extensive courses, teacher-refreshers, and custom-made study plans in Ascoli Piceno or online.
+            {language === 'IT'
+              ? 'L offerta di italiano e pratica e flessibile: piccoli gruppi standard, corsi intensivi, lezioni individuali, corsi estensivi, aggiornamento docenti e percorsi su misura ad Ascoli Piceno o online.'
+              : 'The Italian course offer is practical and flexible: small standard groups, intensive courses, individual lessons, extensive courses, teacher-refreshers, and custom-made study plans in Ascoli Piceno or online.'}
           </p>
         </div>
 
@@ -80,7 +104,7 @@ export default function AboutPage() {
           </div>
           <div className="absolute -bottom-6 -left-6 bg-olive-900 text-travertine-50 p-6 max-w-xs shadow-xl hidden md:block">
             <span className="font-serif text-sm italic font-light block leading-relaxed">
-              "Live Italy, Speak Italian."
+              {language === 'IT' ? '"Vivi l Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
             </span>
           </div>
         </div>
@@ -90,10 +114,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase">
-              School Commitments
+              {language === 'IT' ? 'Impegni della scuola' : 'School Commitments'}
             </span>
             <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal-950">
-              What the school stands on.
+              {language === 'IT' ? 'Le basi della scuola.' : 'What the school stands on.'}
             </h2>
           </div>
 
@@ -115,21 +139,27 @@ export default function AboutPage() {
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-16 space-y-4 max-w-xl">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            Services
+            {language === 'IT' ? 'Servizi' : 'Services'}
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-light text-charcoal-950">
             Accademia Italiana - Accademia Internazionale.
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The institution combines Italian teaching with a wider language-services offer.
+            {language === 'IT'
+              ? 'L istituzione unisce insegnamento dell italiano e una piu ampia offerta di servizi linguistici.'
+              : 'The institution combines Italian teaching with a wider language-services offer.'}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
             <div key={service.title} className="space-y-3 bg-travertine-100 p-6 border border-travertine-200/60 hover:shadow-xl transition-all duration-300">
-              <h3 className="font-serif text-xl text-charcoal-950 font-normal">{service.title}</h3>
-              <p className="text-xs text-charcoal-800 font-light leading-relaxed">{service.description}</p>
+              <h3 className="font-serif text-xl text-charcoal-950 font-normal">
+                {language === 'IT' ? service.titleIT : service.title}
+              </h3>
+              <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                {language === 'IT' ? service.descriptionIT : service.description}
+              </p>
             </div>
           ))}
         </div>

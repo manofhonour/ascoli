@@ -11,53 +11,97 @@ interface FAQ {
 }
 
 export default function FAQSection() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState('');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs: FAQ[] = [
-    {
-      question: 'Do I need prior knowledge of Italian?',
-      answer:
-        'No. Courses can be planned for different levels, from beginners to advanced students. The school can advise on the right format before enrolment.',
-      category: 'Levels',
-    },
-    {
-      question: 'How large are the standard groups?',
-      answer:
-        'The standard course is listed for small groups of 3-6 students. Individual lessons and custom courses are also available.',
-      category: 'Courses',
-    },
-    {
-      question: 'What are the main course prices?',
-      answer:
-        'For 2024/2025, the standard course is EUR 220 per week, the intensive course starts from EUR 370 for one week, and individual lessons are EUR 30 per hour, with package prices available.',
-      category: 'Pricing',
-    },
-    {
-      question: 'Can the school help with accommodation?',
-      answer:
-        'Yes. The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno without additional reservation cost. Host-family prices are listed; B&B and hotel prices are on request.',
-      category: 'Accommodation',
-    },
-    {
-      question: 'Is the school welcoming for solo travelers, LGBTQ+ learners, and students with accessibility needs?',
-      answer:
-        'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so practical details can be discussed before arrival.',
-      category: 'Student Support',
-    },
-    {
-      question: 'How can I reach Ascoli Piceno?',
-      answer:
-        'Travel options include train connections via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports.',
-      category: 'Travel',
-    },
-    {
-      question: 'How do I contact the school?',
-      answer: `Write to ${contactInfo.email}, call ${contactInfo.phone}, or use WhatsApp ${contactInfo.whatsapp}. Office hours are ${contactInfo.hours}.`,
-      category: 'Contact',
-    },
-  ];
+  const faqs: FAQ[] = language === 'IT'
+    ? [
+        {
+          question: 'Serve conoscere gia l italiano?',
+          answer:
+            'No. I corsi possono essere organizzati per diversi livelli, dai principianti agli studenti avanzati. La scuola puo consigliare il formato piu adatto prima dell iscrizione.',
+          category: 'Livelli',
+        },
+        {
+          question: 'Quanto sono grandi i gruppi standard?',
+          answer:
+            'Il corso standard prevede piccoli gruppi di 3-6 studenti. Sono disponibili anche lezioni individuali e corsi su misura.',
+          category: 'Corsi',
+        },
+        {
+          question: 'Quali sono i principali prezzi dei corsi?',
+          answer:
+            'Per il 2024/2025, il corso standard costa EUR 220 a settimana, il corso intensivo parte da EUR 370 per una settimana e le lezioni individuali costano EUR 30 all ora, con pacchetti disponibili.',
+          category: 'Prezzi',
+        },
+        {
+          question: 'La scuola puo aiutare con l alloggio?',
+          answer:
+            'Si. La scuola puo aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno senza costo di prenotazione aggiuntivo. I prezzi della famiglia ospitante sono indicati; B&B e hotel sono su richiesta.',
+          category: 'Alloggi',
+        },
+        {
+          question: 'La scuola accoglie chi viaggia da solo, studenti LGBTQ+ e persone con esigenze di accessibilita?',
+          answer:
+            'Si. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilita o esigenze di accessibilita possono contattare la scuola in anticipo per discutere gli aspetti pratici prima dell arrivo.',
+          category: 'Supporto studenti',
+        },
+        {
+          question: 'Come si raggiunge Ascoli Piceno?',
+          answer:
+            'Le opzioni includono collegamenti in treno via San Benedetto del Tronto, bus o auto da Roma in circa 2,5 ore e aeroporti di Ancona-Falconara e Pescara.',
+          category: 'Viaggio',
+        },
+        {
+          question: 'Come posso contattare la scuola?',
+          answer: `Scrivi a ${contactInfo.email}, chiama ${contactInfo.phone} o usa WhatsApp ${contactInfo.whatsapp}. Orari: ${contactInfo.hoursIT}.`,
+          category: 'Contatti',
+        },
+      ]
+    : [
+        {
+          question: 'Do I need prior knowledge of Italian?',
+          answer:
+            'No. Courses can be planned for different levels, from beginners to advanced students. The school can advise on the right format before enrolment.',
+          category: 'Levels',
+        },
+        {
+          question: 'How large are the standard groups?',
+          answer:
+            'The standard course is listed for small groups of 3-6 students. Individual lessons and custom courses are also available.',
+          category: 'Courses',
+        },
+        {
+          question: 'What are the main course prices?',
+          answer:
+            'For 2024/2025, the standard course is EUR 220 per week, the intensive course starts from EUR 370 for one week, and individual lessons are EUR 30 per hour, with package prices available.',
+          category: 'Pricing',
+        },
+        {
+          question: 'Can the school help with accommodation?',
+          answer:
+            'Yes. The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno without additional reservation cost. Host-family prices are listed; B&B and hotel prices are on request.',
+          category: 'Accommodation',
+        },
+        {
+          question: 'Is the school welcoming for solo travelers, LGBTQ+ learners, and students with accessibility needs?',
+          answer:
+            'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so practical details can be discussed before arrival.',
+          category: 'Student Support',
+        },
+        {
+          question: 'How can I reach Ascoli Piceno?',
+          answer:
+            'Travel options include train connections via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports.',
+          category: 'Travel',
+        },
+        {
+          question: 'How do I contact the school?',
+          answer: `Write to ${contactInfo.email}, call ${contactInfo.phone}, or use WhatsApp ${contactInfo.whatsapp}. Office hours are ${contactInfo.hours}.`,
+          category: 'Contact',
+        },
+      ];
 
   const filteredFaqs = faqs.filter(
     (faq) =>

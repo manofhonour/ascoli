@@ -1,28 +1,39 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Quote, User } from 'lucide-react';
-import { contactInfo, directorQuote, services } from '../data/officialContent';
+import { contactInfo, directorQuote, directorQuoteIT, services } from '../data/officialContent';
+import { useLanguage } from '../context/LanguageContext';
 import accademiaLogo from '../assets/accademia-logo.png';
 
 export default function TestimonialsPage() {
+  const { language } = useLanguage();
   const notes = [
     {
       id: 'method',
-      name: 'Communicative Method',
-      role: 'Teaching principle',
-      quote: 'The school highlights communication, flexibility, qualified teachers, and authentic teaching material.',
+      name: language === 'IT' ? 'Metodo comunicativo' : 'Communicative Method',
+      role: language === 'IT' ? 'Principio didattico' : 'Teaching principle',
+      quote:
+        language === 'IT'
+          ? 'La scuola valorizza comunicazione, flessibilita, docenti qualificati e materiali autentici.'
+          : 'The school highlights communication, flexibility, qualified teachers, and authentic teaching material.',
     },
     {
       id: 'courses',
-      name: 'Italian Courses',
-      role: 'Student pathway',
-      quote: 'The course offer includes standard, intensive, extensive, individual, teacher-refresher, online, and custom-made formats.',
+      name: language === 'IT' ? 'Corsi di italiano' : 'Italian Courses',
+      role: language === 'IT' ? 'Percorso studente' : 'Student pathway',
+      quote:
+        language === 'IT'
+          ? 'L offerta include corsi standard, intensivi, estensivi, individuali, aggiornamento docenti, online e su misura.'
+          : 'The course offer includes standard, intensive, extensive, individual, teacher-refresher, online, and custom-made formats.',
     },
     {
       id: 'services',
-      name: 'Language Services',
+      name: language === 'IT' ? 'Servizi linguistici' : 'Language Services',
       role: 'Accademia Internazionale',
-      quote: 'The wider institution also presents translation, interpreting, exam preparation, tutoring, and Erasmus support.',
+      quote:
+        language === 'IT'
+          ? 'L istituzione presenta anche traduzione, interpretariato, preparazione esami, tutoraggio e supporto Erasmus.'
+          : 'The wider institution also presents translation, interpreting, exam preparation, tutoring, and Erasmus support.',
     },
   ];
 
@@ -39,14 +50,18 @@ export default function TestimonialsPage() {
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <img src={accademiaLogo} alt="Accademia logo" className="w-20 h-20 mx-auto object-contain" />
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            Method and Voice
+            {language === 'IT' ? 'Metodo e voce' : 'Method and Voice'}
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Messages from <br />
-            <span className="italic text-olive-800">the Accademia.</span>
+            {language === 'IT' ? 'Messaggi' : 'Messages from'} <br />
+            <span className="italic text-olive-800">
+              {language === 'IT' ? 'dell Accademia.' : 'the Accademia.'}
+            </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            A concise view of the school method, director voice, and language-service areas.
+            {language === 'IT'
+              ? 'Uno sguardo essenziale al metodo della scuola, alla voce della direttrice e ai servizi linguistici.'
+              : 'A concise view of the school method, director voice, and language-service areas.'}
           </p>
         </div>
       </section>
@@ -55,10 +70,14 @@ export default function TestimonialsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div className="lg:col-span-1 bg-olive-900 text-travertine-50 border border-olive-800 p-8 space-y-6">
             <Quote className="w-10 h-10 text-terracotta-300/60" />
-            <p className="font-serif text-2xl italic font-light leading-relaxed">"{directorQuote}"</p>
+            <p className="font-serif text-2xl italic font-light leading-relaxed">
+              "{language === 'IT' ? directorQuoteIT : directorQuote}"
+            </p>
             <div>
               <h4 className="font-serif text-lg">{contactInfo.director}</h4>
-              <p className="text-[10px] tracking-widest uppercase text-olive-200">Director</p>
+              <p className="text-[10px] tracking-widest uppercase text-olive-200">
+                {language === 'IT' ? 'Direzione' : 'Director'}
+              </p>
             </div>
           </div>
 
@@ -87,8 +106,12 @@ export default function TestimonialsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {services.map((service) => (
             <div key={service.title} className="bg-travertine-100 border border-travertine-200 p-6 space-y-2">
-              <h3 className="font-serif text-base text-charcoal-950">{service.title}</h3>
-              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">{service.description}</p>
+              <h3 className="font-serif text-base text-charcoal-950">
+                {language === 'IT' ? service.titleIT : service.title}
+              </h3>
+              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+                {language === 'IT' ? service.descriptionIT : service.description}
+              </p>
             </div>
           ))}
         </div>

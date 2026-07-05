@@ -8,10 +8,38 @@ export default function WhyAscoliPiceno() {
   const { language, t } = useLanguage();
 
   const stats = [
-    { value: 'Historic', label: 'Art and streets', detail: 'A city known for history, architecture, churches, museums, and theatre' },
-    { value: 'Marche', label: 'Coast and mountains', detail: 'A region of beaches, hill towns, vineyards, olive groves, and Apennine landscapes' },
-    { value: 'Walkable', label: 'Daily immersion', detail: 'A compact setting for cafes, markets, lessons, and local conversation' },
-    { value: 'Festive', label: 'Local calendar', detail: 'Quintana, Carnival, and Sant Emidio mark the civic year' },
+    {
+      value: 'Historic',
+      valueIT: 'Storica',
+      label: 'Art and streets',
+      labelIT: 'Arte e strade',
+      detail: 'A city known for history, architecture, churches, museums, and theatre',
+      detailIT: 'Una citta nota per storia, architettura, chiese, musei e teatro',
+    },
+    {
+      value: 'Marche',
+      valueIT: 'Marche',
+      label: 'Coast and mountains',
+      labelIT: 'Costa e montagne',
+      detail: 'A region of beaches, hill towns, vineyards, olive groves, and Apennine landscapes',
+      detailIT: 'Una regione di spiagge, borghi, vigneti, uliveti e paesaggi appenninici',
+    },
+    {
+      value: 'Walkable',
+      valueIT: 'A misura d uomo',
+      label: 'Daily immersion',
+      labelIT: 'Immersione quotidiana',
+      detail: 'A compact setting for cafes, markets, lessons, and local conversation',
+      detailIT: 'Un contesto compatto per caffe, mercati, lezioni e conversazione locale',
+    },
+    {
+      value: 'Festive',
+      valueIT: 'Festiva',
+      label: 'Local calendar',
+      labelIT: 'Calendario locale',
+      detail: 'Quintana, Carnival, and Sant Emidio mark the civic year',
+      detailIT: 'Quintana, Carnevale e Sant Emidio scandiscono l anno cittadino',
+    },
   ];
 
   return (
@@ -72,12 +100,12 @@ export default function WhyAscoliPiceno() {
               {stats.map((stat) => (
                 <div key={stat.value} className="space-y-1.5">
                   <span className="block font-serif text-3xl md:text-4xl text-olive-800 font-light">
-                    {stat.value}
+                    {language === 'IT' ? stat.valueIT : stat.value}
                   </span>
                   <span className="block text-[11px] tracking-wider font-semibold text-charcoal-950 uppercase">
-                    {stat.label}
+                    {language === 'IT' ? stat.labelIT : stat.label}
                   </span>
-                  <p className="text-xs text-charcoal-800 font-light">{stat.detail}</p>
+                  <p className="text-xs text-charcoal-800 font-light">{language === 'IT' ? stat.detailIT : stat.detail}</p>
                 </div>
               ))}
             </div>
@@ -142,13 +170,15 @@ export default function WhyAscoliPiceno() {
                 <div key={gem.title} className="space-y-1.5 group">
                   <div className="flex items-center justify-between gap-4">
                     <span className="font-serif text-lg font-normal text-charcoal-950 group-hover:text-terracotta-500 transition-colors">
-                      {gem.title}
+                      {language === 'IT' ? gem.titleIT : gem.title}
                     </span>
                     <span className="text-[9px] font-mono uppercase tracking-wider text-olive-800 bg-olive-50 px-2 py-0.5 border border-olive-200">
-                      {gem.type}
+                      {language === 'IT' ? gem.typeIT : gem.type}
                     </span>
                   </div>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">{gem.description}</p>
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                    {language === 'IT' ? gem.descriptionIT : gem.description}
+                  </p>
                 </div>
               ))}
             </div>

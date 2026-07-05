@@ -26,7 +26,12 @@ export default function Courses() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {officialCourses.map((course) => {
             const title = language === 'IT' ? course.italianName : course.name;
-            const eyebrow = language === 'IT' ? course.name : course.italianName;
+            const eyebrow = language === 'IT' ? 'Formato del corso' : course.italianName;
+            const duration = language === 'IT' ? course.durationIT : course.duration;
+            const hoursPerWeek = language === 'IT' ? course.hoursPerWeekIT : course.hoursPerWeek;
+            const price = language === 'IT' ? course.priceIT : course.price;
+            const description = language === 'IT' ? course.descriptionIT : course.description;
+            const highlights = language === 'IT' ? course.highlightsIT : course.highlights;
 
             return (
               <motion.div
@@ -56,17 +61,17 @@ export default function Courses() {
                       {title}
                     </h3>
                     <div className="flex flex-wrap items-center gap-3 text-[10px] font-mono tracking-widest uppercase text-olive-100 pt-1">
-                      <span>{course.duration}</span>
+                      <span>{duration}</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-terracotta-500" />
-                      <span>{course.hoursPerWeek}</span>
+                      <span>{hoursPerWeek}</span>
                     </div>
                     <span className="inline-block text-[10px] tracking-widest uppercase bg-travertine-50/15 border border-travertine-50/25 text-travertine-50 px-2.5 py-1">
-                      {course.price}
+                      {price}
                     </span>
                   </div>
 
                   <p className="text-xs text-travertine-100 font-light leading-relaxed line-clamp-3">
-                    {course.description}
+                    {description}
                   </p>
 
                   <div className="flex items-center gap-2 text-[10px] font-semibold tracking-widest uppercase text-terracotta-100 group-hover:text-terracotta-500 transition-colors pt-2">
@@ -83,7 +88,7 @@ export default function Courses() {
                       </span>
                       <h4 className="font-serif text-2xl text-travertine-50 font-normal">{title}</h4>
                       <p className="text-[10px] font-mono tracking-wider text-olive-200 uppercase mt-1">
-                        {course.price} - {course.hoursPerWeek}
+                        {price} - {hoursPerWeek}
                       </p>
                     </div>
 
@@ -92,7 +97,7 @@ export default function Courses() {
                         {t('courses.curriculum_highlights')}
                       </span>
                       <ul className="space-y-2">
-                        {course.highlights.map((detail) => (
+                        {highlights.map((detail) => (
                           <li key={detail} className="flex items-start gap-2.5 text-xs text-travertine-100 font-light">
                             <span className="w-1 h-1 rounded-full bg-terracotta-500 mt-1.5 shrink-0" />
                             <span>{detail}</span>

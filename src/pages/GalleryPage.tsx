@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Camera } from 'lucide-react';
 import { photoGallery } from '../data/officialContent';
+import { useLanguage } from '../context/LanguageContext';
 
 type Filter = 'all' | 'study' | 'culture' | 'ascoli';
 
 export default function GalleryPage() {
+  const { language } = useLanguage();
   const [filter, setFilter] = useState<Filter>('all');
 
   const filteredPhotos = filter === 'all' ? photoGallery : photoGallery.filter((p) => p.category === filter);
 
   const filters: { id: Filter; label: string }[] = [
-    { id: 'all', label: 'All' },
-    { id: 'study', label: 'Study' },
-    { id: 'culture', label: 'Culture' },
+    { id: 'all', label: language === 'IT' ? 'Tutto' : 'All' },
+    { id: 'study', label: language === 'IT' ? 'Studio' : 'Study' },
+    { id: 'culture', label: language === 'IT' ? 'Cultura' : 'Culture' },
     { id: 'ascoli', label: 'Ascoli' },
   ];
+  const categoryLabel: Record<string, string> =
+    language === 'IT'
+      ? { study: 'Studio', culture: 'Cultura', ascoli: 'Ascoli' }
+      : { study: 'Study', culture: 'Culture', ascoli: 'Ascoli' };
 
   return (
     <motion.div
@@ -29,14 +35,18 @@ export default function GalleryPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            Gallery
+            {language === 'IT' ? 'Galleria' : 'Gallery'}
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Ascoli, culture, <br />
-            <span className="italic text-terracotta-600">and Italian study.</span>
+            {language === 'IT' ? 'Ascoli, cultura,' : 'Ascoli, culture,'} <br />
+            <span className="italic text-terracotta-600">
+              {language === 'IT' ? 'e studio dell italiano.' : 'and Italian study.'}
+            </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Real Accademia photos from lessons, cultural activities, student moments, and Ascoli Piceno.
+            {language === 'IT'
+              ? 'Foto reali dell Accademia tra lezioni, attivita culturali, momenti degli studenti e Ascoli Piceno.'
+              : 'Real Accademia photos from lessons, cultural activities, student moments, and Ascoli Piceno.'}
           </p>
         </div>
       </section>
@@ -75,21 +85,23 @@ export default function GalleryPage() {
                 <div className={`${index === 0 || index === 9 ? 'aspect-[16/9]' : 'aspect-[4/3]'} bg-travertine-200 overflow-hidden relative shadow-sm`}>
                   <img
                     src={photo.image}
-                    alt={photo.title}
+                    alt={language === 'IT' ? photo.titleIT : photo.title}
                     className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-3 py-1.5 text-[9px] tracking-widest font-mono font-bold text-travertine-100 uppercase">
-                    {photo.category}
+                    {categoryLabel[photo.category]}
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <span className="text-[10px] tracking-wider uppercase font-bold text-olive-800 flex items-center gap-1.5">
                     <Camera className="w-3.5 h-3.5 stroke-[1.5]" />
-                    {photo.location}
+                    {language === 'IT' ? photo.locationIT : photo.location}
                   </span>
-                  <h3 className="font-serif text-base text-charcoal-950 font-normal">{photo.title}</h3>
+                  <h3 className="font-serif text-base text-charcoal-950 font-normal">
+                    {language === 'IT' ? photo.titleIT : photo.title}
+                  </h3>
                 </div>
               </motion.div>
             ))}

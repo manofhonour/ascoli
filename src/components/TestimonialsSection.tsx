@@ -2,32 +2,41 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight, Play, Quote, Languages, GraduationCap } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { contactInfo, directorQuote, services } from '../data/officialContent';
+import { contactInfo, directorQuote, directorQuoteIT, services } from '../data/officialContent';
 import accademiaLogo from '../assets/accademia-logo.png';
 
 const schoolNotes = [
   {
     title: 'Open up to the world',
+    titleIT: 'Apriti al mondo',
     detail: 'Accademia Internazionale connects language teaching, translation, and international communication.',
+    detailIT: 'Accademia Internazionale collega insegnamento linguistico, traduzione e comunicazione internazionale.',
   },
   {
     title: 'Precision in translation',
+    titleIT: 'Precisione nella traduzione',
     detail: 'The institution combines teaching with translation and interpreting services.',
+    detailIT: 'L istituzione unisce didattica, traduzione e interpretariato.',
   },
   {
     title: 'Passion for language teaching',
+    titleIT: 'Passione per l insegnamento delle lingue',
     detail: 'The school profile highlights qualified teachers, flexibility, communication, and authentic teaching materials.',
+    detailIT: 'La scuola valorizza docenti qualificati, flessibilita, comunicazione e materiali autentici.',
   },
 ];
 
 export default function TestimonialsSection() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [activeIdx, setActiveIdx] = useState(0);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
 
   const handleNext = () => setActiveIdx((prev) => (prev + 1) % schoolNotes.length);
   const handlePrev = () => setActiveIdx((prev) => (prev - 1 + schoolNotes.length) % schoolNotes.length);
   const activeNote = schoolNotes[activeIdx];
+  const activeTitle = language === 'IT' ? activeNote.titleIT : activeNote.title;
+  const activeDetail = language === 'IT' ? activeNote.detailIT : activeNote.detail;
+  const quote = language === 'IT' ? directorQuoteIT : directorQuote;
 
   return (
     <section id="testimonials" className="py-32 md:py-44 bg-travertine-50">
@@ -51,7 +60,9 @@ export default function TestimonialsSection() {
                 <span className="block text-[9px] text-charcoal-800 uppercase tracking-[0.18em]">
                   {t('testimonials.google_rating')}
                 </span>
-                <span className="block font-serif text-sm text-charcoal-950">Communicative teaching</span>
+                <span className="block font-serif text-sm text-charcoal-950">
+                  {language === 'IT' ? 'Didattica comunicativa' : 'Communicative teaching'}
+                </span>
               </div>
             </div>
             <div className="flex items-center gap-3 px-5 py-4 border border-travertine-300 bg-travertine-100">
@@ -60,7 +71,9 @@ export default function TestimonialsSection() {
                 <span className="block text-[9px] text-charcoal-800 uppercase tracking-[0.18em]">
                   {t('testimonials.trustpilot_status')}
                 </span>
-                <span className="block font-serif text-sm text-charcoal-950">{services.length} core areas</span>
+                <span className="block font-serif text-sm text-charcoal-950">
+                  {language === 'IT' ? `${services.length} aree principali` : `${services.length} core areas`}
+                </span>
               </div>
             </div>
           </div>
@@ -81,10 +94,10 @@ export default function TestimonialsSection() {
                   className="space-y-8"
                 >
                   <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-extralight italic text-charcoal-950 leading-relaxed">
-                    "{activeNote.title}"
+                    "{activeTitle}"
                   </p>
                   <p className="text-sm text-charcoal-800 font-light leading-relaxed max-w-xl">
-                    {activeNote.detail}
+                    {activeDetail}
                   </p>
                   <div>
                     <h4 className="font-serif text-lg lg:text-xl font-light text-charcoal-950">
@@ -147,7 +160,7 @@ export default function TestimonialsSection() {
                   <span className="text-[10px] font-mono text-terracotta-500 tracking-widest uppercase font-bold">
                     {t('testimonials.story_label')}
                   </span>
-                  <p className="font-serif text-lg italic max-w-xs leading-relaxed">"{directorQuote}"</p>
+                  <p className="font-serif text-lg italic max-w-xs leading-relaxed">"{quote}"</p>
                   <span className="text-[10px] tracking-widest uppercase text-olive-200">{contactInfo.director}</span>
                   <button
                     onClick={() => setIsQuoteOpen(false)}

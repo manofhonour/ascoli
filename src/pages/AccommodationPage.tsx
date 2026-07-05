@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Bed, Check, HeartHandshake, Hotel, Home, Info, MapPin } from 'lucide-react';
 import { accommodationOptions, contactInfo } from '../data/officialContent';
+import { useLanguage } from '../context/LanguageContext';
 
 const icons = {
   'host-family': Home,
@@ -10,6 +11,8 @@ const icons = {
 };
 
 export default function AccommodationPage() {
+  const { language } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -22,14 +25,18 @@ export default function AccommodationPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            Accommodation
+            {language === 'IT' ? 'Alloggi' : 'Accommodation'}
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Stay in Ascoli Piceno <br />
-            <span className="italic text-terracotta-600">with school support.</span>
+            {language === 'IT' ? 'Alloggia ad Ascoli Piceno' : 'Stay in Ascoli Piceno'} <br />
+            <span className="italic text-terracotta-600">
+              {language === 'IT' ? 'con il supporto della scuola.' : 'with school support.'}
+            </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students traveling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.
+            {language === 'IT'
+              ? 'La scuola puo aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno. Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita possono contattare la scuola prima dell arrivo.'
+              : 'The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students traveling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.'}
           </p>
         </div>
       </section>
@@ -38,6 +45,9 @@ export default function AccommodationPage() {
         {accommodationOptions.map((acc, idx) => {
           const Icon = icons[acc.id as keyof typeof icons] || Home;
           const isEven = idx % 2 === 0;
+          const name = language === 'IT' ? acc.italianName : acc.name;
+          const description = language === 'IT' ? acc.descriptionIT : acc.description;
+          const features = language === 'IT' ? acc.featuresIT : acc.features;
           return (
             <motion.div
               key={acc.id}
@@ -51,7 +61,7 @@ export default function AccommodationPage() {
                 <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
                   <img
                     src={acc.image}
-                    alt={`${acc.name} planning in Ascoli Piceno`}
+                    alt={language === 'IT' ? `${acc.italianName} ad Ascoli Piceno` : `${acc.name} planning in Ascoli Piceno`}
                     className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
@@ -66,25 +76,27 @@ export default function AccommodationPage() {
                 <div className="space-y-1">
                   <span className="font-serif italic text-xs text-terracotta-600 block">{acc.italianName}</span>
                   <h2 className="font-serif text-2xl md:text-4xl text-charcoal-950 font-light leading-snug">
-                    {acc.name}
+                    {name}
                   </h2>
                 </div>
 
-                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{acc.description}</p>
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{description}</p>
 
                 <div className="flex items-center gap-3 py-4 border-y border-travertine-200">
                   <Icon className="w-4 h-4 text-olive-800 stroke-[1.5]" />
                   <span className="text-xs text-charcoal-800 font-light">
-                    Reservation support through {contactInfo.schoolName}
+                    {language === 'IT'
+                      ? `Supporto alla prenotazione tramite ${contactInfo.schoolName}`
+                      : `Reservation support through ${contactInfo.schoolName}`}
                   </span>
                 </div>
 
                 <div className="space-y-2">
                   <span className="text-[10px] tracking-widest uppercase font-bold text-charcoal-800 block mb-2 opacity-60">
-                    Details:
+                    {language === 'IT' ? 'Dettagli:' : 'Details:'}
                   </span>
                   <div className="grid grid-cols-1 gap-2">
-                    {acc.features.map((p) => (
+                    {features.map((p) => (
                       <div key={p} className="flex items-start gap-2 text-xs text-charcoal-800">
                         <Check className="w-3.5 h-3.5 text-terracotta-500 shrink-0 mt-0.5" />
                         <span className="font-light">{p}</span>
@@ -102,38 +114,54 @@ export default function AccommodationPage() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-              Booking
+              {language === 'IT' ? 'Prenotazione' : 'Booking'}
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-tight">
-              Confirm availability directly with the school.
+              {language === 'IT'
+                ? 'Conferma la disponibilita direttamente con la scuola.'
+                : 'Confirm availability directly with the school.'}
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              Contact the Accademia office for accommodation availability, address details, house rules, payment conditions, and final prices before booking travel.
+              {language === 'IT'
+                ? 'Contatta la segreteria Accademia per disponibilita, indirizzo, regole della casa, condizioni di pagamento e prezzi finali prima di prenotare il viaggio.'
+                : 'Contact the Accademia office for accommodation availability, address details, house rules, payment conditions, and final prices before booking travel.'}
             </p>
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <MapPin className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Town-Centre Focus</h4>
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
+                {language === 'IT' ? 'Centro citta' : 'Town-Centre Focus'}
+              </h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Accommodation options include host family, B&B, and hotel stays in Ascoli Piceno.
+                {language === 'IT'
+                  ? 'Le opzioni includono famiglia ospitante, B&B e hotel ad Ascoli Piceno.'
+                  : 'Accommodation options include host family, B&B, and hotel stays in Ascoli Piceno.'}
               </p>
             </div>
 
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <Info className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">No Extra Reservation Cost</h4>
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
+                {language === 'IT' ? 'Nessun costo extra di prenotazione' : 'No Extra Reservation Cost'}
+              </h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                The school can reserve accommodation for students without an additional reservation cost.
+                {language === 'IT'
+                  ? 'La scuola puo prenotare l alloggio per gli studenti senza costi aggiuntivi di prenotazione.'
+                  : 'The school can reserve accommodation for students without an additional reservation cost.'}
               </p>
             </div>
 
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <HeartHandshake className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Welcoming Planning</h4>
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
+                {language === 'IT' ? 'Accoglienza e pianificazione' : 'Welcoming Planning'}
+              </h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                Solo travel, LGBTQ+ considerations, and accessibility needs can be discussed with the school before booking.
+                {language === 'IT'
+                  ? 'Viaggio individuale, esigenze LGBTQ+ e accessibilita possono essere discussi con la scuola prima della prenotazione.'
+                  : 'Solo travel, LGBTQ+ considerations, and accessibility needs can be discussed with the school before booking.'}
               </p>
             </div>
           </div>

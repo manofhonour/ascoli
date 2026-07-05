@@ -16,6 +16,10 @@ export default function AccommodationSection() {
 
   const activeData = accommodationOptions.find((item) => item.id === activeTab) || accommodationOptions[0];
   const ActiveIcon = accommodationIcons[activeData.id as keyof typeof accommodationIcons] || Home;
+  const activeName = language === 'IT' ? activeData.italianName : activeData.name;
+  const activeTagline = language === 'IT' ? activeData.taglineIT : activeData.tagline;
+  const activeDescription = language === 'IT' ? activeData.descriptionIT : activeData.description;
+  const activeFeatures = language === 'IT' ? activeData.featuresIT : activeData.features;
 
   return (
     <section id="accommodation" className="py-32 md:py-44 bg-travertine-50">
@@ -51,7 +55,9 @@ export default function AccommodationSection() {
                       <span className={`block text-[9px] font-mono uppercase tracking-widest ${isSelected ? 'text-terracotta-200' : 'text-terracotta-600'}`}>
                         {type.italianName}
                       </span>
-                      <span className="block font-serif text-lg lg:text-xl font-light">{type.name}</span>
+                      <span className="block font-serif text-lg lg:text-xl font-light">
+                        {language === 'IT' ? type.italianName : type.name}
+                      </span>
                     </div>
                     <Icon className={`w-4 h-4 stroke-[1.25] ${isSelected ? 'text-terracotta-400' : 'text-olive-700'}`} />
                   </button>
@@ -61,14 +67,14 @@ export default function AccommodationSection() {
 
             <div className="space-y-6 pt-4">
               <span className="text-[10px] font-bold tracking-[0.25em] text-olive-800 uppercase block">
-                {activeData.tagline}
+                {activeTagline}
               </span>
               <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                {activeData.description}
+                {activeDescription}
               </p>
 
               <ul className="space-y-3 pt-2">
-                {activeData.features.map((feat) => (
+                {activeFeatures.map((feat) => (
                   <li key={feat} className="flex items-start gap-3 text-xs md:text-sm text-charcoal-950 font-light leading-relaxed">
                     <Check className="w-4 h-4 text-terracotta-500 shrink-0 mt-0.5 stroke-[1.5]" />
                     <span>{feat}</span>
@@ -84,7 +90,7 @@ export default function AccommodationSection() {
                 <motion.img
                   key={activeTab}
                   src={activeData.image}
-                  alt={activeData.name}
+                  alt={activeName}
                   initial={{ opacity: 0, scale: 1.01 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.01 }}

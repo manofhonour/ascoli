@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { culturalOfferings } from '../data/officialContent';
 
 export default function BeyondClassroom() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section id="beyond-classroom" className="py-24 md:py-32 bg-travertine-50">
@@ -25,24 +25,29 @@ export default function BeyondClassroom() {
         <div className="space-y-24 md:space-y-32">
           {culturalOfferings.map((exp, index) => {
             const isEven = index % 2 === 0;
+            const title = language === 'IT' ? exp.italianTitle : exp.title;
+            const tagline = language === 'IT' ? exp.taglineIT : exp.tagline;
+            const description = language === 'IT' ? exp.descriptionIT : exp.description;
             return (
               <div key={exp.title} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <div className={`lg:col-span-5 space-y-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="space-y-1">
                     <span className="font-serif italic text-xs text-terracotta-600">{exp.italianTitle}</span>
-                    <h3 className="font-serif text-3xl font-light text-charcoal-950">{exp.title}</h3>
+                    <h3 className="font-serif text-3xl font-light text-charcoal-950">{title}</h3>
                     <p className="text-[10px] font-mono tracking-widest uppercase text-olive-700 font-bold">
-                      {exp.tagline}
+                      {tagline}
                     </p>
                   </div>
 
                   <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                    {exp.description}
+                    {description}
                   </p>
 
                   <div className="border-l border-terracotta-500 pl-4 py-2 bg-travertine-100/50">
                     <p className="text-[11px] md:text-xs text-charcoal-800 leading-relaxed">
-                      Contact the school for availability, schedules, level placement, and course format.
+                      {language === 'IT'
+                        ? 'Contatta la scuola per disponibilita, orari, livello e formato del corso.'
+                        : 'Contact the school for availability, schedules, level placement, and course format.'}
                     </p>
                   </div>
                 </div>
@@ -57,7 +62,7 @@ export default function BeyondClassroom() {
                   >
                     <img
                       src={exp.image}
-                      alt={exp.title}
+                      alt={title}
                       className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-102 transition-all duration-[1s] ease-out"
                       referrerPolicy="no-referrer"
                     />

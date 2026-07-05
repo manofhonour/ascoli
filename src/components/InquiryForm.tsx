@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { contactInfo, officialCourses } from '../data/officialContent';
 
 export default function InquiryForm() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +35,7 @@ export default function InquiryForm() {
               </span>
               <h2 className="font-serif text-3xl md:text-5xl font-light text-charcoal-950 leading-tight">
                 {t('form.title')} <br />
-                <span className="italic">in Ascoli Piceno</span>.
+                <span className="italic">{language === 'IT' ? 'ad Ascoli Piceno' : 'in Ascoli Piceno'}</span>.
               </h2>
               <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
                 {t('form.desc')}
@@ -73,7 +73,9 @@ export default function InquiryForm() {
                   <Phone className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Phone and WhatsApp</h4>
+                  <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
+                    {language === 'IT' ? 'Telefono e WhatsApp' : 'Phone and WhatsApp'}
+                  </h4>
                   <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
                     {contactInfo.phone} - WhatsApp {contactInfo.whatsapp}
                   </p>
@@ -85,8 +87,12 @@ export default function InquiryForm() {
                   <Clock className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Office Hours</h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">{contactInfo.hours}</p>
+                  <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
+                    {language === 'IT' ? 'Orari segreteria' : 'Office Hours'}
+                  </h4>
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
+                    {language === 'IT' ? contactInfo.hoursIT : contactInfo.hours}
+                  </p>
                 </div>
               </div>
             </div>
@@ -105,17 +111,19 @@ export default function InquiryForm() {
                 >
                   <div className="space-y-1">
                     <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal">
-                      Course Inquiry
+                      {language === 'IT' ? 'Richiesta corso' : 'Course Inquiry'}
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
-                      This form prepares your message. You can include solo travel, LGBTQ+ considerations, accessibility needs, or arrival details.
+                      {language === 'IT'
+                        ? 'Questo modulo prepara il messaggio. Puoi includere viaggio individuale, esigenze LGBTQ+, accessibilita o dettagli di arrivo.'
+                        : 'This form prepares your message. You can include solo travel, LGBTQ+ considerations, accessibility needs, or arrival details.'}
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="name" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        Your Full Name
+                        {language === 'IT' ? 'Nome e cognome' : 'Your Full Name'}
                       </label>
                       <input
                         type="text"
@@ -123,14 +131,14 @@ export default function InquiryForm() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Example: Anna Rossi"
+                        placeholder={language === 'IT' ? 'Esempio: Anna Rossi' : 'Example: Anna Rossi'}
                         className="w-full bg-travertine-100 border border-travertine-300/60 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40"
                       />
                     </div>
 
                     <div className="space-y-2">
                       <label htmlFor="email" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        Email Address
+                        {language === 'IT' ? 'Email' : 'Email Address'}
                       </label>
                       <input
                         type="email"
@@ -147,7 +155,7 @@ export default function InquiryForm() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="program" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        Course Format
+                        {language === 'IT' ? 'Formato del corso' : 'Course Format'}
                       </label>
                       <select
                         id="program"
@@ -157,7 +165,7 @@ export default function InquiryForm() {
                       >
                         {officialCourses.map((course) => (
                           <option key={course.id} value={course.id}>
-                            {course.name}
+                            {language === 'IT' ? course.italianName : course.name}
                           </option>
                         ))}
                       </select>
@@ -165,7 +173,7 @@ export default function InquiryForm() {
 
                     <div className="space-y-2">
                       <label htmlFor="timing" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        Preferred Timing
+                        {language === 'IT' ? 'Periodo preferito' : 'Preferred Timing'}
                       </label>
                       <select
                         id="timing"
@@ -173,17 +181,17 @@ export default function InquiryForm() {
                         onChange={(e) => setFormData({ ...formData, timing: e.target.value })}
                         className="w-full bg-travertine-100 border border-travertine-300/60 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none appearance-none"
                       >
-                        <option value="flexible">Flexible dates</option>
-                        <option value="spring">Spring</option>
-                        <option value="summer">Summer</option>
-                        <option value="autumn">Autumn</option>
-                        <option value="winter">Winter</option>
+                        <option value="flexible">{language === 'IT' ? 'Date flessibili' : 'Flexible dates'}</option>
+                        <option value="spring">{language === 'IT' ? 'Primavera' : 'Spring'}</option>
+                        <option value="summer">{language === 'IT' ? 'Estate' : 'Summer'}</option>
+                        <option value="autumn">{language === 'IT' ? 'Autunno' : 'Autumn'}</option>
+                        <option value="winter">{language === 'IT' ? 'Inverno' : 'Winter'}</option>
                       </select>
                     </div>
 
                     <div className="space-y-2">
                       <label htmlFor="duration" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        Duration
+                        {language === 'IT' ? 'Durata' : 'Duration'}
                       </label>
                       <select
                         id="duration"
@@ -191,18 +199,18 @@ export default function InquiryForm() {
                         onChange={(e) => setFormData({ ...formData, duration: e.target.value })}
                         className="w-full bg-travertine-100 border border-travertine-300/60 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none appearance-none"
                       >
-                        <option value="1week">1 week</option>
-                        <option value="2weeks">2 weeks</option>
-                        <option value="3weeks">3 weeks</option>
-                        <option value="4weeks">4 weeks</option>
-                        <option value="custom">Custom duration</option>
+                        <option value="1week">{language === 'IT' ? '1 settimana' : '1 week'}</option>
+                        <option value="2weeks">{language === 'IT' ? '2 settimane' : '2 weeks'}</option>
+                        <option value="3weeks">{language === 'IT' ? '3 settimane' : '3 weeks'}</option>
+                        <option value="4weeks">{language === 'IT' ? '4 settimane' : '4 weeks'}</option>
+                        <option value="custom">{language === 'IT' ? 'Durata su misura' : 'Custom duration'}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <label htmlFor="notes" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                      Goals, Level, and Accommodation
+                      {language === 'IT' ? 'Obiettivi, livello e alloggio' : 'Goals, Level, and Accommodation'}
                     </label>
                     <textarea
                       id="notes"
@@ -234,10 +242,15 @@ export default function InquiryForm() {
                     <span className="font-serif italic text-base text-terracotta-600 block">
                       Grazie, {formData.name}.
                     </span>
-                    <h3 className="font-serif text-3xl text-charcoal-950 font-light">Inquiry Noted</h3>
+                    <h3 className="font-serif text-3xl text-charcoal-950 font-light">
+                      {language === 'IT' ? 'Richiesta annotata' : 'Inquiry Noted'}
+                    </h3>
                     <p className="text-xs md:text-sm text-charcoal-800 font-light max-w-md leading-relaxed">
-                      Please contact the school at <span className="font-medium text-charcoal-950">{contactInfo.email}</span> or WhatsApp{' '}
-                      <span className="font-medium text-charcoal-950">{contactInfo.whatsapp}</span> for booking confirmation.
+                      {language === 'IT' ? 'Contatta la scuola a ' : 'Please contact the school at '}
+                      <span className="font-medium text-charcoal-950">{contactInfo.email}</span>
+                      {language === 'IT' ? ' oppure WhatsApp ' : ' or WhatsApp '}
+                      <span className="font-medium text-charcoal-950">{contactInfo.whatsapp}</span>
+                      {language === 'IT' ? ' per confermare la prenotazione.' : ' for booking confirmation.'}
                     </p>
                   </div>
 
@@ -245,7 +258,7 @@ export default function InquiryForm() {
                     onClick={() => setFormSubmitted(false)}
                     className="text-xs tracking-widest font-semibold uppercase text-terracotta-600 hover:text-terracotta-700 underline underline-offset-4 decoration-1 mt-6"
                   >
-                    Modify inquiry
+                    {language === 'IT' ? 'Modifica richiesta' : 'Modify inquiry'}
                   </button>
                 </motion.div>
               )}

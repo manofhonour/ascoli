@@ -2,24 +2,28 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Accessibility, Coffee, HeartHandshake, UserRound } from 'lucide-react';
 import { culturalOfferings, images, inclusiveSupport } from '../data/officialContent';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function StudentLifePage() {
+  const { language } = useLanguage();
   const inclusionIcons = [UserRound, HeartHandshake, Accessibility];
 
   const events = [
     {
       id: 'conversation',
-      title: 'Daily Conversation in Ascoli',
-      tagline: 'Cafes, streets, and practical Italian',
+      title: language === 'IT' ? 'Conversazione quotidiana ad Ascoli' : 'Daily Conversation in Ascoli',
+      tagline: language === 'IT' ? 'Caffe, strade e italiano pratico' : 'Cafes, streets, and practical Italian',
       description:
-        'The school setting in the historic centre makes it natural to use Italian for greetings, directions, food, culture, and everyday exchanges.',
+        language === 'IT'
+          ? 'La scuola nel centro storico rende naturale usare l italiano per saluti, indicazioni, cibo, cultura e scambi quotidiani.'
+          : 'The school setting in the historic centre makes it natural to use Italian for greetings, directions, food, culture, and everyday exchanges.',
       image: images.piazza,
     },
     ...culturalOfferings.slice(0, 3).map((item) => ({
       id: item.title,
-      title: item.title,
-      tagline: item.tagline,
-      description: item.description,
+      title: language === 'IT' ? item.italianTitle : item.title,
+      tagline: language === 'IT' ? item.taglineIT : item.tagline,
+      description: language === 'IT' ? item.descriptionIT : item.description,
       image: item.image,
     })),
   ];
@@ -39,11 +43,15 @@ export default function StudentLifePage() {
             Vita da Studente
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            Student life built <br />
-            <span className="italic text-olive-800">around real Italian.</span>
+            {language === 'IT' ? 'Vita studentesca costruita' : 'Student life built'} <br />
+            <span className="italic text-olive-800">
+              {language === 'IT' ? 'intorno all italiano reale.' : 'around real Italian.'}
+            </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Student life at Accademia Italiana centres on lessons, conversation, Ascoli Piceno, and optional cultural courses.
+            {language === 'IT'
+              ? 'La vita studentesca all Accademia Italiana ruota intorno a lezioni, conversazione, Ascoli Piceno e corsi culturali opzionali.'
+              : 'Student life at Accademia Italiana centres on lessons, conversation, Ascoli Piceno, and optional cultural courses.'}
           </p>
         </div>
       </section>
@@ -51,13 +59,17 @@ export default function StudentLifePage() {
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-12 space-y-20">
         <div className="max-w-2xl space-y-4">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            Learning Rhythm
+            {language === 'IT' ? 'Ritmo di studio' : 'Learning Rhythm'}
           </span>
           <h2 className="font-serif text-3xl font-light text-charcoal-950">
-            Small classes, local context, and optional culture.
+            {language === 'IT'
+              ? 'Piccoli gruppi, contesto locale e cultura opzionale.'
+              : 'Small classes, local context, and optional culture.'}
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            The student experience centres on course formats, local conversation, and optional cultural study.
+            {language === 'IT'
+              ? 'L esperienza degli studenti unisce formati di corso, conversazione locale e studio culturale opzionale.'
+              : 'The student experience centres on course formats, local conversation, and optional cultural study.'}
           </p>
         </div>
 
@@ -70,8 +82,12 @@ export default function StudentLifePage() {
                   <Icon className="w-5 h-5 text-olive-800 stroke-[1.5]" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="font-serif text-lg text-charcoal-950 font-normal">{item.title}</h3>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">{item.description}</p>
+                  <h3 className="font-serif text-lg text-charcoal-950 font-normal">
+                    {language === 'IT' ? item.titleIT : item.title}
+                  </h3>
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                    {language === 'IT' ? item.descriptionIT : item.description}
+                  </p>
                 </div>
               </div>
             );
@@ -108,7 +124,7 @@ export default function StudentLifePage() {
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <Coffee className="w-8 h-8 text-terracotta-600 mx-auto stroke-[1.25]" />
           <p className="font-serif text-xl md:text-2xl text-charcoal-900 italic font-light leading-relaxed">
-            "Live Italy, Speak Italian."
+            {language === 'IT' ? '"Vivi l Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
           </p>
           <span className="block text-[10px] tracking-wider uppercase text-olive-800 font-bold">
             Accademia Italiana

@@ -8,7 +8,7 @@ import accademiaLogo from '../assets/accademia-logo.png';
 const serviceIcons = [BookOpen, Languages, GraduationCap, Users];
 
 export default function Teachers() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section id="teachers" className="py-24 md:py-32 bg-travertine-50">
@@ -38,12 +38,14 @@ export default function Teachers() {
               <img src={accademiaLogo} alt="Accademia logo" className="w-20 h-20 object-contain" />
               <div className="space-y-2">
                 <span className="text-[10px] tracking-widest uppercase font-bold text-terracotta-600">
-                  Direction
+                  {language === 'IT' ? 'Direzione' : 'Direction'}
                 </span>
                 <h3 className="font-serif text-3xl text-charcoal-950 font-light">{contactInfo.director}</h3>
               </div>
               <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                Dr. Antonella Valentini directs the school, which combines Italian language teaching with wider language services.
+                {language === 'IT'
+                  ? 'La Dr. Antonella Valentini dirige la scuola, che unisce insegnamento dell italiano e servizi linguistici.'
+                  : 'Dr. Antonella Valentini directs the school, which combines Italian language teaching with wider language services.'}
               </p>
             </div>
             <div className="pt-6 border-t border-travertine-300/70 text-[10px] uppercase tracking-widest text-olive-800 font-bold">
@@ -54,6 +56,8 @@ export default function Teachers() {
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {services.map((service, index) => {
               const Icon = serviceIcons[index] || BookOpen;
+              const title = language === 'IT' ? service.titleIT : service.title;
+              const description = language === 'IT' ? service.descriptionIT : service.description;
               return (
                 <motion.div
                   key={service.title}
@@ -67,8 +71,8 @@ export default function Teachers() {
                     <Icon className="w-5 h-5 text-olive-800 stroke-[1.5]" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-serif text-xl text-charcoal-950 font-normal">{service.title}</h3>
-                    <p className="text-xs text-charcoal-800 font-light leading-relaxed">{service.description}</p>
+                    <h3 className="font-serif text-xl text-charcoal-950 font-normal">{title}</h3>
+                    <p className="text-xs text-charcoal-800 font-light leading-relaxed">{description}</p>
                   </div>
                 </motion.div>
               );
