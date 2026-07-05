@@ -47,7 +47,7 @@ export default function AscoliPage() {
 
           <div className="lg:col-span-6">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
-              <img src={images.ascoli} alt="Historic Italian city details" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={images.ascoli} alt="Piazza del Popolo in Ascoli Piceno" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>

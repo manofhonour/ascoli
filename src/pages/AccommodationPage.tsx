@@ -51,7 +51,7 @@ export default function AccommodationPage() {
                 <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
                   <img
                     src={acc.image}
-                    alt={acc.name}
+                    alt={`${acc.name} planning in Ascoli Piceno`}
                     className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
                     referrerPolicy="no-referrer"
                   />

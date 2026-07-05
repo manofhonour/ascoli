@@ -1,3 +1,20 @@
+import photo1 from '../assets/photos/accademia-01.jpg';
+import photo2 from '../assets/photos/accademia-02.jpg';
+import photo3 from '../assets/photos/accademia-03.jpg';
+import photo4 from '../assets/photos/accademia-04.jpg';
+import photo5 from '../assets/photos/accademia-05.jpg';
+import photo6 from '../assets/photos/accademia-06.jpg';
+import photo7 from '../assets/photos/accademia-07.jpg';
+import photo8 from '../assets/photos/accademia-08.jpg';
+import photo9 from '../assets/photos/accademia-09.jpg';
+import photo10 from '../assets/photos/accademia-10.jpg';
+import photo11 from '../assets/photos/accademia-11.jpg';
+import photo12 from '../assets/photos/accademia-12.jpg';
+import photo13 from '../assets/photos/accademia-13.jpg';
+import photo14 from '../assets/photos/accademia-14.jpg';
+import photo15 from '../assets/photos/accademia-15.jpg';
+import photo16 from '../assets/photos/accademia-16.jpg';
+
 export const contactInfo = {
   schoolName: 'Accademia Italiana',
   networkName: 'Accademia Internazionale',
@@ -15,23 +32,43 @@ export const contactInfo = {
 };
 
 export const images = {
-  ascoli:
-    'https://images.unsplash.com/photo-1562011107-da2e2955e1e0?auto=format&fit=crop&w=1600&q=80',
-  classroom:
-    'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=900&q=80',
-  conversation:
-    'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80',
-  cooking:
-    'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80',
-  wine:
-    'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80',
-  study:
-    'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80',
-  accommodation:
-    'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80',
-  piazza:
-    'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=900&q=80',
+  ascoli: photo10,
+  classroom: photo7,
+  conversation: photo3,
+  cooking: photo5,
+  wine: photo12,
+  study: photo9,
+  accommodation: photo11,
+  piazza: photo10,
+  cultureInterior: photo11,
+  groupLesson: photo1,
+  whiteboardLesson: photo4,
+  studentGroup: photo14,
+  cookingWorkshop: photo2,
+  foodCulture: photo13,
+  classroomCollage: photo16,
+  smallGroup: photo8,
+  studentPortrait: photo6,
 };
+
+export const photoGallery = [
+  { id: 'group-lesson-book', category: 'study', title: 'Small-Group Lesson', location: 'Accademia classroom', image: photo1 },
+  { id: 'cooking-table', category: 'culture', title: 'Cooking Workshop', location: 'Culture course', image: photo2 },
+  { id: 'conversation-class', category: 'study', title: 'Conversation Practice', location: 'Classroom activity', image: photo3 },
+  { id: 'whiteboard-lesson', category: 'study', title: 'Italian Lesson', location: 'Accademia classroom', image: photo4 },
+  { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', location: 'Italian cooking', image: photo5 },
+  { id: 'student-moment', category: 'study', title: 'Student Moment', location: 'Accademia classroom', image: photo6 },
+  { id: 'table-lesson', category: 'study', title: 'Group Study Table', location: 'Small course group', image: photo7 },
+  { id: 'course-discussion', category: 'study', title: 'Course Discussion', location: 'Classroom activity', image: photo8 },
+  { id: 'teacher-board', category: 'study', title: 'Teacher-Led Practice', location: 'Italian lesson', image: photo9 },
+  { id: 'ascoli-piazza', category: 'ascoli', title: 'Piazza del Popolo', location: 'Ascoli Piceno', image: photo10 },
+  { id: 'heritage-interior', category: 'ascoli', title: 'Historic Interior', location: 'Ascoli Piceno', image: photo11 },
+  { id: 'local-cafe', category: 'ascoli', title: 'Local Cafe Atmosphere', location: 'Town-centre life', image: photo12 },
+  { id: 'food-culture', category: 'culture', title: 'Food and Culture', location: 'Culture add-on', image: photo13 },
+  { id: 'student-group', category: 'study', title: 'International Group', location: 'Accademia classroom', image: photo14 },
+  { id: 'social-table', category: 'culture', title: 'Social Italian Practice', location: 'Cafe setting', image: photo15 },
+  { id: 'course-collage', category: 'study', title: 'Accademia Course Moments', location: 'School photo collage', image: photo16 },
+];
 
 export const officialCourses = [
   {
@@ -168,7 +205,7 @@ export const accommodationOptions = [
     name: 'Host Family',
     italianName: 'Famiglia Ospitante',
     tagline: 'Stay with a host family',
-    image: images.accommodation,
+    image: images.ascoli,
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
     features: [
@@ -185,7 +222,7 @@ export const accommodationOptions = [
     name: 'Bed and Breakfast',
     italianName: 'B&B',
     tagline: 'Town-centre accommodation',
-    image: images.piazza,
+    image: images.accommodation,
     description:
       'B&B accommodation in the town centre can be requested through the school, with pricing on request.',
     features: ['Town-centre options', 'Prices on request', 'Reservation support through the school'],
@@ -195,7 +232,7 @@ export const accommodationOptions = [
     name: 'Hotel',
     italianName: 'Hotel',
     tagline: 'Hotel stay in town',
-    image: images.study,
+    image: images.cultureInterior,
     description:
       'Hotel accommodation in the town centre can be arranged on request for students who prefer a more conventional stay.',
     features: ['Central Ascoli Piceno', 'Prices on request', 'Reservation support through the school'],

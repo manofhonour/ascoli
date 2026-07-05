@@ -1,31 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Camera } from 'lucide-react';
-import { images } from '../data/officialContent';
+import { photoGallery } from '../data/officialContent';
 
-type Filter = 'all' | 'architecture' | 'gastronomy' | 'study';
+type Filter = 'all' | 'study' | 'culture' | 'ascoli';
 
 export default function GalleryPage() {
   const [filter, setFilter] = useState<Filter>('all');
 
-  const photos = [
-    { id: 'architecture', category: 'architecture', title: 'Historic Architecture', location: 'City setting', image: images.ascoli },
-    { id: 'streets', category: 'architecture', title: 'Town-Centre Streets', location: 'Italian daily life', image: images.piazza },
-    { id: 'cooking', category: 'gastronomy', title: 'Italian Cooking', location: 'Culture add-on', image: images.cooking },
-    { id: 'wine', category: 'gastronomy', title: 'Wine Tasting', location: 'Culture add-on', image: images.wine },
-    { id: 'lesson', category: 'study', title: 'Small-Group Study', location: 'Italian course', image: images.classroom },
-    { id: 'individual', category: 'study', title: 'Individual Lessons', location: 'Custom study', image: images.conversation },
-    { id: 'reading', category: 'study', title: 'Reading and Writing', location: 'Italian practice', image: images.study },
-    { id: 'accommodation', category: 'study', title: 'Accommodation Support', location: 'Student stay', image: images.accommodation },
-  ];
-
-  const filteredPhotos = filter === 'all' ? photos : photos.filter((p) => p.category === filter);
+  const filteredPhotos = filter === 'all' ? photoGallery : photoGallery.filter((p) => p.category === filter);
 
   const filters: { id: Filter; label: string }[] = [
     { id: 'all', label: 'All' },
-    { id: 'architecture', label: 'Architecture' },
-    { id: 'gastronomy', label: 'Gastronomy' },
     { id: 'study', label: 'Study' },
+    { id: 'culture', label: 'Culture' },
+    { id: 'ascoli', label: 'Ascoli' },
   ];
 
   return (
@@ -47,7 +36,7 @@ export default function GalleryPage() {
             <span className="italic text-terracotta-600">and Italian study.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            A visual overview of the Accademia experience: Ascoli Piceno, cultural add-ons, small courses, and accommodation support.
+            Real Accademia photos from lessons, cultural activities, student moments, and Ascoli Piceno.
           </p>
         </div>
       </section>
@@ -71,7 +60,7 @@ export default function GalleryPage() {
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           <AnimatePresence mode="popLayout">
-            {filteredPhotos.map((photo) => (
+            {filteredPhotos.map((photo, index) => (
               <motion.div
                 key={photo.id}
                 layout
@@ -79,9 +68,11 @@ export default function GalleryPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
-                className="bg-travertine-100 border border-travertine-200 p-4 hover:shadow-2xl transition-all duration-500 space-y-4 group"
+                className={`bg-travertine-100 border border-travertine-200 p-4 hover:shadow-2xl transition-all duration-500 space-y-4 group ${
+                  index === 0 || index === 9 ? 'lg:col-span-2' : ''
+                }`}
               >
-                <div className="aspect-[4/3] bg-travertine-200 overflow-hidden relative shadow-sm">
+                <div className={`${index === 0 || index === 9 ? 'aspect-[16/9]' : 'aspect-[4/3]'} bg-travertine-200 overflow-hidden relative shadow-sm`}>
                   <img
                     src={photo.image}
                     alt={photo.title}

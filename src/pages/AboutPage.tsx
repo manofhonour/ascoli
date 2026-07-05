@@ -73,7 +73,7 @@ export default function AboutPage() {
           <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
             <img
               src={images.ascoli}
-              alt="Historic Italian city architecture"
+              alt="Piazza del Popolo in Ascoli Piceno"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />

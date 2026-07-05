@@ -21,10 +21,10 @@ export default function Hero({ onInquireClick }: HeroProps) {
       <div className="absolute right-[35%] top-0 bottom-0 w-[1px] bg-travertine-200/40 pointer-events-none hidden lg:block" />
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16 w-full min-w-0 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center relative z-10">
         
         {/* Left Column: Premium Editorial Content */}
-        <div className="lg:col-span-5 flex flex-col justify-center space-y-8 lg:space-y-10 lg:pr-6">
+        <div className="lg:col-span-5 min-w-0 flex flex-col justify-center space-y-8 lg:space-y-10 lg:pr-6">
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15, ease: [0.19, 1, 0.22, 1] }}
-            className="text-sm lg:text-base text-charcoal-800 font-light leading-relaxed max-w-md"
+            className="text-sm lg:text-base text-charcoal-800 font-light leading-relaxed w-full max-w-[350px] sm:max-w-md"
           >
             {t('hero.desc')}
           </motion.p>
@@ -105,7 +105,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
           >
             <img
               src={images.ascoli}
-              alt="Historic Italian architecture"
+              alt="Piazza del Popolo in Ascoli Piceno"
               className="w-full h-full object-cover transition-transform duration-[6s] ease-out hover:scale-103"
               referrerPolicy="no-referrer"
             />

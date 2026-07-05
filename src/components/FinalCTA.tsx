@@ -16,7 +16,7 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
       <div className="absolute inset-0 z-0">
         <img
           src={images.ascoli}
-          alt="Historic Italian architecture"
+          alt="Piazza del Popolo in Ascoli Piceno"
           className="w-full h-full object-cover grayscale brightness-40"
           referrerPolicy="no-referrer"
         />

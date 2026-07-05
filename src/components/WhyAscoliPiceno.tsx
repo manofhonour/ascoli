@@ -44,7 +44,7 @@ export default function WhyAscoliPiceno() {
         >
           <img
             src={images.ascoli}
-            alt="Historic Italian architecture"
+            alt="Piazza del Popolo in Ascoli Piceno"
             className="w-full h-full object-cover grayscale brightness-95 hover:grayscale-0 hover:scale-102 transition-all duration-[2s] ease-out"
             referrerPolicy="no-referrer"
           />

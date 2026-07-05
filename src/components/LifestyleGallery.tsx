@@ -17,7 +17,7 @@ export default function LifestyleGallery() {
     {
       id: 1,
       url: images.ascoli,
-      caption: 'Historic architecture and the atmosphere of central Italy.',
+      caption: 'Piazza del Popolo places Italian study in the heart of Ascoli Piceno.',
       span: 'md:col-span-4 h-[280px]',
     },
     {
@@ -29,25 +29,25 @@ export default function LifestyleGallery() {
     {
       id: 3,
       url: images.wine,
-      caption: 'Wine tasting can connect language practice with local gastronomy.',
+      caption: 'Historic cafes and local settings extend language practice beyond the classroom.',
       span: 'md:col-span-4 h-[280px]',
     },
     {
       id: 4,
       url: images.study,
-      caption: 'Quiet study time supports grammar, reading, and personal writing.',
+      caption: 'Teacher-led lessons support grammar, reading, and spoken Italian.',
       span: 'md:col-span-3 h-[320px]',
     },
     {
       id: 5,
       url: images.piazza,
-      caption: 'Conversation practice connects lessons with everyday Italian settings.',
+      caption: 'The city setting connects classroom Italian with everyday places.',
       span: 'md:col-span-5 h-[320px]',
     },
     {
       id: 6,
       url: images.classroom,
-      caption: 'Small-group and individual lessons keep the pace personal.',
+      caption: 'Small-group lessons keep the pace personal and conversational.',
       span: 'md:col-span-4 h-[320px]',
     },
   ];
@@ -84,7 +84,7 @@ export default function LifestyleGallery() {
 
               <div className="absolute inset-0 bg-charcoal-950/75 p-6 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-between text-travertine-100 text-[10px] tracking-wider font-mono uppercase">
-                  <span>Study in Italy</span>
+                  <span>Accademia Photos</span>
                   <Camera className="w-3.5 h-3.5" />
                 </div>
 

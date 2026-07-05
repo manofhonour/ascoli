@@ -34,7 +34,7 @@ export default function CulturePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-7">
             <div className="aspect-[16/10] bg-travertine-200 overflow-hidden shadow-2xl relative">
-              <img src={images.wine} alt="Marche wine and culture" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={images.wine} alt="Historic cafe interior in Ascoli Piceno" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function CulturePage() {
 
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl">
-              <img src={images.study} alt="Italian culture study" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              <img src={images.study} alt="Italian lesson at Accademia Italiana" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
         </div>
