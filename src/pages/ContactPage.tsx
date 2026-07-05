@@ -37,7 +37,7 @@ export default function ContactPage() {
             <span className="italic text-olive-800">in Ascoli Piceno.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            Use the phone, WhatsApp, and email contacts below to confirm courses, dates, prices, and accommodation.
+            Use the phone, WhatsApp, and email contacts below to confirm courses, dates, prices, accommodation, and any practical support needs.
           </p>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                       Message Preview
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
-                      This on-page form is a visual aid. Use the school contacts for booking confirmation.
+                      This on-page form is a visual aid. Mention solo travel, LGBTQ+ considerations, or accessibility needs if you would like the school to discuss them with you.
                     </p>
                   </div>
 
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Share your course dates, current level, and accommodation preference."
+                      placeholder="Share your course dates, current level, accommodation preference, and any arrival or accessibility needs."
                       className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40 resize-none"
                     />
                   </div>

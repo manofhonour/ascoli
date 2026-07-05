@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Briefcase, GraduationCap, Globe2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Briefcase, GraduationCap, Globe2, HeartHandshake } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const pathways = [
@@ -30,6 +30,13 @@ const pathways = [
     focus: 'Refresher and exam preparation',
     need: 'Prepare for CILS, I.T., university entrance, or refresh Italian teaching practice.',
     fit: 'Teacher-refresher courses and certification preparation are part of the course and service offer.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Solo or supported stay',
+    focus: 'Welcoming planning',
+    need: 'Traveling alone, joining as an LGBTQ+ learner, or bringing accessibility needs that should be discussed before arrival.',
+    fit: 'Contact the school in advance to discuss accommodation, arrival details, and practical arrangements.',
   },
 ];
 

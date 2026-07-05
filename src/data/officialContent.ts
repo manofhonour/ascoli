@@ -229,5 +229,23 @@ export const ascoliHighlights = [
   },
 ];
 
+export const inclusiveSupport = [
+  {
+    title: 'Solo Travelers',
+    description:
+      'Students traveling independently can discuss course rhythm, accommodation preferences, and arrival details before booking.',
+  },
+  {
+    title: 'LGBTQ+ Community',
+    description:
+      'LGBTQ+ learners are welcome to contact the school with any personal considerations before arrival.',
+  },
+  {
+    title: 'Accessibility Needs',
+    description:
+      'Students with disabilities or accessibility needs should contact the school in advance so practical arrangements can be discussed.',
+  },
+];
+
 export const directorQuote =
   'Come to the Accademia and discover that learning languages can be easy and enjoyable.';

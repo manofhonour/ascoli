@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Bed, Check, Hotel, Home, Info, MapPin } from 'lucide-react';
+import { Bed, Check, HeartHandshake, Hotel, Home, Info, MapPin } from 'lucide-react';
 import { accommodationOptions, contactInfo } from '../data/officialContent';
 
 const icons = {
@@ -29,7 +29,7 @@ export default function AccommodationPage() {
             <span className="italic text-terracotta-600">with school support.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Host-family prices are listed below; B&B and hotel prices are available on request.
+            The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students traveling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.
           </p>
         </div>
       </section>
@@ -112,7 +112,7 @@ export default function AccommodationPage() {
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <MapPin className="w-4 h-4 text-terracotta-600" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Town-Centre Focus</h4>
@@ -126,6 +126,14 @@ export default function AccommodationPage() {
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">No Extra Reservation Cost</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
                 The school can reserve accommodation for students without an additional reservation cost.
+              </p>
+            </div>
+
+            <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
+              <HeartHandshake className="w-4 h-4 text-terracotta-600" />
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Welcoming Planning</h4>
+              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+                Solo travel, LGBTQ+ considerations, and accessibility needs can be discussed with the school before booking.
               </p>
             </div>
           </div>

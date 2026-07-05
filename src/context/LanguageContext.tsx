@@ -68,9 +68,9 @@ const translations: Record<Language, Record<string, string>> = {
     'why.focus_3_title': 'Communicative Method',
     'why.focus_3_desc':
       'Lessons are designed around communication, level placement, and practical use of Italian.',
-    'why.focus_4_title': 'Authentic Materials',
+    'why.focus_4_title': 'Welcoming Study Environment',
     'why.focus_4_desc':
-      'Courses use authentic teaching material and can connect language study with food, wine, art, history, literature, and local life.',
+      'Solo travelers, LGBTQ+ learners, and students with accessibility needs can contact the school in advance to discuss practical arrangements.',
 
     'courses.sub': 'Courses',
     'courses.title_part1': 'Italian courses',
@@ -101,7 +101,7 @@ const translations: Record<Language, Record<string, string>> = {
     'accommodation.section_title_part1': 'Simple options',
     'accommodation.section_title_italic': 'for your stay.',
     'accommodation.section_desc':
-      'Choose a host family for daily Italian practice, or request a B&B or hotel in the town centre.',
+      'Choose a host family, B&B, or hotel in town, and contact the school in advance to discuss solo travel, LGBTQ+ considerations, or accessibility needs.',
 
     'ascoli.section_tag': 'Ascoli Piceno',
     'ascoli.section_title_part1': 'A historic city',
@@ -170,7 +170,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'form.sub': 'Inquiry',
     'form.title': 'Begin Your Inquiry',
-    'form.desc': 'Tell the school your preferred dates, course format, Italian level, and accommodation needs.',
+    'form.desc': 'Tell the school your preferred dates, course format, Italian level, accommodation needs, and any practical support you would like to discuss.',
     'form.field_first_name': 'First Name',
     'form.field_last_name': 'Last Name',
     'form.field_email': 'Email Address',
@@ -186,7 +186,7 @@ const translations: Record<Language, Record<string, string>> = {
     'form.field_language_level_intermediate': 'Intermediate',
     'form.field_language_level_advanced': 'Advanced',
     'form.field_interest': 'Tell us about your goals',
-    'form.field_interest_placeholder': 'Example: I would like a standard course in September and host-family accommodation.',
+    'form.field_interest_placeholder': 'Example: I would like a standard course in September, host-family accommodation, and information about accessibility or arrival support.',
     'form.submit': 'Submit Inquiry',
     'form.success_title': 'Grazie',
     'form.success_desc': 'Your inquiry has been noted. Please also contact the school directly for booking confirmation.',
@@ -252,9 +252,9 @@ const translations: Record<Language, Record<string, string>> = {
     'why.focus_3_title': 'Metodo comunicativo',
     'why.focus_3_desc':
       'Le lezioni sono costruite su comunicazione, livello dello studente e uso pratico della lingua.',
-    'why.focus_4_title': 'Materiali autentici',
+    'why.focus_4_title': 'Ambiente accogliente',
     'why.focus_4_desc':
-      'I corsi possono collegare lingua, cucina, vino, arte, storia, letteratura e vita locale.',
+      'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita possono contattare la scuola in anticipo.',
 
     'courses.sub': 'Corsi',
     'courses.title_part1': 'Corsi di italiano',
@@ -285,7 +285,7 @@ const translations: Record<Language, Record<string, string>> = {
     'accommodation.section_title_part1': 'Soluzioni semplici',
     'accommodation.section_title_italic': 'per il soggiorno.',
     'accommodation.section_desc':
-      'Scegli una famiglia ospitante per pratica quotidiana, oppure richiedi B&B o hotel in centro.',
+      'Scegli famiglia ospitante, B&B o hotel e contatta la scuola in anticipo per esigenze personali o di accessibilita.',
 
     'ascoli.section_tag': 'Ascoli Piceno',
     'ascoli.section_title_part1': 'Una citta storica',
@@ -351,7 +351,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     'form.sub': 'Richiesta',
     'form.title': 'Inizia la richiesta',
-    'form.desc': 'Indica date, corso, livello di italiano e alloggio desiderato.',
+    'form.desc': 'Indica date, corso, livello di italiano, alloggio desiderato ed eventuali esigenze pratiche.',
     'form.field_first_name': 'Nome',
     'form.field_last_name': 'Cognome',
     'form.field_email': 'Email',
@@ -367,7 +367,7 @@ const translations: Record<Language, Record<string, string>> = {
     'form.field_language_level_intermediate': 'Intermedio',
     'form.field_language_level_advanced': 'Avanzato',
     'form.field_interest': 'Parlaci dei tuoi obiettivi',
-    'form.field_interest_placeholder': 'Esempio: corso standard a settembre e alloggio in famiglia.',
+    'form.field_interest_placeholder': 'Esempio: corso standard a settembre, alloggio in famiglia e informazioni su accessibilita o arrivo.',
     'form.submit': 'Invia richiesta',
     'form.success_title': 'Grazie',
     'form.success_desc': 'La richiesta e stata annotata. Contatta anche la scuola per conferma della prenotazione.',

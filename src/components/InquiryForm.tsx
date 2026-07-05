@@ -108,7 +108,7 @@ export default function InquiryForm() {
                       Course Inquiry
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
-                      This form prepares your message. Contact the school office directly for booking confirmation.
+                      This form prepares your message. You can include solo travel, LGBTQ+ considerations, accessibility needs, or arrival details.
                     </p>
                   </div>
 

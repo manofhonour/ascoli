@@ -36,6 +36,13 @@ export default function FaqPage() {
         'The school can help reserve host-family accommodation, B&B, and hotel options in Ascoli Piceno. Host-family weekly prices are listed, while B&B and hotel prices are on request.',
     },
     {
+      id: 'inclusive-support',
+      category: 'Student Support',
+      question: 'Are solo travelers, LGBTQ+ learners, and students with accessibility needs welcome?',
+      answer:
+        'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so course, accommodation, arrival, and practical details can be discussed.',
+    },
+    {
       id: 'travel',
       category: 'Travel',
       question: 'How do students reach Ascoli Piceno?',

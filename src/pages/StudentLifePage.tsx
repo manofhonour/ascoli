@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Coffee } from 'lucide-react';
-import { culturalOfferings, images } from '../data/officialContent';
+import { Accessibility, Coffee, HeartHandshake, UserRound } from 'lucide-react';
+import { culturalOfferings, images, inclusiveSupport } from '../data/officialContent';
 
 export default function StudentLifePage() {
+  const inclusionIcons = [UserRound, HeartHandshake, Accessibility];
+
   const events = [
     {
       id: 'conversation',
@@ -57,6 +59,23 @@ export default function StudentLifePage() {
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
             The student experience centres on course formats, local conversation, and optional cultural study.
           </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {inclusiveSupport.map((item, index) => {
+            const Icon = inclusionIcons[index] || HeartHandshake;
+            return (
+              <div key={item.title} className="bg-travertine-100 border border-travertine-200 p-6 space-y-4">
+                <div className="w-10 h-10 bg-olive-50 border border-olive-200 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-olive-800 stroke-[1.5]" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-serif text-lg text-charcoal-950 font-normal">{item.title}</h3>
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="space-y-16">

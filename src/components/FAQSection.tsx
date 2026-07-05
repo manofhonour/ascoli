@@ -41,6 +41,12 @@ export default function FAQSection() {
       category: 'Accommodation',
     },
     {
+      question: 'Is the school welcoming for solo travelers, LGBTQ+ learners, and students with accessibility needs?',
+      answer:
+        'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so practical details can be discussed before arrival.',
+      category: 'Student Support',
+    },
+    {
       question: 'How can I reach Ascoli Piceno?',
       answer:
         'Travel options include train connections via San Benedetto del Tronto, bus or car from Rome in about 2.5 hours, and access from Ancona-Falconara and Pescara airports.',
