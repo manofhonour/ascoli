@@ -10,4 +10,6 @@ Kullanma:
 
 Alternatif olarak `accademia-italiana-offline-html.zip` dosyasini indirip icindeki HTML dosyasini acabilirsin.
 
+Bu dosya React, Vite, harici JavaScript, assets klasoru veya internet baglantisi gerektirmez. Foto, stil ve icerik tek HTML dosyasinin icine gomuludur.
+
 Not: Paket statik onizleme icindir. Form gonderimi veya canli sunucu ozellikleri gerektiren islemler icin GitHub reposundaki React projesi kullanilmalidir.
