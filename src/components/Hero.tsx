@@ -122,13 +122,10 @@ export default function Hero({ onInquireClick }: HeroProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/35 via-transparent to-transparent pointer-events-none" />
               <div className="absolute inset-0 border border-white/15 pointer-events-none m-4" />
-              <div className="absolute left-4 top-4 md:left-7 md:top-7 max-w-[260px] text-travertine-50 bg-charcoal-950/55 backdrop-blur-sm border border-travertine-50/15 px-4 py-3">
-                <span className="flex items-center gap-2 text-[9px] tracking-[0.2em] uppercase font-bold text-terracotta-100">
+              <div className="absolute right-4 top-4 md:right-7 md:top-7 text-charcoal-950 bg-travertine-50/92 backdrop-blur-sm border border-travertine-300/70 px-3 py-2 shadow-lg">
+                <span className="flex items-center gap-2 text-[9px] tracking-[0.18em] uppercase font-bold text-olive-800">
                   <Users className="w-3.5 h-3.5" />
                   {language === 'IT' ? 'Piccoli gruppi reali' : 'Real small groups'}
-                </span>
-                <span className="hidden md:block font-serif text-2xl md:text-3xl font-light leading-tight mt-2">
-                  {language === 'IT' ? 'Una scuola con volti, ritmo e presenza.' : 'A school with faces, rhythm, and presence.'}
                 </span>
               </div>
             </div>
