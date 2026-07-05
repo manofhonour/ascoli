@@ -50,12 +50,10 @@ export default function Courses() {
                 src={featuredCourse.image}
                 alt={featured.title}
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 hover:scale-103 transition-all duration-[1.2s]"
+                style={{ objectPosition: featuredCourse.imagePosition }}
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/45 via-transparent to-transparent" />
-              <span className="absolute top-5 left-5 text-[10px] tracking-[0.22em] uppercase font-bold text-travertine-50 bg-charcoal-950/55 px-3 py-1.5">
-                {language === 'IT' ? 'Corso principale' : 'Signature course'}
-              </span>
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/22 via-transparent to-transparent pointer-events-none" />
             </div>
 
             <div className="p-7 md:p-9 flex flex-col justify-between gap-10">
@@ -111,6 +109,7 @@ export default function Courses() {
                       src={course.image}
                       alt={copy.title}
                       className="w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      style={{ objectPosition: course.imagePosition }}
                       referrerPolicy="no-referrer"
                     />
                   </div>

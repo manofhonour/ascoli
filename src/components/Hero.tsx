@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, MapPin, MessageCircle, Users } from 'lucide-react';
+import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { contactInfo, images } from '../data/officialContent';
 import accademiaLogo from '../assets/accademia-logo.png';
@@ -115,19 +115,14 @@ export default function Hero({ onInquireClick }: HeroProps) {
           >
             <div className="absolute left-0 sm:left-auto right-0 top-0 w-full sm:w-[88%] md:w-[82%] h-[68%] md:h-[72%] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/70">
               <img
-                src={images.studentGroup}
+                src={images.groupLesson}
                 alt="Accademia Italiana students in a small group lesson"
-                className="w-full h-full object-cover object-center transition-transform duration-[6s] ease-out hover:scale-103"
+                className="w-full h-full object-cover transition-transform duration-[6s] ease-out hover:scale-103"
+                style={{ objectPosition: '50% 44%' }}
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/35 via-transparent to-transparent pointer-events-none" />
               <div className="absolute inset-0 border border-white/15 pointer-events-none m-4" />
-              <div className="absolute right-4 top-4 md:right-7 md:top-7 text-charcoal-950 bg-travertine-50/92 backdrop-blur-sm border border-travertine-300/70 px-3 py-2 shadow-lg">
-                <span className="flex items-center gap-2 text-[9px] tracking-[0.18em] uppercase font-bold text-olive-800">
-                  <Users className="w-3.5 h-3.5" />
-                  {language === 'IT' ? 'Piccoli gruppi reali' : 'Real small groups'}
-                </span>
-              </div>
             </div>
 
             <div className="absolute left-0 bottom-10 w-[48%] min-w-[210px] h-[38%] bg-travertine-100 overflow-hidden shadow-xl border border-travertine-300/70 hidden sm:block">
@@ -135,6 +130,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
                 src={images.ascoli}
                 alt="Piazza del Popolo in Ascoli Piceno"
                 className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 50%' }}
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/55 via-transparent to-transparent" />

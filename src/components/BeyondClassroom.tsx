@@ -64,6 +64,7 @@ export default function BeyondClassroom() {
                       src={exp.image}
                       alt={title}
                       className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-102 transition-all duration-[1s] ease-out"
+                      style={{ objectPosition: exp.imagePosition }}
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 border border-white/20 pointer-events-none m-3" />

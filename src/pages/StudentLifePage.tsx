@@ -17,7 +17,8 @@ export default function StudentLifePage() {
         language === 'IT'
           ? 'La scuola nel centro storico rende naturale usare l italiano per saluti, indicazioni, cibo, cultura e scambi quotidiani.'
           : 'The school setting in the historic centre makes it natural to use Italian for greetings, directions, food, culture, and everyday exchanges.',
-      image: images.piazza,
+      image: images.socialTable,
+      imagePosition: '50% 48%',
     },
     ...culturalOfferings.slice(0, 3).map((item) => ({
       id: item.title,
@@ -25,6 +26,7 @@ export default function StudentLifePage() {
       tagline: language === 'IT' ? item.taglineIT : item.tagline,
       description: language === 'IT' ? item.descriptionIT : item.description,
       image: item.image,
+      imagePosition: item.imagePosition,
     })),
   ];
 
@@ -101,7 +103,13 @@ export default function StudentLifePage() {
               <div key={event.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div className={`lg:col-span-6 relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="aspect-[16/10] bg-travertine-200 overflow-hidden shadow-xl">
-                    <img src={event.image} alt={event.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: event.imagePosition }}
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                 </div>
 

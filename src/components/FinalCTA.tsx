@@ -18,6 +18,7 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
           src={images.ascoli}
           alt="Piazza del Popolo in Ascoli Piceno"
           className="w-full h-full object-cover grayscale brightness-40"
+          style={{ objectPosition: '50% 50%' }}
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal-950/90 via-charcoal-950/80 to-charcoal-950" />

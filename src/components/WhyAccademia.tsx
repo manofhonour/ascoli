@@ -73,6 +73,7 @@ export default function WhyAccademia() {
                 src={images.whiteboardLesson}
                 alt="Teacher-led Italian lesson at Accademia Italiana"
                 className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 hover:scale-102 transition-all duration-[1.2s]"
+                style={{ objectPosition: '54% 48%' }}
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/55 via-transparent to-transparent" />

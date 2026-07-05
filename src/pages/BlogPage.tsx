@@ -13,6 +13,7 @@ interface BlogPost {
   author: string;
   readTime: string;
   image: string;
+  imagePosition: string;
   content: string[];
 }
 
@@ -36,6 +37,7 @@ export default function BlogPage() {
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '4 min lettura' : '4 min read',
       image: officialCourses[0].image,
+      imagePosition: officialCourses[0].imagePosition,
       content:
         language === 'IT'
           ? [
@@ -64,6 +66,7 @@ export default function BlogPage() {
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '3 min lettura' : '3 min read',
       image: culturalOfferings[0].image,
+      imagePosition: culturalOfferings[0].imagePosition,
       content:
         language === 'IT'
           ? [
@@ -92,6 +95,7 @@ export default function BlogPage() {
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '4 min lettura' : '4 min read',
       image: images.ascoli,
+      imagePosition: '50% 50%',
       content:
         language === 'IT'
           ? [
@@ -146,7 +150,13 @@ export default function BlogPage() {
                   <div key={post.id} className="bg-travertine-100 border border-travertine-200/60 p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
                     <div className="space-y-6">
                       <div className="aspect-[16/10] bg-travertine-200 overflow-hidden relative shadow-sm">
-                        <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105" referrerPolicy="no-referrer" />
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105"
+                          style={{ objectPosition: post.imagePosition }}
+                          referrerPolicy="no-referrer"
+                        />
                         <span className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-3.5 py-1.5 text-[9px] tracking-widest font-mono font-bold text-travertine-100 uppercase">
                           {post.category}
                         </span>
@@ -227,7 +237,13 @@ export default function BlogPage() {
                 </div>
 
                 <div className="aspect-[16/9] bg-travertine-200 overflow-hidden shadow-xl">
-                  <img src={selectedPost.image} alt={selectedPost.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img
+                    src={selectedPost.image}
+                    alt={selectedPost.title}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: selectedPost.imagePosition }}
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
 
                 <div className="font-serif text-base md:text-lg text-charcoal-900 leading-relaxed font-light space-y-6 pt-4">

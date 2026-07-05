@@ -63,11 +63,9 @@ export default function AccommodationPage() {
                     src={acc.image}
                     alt={language === 'IT' ? `${acc.italianName} ad Ascoli Piceno` : `${acc.name} planning in Ascoli Piceno`}
                     className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
+                    style={{ objectPosition: acc.imagePosition }}
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-4 py-2 text-[10px] tracking-widest font-bold text-travertine-100 uppercase">
-                    {acc.italianName}
-                  </div>
                 </div>
                 <div className="absolute -inset-2 border border-travertine-300 pointer-events-none rounded-none -z-10 translate-x-3 translate-y-3 opacity-30" />
               </div>

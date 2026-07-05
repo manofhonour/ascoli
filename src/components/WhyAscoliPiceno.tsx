@@ -74,6 +74,7 @@ export default function WhyAscoliPiceno() {
             src={images.ascoli}
             alt="Piazza del Popolo in Ascoli Piceno"
             className="w-full h-full object-cover grayscale brightness-95 hover:grayscale-0 hover:scale-102 transition-all duration-[2s] ease-out"
+            style={{ objectPosition: '50% 50%' }}
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/70 via-transparent to-transparent" />

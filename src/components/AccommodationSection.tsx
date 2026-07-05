@@ -90,12 +90,13 @@ export default function AccommodationSection() {
                 <motion.img
                   key={activeTab}
                   src={activeData.image}
-                  alt={activeName}
+                  alt={`${activeName} accommodation planning in Ascoli Piceno`}
                   initial={{ opacity: 0, scale: 1.01 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.01 }}
                   transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
                   className="absolute inset-0 w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-102 transition-all duration-[1s]"
+                  style={{ objectPosition: activeData.imagePosition }}
                   referrerPolicy="no-referrer"
                 />
               </AnimatePresence>

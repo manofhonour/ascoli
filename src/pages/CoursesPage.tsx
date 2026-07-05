@@ -91,6 +91,7 @@ export default function CoursesPage() {
                 src={activeCourse.image}
                 alt={activeName}
                 className="w-full h-full object-cover"
+                style={{ objectPosition: activeCourse.imagePosition }}
                 referrerPolicy="no-referrer"
               />
             </div>

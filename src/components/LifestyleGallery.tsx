@@ -9,6 +9,7 @@ interface GalleryItem {
   caption: string;
   captionIT: string;
   span: string;
+  position: string;
 }
 
 export default function LifestyleGallery() {
@@ -21,6 +22,7 @@ export default function LifestyleGallery() {
       caption: 'Piazza del Popolo places Italian study in the heart of Ascoli Piceno.',
       captionIT: 'Piazza del Popolo colloca lo studio dell italiano nel cuore di Ascoli Piceno.',
       span: 'md:col-span-4 h-[280px]',
+      position: '50% 50%',
     },
     {
       id: 2,
@@ -28,13 +30,15 @@ export default function LifestyleGallery() {
       caption: 'Italian cooking and regional food vocabulary as part of cultural learning.',
       captionIT: 'Cucina italiana e lessico gastronomico regionale come parte dello studio culturale.',
       span: 'md:col-span-4 h-[380px] md:mt-[-40px]',
+      position: '50% 56%',
     },
     {
       id: 3,
-      url: images.wine,
-      caption: 'Historic cafes and local settings extend language practice beyond the classroom.',
-      captionIT: 'Caffe storici e contesti locali portano la pratica linguistica fuori dall aula.',
+      url: images.socialTable,
+      caption: 'Social tables and local settings extend language practice beyond the classroom.',
+      captionIT: 'Tavoli sociali e contesti locali portano la pratica linguistica fuori dall aula.',
       span: 'md:col-span-4 h-[280px]',
+      position: '50% 48%',
     },
     {
       id: 4,
@@ -42,20 +46,23 @@ export default function LifestyleGallery() {
       caption: 'Teacher-led lessons support grammar, reading, and spoken Italian.',
       captionIT: 'Le lezioni guidate dal docente sostengono grammatica, lettura e italiano parlato.',
       span: 'md:col-span-3 h-[320px]',
+      position: '47% 48%',
     },
     {
       id: 5,
-      url: images.piazza,
-      caption: 'The city setting connects classroom Italian with everyday places.',
-      captionIT: 'La citta collega l italiano dell aula ai luoghi della vita quotidiana.',
+      url: images.cultureInterior,
+      caption: 'Historic interiors connect Italian study with local art and traditions.',
+      captionIT: 'Gli interni storici collegano lo studio dell italiano ad arte e tradizioni locali.',
       span: 'md:col-span-5 h-[320px]',
+      position: '50% 50%',
     },
     {
       id: 6,
-      url: images.classroom,
+      url: images.groupLesson,
       caption: 'Small-group lessons keep the pace personal and conversational.',
       captionIT: 'Le lezioni in piccoli gruppi mantengono un ritmo personale e comunicativo.',
       span: 'md:col-span-4 h-[320px]',
+      position: '50% 44%',
     },
   ];
 
@@ -86,6 +93,7 @@ export default function LifestyleGallery() {
                 src={item.url}
                 alt={language === 'IT' ? item.captionIT : item.caption}
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-102 transition-all duration-700 ease-out"
+                style={{ objectPosition: item.position }}
                 referrerPolicy="no-referrer"
               />
 

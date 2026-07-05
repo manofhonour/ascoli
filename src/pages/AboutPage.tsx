@@ -96,9 +96,10 @@ export default function AboutPage() {
         <div className="lg:col-span-6 relative">
           <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
             <img
-              src={images.ascoli}
-              alt="Piazza del Popolo in Ascoli Piceno"
+              src={images.classroomCollage}
+              alt="Accademia Italiana course moments"
               className="w-full h-full object-cover"
+              style={{ objectPosition: '50% 50%' }}
               referrerPolicy="no-referrer"
             />
           </div>

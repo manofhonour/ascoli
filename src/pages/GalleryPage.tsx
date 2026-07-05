@@ -87,17 +87,15 @@ export default function GalleryPage() {
                     src={photo.image}
                     alt={language === 'IT' ? photo.titleIT : photo.title}
                     className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
+                    style={{ objectPosition: photo.imagePosition }}
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-3 py-1.5 text-[9px] tracking-widest font-mono font-bold text-travertine-100 uppercase">
-                    {categoryLabel[photo.category]}
-                  </div>
                 </div>
 
                 <div className="space-y-1">
                   <span className="text-[10px] tracking-wider uppercase font-bold text-olive-800 flex items-center gap-1.5">
                     <Camera className="w-3.5 h-3.5 stroke-[1.5]" />
-                    {language === 'IT' ? photo.locationIT : photo.location}
+                    {categoryLabel[photo.category]} / {language === 'IT' ? photo.locationIT : photo.location}
                   </span>
                   <h3 className="font-serif text-base text-charcoal-950 font-normal">
                     {language === 'IT' ? photo.titleIT : photo.title}

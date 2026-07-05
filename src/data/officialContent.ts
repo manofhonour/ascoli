@@ -33,7 +33,7 @@ export const contactInfo = {
 
 export const images = {
   ascoli: photo10,
-  classroom: photo7,
+  classroom: photo14,
   conversation: photo3,
   cooking: photo5,
   wine: photo12,
@@ -49,25 +49,26 @@ export const images = {
   classroomCollage: photo16,
   smallGroup: photo8,
   studentPortrait: photo6,
+  socialTable: photo15,
 };
 
 export const photoGallery = [
-  { id: 'group-lesson-book', category: 'study', title: 'Small-Group Lesson', titleIT: 'Lezione in piccolo gruppo', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo1 },
-  { id: 'cooking-table', category: 'culture', title: 'Cooking Workshop', titleIT: 'Laboratorio di cucina', location: 'Culture course', locationIT: 'Corso di cultura', image: photo2 },
-  { id: 'conversation-class', category: 'study', title: 'Conversation Practice', titleIT: 'Pratica di conversazione', location: 'Classroom activity', locationIT: 'Attivita in aula', image: photo3 },
-  { id: 'whiteboard-lesson', category: 'study', title: 'Italian Lesson', titleIT: 'Lezione di italiano', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo4 },
-  { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', titleIT: 'Laboratorio di pasta fresca', location: 'Italian cooking', locationIT: 'Cucina italiana', image: photo5 },
-  { id: 'student-moment', category: 'study', title: 'Student Moment', titleIT: 'Momento in aula', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo6 },
-  { id: 'table-lesson', category: 'study', title: 'Group Study Table', titleIT: 'Studio di gruppo', location: 'Small course group', locationIT: 'Piccolo gruppo', image: photo7 },
-  { id: 'course-discussion', category: 'study', title: 'Course Discussion', titleIT: 'Discussione in corso', location: 'Classroom activity', locationIT: 'Attivita in aula', image: photo8 },
-  { id: 'teacher-board', category: 'study', title: 'Teacher-Led Practice', titleIT: 'Pratica guidata', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: photo9 },
-  { id: 'ascoli-piazza', category: 'ascoli', title: 'Piazza del Popolo', titleIT: 'Piazza del Popolo', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo10 },
-  { id: 'heritage-interior', category: 'ascoli', title: 'Historic Interior', titleIT: 'Interno storico', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo11 },
-  { id: 'local-cafe', category: 'ascoli', title: 'Local Cafe Atmosphere', titleIT: 'Atmosfera di caffe', location: 'Town-centre life', locationIT: 'Vita del centro', image: photo12 },
-  { id: 'food-culture', category: 'culture', title: 'Food and Culture', titleIT: 'Cibo e cultura', location: 'Culture add-on', locationIT: 'Modulo culturale', image: photo13 },
-  { id: 'student-group', category: 'study', title: 'International Group', titleIT: 'Gruppo internazionale', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo14 },
-  { id: 'social-table', category: 'culture', title: 'Social Italian Practice', titleIT: 'Pratica sociale di italiano', location: 'Cafe setting', locationIT: 'Caffe e conversazione', image: photo15 },
-  { id: 'course-collage', category: 'study', title: 'Accademia Course Moments', titleIT: 'Momenti dei corsi Accademia', location: 'School photo collage', locationIT: 'Foto della scuola', image: photo16 },
+  { id: 'group-lesson-book', category: 'study', title: 'Small-Group Lesson', titleIT: 'Lezione in piccolo gruppo', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo1, imagePosition: '50% 44%' },
+  { id: 'cooking-table', category: 'culture', title: 'Cooking Workshop', titleIT: 'Laboratorio di cucina', location: 'Culture course', locationIT: 'Corso di cultura', image: photo2, imagePosition: '50% 50%' },
+  { id: 'conversation-class', category: 'study', title: 'Conversation Practice', titleIT: 'Pratica di conversazione', location: 'Classroom activity', locationIT: 'Attivita in aula', image: photo3, imagePosition: '50% 46%' },
+  { id: 'whiteboard-lesson', category: 'study', title: 'Italian Lesson', titleIT: 'Lezione di italiano', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo4, imagePosition: '54% 48%' },
+  { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', titleIT: 'Laboratorio di pasta fresca', location: 'Italian cooking', locationIT: 'Cucina italiana', image: photo5, imagePosition: '50% 56%' },
+  { id: 'student-moment', category: 'study', title: 'Student Moment', titleIT: 'Momento in aula', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo6, imagePosition: '50% 50%' },
+  { id: 'table-lesson', category: 'study', title: 'Group Study Table', titleIT: 'Studio di gruppo', location: 'Small course group', locationIT: 'Piccolo gruppo', image: photo7, imagePosition: '52% 50%' },
+  { id: 'course-discussion', category: 'study', title: 'Course Discussion', titleIT: 'Discussione in corso', location: 'Classroom activity', locationIT: 'Attivita in aula', image: photo8, imagePosition: '55% 52%' },
+  { id: 'teacher-board', category: 'study', title: 'Teacher-Led Practice', titleIT: 'Pratica guidata', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: photo9, imagePosition: '47% 48%' },
+  { id: 'ascoli-piazza', category: 'ascoli', title: 'Piazza del Popolo', titleIT: 'Piazza del Popolo', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo10, imagePosition: '50% 50%' },
+  { id: 'heritage-interior', category: 'ascoli', title: 'Historic Interior', titleIT: 'Interno storico', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo11, imagePosition: '50% 50%' },
+  { id: 'local-cafe', category: 'ascoli', title: 'Local Cafe Atmosphere', titleIT: 'Atmosfera di caffe', location: 'Town-centre life', locationIT: 'Vita del centro', image: photo12, imagePosition: '50% 50%' },
+  { id: 'food-culture', category: 'culture', title: 'Food and Culture', titleIT: 'Cibo e cultura', location: 'Culture add-on', locationIT: 'Modulo culturale', image: photo13, imagePosition: '45% 48%' },
+  { id: 'student-group', category: 'study', title: 'International Group', titleIT: 'Gruppo internazionale', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo14, imagePosition: '52% 48%' },
+  { id: 'social-table', category: 'culture', title: 'Social Italian Practice', titleIT: 'Pratica sociale di italiano', location: 'Cafe setting', locationIT: 'Caffe e conversazione', image: photo15, imagePosition: '50% 48%' },
+  { id: 'course-collage', category: 'study', title: 'Accademia Course Moments', titleIT: 'Momenti dei corsi Accademia', location: 'School photo collage', locationIT: 'Foto della scuola', image: photo16, imagePosition: '50% 50%' },
 ];
 
 export const officialCourses = [
@@ -81,7 +82,8 @@ export const officialCourses = [
     hoursPerWeekIT: '20 ore/settimana',
     price: 'EUR 220/week',
     priceIT: 'EUR 220/settimana',
-    image: images.classroom,
+    image: images.studentGroup,
+    imagePosition: '52% 48%',
     description:
       'Small-group Italian course in Ascoli Piceno with 20 hours per week and groups of 3-6 students.',
     descriptionIT:
@@ -100,6 +102,7 @@ export const officialCourses = [
     price: 'From EUR 370/week',
     priceIT: 'Da EUR 370/settimana',
     image: images.conversation,
+    imagePosition: '50% 46%',
     description:
       'Intensive course with 20 group hours and 5 individual hours each week.',
     descriptionIT:
@@ -118,6 +121,7 @@ export const officialCourses = [
     price: 'EUR 30/hour',
     priceIT: 'EUR 30/ora',
     image: images.study,
+    imagePosition: '47% 48%',
     description:
       'One-to-one lessons available by appointment, with hourly and package pricing.',
     descriptionIT:
@@ -135,7 +139,8 @@ export const officialCourses = [
     hoursPerWeekIT: '4-6 ore/settimana',
     price: 'EUR 10-14/hour',
     priceIT: 'EUR 10-14/ora',
-    image: images.piazza,
+    image: images.smallGroup,
+    imagePosition: '55% 52%',
     description:
       'Extensive course for groups of 3-6 students, with 4-6 hours per week and one or two weekly meetings.',
     descriptionIT:
@@ -153,7 +158,8 @@ export const officialCourses = [
     hoursPerWeekIT: '30 ore/settimana',
     price: 'From EUR 430',
     priceIT: 'Da EUR 430',
-    image: images.classroom,
+    image: images.whiteboardLesson,
+    imagePosition: '54% 48%',
     description:
       'Refresher course for teachers with 30 hours per week and one- or two-week formats.',
     descriptionIT:
@@ -171,7 +177,8 @@ export const officialCourses = [
     hoursPerWeekIT: 'Su misura',
     price: 'Quote on request',
     priceIT: 'Preventivo su richiesta',
-    image: images.cooking,
+    image: images.foodCulture,
+    imagePosition: '45% 48%',
     description:
       'Custom-made Italian course available in Ascoli Piceno or online, with pricing prepared on request.',
     descriptionIT:
@@ -192,6 +199,7 @@ export const culturalOfferings = [
     descriptionIT:
       'I corsi di cultura italiana includono cucina e tradizioni gastronomiche locali; Ascoli Piceno e nota per le Olive all Ascolana.',
     image: images.cooking,
+    imagePosition: '50% 54%',
   },
   {
     title: 'Wine Tasting',
@@ -203,6 +211,7 @@ export const culturalOfferings = [
     descriptionIT:
       'La degustazione unisce teoria e pratica con vini bianchi, rossi e rose, vitigni, metodi di produzione e gastronomia locale.',
     image: images.wine,
+    imagePosition: '50% 50%',
   },
   {
     title: 'Arts and Handcrafts',
@@ -213,7 +222,8 @@ export const culturalOfferings = [
       'Add-on culture options include opera, olive oil, ceramics, painting, and tombolo pillow lace, depending on dates and availability.',
     descriptionIT:
       'Le opzioni culturali includono opera, olio, ceramica, pittura e tombolo, in base a date e disponibilita.',
-    image: images.study,
+    image: images.cultureInterior,
+    imagePosition: '50% 50%',
   },
   {
     title: 'Special Italian Topics',
@@ -224,7 +234,8 @@ export const culturalOfferings = [
       'Students can add current affairs, business Italian, tourism and hotel management, university entrance preparation, CILS, I.T., history, art history, literature, and Italy today.',
     descriptionIT:
       'Gli studenti possono aggiungere attualita, italiano commerciale, turismo e hotel management, preparazione universitaria, CILS, I.T., storia, storia dell arte, letteratura e Italia oggi.',
-    image: images.piazza,
+    image: images.classroomCollage,
+    imagePosition: '50% 50%',
   },
 ];
 
@@ -263,6 +274,7 @@ export const accommodationOptions = [
     tagline: 'Stay with a host family',
     taglineIT: 'Soggiorno in famiglia ospitante',
     image: images.ascoli,
+    imagePosition: '50% 50%',
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
     descriptionIT:
@@ -291,6 +303,7 @@ export const accommodationOptions = [
     tagline: 'Town-centre accommodation',
     taglineIT: 'Alloggio in centro',
     image: images.accommodation,
+    imagePosition: '50% 50%',
     description:
       'B&B accommodation in the town centre can be requested through the school, with pricing on request.',
     descriptionIT:
@@ -304,7 +317,8 @@ export const accommodationOptions = [
     italianName: 'Hotel',
     tagline: 'Hotel stay in town',
     taglineIT: 'Soggiorno in hotel in citta',
-    image: images.cultureInterior,
+    image: images.wine,
+    imagePosition: '50% 50%',
     description:
       'Hotel accommodation in the town centre can be arranged on request for students who prefer a more conventional stay.',
     descriptionIT:
