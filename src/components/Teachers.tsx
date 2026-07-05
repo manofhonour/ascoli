@@ -12,8 +12,8 @@ export default function Teachers() {
 
   return (
     <section id="teachers" className="py-24 md:py-32 bg-travertine-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="max-w-3xl mb-20 space-y-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
+        <div className="max-w-[340px] sm:max-w-3xl mb-20 space-y-4">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
             {t('teachers.section_tag')}
           </span>

@@ -61,9 +61,9 @@ export default function LifestyleGallery() {
 
   return (
     <section id="gallery" className="py-32 md:py-44 bg-travertine-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">
-          <div className="space-y-6">
+          <div className="space-y-6 max-w-[340px] sm:max-w-none">
             <span className="text-[10px] font-bold tracking-[0.3em] text-terracotta-600 uppercase block">
               {t('gallery.section_tag')}
             </span>

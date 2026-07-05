@@ -8,8 +8,8 @@ export default function BeyondClassroom() {
 
   return (
     <section id="beyond-classroom" className="py-24 md:py-32 bg-travertine-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="max-w-3xl mb-20 space-y-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
+        <div className="max-w-[340px] sm:max-w-3xl mb-20 space-y-4">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
             {t('beyond.section_tag')}
           </span>
@@ -29,7 +29,7 @@ export default function BeyondClassroom() {
             const tagline = language === 'IT' ? exp.taglineIT : exp.tagline;
             const description = language === 'IT' ? exp.descriptionIT : exp.description;
             return (
-              <div key={exp.title} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+              <div key={exp.title} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-[340px] sm:max-w-none">
                 <div className={`lg:col-span-5 space-y-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="space-y-1">
                     <span className="font-serif italic text-xs text-terracotta-600">{exp.italianTitle}</span>

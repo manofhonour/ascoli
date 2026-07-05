@@ -77,9 +77,9 @@ export default function StudentStories() {
 
   return (
     <section id="student-stories" className="py-24 md:py-32 bg-travertine-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="space-y-4 max-w-2xl">
+          <div className="space-y-4 max-w-[340px] sm:max-w-2xl">
             <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
               {t('stories.section_tag')}
             </span>

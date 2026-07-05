@@ -44,9 +44,9 @@ export default function WhyAscoliPiceno() {
 
   return (
     <section id="why-ascoli" className="py-24 md:py-32 bg-travertine-100">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16">
-          <div className="lg:col-span-7 space-y-4">
+          <div className="lg:col-span-7 max-w-[340px] sm:max-w-none space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
               {t('ascoli.section_tag')}
             </span>

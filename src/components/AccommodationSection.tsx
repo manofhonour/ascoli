@@ -23,8 +23,8 @@ export default function AccommodationSection() {
 
   return (
     <section id="accommodation" className="py-32 md:py-44 bg-travertine-50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="max-w-3xl mb-24 space-y-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16">
+        <div className="max-w-[340px] sm:max-w-3xl mb-24 space-y-6">
           <span className="text-[10px] font-bold tracking-[0.3em] text-terracotta-600 uppercase block">
             {t('accommodation.section_tag')}
           </span>

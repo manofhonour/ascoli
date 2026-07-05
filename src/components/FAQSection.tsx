@@ -112,12 +112,12 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="py-32 md:py-44 bg-travertine-100">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center space-y-6 mb-24">
           <span className="text-[10px] font-bold tracking-[0.3em] text-terracotta-600 uppercase">
             {t('faq.section_tag')}
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-extralight text-charcoal-950 leading-tight">
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-extralight text-charcoal-950 leading-tight max-w-[340px] sm:max-w-none">
             {t('faq.section_title')}
           </h2>
           <p className="text-xs md:text-sm lg:text-base text-charcoal-800 font-light max-w-md leading-relaxed">

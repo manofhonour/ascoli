@@ -26,7 +26,7 @@ export default function InquiryForm() {
     <section id="inquire" className="py-24 md:py-32 bg-travertine-100 relative overflow-hidden scroll-mt-20">
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:20px_20px] opacity-10 pointer-events-none -translate-x-1/3 translate-y-1/3" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
