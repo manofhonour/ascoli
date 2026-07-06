@@ -1,33 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Aptos, "Segoe UI", system-ui, -apple-system, sans-serif;
   
-  --color-travertine-50: #FCFAF7;
-  --color-travertine-100: #F6F1EA;
-  --color-travertine-200: #EFE6DA;
-  --color-travertine-300: #E2D3C1;
-  --color-travertine-400: #CBB49C;
+  --color-travertine-50: #F7F3EC;
+  --color-travertine-100: #EFE7DA;
+  --color-travertine-200: #E7D7C2;
+  --color-travertine-300: #D8C3A8;
+  --color-travertine-400: #BFA17E;
   
-  --color-olive-50: #F7F8F5;
-  --color-olive-100: #EAECE2;
-  --color-olive-200: #D3D9C1;
-  --color-olive-700: #4B5742;
-  --color-olive-800: #384232;
-  --color-olive-900: #272E23;
+  --color-olive-50: #F1F3ED;
+  --color-olive-100: #E2E7DA;
+  --color-olive-200: #C8D2BA;
+  --color-olive-700: #556B4E;
+  --color-olive-800: #42553C;
+  --color-olive-900: #2F3C2C;
   
-  --color-terracotta-50: #FAF2F0;
-  --color-terracotta-100: #F4E2DE;
-  --color-terracotta-500: #CE6A4E;
-  --color-terracotta-600: #B75237;
-  --color-terracotta-700: #933E27;
+  --color-terracotta-50: #FBF0EC;
+  --color-terracotta-100: #F1D7CC;
+  --color-terracotta-500: #C96A45;
+  --color-terracotta-600: #A95032;
+  --color-terracotta-700: #873D27;
+
+  --color-gold-50: #FAF4E5;
+  --color-gold-100: #F0DFC0;
+  --color-gold-500: #C89A47;
+  --color-gold-700: #8F6829;
   
-  --color-charcoal-50: #F4F4F4;
-  --color-charcoal-100: #E9E9E9;
-  --color-charcoal-800: #262626;
-  --color-charcoal-950: #121212;
+  --color-charcoal-50: #F2F0EC;
+  --color-charcoal-100: #E5E0D8;
+  --color-charcoal-800: #3F3A35;
+  --color-charcoal-950: #2B2926;
 }
 
 @layer base {
@@ -49,10 +53,19 @@
     color: var(--color-charcoal-950);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    outline-color: var(--color-olive-700);
   }
 }
 
-/* Luxury custom scrollbar */
+/* Quiet custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }

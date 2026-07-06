@@ -46,6 +46,8 @@ export default function CulturePage() {
                 alt="Italian culture workshop at Accademia Italiana"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -116,6 +118,8 @@ export default function CulturePage() {
                 alt="Italian course moments at Accademia Italiana"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>

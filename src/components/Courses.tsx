@@ -48,9 +48,11 @@ export default function Courses() {
             <div className="relative min-h-[320px] md:min-h-full overflow-hidden bg-travertine-200">
               <img
                 src={featuredCourse.image}
-                alt={featured.title}
+                alt={`${featured.title} at Accademia Italiana`}
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 hover:scale-103 transition-all duration-[1.2s]"
                 style={{ objectPosition: featuredCourse.imagePosition }}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/22 via-transparent to-transparent pointer-events-none" />
@@ -107,9 +109,11 @@ export default function Courses() {
                   <div className="relative overflow-hidden bg-travertine-200">
                     <img
                       src={course.image}
-                      alt={copy.title}
+                      alt={`${copy.title} course setting at Accademia Italiana`}
                       className="w-full h-full object-cover grayscale-[35%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       style={{ objectPosition: course.imagePosition }}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -120,9 +124,9 @@ export default function Courses() {
                         {copy.title}
                       </h3>
                     </div>
-                    <div className="flex flex-wrap items-center gap-3 text-[10px] tracking-widest uppercase text-charcoal-800">
+                    <div className="flex flex-wrap items-center gap-2 text-[10px] tracking-widest uppercase text-charcoal-800">
                       <span>{copy.hoursPerWeek}</span>
-                      <span className="h-1 w-1 bg-terracotta-500" />
+                      <span className="text-travertine-400">/</span>
                       <span>{copy.price}</span>
                     </div>
                   </div>

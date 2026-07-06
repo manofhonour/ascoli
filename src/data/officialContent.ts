@@ -33,7 +33,7 @@ export const contactInfo = {
 
 export const images = {
   ascoli: photo10,
-  classroom: photo14,
+  classroom: photo4,
   conversation: photo3,
   cooking: photo5,
   wine: photo12,
@@ -48,6 +48,7 @@ export const images = {
   foodCulture: photo13,
   classroomCollage: photo16,
   smallGroup: photo8,
+  studyTable: photo7,
   studentPortrait: photo6,
   socialTable: photo15,
 };
@@ -82,8 +83,8 @@ export const officialCourses = [
     hoursPerWeekIT: '20 ore/settimana',
     price: 'EUR 220/week',
     priceIT: 'EUR 220/settimana',
-    image: images.studentGroup,
-    imagePosition: '52% 48%',
+    image: images.studentPortrait,
+    imagePosition: '54% 48%',
     description:
       'Small-group Italian course in Ascoli Piceno with 20 hours per week and groups of 3-6 students.',
     descriptionIT:
@@ -177,10 +178,10 @@ export const officialCourses = [
     hoursPerWeekIT: 'Su misura',
     price: 'Quote on request',
     priceIT: 'Preventivo su richiesta',
-    image: images.foodCulture,
-    imagePosition: '45% 48%',
+    image: images.socialTable,
+    imagePosition: '50% 48%',
     description:
-      'Custom-made Italian course available in Ascoli Piceno or online, with pricing prepared on request.',
+      'Custom Italian study in Ascoli Piceno or online, prepared around level, dates, and personal goals.',
     descriptionIT:
       'Corso di italiano su misura disponibile ad Ascoli Piceno o online, con preventivo su richiesta.',
     highlights: ['Personal schedule', 'Special-interest vocabulary', 'In-person or online', 'Quote on request'],
@@ -195,7 +196,7 @@ export const culturalOfferings = [
     tagline: 'Regional food as language practice',
     taglineIT: 'Cibo regionale come pratica linguistica',
     description:
-      'Italian culture courses include cooking and local food traditions, with Ascoli Piceno known for Olive all Ascolana.',
+      'Cooking sessions connect Italian vocabulary with regional food traditions, including Ascoli Piceno and Olive all Ascolana.',
     descriptionIT:
       'I corsi di cultura italiana includono cucina e tradizioni gastronomiche locali; Ascoli Piceno e nota per le Olive all Ascolana.',
     image: images.cooking,
@@ -234,8 +235,8 @@ export const culturalOfferings = [
       'Students can add current affairs, business Italian, tourism and hotel management, university entrance preparation, CILS, I.T., history, art history, literature, and Italy today.',
     descriptionIT:
       'Gli studenti possono aggiungere attualita, italiano commerciale, turismo e hotel management, preparazione universitaria, CILS, I.T., storia, storia dell arte, letteratura e Italia oggi.',
-    image: images.classroomCollage,
-    imagePosition: '50% 50%',
+    image: images.study,
+    imagePosition: '47% 48%',
   },
 ];
 
@@ -376,7 +377,7 @@ export const inclusiveSupport = [
     title: 'Solo Travelers',
     titleIT: 'Chi viaggia da solo',
     description:
-      'Students traveling independently can discuss course rhythm, accommodation preferences, and arrival details before booking.',
+      'Students travelling independently can discuss course rhythm, accommodation preferences, and arrival details before booking.',
     descriptionIT:
       'Gli studenti che viaggiano da soli possono parlare di ritmo del corso, preferenze di alloggio e dettagli di arrivo prima della prenotazione.',
   },

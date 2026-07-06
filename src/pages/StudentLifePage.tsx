@@ -108,6 +108,8 @@ export default function StudentLifePage() {
                       alt={event.title}
                       className="w-full h-full object-cover"
                       style={{ objectPosition: event.imagePosition }}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                     />
                   </div>

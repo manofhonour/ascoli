@@ -65,6 +65,8 @@ export default function AscoliPage() {
                 alt="Piazza del Popolo in Ascoli Piceno"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
             </div>

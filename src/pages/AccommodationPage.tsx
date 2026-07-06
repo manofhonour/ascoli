@@ -36,7 +36,7 @@ export default function AccommodationPage() {
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
               ? 'La scuola puo aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno. Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita possono contattare la scuola prima dell arrivo.'
-              : 'The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students traveling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.'}
+              : 'The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students travelling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.'}
           </p>
         </div>
       </section>
@@ -64,6 +64,8 @@ export default function AccommodationPage() {
                     alt={language === 'IT' ? `${acc.italianName} ad Ascoli Piceno` : `${acc.name} planning in Ascoli Piceno`}
                     className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
                     style={{ objectPosition: acc.imagePosition }}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                 </div>

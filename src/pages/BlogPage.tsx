@@ -155,6 +155,8 @@ export default function BlogPage() {
                           alt={post.title}
                           className="w-full h-full object-cover transition-transform duration-[4s] group-hover:scale-105"
                           style={{ objectPosition: post.imagePosition }}
+                          loading="lazy"
+                          decoding="async"
                           referrerPolicy="no-referrer"
                         />
                         <span className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-3.5 py-1.5 text-[9px] tracking-widest font-mono font-bold text-travertine-100 uppercase">
@@ -242,6 +244,8 @@ export default function BlogPage() {
                     alt={selectedPost.title}
                     className="w-full h-full object-cover"
                     style={{ objectPosition: selectedPost.imagePosition }}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                 </div>

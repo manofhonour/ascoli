@@ -100,6 +100,8 @@ export default function AboutPage() {
               alt="Accademia Italiana course moments"
               className="w-full h-full object-cover"
               style={{ objectPosition: '50% 50%' }}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
           </div>

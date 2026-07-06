@@ -32,7 +32,7 @@ export default function FAQSection() {
         {
           question: 'Quali sono i principali prezzi dei corsi?',
           answer:
-            'Per il 2024/2025, il corso standard costa EUR 220 a settimana, il corso intensivo parte da EUR 370 per una settimana e le lezioni individuali costano EUR 30 all ora, con pacchetti disponibili.',
+            'Il corso standard costa EUR 220 a settimana, il corso intensivo parte da EUR 370 per una settimana e le lezioni individuali costano EUR 30 all ora, con pacchetti disponibili.',
           category: 'Prezzi',
         },
         {
@@ -75,7 +75,7 @@ export default function FAQSection() {
         {
           question: 'What are the main course prices?',
           answer:
-            'For 2024/2025, the standard course is EUR 220 per week, the intensive course starts from EUR 370 for one week, and individual lessons are EUR 30 per hour, with package prices available.',
+            'The standard course is EUR 220 per week, the intensive course starts from EUR 370 for one week, and individual lessons are EUR 30 per hour, with package prices available.',
           category: 'Pricing',
         },
         {
@@ -85,9 +85,9 @@ export default function FAQSection() {
           category: 'Accommodation',
         },
         {
-          question: 'Is the school welcoming for solo travelers, LGBTQ+ learners, and students with accessibility needs?',
+          question: 'Is the school welcoming for solo travellers, LGBTQ+ learners, and students with accessibility needs?',
           answer:
-            'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so practical details can be discussed before arrival.',
+            'Yes. Students travelling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so practical details can be discussed before arrival.',
           category: 'Student Support',
         },
         {

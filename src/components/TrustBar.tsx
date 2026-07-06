@@ -24,7 +24,7 @@ export default function TrustBar() {
             <p className="font-serif text-2xl md:text-3xl text-charcoal-950 font-light leading-tight mt-3">
               {language === 'IT'
                 ? 'Una scuola concreta, centrale e riconoscibile.'
-                : 'A grounded, central, and recognisable school.'}
+                : 'A small school with a real local life around it.'}
             </p>
             <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-4 max-w-sm">
               {language === 'IT'

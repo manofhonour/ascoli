@@ -30,7 +30,7 @@ export default function WhyAccademia() {
     <section id="why-accademia" className="py-28 md:py-40 bg-travertine-50 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
-          <div className="lg:col-span-5 max-w-[340px] sm:max-w-none space-y-8 lg:sticky lg:top-28">
+          <div className="lg:col-span-5 max-w-[360px] sm:max-w-none space-y-8 lg:sticky lg:top-28">
             <div className="space-y-4">
               <span className="text-[10px] font-bold tracking-[0.3em] text-terracotta-600 uppercase block">
                 {t("why.philosophy_sub")}
@@ -74,6 +74,8 @@ export default function WhyAccademia() {
                 alt="Teacher-led Italian lesson at Accademia Italiana"
                 className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 hover:scale-102 transition-all duration-[1.2s]"
                 style={{ objectPosition: '54% 48%' }}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/55 via-transparent to-transparent" />
@@ -97,11 +99,8 @@ export default function WhyAccademia() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.8, delay: idx * 0.08, ease: [0.19, 1, 0.22, 1] }}
-                  className="min-h-[220px] border-r border-b border-travertine-200/90 bg-travertine-50 p-6 md:p-8 flex flex-col justify-between group"
+                  className="min-h-[210px] border-r border-b border-travertine-200/90 bg-travertine-50 p-6 md:p-8 flex flex-col justify-end group"
                 >
-                  <span className="font-serif italic text-sm text-terracotta-600">
-                    0{idx + 1}
-                  </span>
                   <div className="space-y-3">
                     <h3 className="font-serif text-2xl font-light text-charcoal-950 group-hover:text-olive-800 transition-colors duration-300">
                       {block.title}

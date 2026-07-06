@@ -88,6 +88,8 @@ export default function GalleryPage() {
                     alt={language === 'IT' ? photo.titleIT : photo.title}
                     className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
                     style={{ objectPosition: photo.imagePosition }}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                   />
                 </div>

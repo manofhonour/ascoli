@@ -28,7 +28,7 @@ export default function FaqPage() {
           {
             id: 'prices',
             category: 'Prezzi',
-            question: 'Quali sono i prezzi 2024/2025?',
+            question: 'Quali sono i prezzi?',
             answer:
               'I prezzi indicati includono corso standard a EUR 220 a settimana, lezioni individuali a EUR 30 l ora, 20 ore individuali a EUR 550 e corsi intensivi da EUR 370 per una settimana. Contatta la scuola per disponibilita aggiornata.',
           },
@@ -78,7 +78,7 @@ export default function FaqPage() {
           {
             id: 'prices',
             category: 'Pricing',
-            question: 'What are the 2024/2025 prices?',
+            question: 'What are the prices?',
             answer:
               'Prices include standard courses at EUR 220 per week, individual lessons at EUR 30 per hour, 20 individual hours at EUR 550, and intensive courses from EUR 370 for one week. Contact the school for current availability.',
           },
@@ -92,9 +92,9 @@ export default function FaqPage() {
           {
             id: 'inclusive-support',
             category: 'Student Support',
-            question: 'Are solo travelers, LGBTQ+ learners, and students with accessibility needs welcome?',
+            question: 'Are solo travellers, LGBTQ+ learners, and students with accessibility needs welcome?',
             answer:
-              'Yes. Students traveling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so course, accommodation, arrival, and practical details can be discussed.',
+              'Yes. Students travelling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so course, accommodation, arrival, and practical details can be discussed.',
           },
           {
             id: 'travel',

@@ -31,7 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title_part2': 'Speak Italian.',
     'hero.title_italic': 'Study in Ascoli.',
     'hero.desc':
-      'Accademia Italiana offers Italian courses for international students in Ascoli Piceno, led by Dr. Antonella Valentini and supported by qualified teachers, small groups, and authentic cultural practice.',
+      'A small Italian language school in Ascoli Piceno for adults who want lessons, local culture, and time to live the language.',
     'hero.explore_courses': 'Explore Courses',
     'hero.book_consultation': 'Contact the School',
     'hero.salon_title': 'Address',
@@ -47,7 +47,7 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.cohorts_label': '3-6 Students',
     'trust.cohorts_detail': 'Small standard-course groups',
     'trust.global_label': 'International Students',
-    'trust.global_detail': 'Learners from many countries',
+    'trust.global_detail': 'Adult learners from many countries',
     'trust.sanctuaries_label': 'Ascoli Piceno',
     'trust.sanctuaries_detail': 'A historic city in Le Marche',
     'trust.staff_label': 'Qualified Teachers',
@@ -58,29 +58,29 @@ const translations: Record<Language, Record<string, string>> = {
     'why.philosophy_title_italic': 'real conversation',
     'why.philosophy_title_part2': ', and Italian culture.',
     'why.philosophy_desc':
-      'The school combines professional language teaching with flexible course design, authentic materials, and the cultural life of Ascoli Piceno.',
+      'Lessons are practical and personal. The city gives students the setting to use Italian in ordinary, memorable ways.',
     'why.focus_1_title': 'Qualified Teachers',
     'why.focus_1_desc':
       'The school is directed by Dr. Antonella Valentini and works with qualified teachers.',
     'why.focus_2_title': 'Flexible Formats',
     'why.focus_2_desc':
-      'Students can choose standard, intensive, individual, extensive, teacher-refresher, online, and custom-made courses.',
+      'Students can choose standard, intensive, individual, extensive, teacher-refresher, online, and custom courses.',
     'why.focus_3_title': 'Communicative Method',
     'why.focus_3_desc':
       'Lessons are designed around communication, level placement, and practical use of Italian.',
     'why.focus_4_title': 'Welcoming Study Environment',
     'why.focus_4_desc':
-      'Solo travelers, LGBTQ+ learners, and students with accessibility needs can contact the school in advance to discuss practical arrangements.',
+      'Solo travellers, LGBTQ+ learners, older students, and visitors with accessibility needs can discuss practical arrangements before arrival.',
 
     'courses.sub': 'Courses',
     'courses.title_part1': 'Italian courses',
     'courses.title_italic': 'for real goals.',
     'courses.desc': 'Small groups, individual lessons, teacher training, and custom study in Ascoli Piceno or online.',
     'courses.section_tag': 'Course Formats',
-    'courses.section_title_part1': 'Choose the pace',
-    'courses.section_title_italic': 'that fits your stay.',
+    'courses.section_title_part1': 'Choose a rhythm',
+    'courses.section_title_italic': 'for your stay.',
     'courses.section_desc':
-      'Course formats include standard, intensive, individual, extensive, teacher-refresher, and custom study.',
+      'Course formats range from small standard groups to individual lessons and custom study for specific goals.',
     'courses.explore_details': 'View details',
     'courses.curriculum_highlights': 'Course details',
     'courses.enquire_now': 'Enquire now',
@@ -89,7 +89,7 @@ const translations: Record<Language, Record<string, string>> = {
     'beyond.section_title_part1': 'Practice Italian through',
     'beyond.section_title_italic': 'local culture.',
     'beyond.section_desc':
-      'Cooking, wine, opera, olive oil, ceramics, painting, lace, literature, history, current affairs, business Italian, tourism, and exam preparation are available as course extensions.',
+      'Italian continues outside the classroom through cooking, wine, art, history, literature, and everyday life in Ascoli.',
 
     'accommodation.sub': 'Accommodation',
     'accommodation.title_part1': 'Stay close to',
@@ -127,11 +127,11 @@ const translations: Record<Language, Record<string, string>> = {
     'teachers.section_title_part1': 'Guided by',
     'teachers.section_title_italic': 'experienced language professionals.',
     'teachers.section_desc':
-      'Accademia Italiana and Accademia Internazionale combine Italian teaching, language courses, translation, interpreting, exam preparation, tutoring, and Erasmus support.',
+      'Accademia Italiana and Accademia Internazionale combine Italian teaching with translation, interpreting, exam preparation, and language services.',
 
-    'stories.section_tag': 'Student Pathways',
-    'stories.section_title_part1': 'A course path for',
-    'stories.section_title_italic': 'each learning need.',
+    'stories.section_tag': 'Student Stays',
+    'stories.section_title_part1': 'Ways to make Ascoli',
+    'stories.section_title_italic': 'part of your life.',
 
     'gallery.sub': 'Ascoli Moments',
     'gallery.title_part1': 'Daily Italian life,',
@@ -160,10 +160,10 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.section_desc': 'A practical guide to levels, travel, tuition, accommodation, and the pace of study in Ascoli Piceno.',
 
     'cta.limited': 'Standard groups: 3-6 students',
-    'cta.title_part1': 'Begin Your',
-    'cta.title_italic': 'Italian Course.',
+    'cta.title_part1': 'Plan Your',
+    'cta.title_italic': 'Italian Stay.',
     'cta.desc':
-      'Contact the school in Ascoli Piceno to discuss your level, dates, course format, accommodation, and cultural interests.',
+      'Contact the school to discuss your level, dates, course format, accommodation, and the kind of stay you have in mind.',
     'cta.begin': 'Send an Inquiry',
     'cta.whatsapp': 'WhatsApp the School',
     'cta.booking_note': 'For booking conditions, contact the school office directly.',
@@ -215,7 +215,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.title_part2': 'Parla italiano.',
     'hero.title_italic': 'Studia ad Ascoli.',
     'hero.desc':
-      'Accademia Italiana offre corsi di italiano per studenti internazionali ad Ascoli Piceno, con la direzione della Dr. Antonella Valentini, docenti qualificati, piccoli gruppi e pratica culturale autentica.',
+      'Una piccola scuola di italiano ad Ascoli Piceno per adulti che desiderano lezioni, cultura locale e tempo per vivere la lingua.',
     'hero.explore_courses': 'Esplora i Corsi',
     'hero.book_consultation': 'Contatta la Scuola',
     'hero.salon_title': 'Indirizzo',
@@ -231,7 +231,7 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.cohorts_label': '3-6 studenti',
     'trust.cohorts_detail': 'Piccoli gruppi nei corsi standard',
     'trust.global_label': 'Studenti internazionali',
-    'trust.global_detail': 'Allievi da molti paesi',
+    'trust.global_detail': 'Adulti da molti paesi',
     'trust.sanctuaries_label': 'Ascoli Piceno',
     'trust.sanctuaries_detail': 'Citta storica nelle Marche',
     'trust.staff_label': 'Docenti qualificati',
@@ -242,7 +242,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.philosophy_title_italic': 'conversazione reale',
     'why.philosophy_title_part2': ' e cultura italiana.',
     'why.philosophy_desc':
-      'La scuola unisce insegnamento professionale, corsi flessibili, materiali autentici e vita culturale di Ascoli Piceno.',
+      'Le lezioni sono pratiche e personali. La citta offre occasioni quotidiane per usare l italiano.',
     'why.focus_1_title': 'Docenti qualificati',
     'why.focus_1_desc':
       'La scuola e diretta dalla Dr. Antonella Valentini e lavora con docenti qualificati.',
@@ -254,7 +254,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Le lezioni sono costruite su comunicazione, livello dello studente e uso pratico della lingua.',
     'why.focus_4_title': 'Ambiente accogliente',
     'why.focus_4_desc':
-      'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita possono contattare la scuola in anticipo.',
+      'Chi viaggia da solo, studenti LGBTQ+, adulti e studenti con esigenze di accessibilita possono contattare la scuola in anticipo.',
 
     'courses.sub': 'Corsi',
     'courses.title_part1': 'Corsi di italiano',
@@ -262,9 +262,9 @@ const translations: Record<Language, Record<string, string>> = {
     'courses.desc': 'Piccoli gruppi, lezioni individuali, formazione docenti e corsi su misura ad Ascoli Piceno o online.',
     'courses.section_tag': 'Formati dei corsi',
     'courses.section_title_part1': 'Scegli il ritmo',
-    'courses.section_title_italic': 'adatto al tuo soggiorno.',
+    'courses.section_title_italic': 'del tuo soggiorno.',
     'courses.section_desc':
-      'I formati includono corsi standard, intensivi, individuali, estensivi, aggiornamento docenti e su misura.',
+      'I formati vanno dai piccoli gruppi alle lezioni individuali e ai corsi su misura.',
     'courses.explore_details': 'Vedi dettagli',
     'courses.curriculum_highlights': 'Dettagli del corso',
     'courses.enquire_now': 'Richiedi informazioni',
@@ -273,7 +273,7 @@ const translations: Record<Language, Record<string, string>> = {
     'beyond.section_title_part1': 'Pratica italiano con',
     'beyond.section_title_italic': 'la cultura locale.',
     'beyond.section_desc':
-      'Cucina, vino, opera, olio, ceramica, pittura, tombolo, letteratura, storia, attualita, business, turismo ed esami.',
+      'L italiano continua fuori dall aula con cucina, vino, arte, storia, letteratura e vita quotidiana ad Ascoli.',
 
     'accommodation.sub': 'Alloggi',
     'accommodation.title_part1': 'Alloggia vicino',
@@ -308,11 +308,11 @@ const translations: Record<Language, Record<string, string>> = {
     'teachers.section_title_part1': 'Guidati da',
     'teachers.section_title_italic': 'professionisti delle lingue.',
     'teachers.section_desc':
-      'Accademia Italiana e Accademia Internazionale uniscono insegnamento, traduzione, interpretariato, esami, tutoraggio e supporto Erasmus.',
+      'Accademia Italiana e Accademia Internazionale uniscono insegnamento, traduzione, interpretariato, esami e servizi linguistici.',
 
-    'stories.section_tag': 'Percorsi studenti',
-    'stories.section_title_part1': 'Un percorso per',
-    'stories.section_title_italic': 'ogni esigenza.',
+    'stories.section_tag': 'Soggiorni',
+    'stories.section_title_part1': 'Modi di rendere Ascoli',
+    'stories.section_title_italic': 'parte della tua vita.',
 
     'gallery.sub': 'Momenti di Ascoli',
     'gallery.title_part1': 'Vita italiana quotidiana,',
@@ -341,10 +341,10 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.section_desc': 'Guida pratica a livelli, viaggio, quote, alloggio e ritmo di studio ad Ascoli Piceno.',
 
     'cta.limited': 'Gruppi standard: 3-6 studenti',
-    'cta.title_part1': 'Inizia il tuo',
-    'cta.title_italic': 'corso di italiano.',
+    'cta.title_part1': 'Organizza il tuo',
+    'cta.title_italic': 'soggiorno italiano.',
     'cta.desc':
-      'Contatta la scuola ad Ascoli Piceno per parlare di livello, date, formato del corso, alloggio e interessi culturali.',
+      'Contatta la scuola per parlare di livello, date, corso, alloggio e del tipo di soggiorno che immagini.',
     'cta.begin': 'Invia richiesta',
     'cta.whatsapp': 'WhatsApp scuola',
     'cta.booking_note': 'Per condizioni di prenotazione, contatta direttamente la segreteria.',
