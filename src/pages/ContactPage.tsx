@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from 'lucide-react';
-import { contactInfo } from '../data/officialContent';
-import { useLanguage } from '../context/LanguageContext';
 
 export default function ContactPage() {
-  const { language } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,55 +25,52 @@ export default function ContactPage() {
       transition={{ duration: 0.6 }}
       className="bg-travertine-50 min-h-screen"
     >
+      {/* Editorial Header */}
       <section className="relative py-24 md:py-32 bg-travertine-100 overflow-hidden border-b border-travertine-200">
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            {language === 'IT' ? 'Contatti' : 'Contact'}
+            Liaison Concierge
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Parla con la scuola' : 'Speak with the school'} <br />
-            <span className="italic text-olive-800">
-              {language === 'IT' ? 'ad Ascoli Piceno.' : 'in Ascoli Piceno.'}
-            </span>
+            Schedule a customized <br />
+            <span className="italic text-olive-800">linguistic audit.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            {language === 'IT'
-              ? 'Usa telefono, WhatsApp ed email per confermare corsi, date, prezzi, alloggio ed eventuali esigenze pratiche.'
-              : 'Use the phone, WhatsApp, and email contacts below to confirm courses, dates, prices, accommodation, and any practical support needs.'}
+            Every entry begins with a private conversation. Let us understand your professional parameters, housing preferences, and learning objectives.
           </p>
         </div>
       </section>
 
+      {/* Main Form and Location Details Column */}
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+          
+          {/* Left Block (5 columns) */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
               <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-                {language === 'IT' ? 'Contatto diretto' : 'Direct Contact'}
+                Direct Contact
               </span>
               <h2 className="font-serif text-2xl md:text-4xl text-charcoal-950 font-light leading-snug">
-                {contactInfo.schoolName}
+                Reach our administration inside Palazzo Sgariglia.
               </h2>
               <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-                {language === 'IT'
-                  ? 'La segreteria si trova nel centro di Ascoli Piceno, in Corso Vittorio Emanuele.'
-                  : 'The school office is based in central Ascoli Piceno on Corso Vittorio Emanuele.'}
+                We maintain active lines for curious global minds, professionals, and travel concierge agencies looking to book private custom calendars.
               </p>
             </div>
 
+            {/* Practical list info */}
             <div className="space-y-6 pt-6 border-t border-travertine-200">
               <div className="flex gap-4">
                 <div className="bg-travertine-200 p-2.5 border border-travertine-300/40 shrink-0">
                   <MapPin className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">
-                    {language === 'IT' ? 'Indirizzo' : 'Address'}
-                  </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
-                    {contactInfo.addressLine1} <br />
-                    {contactInfo.cityLine}
+                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">The Palazzo Office</h4>
+                  <p className="text-xs text-charcoal-850 font-light leading-relaxed mt-1">
+                    Palazzo Sgariglia, Piazza Ventidio Basso 12 <br />
+                    63100 Ascoli Piceno, Marche, Italy
                   </p>
                 </div>
               </div>
@@ -86,12 +80,9 @@ export default function ContactPage() {
                   <Mail className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">Email</h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
-                    {contactInfo.email}
-                  </p>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
-                    {contactInfo.internationalEmail}
+                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">General Inquiries</h4>
+                  <p className="text-xs text-charcoal-850 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
+                    concierge@accademia-ascoli.it
                   </p>
                 </div>
               </div>
@@ -101,13 +92,9 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">
-                    {language === 'IT' ? 'Telefono e WhatsApp' : 'Phone and WhatsApp'}
-                  </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
-                    {contactInfo.phone}
-                    <br />
-                    WhatsApp {contactInfo.whatsapp}
+                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">Administrative Office</h4>
+                  <p className="text-xs text-charcoal-850 font-light leading-relaxed mt-1">
+                    +39 0736 250 821
                   </p>
                 </div>
               </div>
@@ -117,17 +104,26 @@ export default function ContactPage() {
                   <Clock className="w-4 h-4 text-olive-800" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">
-                    {language === 'IT' ? 'Orari segreteria' : 'Office Hours'}
-                  </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
-                    {language === 'IT' ? contactInfo.hoursIT : contactInfo.hours}
+                  <h4 className="font-serif text-sm font-semibold text-charcoal-950">Office Hours</h4>
+                  <p className="text-xs text-charcoal-850 font-light leading-relaxed mt-1">
+                    Monday — Friday: 09:00 - 17:00 (CET)
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Note block */}
+            <div className="bg-olive-50 p-6 border-l-4 border-olive-800/80 space-y-2">
+              <h5 className="text-[10px] tracking-widest uppercase font-bold text-olive-800">
+                A Safe & Inclusive Haven
+              </h5>
+              <p className="text-[11px] text-olive-900 font-light leading-relaxed">
+                We celebrate diversity. All background profiles, solo travelers, and members of the LGBTQ+ community will find a warm, helpful, and collaborative family awaiting them inside Ascoli Piceno.
+              </p>
+            </div>
           </div>
 
+          {/* Right Block (7 columns) Form Card */}
           <div className="lg:col-span-7 bg-travertine-100 border border-travertine-200 p-8 md:p-12 shadow-xl relative">
             <AnimatePresence mode="wait">
               {!submitted ? (
@@ -141,19 +137,18 @@ export default function ContactPage() {
                 >
                   <div className="space-y-1">
                     <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal">
-                      {language === 'IT' ? 'Anteprima messaggio' : 'Message Preview'}
+                      Liaison Correspondence
                     </h3>
-                    <p className="text-xs text-charcoal-800 font-light">
-                      {language === 'IT'
-                        ? 'Questo modulo nella pagina e un aiuto visivo. Indica viaggio individuale, esigenze LGBTQ+ o accessibilita se vuoi discuterne con la scuola.'
-                        : 'This on-page form is a visual aid. Mention solo travel, LGBTQ+ considerations, or accessibility needs if you would like the school to discuss them with you.'}
+                    <p className="text-xs text-charcoal-850 font-light">
+                      Please enter your contact details below.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Name */}
                     <div className="space-y-2">
                       <label htmlFor="name" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        {language === 'IT' ? 'Nome e cognome' : 'Full Name'}
+                        Full Name
                       </label>
                       <input
                         type="text"
@@ -161,14 +156,15 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Anna Rossi"
+                        placeholder="Clara Thorne"
                         className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40"
                       />
                     </div>
 
+                    {/* Email */}
                     <div className="space-y-2">
                       <label htmlFor="email" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                        {language === 'IT' ? 'Email' : 'Email Address'}
+                        Email Address
                       </label>
                       <input
                         type="email"
@@ -176,29 +172,31 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="anna@example.com"
+                        placeholder="clara@domain.com"
                         className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40"
                       />
                     </div>
                   </div>
 
+                  {/* Phone */}
                   <div className="space-y-2">
                     <label htmlFor="phone" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                      {language === 'IT' ? 'Telefono (opzionale)' : 'Phone Number (Optional)'}
+                      Phone Number (Optional)
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+39 ..."
+                      placeholder="+1 (415) 555-0192"
                       className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40"
                     />
                   </div>
 
+                  {/* Message */}
                   <div className="space-y-2">
                     <label htmlFor="message" className="block text-[10px] tracking-widest uppercase font-bold text-charcoal-800">
-                      {language === 'IT' ? 'Messaggio' : 'Message'}
+                      Message Vision
                     </label>
                     <textarea
                       id="message"
@@ -206,11 +204,7 @@ export default function ContactPage() {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder={
-                        language === 'IT'
-                          ? 'Indica date del corso, livello attuale, preferenza di alloggio ed eventuali esigenze di arrivo o accessibilita.'
-                          : 'Share your course dates, current level, accommodation preference, and any arrival or accessibility needs.'
-                      }
+                      placeholder="Share your goals, learning pace, and ideal stay duration..."
                       className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40 resize-none"
                     />
                   </div>
@@ -219,7 +213,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full bg-charcoal-950 hover:bg-olive-800 text-travertine-50 py-4 text-xs tracking-[0.2em] font-semibold uppercase transition-all duration-500 flex items-center justify-center gap-2 rounded-none cursor-pointer"
                   >
-                    {language === 'IT' ? 'Prepara messaggio' : 'Prepare Message'}
+                    Send Message
                     <Send className="w-3.5 h-3.5" />
                   </button>
                 </motion.form>
@@ -233,29 +227,27 @@ export default function ContactPage() {
                   <CheckCircle className="w-14 h-14 text-olive-800 stroke-[1.25]" />
                   <div className="space-y-3">
                     <span className="font-serif italic text-base text-terracotta-600 block">
-                      Grazie, {formData.name}.
+                      Grazie Mille, {formData.name}.
                     </span>
                     <h3 className="font-serif text-2xl text-charcoal-950 font-light">
-                      {language === 'IT' ? 'Messaggio preparato' : 'Message Prepared'}
+                      Correspondence Sent
                     </h3>
-                    <p className="text-xs text-charcoal-800 font-light max-w-sm leading-relaxed">
-                      {language === 'IT' ? 'Invia la richiesta a ' : 'Send your request to '}
-                      <span className="font-semibold text-charcoal-950">{contactInfo.email}</span>
-                      {language === 'IT' ? ' oppure contatta WhatsApp ' : ' or contact WhatsApp '}
-                      <span className="font-semibold text-charcoal-950">{contactInfo.whatsapp}</span>.
+                    <p className="text-xs text-charcoal-850 font-light max-w-sm leading-relaxed">
+                      Our liaison has reserved your correspondence. We will reply to <span className="font-semibold text-charcoal-950">{formData.email}</span> within 24 hours to coordinate your custom call.
                     </p>
                   </div>
-
+                  
                   <button
                     onClick={() => setSubmitted(false)}
                     className="text-xs font-bold tracking-widest uppercase text-terracotta-600 hover:text-terracotta-700 underline underline-offset-4 decoration-1 mt-6"
                   >
-                    {language === 'IT' ? 'Modifica messaggio' : 'Edit message'}
+                    Send another message
                   </button>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
+
         </div>
       </section>
     </motion.div>

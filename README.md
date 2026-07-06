@@ -1,19 +1,20 @@
-# Accademia Italiana Website
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-React and Vite website for Accademia Italiana in Ascoli Piceno.
+# Run and deploy your AI Studio app
 
-The content is based on the official Accademia Italiana and Accademia Internazionale websites, including the school logo, contact details, course formats, accommodation options, cultural add-ons, and Ascoli Piceno information.
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/31a4cc71-1510-4f7c-ad58-208674329a91
 
 ## Run Locally
 
+**Prerequisites:**  Node.js
+
+
 1. Install dependencies:
    `npm install`
-2. Start the local server:
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
    `npm run dev`
-3. Build for production:
-   `npm run build`
-
-## Checks
-
-- `npm run lint`
-- `npm run build`

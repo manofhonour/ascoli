@@ -31,19 +31,6 @@
 }
 
 @layer base {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
-  html,
-  body,
-  #root {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   body {
     background-color: var(--color-travertine-50);
     color: var(--color-charcoal-950);

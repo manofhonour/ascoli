@@ -1,33 +1,30 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Accessibility, Coffee, HeartHandshake, UserRound } from 'lucide-react';
-import { culturalOfferings, images, inclusiveSupport } from '../data/officialContent';
-import { useLanguage } from '../context/LanguageContext';
+import { Compass, Music, MapPin, Coffee, ArrowRight } from 'lucide-react';
 
 export default function StudentLifePage() {
-  const { language } = useLanguage();
-  const inclusionIcons = [UserRound, HeartHandshake, Accessibility];
-
   const events = [
     {
-      id: 'conversation',
-      title: language === 'IT' ? 'Conversazione quotidiana ad Ascoli' : 'Daily Conversation in Ascoli',
-      tagline: language === 'IT' ? 'Caffe, strade e italiano pratico' : 'Cafes, streets, and practical Italian',
-      description:
-        language === 'IT'
-          ? 'La scuola nel centro storico rende naturale usare l italiano per saluti, indicazioni, cibo, cultura e scambi quotidiani.'
-          : 'The school setting in the historic centre makes it natural to use Italian for greetings, directions, food, culture, and everyday exchanges.',
-      image: images.socialTable,
-      imagePosition: '50% 48%',
+      id: 'aperitivo',
+      title: 'Tavola Aperta: The Welcome Aperitivo',
+      tagline: 'Mingle & Wine Tasting at Palazzo Sgariglia',
+      description: 'Every Monday evening, our private courtyard lights up with candlelight. Mingle with fellow writers, professionals, and language coaches. Sip on vintage biodynamic Pecorino and taste local olive nibbles while practicing your initial greetings.',
+      image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80',
     },
-    ...culturalOfferings.slice(0, 3).map((item) => ({
-      id: item.title,
-      title: language === 'IT' ? item.italianTitle : item.title,
-      tagline: language === 'IT' ? item.taglineIT : item.tagline,
-      description: language === 'IT' ? item.descriptionIT : item.description,
-      image: item.image,
-      imagePosition: item.imagePosition,
-    })),
+    {
+      id: 'cooking',
+      title: 'The Alchemy of Olive all’Ascolana',
+      tagline: 'Private Culinary Workshops with Nonna Luisa',
+      description: 'Ascoli Piceno is famous across Italy for its legendary stuffed, fried olives. Under the guidance of our beloved local grandmother, Luisa, learn the exact carving, meat-stuffing, and crispy breading secrets—using only slow Italian commands.',
+      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80',
+    },
+    {
+      id: 'opera',
+      title: 'Cinema Sotto le Stelle (Retro Movie Night)',
+      tagline: 'Vintage screenings under the Roman arches',
+      description: 'As twilight settles, we project masterworks of classical Italian cinema (Fellini, Antonioni, Pasolini) directly onto the stone walls of the courtyard. Sip on regional Rosso Piceno and debate screen motifs under a canopy of stars.',
+      image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80',
+    },
   ];
 
   return (
@@ -38,6 +35,7 @@ export default function StudentLifePage() {
       transition={{ duration: 0.6 }}
       className="bg-travertine-50 min-h-screen"
     >
+      {/* Editorial Header */}
       <section className="relative py-24 md:py-32 bg-travertine-100 overflow-hidden border-b border-travertine-200">
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.08] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
@@ -45,69 +43,40 @@ export default function StudentLifePage() {
             Vita da Studente
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Vita studentesca costruita' : 'Student life built'} <br />
-            <span className="italic text-olive-800">
-              {language === 'IT' ? 'intorno all italiano reale.' : 'around real Italian.'}
-            </span>
+            An elegant community of <br />
+            <span className="italic text-olive-800">inquisitive global souls.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            {language === 'IT'
-              ? 'La vita studentesca all Accademia Italiana ruota intorno a lezioni, conversazione, Ascoli Piceno e corsi culturali opzionali.'
-              : 'Student life at Accademia Italiana centres on lessons, conversation, Ascoli Piceno, and optional cultural courses.'}
+            Our student life is structured around intellectual collaboration, slow culinary practices, and beautiful authentic connections that turn absolute strangers into life-long travel companions.
           </p>
         </div>
       </section>
 
+      {/* Grid of Highlight Cultural Events */}
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-12 space-y-20">
         <div className="max-w-2xl space-y-4">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            {language === 'IT' ? 'Ritmo di studio' : 'Learning Rhythm'}
+            Social Rituals
           </span>
           <h2 className="font-serif text-3xl font-light text-charcoal-950">
-            {language === 'IT'
-              ? 'Piccoli gruppi, contesto locale e cultura opzionale.'
-              : 'Small classes, local context, and optional culture.'}
+            A weekly sequence of cultural landmarks.
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-            {language === 'IT'
-              ? 'L esperienza degli studenti unisce formati di corso, conversazione locale e studio culturale opzionale.'
-              : 'The student experience centres on course formats, local conversation, and optional cultural study.'}
+            We curate three high-end communal activities every week, designed to spark conversation, explore local craft legacies, and embrace the authentic rhythms of the region.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {inclusiveSupport.map((item, index) => {
-            const Icon = inclusionIcons[index] || HeartHandshake;
-            return (
-              <div key={item.title} className="bg-travertine-100 border border-travertine-200 p-6 space-y-4">
-                <div className="w-10 h-10 bg-olive-50 border border-olive-200 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-olive-800 stroke-[1.5]" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="font-serif text-lg text-charcoal-950 font-normal">
-                    {language === 'IT' ? item.titleIT : item.title}
-                  </h3>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">
-                    {language === 'IT' ? item.descriptionIT : item.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
         </div>
 
         <div className="space-y-16">
           {events.map((event, idx) => {
             const isEven = idx % 2 === 0;
             return (
-              <div key={event.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div key={event.id} className={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
                 <div className={`lg:col-span-6 relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                   <div className="aspect-[16/10] bg-travertine-200 overflow-hidden shadow-xl">
                     <img
                       src={event.image}
                       alt={event.title}
                       className="w-full h-full object-cover"
-                      style={{ objectPosition: event.imagePosition }}
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -117,7 +86,9 @@ export default function StudentLifePage() {
                   <span className="text-[10px] tracking-widest font-mono font-semibold uppercase text-olive-800 block">
                     {event.tagline}
                   </span>
-                  <h3 className="font-serif text-2xl text-charcoal-950 font-normal">{event.title}</h3>
+                  <h3 className="font-serif text-2xl text-charcoal-950 font-normal">
+                    {event.title}
+                  </h3>
                   <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
                     {event.description}
                   </p>
@@ -128,14 +99,15 @@ export default function StudentLifePage() {
         </div>
       </section>
 
+      {/* Subtle quote callout block */}
       <section className="py-20 bg-travertine-100 border-t border-travertine-200">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <Coffee className="w-8 h-8 text-terracotta-600 mx-auto stroke-[1.25]" />
           <p className="font-serif text-xl md:text-2xl text-charcoal-900 italic font-light leading-relaxed">
-            {language === 'IT' ? '"Vivi l Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
+            "I joined Accademia seeking to brush up on my Italian verbs. I left with an entire community of sophisticated global friends, private memories inside ancient vineyards, and a soul completely restored."
           </p>
           <span className="block text-[10px] tracking-wider uppercase text-olive-800 font-bold">
-            Accademia Italiana
+            — Eleanor Vance, Architectural Designer (Sojourn Fall 2025)
           </span>
         </div>
       </section>

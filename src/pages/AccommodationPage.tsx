@@ -1,17 +1,40 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Bed, Check, HeartHandshake, Hotel, Home, Info, MapPin } from 'lucide-react';
-import { accommodationOptions, contactInfo } from '../data/officialContent';
-import { useLanguage } from '../context/LanguageContext';
-
-const icons = {
-  'host-family': Home,
-  bnb: Bed,
-  hotel: Hotel,
-};
+import { Sparkles, Bed, MapPin, Eye, ShieldAlert } from 'lucide-react';
 
 export default function AccommodationPage() {
-  const { language } = useLanguage();
+  const accommodations = [
+    {
+      id: 'fresco',
+      title: 'The Fresco Suite',
+      italianTitle: 'La Suite Affrescata',
+      area: '85 sqm',
+      view: 'Piazza Ventidio Basso',
+      perks: ['16th-Century restored frescoes', 'Private travertine bathtub', 'French linen bedding', 'Double-height vaulted ceilings'],
+      image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
+      description: 'Dwell directly inside history. This exceptional master suite is located in the noble wing of Palazzo Sgariglia. Retain original Renaissance artwork on your bedroom ceiling while enjoying modern premium amenities.',
+    },
+    {
+      id: 'terrace',
+      title: 'The Olive Terrace Garden Loft',
+      italianTitle: 'Altana dell’Olivo',
+      area: '65 sqm',
+      view: 'Ascoli Towers & Olive Hills',
+      perks: ['Private rooftop terrace', 'Artisanal writing study', 'Rustic chestnut wood beams', 'Local terracotta flooring'],
+      image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80',
+      description: 'A sun-drenched loft featuring panoramic views of Ascoli’s medieval stone towers and rolling organic olive groves. Features a stunning private terrace perfect for evening studies or writing.',
+    },
+    {
+      id: 'courtyard',
+      title: 'The Sanctuary Courtyard Apartment',
+      italianTitle: 'Dimora del Cortile',
+      area: '70 sqm',
+      view: 'Private Stone Courtyard',
+      perks: ['Direct courtyard access', 'Stone fireplace hearth', 'Premium chef kitchen', 'Custom travertine sinks'],
+      image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+      description: 'A quiet, secluded ground-floor retreat hidden behind majestic hand-carved oak doors. Ideal for writers and solo travelers seeking complete tranquility and immediate access to a private botanical garden.',
+    },
+  ];
 
   return (
     <motion.div
@@ -21,33 +44,27 @@ export default function AccommodationPage() {
       transition={{ duration: 0.6 }}
       className="bg-travertine-50 min-h-screen"
     >
+      {/* Editorial Header */}
       <section className="relative py-24 md:py-32 bg-travertine-100 overflow-hidden border-b border-travertine-200">
         <div className="absolute inset-0 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            {language === 'IT' ? 'Alloggi' : 'Accommodation'}
+            Dimore d’Autore
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Alloggia ad Ascoli Piceno' : 'Stay in Ascoli Piceno'} <br />
-            <span className="italic text-terracotta-600">
-              {language === 'IT' ? 'con il supporto della scuola.' : 'with school support.'}
-            </span>
+            Elegant residences nestled <br />
+            <span className="italic text-terracotta-600">in medieval stone.</span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
-            {language === 'IT'
-              ? 'La scuola puo aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno. Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita possono contattare la scuola prima dell arrivo.'
-              : 'The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students traveling alone, LGBTQ+ learners, and students with accessibility needs can contact the school before arrival.'}
+            Every guest is housed in hand-selected, luxury-tier apartments located inside our restored 16th-century Palazzo Sgariglia or neighboring historic estates.
           </p>
         </div>
       </section>
 
+      {/* Main Accommodations List */}
       <section className="py-24 max-w-7xl mx-auto px-6 md:px-12 space-y-24">
-        {accommodationOptions.map((acc, idx) => {
-          const Icon = icons[acc.id as keyof typeof icons] || Home;
+        {accommodations.map((acc, idx) => {
           const isEven = idx % 2 === 0;
-          const name = language === 'IT' ? acc.italianName : acc.name;
-          const description = language === 'IT' ? acc.descriptionIT : acc.description;
-          const features = language === 'IT' ? acc.featuresIT : acc.features;
           return (
             <motion.div
               key={acc.id}
@@ -55,48 +72,63 @@ export default function AccommodationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center"
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center ${
+                isEven ? '' : 'lg:flex-row-reverse'
+              }`}
             >
+              {/* Image Column */}
               <div className={`lg:col-span-7 relative ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                 <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
                   <img
                     src={acc.image}
-                    alt={language === 'IT' ? `${acc.italianName} ad Ascoli Piceno` : `${acc.name} planning in Ascoli Piceno`}
+                    alt={acc.title}
                     className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
-                    style={{ objectPosition: acc.imagePosition }}
                     referrerPolicy="no-referrer"
                   />
+                  <div className="absolute top-4 left-4 bg-charcoal-950/80 backdrop-blur-sm px-4 py-2 text-[10px] tracking-widest font-bold text-travertine-100 uppercase">
+                    {acc.italianTitle}
+                  </div>
                 </div>
+                {/* Underframe outline border decor */}
                 <div className="absolute -inset-2 border border-travertine-300 pointer-events-none rounded-none -z-10 translate-x-3 translate-y-3 opacity-30" />
               </div>
 
+              {/* Text Information Column */}
               <div className={`lg:col-span-5 space-y-6 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="space-y-1">
-                  <span className="font-serif italic text-xs text-terracotta-600 block">{acc.italianName}</span>
+                  <span className="font-serif italic text-xs text-terracotta-600 block">
+                    {acc.italianTitle}
+                  </span>
                   <h2 className="font-serif text-2xl md:text-4xl text-charcoal-950 font-light leading-snug">
-                    {name}
+                    {acc.title}
                   </h2>
                 </div>
 
-                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{description}</p>
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+                  {acc.description}
+                </p>
 
-                <div className="flex items-center gap-3 py-4 border-y border-travertine-200">
-                  <Icon className="w-4 h-4 text-olive-800 stroke-[1.5]" />
-                  <span className="text-xs text-charcoal-800 font-light">
-                    {language === 'IT'
-                      ? `Supporto alla prenotazione tramite ${contactInfo.schoolName}`
-                      : `Reservation support through ${contactInfo.schoolName}`}
-                  </span>
+                {/* Technical specifications */}
+                <div className="grid grid-cols-2 gap-4 py-4 border-y border-travertine-200">
+                  <div className="flex items-center gap-2 text-xs text-charcoal-800">
+                    <Bed className="w-4 h-4 text-olive-800 stroke-[1.5]" />
+                    <span className="font-light">Size: <span className="font-semibold text-charcoal-950">{acc.area}</span></span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-charcoal-800">
+                    <Eye className="w-4 h-4 text-olive-800 stroke-[1.5]" />
+                    <span className="font-light">View: <span className="font-semibold text-charcoal-950">{acc.view}</span></span>
+                  </div>
                 </div>
 
+                {/* Perky features list */}
                 <div className="space-y-2">
                   <span className="text-[10px] tracking-widest uppercase font-bold text-charcoal-800 block mb-2 opacity-60">
-                    {language === 'IT' ? 'Dettagli:' : 'Details:'}
+                    Residency Highlights:
                   </span>
-                  <div className="grid grid-cols-1 gap-2">
-                    {features.map((p) => (
-                      <div key={p} className="flex items-start gap-2 text-xs text-charcoal-800">
-                        <Check className="w-3.5 h-3.5 text-terracotta-500 shrink-0 mt-0.5" />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    {acc.perks.map((p) => (
+                      <div key={p} className="flex items-center gap-2 text-xs text-charcoal-800">
+                        <span className="w-1.5 h-1.5 bg-terracotta-500 rounded-full shrink-0" />
                         <span className="font-light">{p}</span>
                       </div>
                     ))}
@@ -108,61 +140,56 @@ export default function AccommodationPage() {
         })}
       </section>
 
+      {/* Concierge Services list */}
       <section className="py-20 bg-travertine-100 border-t border-travertine-200">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
           <div className="lg:col-span-5 space-y-4">
             <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-              {language === 'IT' ? 'Prenotazione' : 'Booking'}
+              Servizio Esclusivo
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-tight">
-              {language === 'IT'
-                ? 'Conferma la disponibilita direttamente con la scuola.'
-                : 'Confirm availability directly with the school.'}
+              A private hotel standard, inside a historic residence.
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
-              {language === 'IT'
-                ? 'Contatta la segreteria Accademia per disponibilita, indirizzo, regole della casa, condizioni di pagamento e prezzi finali prima di prenotare il viaggio.'
-                : 'Contact the Accademia office for accommodation availability, address details, house rules, payment conditions, and final prices before booking travel.'}
+              We understand that the comfort of your sanctuary directly impacts your focus and serenity. Accademia offers full, discrete concierge care that blends the independence of an apartment with the premium touches of an Aman resort.
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
+              <Sparkles className="w-4 h-4 text-terracotta-600" />
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Housekeeping & Linens</h4>
+              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+                Bi-weekly professional cleaning and change of fine organic French flax sheets and premium fluffy towels.
+              </p>
+            </div>
+
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <MapPin className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
-                {language === 'IT' ? 'Centro citta' : 'Town-Centre Focus'}
-              </h4>
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Culinary Stocking</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                {language === 'IT'
-                  ? 'Le opzioni includono famiglia ospitante, B&B e hotel ad Ascoli Piceno.'
-                  : 'Accommodation options include host family, B&B, and hotel stays in Ascoli Piceno.'}
+                Arrive to a kitchen pre-stocked with artisanal local olive oil, fresh focaccia, dynamic seasonal fruit, and fine local Marche wine.
               </p>
             </div>
 
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
-              <Info className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
-                {language === 'IT' ? 'Nessun costo extra di prenotazione' : 'No Extra Reservation Cost'}
-              </h4>
+              <Bed className="w-4 h-4 text-terracotta-600" />
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Ergonomic Work Desks</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                {language === 'IT'
-                  ? 'La scuola puo prenotare l alloggio per gli studenti senza costi aggiuntivi di prenotazione.'
-                  : 'The school can reserve accommodation for students without an additional reservation cost.'}
+                Every apartment is equipped with a gorgeous dedicated hardwood writing desk, fast fiber Wi-Fi, and gentle reading lighting.
               </p>
             </div>
 
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
-              <HeartHandshake className="w-4 h-4 text-terracotta-600" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
-                {language === 'IT' ? 'Accoglienza e pianificazione' : 'Welcoming Planning'}
-              </h4>
+              <ShieldAlert className="w-4 h-4 text-terracotta-600" />
+              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">Liaison Support</h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                {language === 'IT'
-                  ? 'Viaggio individuale, esigenze LGBTQ+ e accessibilita possono essere discussi con la scuola prima della prenotazione.'
-                  : 'Solo travel, LGBTQ+ considerations, and accessibility needs can be discussed with the school before booking.'}
+                Our concierge desk is available 24/7 via private message to arrange local train pick-ups, doctor appointments, or osteria bookings.
               </p>
             </div>
           </div>
+
         </div>
       </section>
     </motion.div>
