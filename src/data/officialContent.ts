@@ -235,8 +235,8 @@ export const culturalOfferings = [
       'Students can add current affairs, business Italian, tourism and hotel management, university entrance preparation, CILS, I.T., history, art history, literature, and Italy today.',
     descriptionIT:
       'Gli studenti possono aggiungere attualita, italiano commerciale, turismo e hotel management, preparazione universitaria, CILS, I.T., storia, storia dell arte, letteratura e Italia oggi.',
-    image: images.study,
-    imagePosition: '47% 48%',
+    image: images.foodCulture,
+    imagePosition: '45% 48%',
   },
 ];
 
@@ -274,8 +274,8 @@ export const accommodationOptions = [
     italianName: 'Famiglia Ospitante',
     tagline: 'Stay with a host family',
     taglineIT: 'Soggiorno in famiglia ospitante',
-    image: images.ascoli,
-    imagePosition: '50% 50%',
+    image: images.foodCulture,
+    imagePosition: '45% 48%',
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
     descriptionIT:

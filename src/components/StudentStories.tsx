@@ -10,8 +10,8 @@ const stays = [
     focusIT: 'Corso standard e vita locale',
     text: 'For travellers who want morning lessons, afternoons in Ascoli, and enough space to enjoy the city slowly.',
     textIT: 'Per chi desidera lezioni al mattino, pomeriggi ad Ascoli e tempo per vivere la citta con calma.',
-    image: images.socialTable,
-    position: '50% 48%',
+    image: images.cookingWorkshop,
+    position: '50% 50%',
   },
   {
     title: 'A longer stay before a move',
@@ -20,8 +20,8 @@ const stays = [
     focusIT: 'Conversazione, italiano pratico, routine',
     text: 'Useful for adults relocating to Italy, buying a home, or testing the rhythm of everyday life before a bigger decision.',
     textIT: 'Utile per adulti che si trasferiscono in Italia, acquistano casa o vogliono capire il ritmo quotidiano.',
-    image: images.ascoli,
-    position: '50% 50%',
+    image: images.conversation,
+    position: '50% 46%',
   },
   {
     title: 'A focused professional course',
@@ -40,7 +40,7 @@ const stays = [
     focusIT: 'Organizzazione prima del viaggio',
     text: 'Solo travellers, women travelling alone, LGBTQ+ visitors, older learners, and students with accessibility needs can discuss practical details in advance.',
     textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilita possono parlare prima dell arrivo.',
-    image: images.groupLesson,
+    image: images.studyTable,
     position: '50% 44%',
   },
 ];

@@ -17,10 +17,10 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
         <div className="grid grid-cols-1 overflow-hidden border border-travertine-300 bg-travertine-50 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <img
-              src={images.ascoli}
-              alt="Piazza del Popolo in Ascoli Piceno"
+              src={images.cooking}
+              alt="Adults preparing fresh pasta during an Accademia Italiana culture lesson"
               className="h-[360px] w-full object-cover grayscale-[12%] lg:h-full"
-              style={{ objectPosition: '50% 50%' }}
+              style={{ objectPosition: '50% 56%' }}
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"
