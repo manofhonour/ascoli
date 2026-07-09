@@ -1,3 +1,4 @@
+import { spawn } from 'node:child_process';
 import { copyFile, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
@@ -9,8 +10,10 @@ const root = path.resolve(__dirname, '..');
 const distDir = path.join(root, 'dist');
 const themeRoot = path.join(root, 'wordpress-theme');
 const themeDir = path.join(themeRoot, 'accademia-italiana-ascoli');
+const previewThemeDir = path.join(themeRoot, 'accademia-ascoli-preview');
 const assetsDir = path.join(themeDir, 'assets');
 const flatAssetsDir = themeDir;
+const downloadDir = path.join(root, 'download');
 
 async function copyDir(source, target) {
   await mkdir(target, { recursive: true });
@@ -23,6 +26,107 @@ async function copyDir(source, target) {
     } else {
       await copyFile(sourcePath, targetPath);
     }
+  }
+}
+
+function run(command, args, options = {}) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args, {
+      stdio: 'inherit',
+      windowsHide: true,
+      ...options,
+    });
+
+    child.on('error', reject);
+    child.on('exit', (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`${command} exited with code ${code}`));
+      }
+    });
+  });
+}
+
+async function assertThemeFiles(sourceDir) {
+  const requiredFiles = ['style.css', 'functions.php', 'index.php', 'react-shell.php', 'manifest.json'];
+  const missing = requiredFiles.filter((fileName) => !existsSync(path.join(sourceDir, fileName)));
+
+  const sourceAssetsDir = path.join(sourceDir, 'assets');
+  const assetNames = existsSync(sourceAssetsDir) ? await readdir(sourceAssetsDir) : [];
+  const hasAssetJs = assetNames.some((fileName) => /^index-[^/]+\.js$/.test(fileName));
+  const hasAssetCss = assetNames.some((fileName) => /^index-[^/]+\.css$/.test(fileName));
+
+  if (!hasAssetJs) {
+    missing.push('assets/index-*.js');
+  }
+
+  if (!hasAssetCss) {
+    missing.push('assets/index-*.css');
+  }
+
+  if (missing.length) {
+    throw new Error(`Theme package source is missing required files in ${sourceDir}: ${missing.join(', ')}`);
+  }
+}
+
+async function createZip(sourceDir, zipPath) {
+  await assertThemeFiles(sourceDir);
+  await mkdir(path.dirname(zipPath), { recursive: true });
+  await rm(zipPath, { force: true });
+
+  if (process.platform === 'win32') {
+    await run('powershell.exe', [
+      '-NoProfile',
+      '-ExecutionPolicy',
+      'Bypass',
+      '-Command',
+      "$ErrorActionPreference = 'Stop'; Compress-Archive -Path (Join-Path $env:THEME_SOURCE '*') -DestinationPath $env:THEME_ZIP -Force",
+    ], {
+      env: {
+        ...process.env,
+        THEME_SOURCE: sourceDir,
+        THEME_ZIP: zipPath,
+      },
+    });
+  } else {
+    await run('zip', ['-qr', zipPath, '.'], { cwd: sourceDir });
+  }
+}
+
+async function createPreviewTheme() {
+  await rm(previewThemeDir, { recursive: true, force: true });
+  await copyDir(themeDir, previewThemeDir);
+
+  const stylePath = path.join(previewThemeDir, 'style.css');
+  const styleCss = await readFile(stylePath, 'utf8');
+  await writeFile(
+    stylePath,
+    styleCss
+      .replace('Theme Name: Accademia Italiana Ascoli', 'Theme Name: Accademia Italiana Ascoli Preview')
+      .replace(/Version: .+/, 'Version: 0.1.2-preview')
+      .replace('Text Domain: accademia-italiana-ascoli', 'Text Domain: accademia-ascoli-preview'),
+  );
+}
+
+async function createDownloadPackages() {
+  const packages = [
+    {
+      sourceDir: previewThemeDir,
+      zipPath: path.join(downloadDir, 'accademia-ascoli-preview.zip'),
+    },
+    {
+      sourceDir: themeDir,
+      zipPath: path.join(downloadDir, 'accademia-italiana-ascoli-theme.zip'),
+    },
+    {
+      sourceDir: themeDir,
+      zipPath: path.join(downloadDir, 'accademia-italiana-ascoli-theme-1.zip'),
+    },
+  ];
+
+  for (const packageInfo of packages) {
+    await createZip(packageInfo.sourceDir, packageInfo.zipPath);
   }
 }
 
@@ -91,7 +195,7 @@ Theme Name: Accademia Italiana Ascoli
 Theme URI: https://github.com/manofhonour/ascoli
 Author: Accademia Italiana / Codex
 Description: Boutique React-powered WordPress theme for Accademia Italiana in Ascoli Piceno. Built for preview, staging, and controlled activation.
-Version: 0.1.1
+Version: 0.1.2
 Requires at least: 6.0
 Tested up to: 6.6
 Requires PHP: 7.4
@@ -325,13 +429,13 @@ function accademia_ascoli_enqueue_assets() {
                 $version
             );
         } else {
-        wp_enqueue_script(
-            'accademia-ascoli-app',
+            wp_enqueue_script(
+                'accademia-ascoli-app',
                 accademia_ascoli_theme_file_uri($js),
-            array(),
+                array(),
                 $version,
-            true
-        );
+                true
+            );
         }
     }
 }
@@ -427,13 +531,16 @@ This folder is generated from the React/Vite project.
 ## Use
 
 1. Run \`npm run build:wordpress\`.
-2. Zip the \`accademia-italiana-ascoli\` folder.
-3. Upload the zip in WordPress under Appearance -> Themes -> Add New -> Upload Theme.
-4. Use Live Preview first. Do not activate on a production site until the school has approved the preview.
+2. Upload \`download/accademia-italiana-ascoli-theme.zip\` in WordPress under Appearance -> Themes -> Add New -> Upload Theme.
+3. Use Live Preview first. Do not activate on a production site until the school has approved the preview.
 
 The theme also includes a page template named **Accademia React Preview** for controlled review on a WordPress page after activation in a staging environment.
 `,
 );
 
 await mkdir(themeRoot, { recursive: true });
+await createPreviewTheme();
+await createDownloadPackages();
 console.log(`WordPress theme generated: ${themeDir}`);
+console.log(`WordPress preview theme generated: ${previewThemeDir}`);
+console.log(`WordPress ZIP packages generated in: ${downloadDir}`);

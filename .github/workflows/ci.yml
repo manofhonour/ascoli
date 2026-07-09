@@ -28,6 +28,9 @@ jobs:
         with:
           php-version: '8.2'
 
+      - name: Install ZIP tooling
+        run: sudo apt-get update && sudo apt-get install -y zip unzip
+
       - name: Install dependencies
         run: npm ci
 
@@ -36,6 +39,11 @@ jobs:
 
       - name: Build WordPress theme
         run: npm run build:wordpress
+
+      - name: Inspect preview ZIP contents
+        run: |
+          set -euo pipefail
+          unzip -l download/accademia-ascoli-preview.zip | grep -E "style.css|functions.php|manifest.json|assets/index-.*\.(js|css)"
 
       - name: PHP syntax check
         run: |
@@ -67,6 +75,8 @@ jobs:
           required_files = {
               "style.css",
               "functions.php",
+              "index.php",
+              "react-shell.php",
               "manifest.json",
           }
 
@@ -84,8 +94,9 @@ jobs:
               missing = sorted(required_files - names)
               has_asset_js = any(re.fullmatch(r"assets/index-[^/]+\.js", name) for name in names)
               has_asset_css = any(re.fullmatch(r"assets/index-[^/]+\.css", name) for name in names)
+              nested_theme_entries = sorted(name for name in names if re.match(r"accademia-[^/]+/", name))
 
-              if missing or not has_asset_js or not has_asset_css:
+              if missing or not has_asset_js or not has_asset_css or nested_theme_entries:
                   print(f"Invalid WordPress ZIP package: {zip_path}", file=sys.stderr)
                   for name in missing:
                       print(f"  missing {name}", file=sys.stderr)
@@ -93,6 +104,8 @@ jobs:
                       print("  missing assets/index-*.js", file=sys.stderr)
                   if not has_asset_css:
                       print("  missing assets/index-*.css", file=sys.stderr)
+                  if nested_theme_entries:
+                      print(f"  contains nested theme folder entry: {nested_theme_entries[0]}", file=sys.stderr)
                   failed = True
               else:
                   print(f"Verified {zip_path}")

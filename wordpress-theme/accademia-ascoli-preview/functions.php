@@ -221,13 +221,13 @@ function accademia_ascoli_enqueue_assets() {
                 $version
             );
         } else {
-        wp_enqueue_script(
-            'accademia-ascoli-app',
+            wp_enqueue_script(
+                'accademia-ascoli-app',
                 accademia_ascoli_theme_file_uri($js),
-            array(),
+                array(),
                 $version,
-            true
-        );
+                true
+            );
         }
     }
 }
