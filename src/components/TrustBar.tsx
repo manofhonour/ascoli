@@ -29,14 +29,14 @@ export default function TrustBar() {
             <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-4 max-w-sm">
               {language === 'IT'
                 ? `${contactInfo.schoolName} combina piccoli gruppi, docenti qualificati e vita quotidiana ad Ascoli Piceno.`
-                : `${contactInfo.schoolName} combines small groups, qualified teachers, and daily life in Ascoli Piceno.`}
+                : `${contactInfo.schoolName} combines small groups, passionate teachers, and daily life in Ascoli Piceno.`}
             </p>
           </div>
 
           <div className="lg:col-span-8 max-w-[340px] sm:max-w-none grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 border-t border-l border-travertine-200/90">
             {trustItems.map((item) => (
               <div key={item.value} className="min-h-[140px] min-w-0 border-r border-b border-travertine-200/90 p-5 md:p-6 flex flex-col justify-between bg-travertine-50/70">
-                <span className="block min-w-0 font-serif text-2xl md:text-[1.65rem] xl:text-[1.55rem] text-olive-800 font-light leading-[1.05]">
+                <span className="block min-w-0 max-w-full font-serif text-xl md:text-[1.4rem] xl:text-[1.12rem] 2xl:text-[1.35rem] text-olive-800 font-light leading-[1.08]">
                   {item.value}
                 </span>
                 <span className="block text-[11px] text-charcoal-800 font-light leading-snug">

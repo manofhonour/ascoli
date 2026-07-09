@@ -19,7 +19,7 @@ import FAQSection from './components/FAQSection';
 import FinalCTA from './components/FinalCTA';
 import InquiryForm from './components/InquiryForm';
 
-// Individual Custom Pages
+// Individual Tailor-Made Pages
 import AboutPage from './pages/AboutPage';
 import CoursesPage from './pages/CoursesPage';
 import AccommodationPage from './pages/AccommodationPage';

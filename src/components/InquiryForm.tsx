@@ -203,7 +203,7 @@ export default function InquiryForm() {
                         <option value="2weeks">{language === 'IT' ? '2 settimane' : '2 weeks'}</option>
                         <option value="3weeks">{language === 'IT' ? '3 settimane' : '3 weeks'}</option>
                         <option value="4weeks">{language === 'IT' ? '4 settimane' : '4 weeks'}</option>
-                        <option value="custom">{language === 'IT' ? 'Durata su misura' : 'Custom duration'}</option>
+                        <option value="tailor-made">{language === 'IT' ? 'Durata su misura' : 'Tailor-made duration'}</option>
                       </select>
                     </div>
                   </div>

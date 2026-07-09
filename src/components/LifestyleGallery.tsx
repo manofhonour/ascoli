@@ -21,7 +21,7 @@ export default function LifestyleGallery() {
       caption: 'Food, conversation, and small rituals make the language easier to remember.',
       captionIT: 'Cibo, conversazione e piccoli rituali rendono la lingua piu facile da ricordare.',
       span: 'md:col-span-7',
-      position: '45% 48%',
+      position: '50% 50%',
     },
     {
       id: 2,
@@ -41,9 +41,9 @@ export default function LifestyleGallery() {
     },
     {
       id: 4,
-      url: images.classroomCollage,
-      caption: 'The school feels personal because the learning moments are small and real.',
-      captionIT: 'La scuola sembra personale perche i momenti di studio sono piccoli e reali.',
+      url: images.ascoliStreet,
+      caption: 'Historic rooms, quiet streets, and local rituals give the language a setting.',
+      captionIT: 'Sale storiche, strade tranquille e rituali locali danno un contesto alla lingua.',
       span: 'md:col-span-7 md:mt-[-40px]',
       position: '50% 50%',
     },

@@ -18,8 +18,8 @@ const schoolNotes = [
     detailIT: 'Accademia Internazionale collega didattica, traduzione, interpretariato e preparazione agli esami.',
   },
   {
-    title: 'Human planning before arrival',
-    titleIT: 'Organizzazione umana prima dell arrivo',
+    title: 'Careful planning before arrival',
+    titleIT: 'Organizzazione attenta prima dell arrivo',
     detail: 'Students can discuss timing, accommodation, level, and practical needs before booking.',
     detailIT: 'Gli studenti possono parlare di date, alloggio, livello ed esigenze pratiche prima della prenotazione.',
   },
@@ -53,9 +53,9 @@ export default function TestimonialsSection() {
             <div className="aspect-[16/9] overflow-hidden border border-travertine-300 bg-travertine-200">
               <img
                 src={images.classroomCollage}
-                alt={language === 'IT' ? 'Momenti di studio in Accademia Italiana' : 'Study moments at Accademia Italiana'}
+                alt={language === 'IT' ? 'Momento culturale in Accademia Italiana' : 'Cultural moment at Accademia Italiana'}
                 className="h-full w-full object-cover grayscale-[10%]"
-                style={{ objectPosition: '50% 50%' }}
+                style={{ objectPosition: '50% 46%' }}
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"

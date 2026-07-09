@@ -1,0 +1,128 @@
+{
+  "index.html": {
+    "file": "assets/index-Bw6b5pu0.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-y_SY-ngX.css"
+    ],
+    "assets": [
+      "assets/accademia-logo-G5QgtLrI.png",
+      "assets/accademia-01-BKtqVdIk.jpg",
+      "assets/accademia-10-Cqd8pv8f.jpg",
+      "assets/accademia-12-EkdKIZ8b.jpg",
+      "assets/refresher-course-aBcRparE.jpeg",
+      "assets/pics-ascoli-piazza-day-DtLaU2lM.jpg",
+      "assets/pics-ascoli-street-CQKM_aMp.jpg",
+      "assets/pics-bed-breakfast-BAn2cp_1.jpg",
+      "assets/pics-communicative-lesson-BMueHIhk.jpg",
+      "assets/pics-cultural-classroom-B-HSTsHy.jpg",
+      "assets/pics-culture-certificates-DYe2Asa3.jpg",
+      "assets/pics-culture-fans-1LqDrI6v.jpg",
+      "assets/pics-gallery-interior-Be6627Ux.jpg",
+      "assets/pics-hotel-Gbh1R3jE.jpg",
+      "assets/pics-marche-walk-ZaforiAY.jpg",
+      "assets/pics-olive-ascolana-qHhG0o6i.jpg",
+      "assets/pics-pasta-workshop-Cfp8gfJt.jpg",
+      "assets/pics-quintana-drummers-CiS5Ka6-.jpg",
+      "assets/pics-rolling-hills-CFSTxIqJ.jpg",
+      "assets/pics-social-table-DPstBvmP.jpg",
+      "assets/pics-special-topics-sSUy4rWD.jpg",
+      "assets/pics-standard-group-REFIfQZn.jpg",
+      "assets/pics-wine-tasting-DleCHEp8.jpg"
+    ]
+  },
+  "src/assets/accademia-logo.png": {
+    "file": "assets/accademia-logo-G5QgtLrI.png",
+    "src": "src/assets/accademia-logo.png"
+  },
+  "src/assets/photos/accademia-01.jpg": {
+    "file": "assets/accademia-01-BKtqVdIk.jpg",
+    "src": "src/assets/photos/accademia-01.jpg"
+  },
+  "src/assets/photos/accademia-10.jpg": {
+    "file": "assets/accademia-10-Cqd8pv8f.jpg",
+    "src": "src/assets/photos/accademia-10.jpg"
+  },
+  "src/assets/photos/accademia-12.jpg": {
+    "file": "assets/accademia-12-EkdKIZ8b.jpg",
+    "src": "src/assets/photos/accademia-12.jpg"
+  },
+  "src/assets/photos/pics-ascoli-piazza-day.jpg": {
+    "file": "assets/pics-ascoli-piazza-day-DtLaU2lM.jpg",
+    "src": "src/assets/photos/pics-ascoli-piazza-day.jpg"
+  },
+  "src/assets/photos/pics-ascoli-street.jpg": {
+    "file": "assets/pics-ascoli-street-CQKM_aMp.jpg",
+    "src": "src/assets/photos/pics-ascoli-street.jpg"
+  },
+  "src/assets/photos/pics-bed-breakfast.jpg": {
+    "file": "assets/pics-bed-breakfast-BAn2cp_1.jpg",
+    "src": "src/assets/photos/pics-bed-breakfast.jpg"
+  },
+  "src/assets/photos/pics-communicative-lesson.jpg": {
+    "file": "assets/pics-communicative-lesson-BMueHIhk.jpg",
+    "src": "src/assets/photos/pics-communicative-lesson.jpg"
+  },
+  "src/assets/photos/pics-cultural-classroom.jpg": {
+    "file": "assets/pics-cultural-classroom-B-HSTsHy.jpg",
+    "src": "src/assets/photos/pics-cultural-classroom.jpg"
+  },
+  "src/assets/photos/pics-culture-certificates.jpg": {
+    "file": "assets/pics-culture-certificates-DYe2Asa3.jpg",
+    "src": "src/assets/photos/pics-culture-certificates.jpg"
+  },
+  "src/assets/photos/pics-culture-fans.jpg": {
+    "file": "assets/pics-culture-fans-1LqDrI6v.jpg",
+    "src": "src/assets/photos/pics-culture-fans.jpg"
+  },
+  "src/assets/photos/pics-gallery-interior.jpg": {
+    "file": "assets/pics-gallery-interior-Be6627Ux.jpg",
+    "src": "src/assets/photos/pics-gallery-interior.jpg"
+  },
+  "src/assets/photos/pics-hotel.jpg": {
+    "file": "assets/pics-hotel-Gbh1R3jE.jpg",
+    "src": "src/assets/photos/pics-hotel.jpg"
+  },
+  "src/assets/photos/pics-marche-walk.jpg": {
+    "file": "assets/pics-marche-walk-ZaforiAY.jpg",
+    "src": "src/assets/photos/pics-marche-walk.jpg"
+  },
+  "src/assets/photos/pics-olive-ascolana.jpg": {
+    "file": "assets/pics-olive-ascolana-qHhG0o6i.jpg",
+    "src": "src/assets/photos/pics-olive-ascolana.jpg"
+  },
+  "src/assets/photos/pics-pasta-workshop.jpg": {
+    "file": "assets/pics-pasta-workshop-Cfp8gfJt.jpg",
+    "src": "src/assets/photos/pics-pasta-workshop.jpg"
+  },
+  "src/assets/photos/pics-quintana-drummers.jpg": {
+    "file": "assets/pics-quintana-drummers-CiS5Ka6-.jpg",
+    "src": "src/assets/photos/pics-quintana-drummers.jpg"
+  },
+  "src/assets/photos/pics-rolling-hills.jpg": {
+    "file": "assets/pics-rolling-hills-CFSTxIqJ.jpg",
+    "src": "src/assets/photos/pics-rolling-hills.jpg"
+  },
+  "src/assets/photos/pics-social-table.jpg": {
+    "file": "assets/pics-social-table-DPstBvmP.jpg",
+    "src": "src/assets/photos/pics-social-table.jpg"
+  },
+  "src/assets/photos/pics-special-topics.jpg": {
+    "file": "assets/pics-special-topics-sSUy4rWD.jpg",
+    "src": "src/assets/photos/pics-special-topics.jpg"
+  },
+  "src/assets/photos/pics-standard-group.jpg": {
+    "file": "assets/pics-standard-group-REFIfQZn.jpg",
+    "src": "src/assets/photos/pics-standard-group.jpg"
+  },
+  "src/assets/photos/pics-wine-tasting.jpg": {
+    "file": "assets/pics-wine-tasting-DleCHEp8.jpg",
+    "src": "src/assets/photos/pics-wine-tasting.jpg"
+  },
+  "src/assets/photos/refresher-course.jpeg": {
+    "file": "assets/refresher-course-aBcRparE.jpeg",
+    "src": "src/assets/photos/refresher-course.jpeg"
+  }
+}

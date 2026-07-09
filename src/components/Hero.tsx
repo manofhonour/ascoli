@@ -23,7 +23,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
     },
     {
       label: 'Ascoli Piceno',
-      detail: language === 'IT' ? 'Vita quotidiana nelle Marche' : 'Everyday life in Le Marche',
+      detail: language === 'IT' ? 'Vita quotidiana nelle Marche' : 'Everyday life in the region Le Marche',
     },
   ];
 
@@ -125,7 +125,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
             className="relative min-h-[460px] sm:min-h-[520px] md:min-h-[620px] lg:min-h-[660px]"
           >
-            <div className="absolute left-0 sm:left-auto right-0 top-0 w-full sm:w-[88%] md:w-[82%] h-[68%] md:h-[72%] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/70">
+            <div className="absolute left-0 sm:left-auto right-0 top-0 w-full sm:w-[88%] md:w-[82%] h-[56%] md:h-[58%] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/70">
               <img
                 src={images.groupLesson}
                 alt="Accademia Italiana students in a small group lesson"
@@ -139,7 +139,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
               <div className="absolute inset-0 border border-white/15 pointer-events-none m-4" />
             </div>
 
-            <div className="absolute left-0 bottom-10 w-[48%] min-w-[210px] h-[38%] bg-travertine-100 overflow-hidden shadow-xl border border-travertine-300/70 hidden sm:block">
+            <div className="absolute left-0 bottom-0 w-[48%] min-w-[210px] h-[34%] bg-travertine-100 overflow-hidden shadow-xl border border-travertine-300/70 hidden sm:block">
               <img
                 src={images.ascoli}
                 alt="Piazza del Popolo in Ascoli Piceno"
@@ -158,7 +158,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
               </div>
             </div>
 
-            <div className="absolute left-4 right-4 sm:left-auto sm:right-8 bottom-0 w-auto sm:w-[42%] sm:min-w-[190px] h-[30%] bg-olive-900 text-travertine-50 border border-olive-800 shadow-2xl p-5 md:p-6 flex flex-col justify-between">
+            <div className="absolute left-4 right-4 sm:left-auto sm:right-12 bottom-0 w-auto sm:w-[42%] sm:min-w-[190px] h-[30%] bg-olive-900 text-travertine-50 border border-olive-800 shadow-2xl p-5 md:p-6 flex flex-col justify-between">
               <div className="flex items-center gap-3">
                 <img src={accademiaLogo} alt="" className="h-11 w-11 object-contain bg-travertine-50 p-1.5" />
                 <div>

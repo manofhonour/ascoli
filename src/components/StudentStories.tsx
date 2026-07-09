@@ -4,13 +4,13 @@ import { images } from '../data/officialContent';
 
 const stays = [
   {
-    title: 'A cultural week in Le Marche',
+    title: 'A cultural week in the region Le Marche',
     titleIT: 'Una settimana culturale nelle Marche',
     focus: 'Standard course plus local life',
     focusIT: 'Corso standard e vita locale',
     text: 'For travellers who want morning lessons, afternoons in Ascoli, and enough space to enjoy the city slowly.',
     textIT: 'Per chi desidera lezioni al mattino, pomeriggi ad Ascoli e tempo per vivere la citta con calma.',
-    image: images.cookingWorkshop,
+    image: images.quintana,
     position: '50% 50%',
   },
   {
@@ -20,28 +20,28 @@ const stays = [
     focusIT: 'Conversazione, italiano pratico, routine',
     text: 'Useful for adults relocating to Italy, buying a home, or testing the rhythm of everyday life before a bigger decision.',
     textIT: 'Utile per adulti che si trasferiscono in Italia, acquistano casa o vogliono capire il ritmo quotidiano.',
-    image: images.conversation,
-    position: '50% 46%',
+    image: images.ascoliStreet,
+    position: '50% 50%',
   },
   {
     title: 'A focused professional course',
     titleIT: 'Un corso professionale mirato',
-    focus: 'Individual or custom lessons',
+    focus: 'Individual or tailor-made lessons',
     focusIT: 'Lezioni individuali o su misura',
     text: 'For professionals and digital nomads who need flexible timing, sector vocabulary, or confidence in spoken Italian.',
     textIT: 'Per professionisti e nomadi digitali che cercano orari flessibili, lessico di settore o sicurezza nel parlato.',
-    image: images.study,
-    position: '47% 48%',
+    image: images.whiteboardLesson,
+    position: '50% 50%',
   },
   {
-    title: 'A supported solo arrival',
-    titleIT: 'Un arrivo individuale con supporto',
+    title: 'A supported arrival and staying',
+    titleIT: 'Un arrivo e soggiorno con supporto',
     focus: 'Planning before travel',
     focusIT: 'Organizzazione prima del viaggio',
-    text: 'Solo travellers, women travelling alone, LGBTQ+ visitors, older learners, and students with accessibility needs can discuss practical details in advance.',
-    textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilita possono parlare prima dell arrivo.',
-    image: images.studyTable,
-    position: '50% 44%',
+    text: 'Solo travellers, women travelling alone, LGBTQ+ visitors, older learners, and students with accessibility needs are welcomed in a respectful learning environment.',
+    textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilita sono accolti in un ambiente rispettoso.',
+    image: images.bnb,
+    position: '50% 50%',
   },
 ];
 
@@ -101,8 +101,8 @@ export default function StudentStories() {
 
         <div className="mt-12 border-l border-olive-700 bg-travertine-50 px-6 py-5 text-sm font-light leading-relaxed text-charcoal-800 md:max-w-3xl">
           {language === 'IT'
-            ? 'L accoglienza e semplice e concreta: piccoli gruppi, comunicazione chiara prima dell arrivo e rispetto per il ritmo di ogni adulto.'
-            : "The welcome is simple and practical: small groups, clear communication before arrival, and respect for each adult learner's rhythm."}
+            ? 'L accoglienza e semplice e concreta: piccoli gruppi, comunicazione chiara prima dell arrivo e rispetto per il ritmo di ogni studente.'
+            : "The welcome is simple and practical: small groups, clear communication before their arrival, and respect for each learner's rhythm."}
         </div>
       </div>
     </section>

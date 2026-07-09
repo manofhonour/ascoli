@@ -22,7 +22,7 @@ export default function AboutPage() {
       text:
         language === 'IT'
           ? 'La scuola e diretta dalla Dr. Antonella Valentini e supportata da docenti qualificati.'
-          : 'The school is directed by Dr. Antonella Valentini and supported by qualified teachers.',
+          : 'The school is directed by Dr. Antonella Valentini and supported by highly qualified and passionate teachers.',
     },
     {
       icon: Heart,
@@ -30,15 +30,15 @@ export default function AboutPage() {
       text:
         language === 'IT'
           ? 'Le lezioni possono essere personalizzate per livello, obiettivi, date e interessi, online o in presenza.'
-          : 'Lessons can be customized by level, goals, dates, and interest area, including online or in-person formats.',
+          : 'Lessons can be tailored by level, goals, dates, and interest area, including online or in-person formats.',
     },
     {
       icon: Sparkles,
       title: language === 'IT' ? 'Cultura italiana nel contesto' : 'Italian Culture in Context',
       text:
         language === 'IT'
-          ? 'Lo studio della lingua puo collegarsi ad Ascoli Piceno, cucina, vino, arte, letteratura, storia e tradizioni locali.'
-          : 'Language study can connect with Ascoli Piceno, food, wine, art, literature, history, and local traditions.',
+          ? 'Lo studio della lingua puo collegarsi ad Ascoli Piceno, cucina, vino, olio d oliva, arte, letteratura, storia e tradizioni locali.'
+          : 'Language study can connect with Ascoli Piceno, food, wine, olive oil, art, literature, history, and local traditions.',
     },
   ];
 
@@ -83,23 +83,23 @@ export default function AboutPage() {
           </h2>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
-              ? 'L istituzione e dedicata ai servizi linguistici dal 1997, con corsi di italiano per stranieri, corsi di lingue, formazione docenti, tutoraggio, preparazione esami e supporto internazionale.'
-              : 'The institution has been dedicated to language services since 1997, with Italian courses for foreigners, language courses, teacher training, tutoring, exam preparation, and international support.'}
+              ? 'L istituzione e dedicata ai servizi linguistici dal 1997, con corsi di lingue straniere, corsi di italiano, formazione docenti, tutoraggio, preparazione esami e supporto internazionale.'
+              : 'The institution has been dedicated to language services since 1997, with foreign language courses, Italian courses, teacher training, tutoring, exam preparation, and international support.'}
           </p>
           <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
               ? 'L offerta di italiano e pratica e flessibile: piccoli gruppi standard, corsi intensivi, lezioni individuali, corsi estensivi, aggiornamento docenti e percorsi su misura ad Ascoli Piceno o online.'
-              : 'The Italian course offer is practical and flexible: small standard groups, intensive courses, individual lessons, extensive courses, teacher-refreshers, and custom-made study plans in Ascoli Piceno or online.'}
+              : 'The Italian course offer is practical and flexible: small standard groups, intensive courses, extensive courses, individual lessons, teacher-refreshers, and tailor-made study plans in Ascoli Piceno or online.'}
           </p>
         </div>
 
         <div className="lg:col-span-6 relative">
           <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl relative">
             <img
-              src={images.classroomCollage}
-              alt="Accademia Italiana course moments"
+              src={images.culturalClassroom}
+              alt="Adult learners in a small Accademia Italiana classroom"
               className="w-full h-full object-cover"
-              style={{ objectPosition: '50% 50%' }}
+              style={{ objectPosition: '50% 48%' }}
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"

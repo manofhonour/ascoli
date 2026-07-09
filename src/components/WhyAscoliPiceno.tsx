@@ -8,8 +8,8 @@ export default function WhyAscoliPiceno() {
   const { language, t } = useLanguage();
 
   const rhythms = language === 'IT'
-    ? ['Lezione al mattino', 'Caffe in centro', 'Pranzo lento', 'Passeggiata in piazza']
-    : ['Morning lesson', 'Coffee in the centre', 'A slow lunch', 'A walk through the piazza'];
+    ? ['Lezione al mattino', 'Caffe in centro', 'Pranzo lento', 'Passeggiata nelle piazze']
+    : ['Morning lesson', 'Coffee in the centre', 'A slow lunch', 'A walk through the piazzas'];
 
   return (
     <section id="why-ascoli" className="bg-travertine-100 py-28 md:py-40">
@@ -98,16 +98,16 @@ export default function WhyAscoliPiceno() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           <img
-            src={images.cultureInterior}
-            alt={language === 'IT' ? 'Interno storico ad Ascoli Piceno' : 'Historic interior in Ascoli Piceno'}
+            src={images.ascoliStreet}
+            alt={language === 'IT' ? 'Strada storica ad Ascoli Piceno' : 'Historic street in Ascoli Piceno'}
             className="h-[300px] w-full border border-travertine-300 object-cover grayscale-[10%]"
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
           />
           <img
-            src={images.wine}
-            alt={language === 'IT' ? 'Caffe storico ad Ascoli Piceno' : 'Historic cafe atmosphere in Ascoli Piceno'}
+            src={images.rollingHills}
+            alt={language === 'IT' ? 'Colline nella regione Le Marche vicino ad Ascoli Piceno' : 'Hills in the region Le Marche near Ascoli Piceno'}
             className="h-[300px] w-full border border-travertine-300 object-cover grayscale-[10%]"
             loading="lazy"
             decoding="async"

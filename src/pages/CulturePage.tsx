@@ -6,6 +6,18 @@ import { useLanguage } from '../context/LanguageContext';
 
 const icons = [Utensils, Wine, Palette, Library];
 
+function renderWithTomboloItalic(text: string) {
+  return text.split(/(Tombolo)/g).map((part, index) =>
+    part === 'Tombolo' ? (
+      <em key={`${part}-${index}`} className="font-serif italic">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function CulturePage() {
   const { language } = useLanguage();
 
@@ -85,7 +97,7 @@ export default function CulturePage() {
                 </h3>
                 </div>
                 <p className="text-xs text-charcoal-800 font-light leading-relaxed">
-                  {language === 'IT' ? cat.descriptionIT : cat.description}
+                  {renderWithTomboloItalic(language === 'IT' ? cat.descriptionIT : cat.description)}
                 </p>
               </div>
             );
@@ -106,16 +118,16 @@ export default function CulturePage() {
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'I moduli includono attualita, italiano per il business, turismo e hotel management, preparazione universitaria, preparazione agli esami di certificazione, storia italiana, storia dell arte, letteratura e Italia oggi.'
-                : 'Add-ons include current affairs, business Italian, tourism and hotel management, university admission preparation, certification exam preparation, Italian history, art history, literature, and Italy today.'}
+                ? 'I moduli includono italiano per il business, turismo e hotel management, preparazione universitaria, storia italiana, storia dell arte, letteratura e "Italia oggi".'
+                : 'Add-ons include business Italian, tourism and hotel management, university admission preparation, Italian history, art history, literature, and "Italy today".'}
             </p>
           </div>
 
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl">
               <img
-                src={images.classroomCollage}
-                alt="Italian course moments at Accademia Italiana"
+                src={images.whiteboardLesson}
+                alt="Specialist Italian topic lesson at Accademia Italiana"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}
                 loading="lazy"

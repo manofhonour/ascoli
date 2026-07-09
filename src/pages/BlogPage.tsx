@@ -17,6 +17,18 @@ interface BlogPost {
   content: string[];
 }
 
+function renderWithTomboloItalic(text: string) {
+  return text.split(/(Tombolo)/g).map((part, index) =>
+    part === 'Tombolo' ? (
+      <em key={`${part}-${index}`} className="italic">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function BlogPage() {
   const { language } = useLanguage();
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
@@ -30,8 +42,8 @@ export default function BlogPage() {
           : 'Choosing the right Italian course in Ascoli Piceno',
       excerpt:
         language === 'IT'
-          ? 'Una guida essenziale a corsi standard, intensivi, individuali, estensivi, aggiornamento docenti e percorsi su misura.'
-          : 'A concise guide to standard, intensive, individual, extensive, teacher-refresher, and custom-made course formats.',
+          ? 'Una guida essenziale a corsi standard, intensivi, estensivi, individuali, aggiornamento docenti e percorsi su misura.'
+          : 'A concise guide to standard, intensive, extensive, individual, teacher-refresher, and tailor-made course formats.',
       category: language === 'IT' ? 'Corsi' : 'Courses',
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
@@ -47,7 +59,7 @@ export default function BlogPage() {
             ]
           : [
               'Accademia Italiana offers flexible course formats for students with different goals and schedules.',
-              'The standard course is a small-group format, while intensive study adds individual hours. Students who need a tailored schedule can choose individual or custom-made lessons.',
+              'The standard course is a small-group format, while intensive study adds individual hours. Students who need a tailored schedule can choose individual or tailor-made lessons.',
               'The right choice depends on level, dates, pace, and whether the student wants cultural add-ons or exam preparation.',
             ],
     },
@@ -55,8 +67,8 @@ export default function BlogPage() {
       id: 'culture',
       title:
         language === 'IT'
-          ? 'Moduli culturali: cucina, vino, arte, storia ed esami'
-          : 'Culture add-ons: food, wine, art, history, and exams',
+          ? 'Moduli culturali: cucina, vino, arte e storia'
+          : 'Culture add-ons: food, wine, art, and history',
       excerpt:
         language === 'IT'
           ? 'Temi culturali e specialistici possono ampliare lo studio dell italiano.'
@@ -71,13 +83,13 @@ export default function BlogPage() {
         language === 'IT'
           ? [
               'L apprendimento dell italiano diventa piu forte quando il vocabolario e collegato a contesti vissuti.',
-              'I moduli includono cucina, degustazione vini, opera, olio d oliva, ceramica, pittura, tombolo, italiano per il business, turismo, preparazione universitaria, certificazioni, storia, storia dell arte, letteratura e Italia oggi.',
-              'La disponibilita dipende da date, livello e formato del corso.',
+              'I moduli includono cucina, degustazione vini, opera, olio d oliva, ceramica, pittura, Tombolo, italiano per il business, turismo, preparazione universitaria, storia, storia dell arte, letteratura e "Italia oggi".',
+              'I moduli sono organizzati intorno al formato del corso e agli obiettivi degli studenti.',
             ]
           : [
               'Italian learning becomes stronger when vocabulary is connected with lived contexts.',
-              'Add-ons include cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, business Italian, tourism, university preparation, certification preparation, history, art history, literature, and Italy today.',
-              'Availability depends on dates, level, and course format.',
+              'Add-ons include cooking, wine tasting, opera, olive oil, ceramics, painting, Tombolo lace, business Italian, tourism, university preparation, history, art history, literature, and "Italy today".',
+              'Modules are organised around the course format and the student goals.',
             ],
     },
     {
@@ -89,7 +101,7 @@ export default function BlogPage() {
       excerpt:
         language === 'IT'
           ? 'Ascoli offre storia, cultura, cucina locale, festival e accesso alle Marche.'
-          : 'Ascoli offers history, culture, local food, festivals, and access to the Marche region.',
+          : 'Ascoli offers history, culture, local food, festivals, and access to the region Le Marche.',
       category: 'Ascoli',
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
@@ -105,7 +117,7 @@ export default function BlogPage() {
             ]
           : [
               'Ascoli Piceno gives students a compact, historic setting for daily Italian use.',
-              `${ascoliHighlights[0].title}, local food traditions, events such as the Quintana, and the wider Marche landscape all support cultural immersion.`,
+              `${ascoliHighlights[0].title}, local food traditions, events such as the Quintana, and the landscape in the region Le Marche all support cultural immersion.`,
               `The school is located at ${contactInfo.addressLine1}, close to the life of the historic centre.`,
             ],
     },
@@ -252,7 +264,7 @@ export default function BlogPage() {
 
                 <div className="font-serif text-base md:text-lg text-charcoal-900 leading-relaxed font-light space-y-6 pt-4">
                   {selectedPost.content.map((para) => (
-                    <p key={para}>{para}</p>
+                    <p key={para}>{renderWithTomboloItalic(para)}</p>
                   ))}
                 </div>
               </div>

@@ -47,8 +47,8 @@ export default function Teachers() {
                 </div>
                 <p className="mt-5 text-sm font-light leading-relaxed text-charcoal-800">
                   {language === 'IT'
-                    ? 'Una scuola piccola permette di parlare prima dell arrivo, chiarire il livello e preparare un soggiorno adatto.'
-                    : 'A small school means you can speak before arrival, clarify your level, and plan a stay that feels manageable.'}
+                    ? 'Una scuola piccola permette di parlare via WhatsApp prima dell arrivo, chiarire il livello e preparare un soggiorno adatto.'
+                    : 'A small school means you can have a WhatsApp conversation before arrival, clarify your level, and plan a stay that feels manageable.'}
                 </p>
               </div>
             </motion.div>

@@ -11,6 +11,18 @@ interface FaqItem {
   answer: string;
 }
 
+function renderWithTomboloItalic(text: string) {
+  return text.split(/(Tombolo)/g).map((part, index) =>
+    part === 'Tombolo' ? (
+      <em key={`${part}-${index}`} className="font-serif italic">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function FaqPage() {
   const { language } = useLanguage();
   const [activeFaq, setActiveFaq] = useState<string | null>('courses');
@@ -23,7 +35,7 @@ export default function FaqPage() {
             category: 'Corsi',
             question: 'Quali corsi di italiano offre la scuola?',
             answer:
-              'L offerta include corsi standard, intensivi, lezioni individuali, corsi estensivi, aggiornamento per docenti e corsi su misura ad Ascoli Piceno o online.',
+              'L offerta include corsi standard, intensivi, corsi estensivi, lezioni individuali, aggiornamento per docenti e corsi su misura ad Ascoli Piceno o online.',
           },
           {
             id: 'prices',
@@ -44,21 +56,21 @@ export default function FaqPage() {
             category: 'Supporto studenti',
             question: 'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita sono benvenuti?',
             answer:
-              'Si. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilita o esigenze di accessibilita possono contattare la scuola in anticipo per discutere corso, alloggio, arrivo e dettagli pratici.',
+              'Si. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilita o esigenze di accessibilita sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell arrivo per indicazioni pratiche.',
           },
           {
             id: 'travel',
             category: 'Viaggio',
             question: 'Come si raggiunge Ascoli Piceno?',
             answer:
-              'Gli studenti possono arrivare in treno via San Benedetto del Tronto, in autobus o auto da Roma in circa 2,5 ore, oppure tramite gli aeroporti di Ancona-Falconara e Pescara. Gli orari vanno controllati prima del viaggio.',
+              'Gli studenti possono arrivare in autobus o auto da Roma in circa 3 ore, oppure tramite gli aeroporti di Ancona-Falconara e Pescara. Gli orari vanno controllati prima del viaggio.',
           },
           {
             id: 'culture',
             category: 'Cultura',
             question: 'Quali corsi culturali o moduli aggiuntivi sono disponibili?',
             answer:
-              'I moduli includono cucina italiana, degustazione vini, opera, olio d oliva, ceramica, pittura, tombolo, attualita, italiano per il business, turismo e hotel management, preparazione universitaria, esami di certificazione, storia, storia dell arte, letteratura e Italia oggi.',
+              'I moduli includono cucina italiana, degustazione vini, opera, olio d oliva, ceramica, pittura, Tombolo, italiano per il business, turismo e hotel management, preparazione universitaria, storia, storia dell arte, letteratura e "Italia oggi".',
           },
           {
             id: 'contact',
@@ -73,7 +85,7 @@ export default function FaqPage() {
             category: 'Courses',
             question: 'Which Italian courses does the school offer?',
             answer:
-              'The course offer includes standard courses, intensive courses, individual lessons, extensive courses, refresher courses for teachers, and custom-made courses in Ascoli Piceno or online.',
+              'The course offer includes standard courses, intensive courses, extensive courses, individual lessons, refresher courses for teachers, and tailor-made courses in Ascoli Piceno or online.',
           },
           {
             id: 'prices',
@@ -94,21 +106,21 @@ export default function FaqPage() {
             category: 'Student Support',
             question: 'Are solo travellers, LGBTQ+ learners, and students with accessibility needs welcome?',
             answer:
-              'Yes. Students travelling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcome to contact the school in advance so course, accommodation, arrival, and practical details can be discussed.',
+              'Yes. Students travelling alone, LGBTQ+ learners, and students with disabilities or accessibility needs are welcomed in a respectful learning environment and may contact the school before their arrival for practical guidance.',
           },
           {
             id: 'travel',
             category: 'Travel',
             question: 'How do students reach Ascoli Piceno?',
             answer:
-              'Students can travel by train via San Benedetto del Tronto, by bus or car from Rome in about 2.5 hours, or through Ancona-Falconara and Pescara airports. Timetables should be checked before travel.',
+              'Students can travel by bus or car from Rome in about 3 hours, or through Ancona-Falconara and Pescara airports. Timetables should be checked before travel.',
           },
           {
             id: 'culture',
             category: 'Culture',
             question: 'Which culture courses or add-ons are available?',
             answer:
-              'Add-ons include Italian cooking, wine tasting, opera, olive oil, ceramics, painting, tombolo lace, current affairs, business Italian, tourism and hotel management, university entrance preparation, certification exam preparation, history, art history, literature, and Italy today.',
+              'Add-ons include Italian cooking, wine tasting, opera, olive oil, ceramics, painting, Tombolo lace, business Italian, tourism and hotel management, university entrance preparation, history, art history, literature, and "Italy today".',
           },
           {
             id: 'contact',
@@ -175,7 +187,7 @@ export default function FaqPage() {
                       className="border-t border-travertine-200/60 bg-travertine-50/50"
                     >
                       <p className="p-6 md:p-8 text-xs md:text-sm text-charcoal-800 leading-relaxed font-light">
-                        {faq.answer}
+                        {renderWithTomboloItalic(faq.answer)}
                       </p>
                     </motion.div>
                   )}

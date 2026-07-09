@@ -15,7 +15,7 @@ export default function TestimonialsPage() {
       quote:
         language === 'IT'
           ? 'La scuola valorizza comunicazione, flessibilita, docenti qualificati e materiali autentici.'
-          : 'The school highlights communication, flexibility, qualified teachers, and authentic teaching material.',
+          : 'The school highlights communication, flexibility, passionate teachers, and authentic teaching material.',
     },
     {
       id: 'courses',
@@ -24,7 +24,7 @@ export default function TestimonialsPage() {
       quote:
         language === 'IT'
           ? 'L offerta include corsi standard, intensivi, estensivi, individuali, aggiornamento docenti, online e su misura.'
-          : 'The course offer includes standard, intensive, extensive, individual, teacher-refresher, online, and custom-made formats.',
+          : 'The course offer includes standard, intensive, extensive, individual, teacher-refresher, online, and tailor-made formats.',
     },
     {
       id: 'services',

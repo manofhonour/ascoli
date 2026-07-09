@@ -18,9 +18,9 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
           <div className="lg:col-span-5">
             <img
               src={images.cooking}
-              alt="Adults preparing fresh pasta during an Accademia Italiana culture lesson"
+              alt="Olive all'Ascolana and local wine in Ascoli Piceno"
               className="h-[360px] w-full object-cover grayscale-[12%] lg:h-full"
-              style={{ objectPosition: '50% 56%' }}
+              style={{ objectPosition: '50% 50%' }}
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"

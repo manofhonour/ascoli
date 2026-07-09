@@ -3,6 +3,18 @@ import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
 import { culturalOfferings } from '../data/officialContent';
 
+function renderWithTomboloItalic(text: string) {
+  return text.split(/(Tombolo)/g).map((part, index) =>
+    part === 'Tombolo' ? (
+      <em key={`${part}-${index}`} className="font-serif italic normal-case">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function BeyondClassroom() {
   const { language, t } = useLanguage();
   const heroExperience = culturalOfferings[0];
@@ -76,9 +88,11 @@ export default function BeyondClassroom() {
                       </div>
                       <div className="space-y-3">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-olive-800">
-                          {tagline}
+                          {renderWithTomboloItalic(tagline)}
                         </p>
-                        <p className="text-sm font-light leading-relaxed text-charcoal-800">{description}</p>
+                        <p className="text-sm font-light leading-relaxed text-charcoal-800">
+                          {renderWithTomboloItalic(description)}
+                        </p>
                       </div>
                     </div>
                   </motion.article>

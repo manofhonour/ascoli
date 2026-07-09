@@ -7,6 +7,9 @@ export default defineConfig(() => {
   return {
     base: './',
     plugins: [react(), tailwindcss()],
+    build: {
+      manifest: 'manifest.json',
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

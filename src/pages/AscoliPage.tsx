@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Landmark, Compass, Plane, Train } from 'lucide-react';
+import { Landmark, Plane } from 'lucide-react';
 import { ascoliHighlights, images } from '../data/officialContent';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -22,15 +22,15 @@ export default function AscoliPage() {
             Ascoli Piceno
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Una citta storica' : 'A historic city'} <br />
+            {language === 'IT' ? 'Una citta storica' : 'A hidden gem'} <br />
             <span className="italic text-terracotta-600">
               {language === 'IT' ? 'per l immersione in italiano.' : 'for Italian immersion.'}
             </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'Ascoli Piceno unisce storia, cultura, bellezza naturale, cucina, festival, teatro e collegamenti con le Marche.'
-              : 'Ascoli Piceno brings together history, culture, natural beauty, food, festivals, theatre, and access to the wider Marche region.'}
+              ? 'Ascoli Piceno unisce storia, cultura, bellezza naturale, cucina, festival, due teatri e collegamenti con le Marche.'
+              : 'Ascoli Piceno brings together history, culture, natural beauty, food, festivals, two theatres, and access to the region Le Marche.'}
           </p>
         </div>
       </section>
@@ -43,18 +43,18 @@ export default function AscoliPage() {
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-snug">
               {language === 'IT'
-                ? 'Studio della lingua tra arte, strade, cucina e ritmo locale.'
-                : 'Language study surrounded by art, streets, food, and local rhythm.'}
+                ? 'Studio della lingua tra buon cibo, strade storiche, piazze medievali e ritmo locale.'
+                : 'Language study surrounded by delicious food, historical streets, medieval squares, and local rhythm.'}
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'Ascoli Piceno offre Piazza del Popolo, architettura storica, tracce romane, montagne e fiumi, piatti locali come le Olive all Ascolana, Teatro Ventidio Basso, concerti e festival.'
-                : 'Ascoli Piceno offers Piazza del Popolo, historic architecture, Roman traces, mountains and rivers, local dishes such as Olive all Ascolana, Teatro Ventidio Basso, concerts, and festivals.'}
+                ? "Ascoli Piceno offre Piazza del Popolo, architettura storica, tracce romane, montagne e fiumi, piatti locali come le Olive all'Ascolana, due teatri, concerti e festival."
+                : "Ascoli Piceno offers Piazza del Popolo, historic architecture, Roman traces, mountains and rivers, local dishes such as Olive all'Ascolana (stuffed meat, fried olives), two theatres, concerts, and festivals."}
             </p>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'Le Marche aggiungono spiagge, borghi collinari, vigneti, uliveti, chiese, musei, rovine romane e architettura rinascimentale.'
-                : 'The Marche region adds beaches, hill towns, vineyards, olive groves, churches, museums, Roman ruins, and Renaissance architecture.'}
+                ? 'Le Marche aggiungono spiagge, colline morbide, vigneti, uliveti, chiese, musei, rovine romane e architettura rinascimentale.'
+                : 'In the region Le Marche, students find beaches, rolling hills, vineyards, olive groves, churches, museums, Roman ruins, and Renaissance architecture.'}
             </p>
           </div>
 
@@ -112,12 +112,12 @@ export default function AscoliPage() {
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'Gli studenti possono pianificare il viaggio in treno, autobus, auto e tramite aeroporti vicini. Gli orari aggiornati vanno controllati prima della partenza.'
-                : 'Students can plan routes by train, bus, car, and nearby airports. Current timetables should be checked before travelling.'}
+                ? 'Gli studenti possono pianificare il viaggio in autobus, auto e tramite aeroporti vicini. Gli orari aggiornati vanno controllati prima della partenza.'
+                : 'Students can plan routes by bus, car, and nearby airports. Current timetables should be checked before travelling.'}
             </p>
           </div>
 
-          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
               <Landmark className="w-5 h-5 text-olive-800" />
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
@@ -125,20 +125,8 @@ export default function AscoliPage() {
               </h4>
               <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT'
-                  ? 'In autobus o auto, Roma e a circa 2,5 ore da Ascoli Piceno, con percorsi via S4 o A24/E80.'
-                  : 'By bus or car, Rome to Ascoli Piceno is about 2.5 hours, with routes via S4 or A24/E80.'}
-              </p>
-            </div>
-
-            <div className="bg-travertine-50 p-6 border border-travertine-200 space-y-2">
-              <Train className="w-5 h-5 text-olive-800" />
-              <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
-                {language === 'IT' ? 'In treno' : 'By Train'}
-              </h4>
-              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                {language === 'IT'
-                  ? 'Da Milano, il percorso passa da San Benedetto del Tronto, con collegamenti locali successivi.'
-                  : 'From Milan, the route goes via San Benedetto del Tronto, with onward local transport.'}
+                  ? 'In autobus o auto, Roma e a circa 3 ore da Ascoli Piceno, con percorsi via S4 o A24/E80.'
+                  : 'By bus or car, Rome to Ascoli Piceno is about 3 hours, with routes via S4 or A24/E80.'}
               </p>
             </div>
 

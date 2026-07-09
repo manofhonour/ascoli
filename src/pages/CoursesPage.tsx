@@ -4,6 +4,18 @@ import { Check, Calendar, Euro, Compass, Award, Star } from 'lucide-react';
 import { officialCourses, culturalOfferings } from '../data/officialContent';
 import { useLanguage } from '../context/LanguageContext';
 
+function renderWithTomboloItalic(text: string) {
+  return text.split(/(Tombolo)/g).map((part, index) =>
+    part === 'Tombolo' ? (
+      <em key={`${part}-${index}`} className="font-serif italic">
+        {part}
+      </em>
+    ) : (
+      part
+    ),
+  );
+}
+
 export default function CoursesPage() {
   const { language } = useLanguage();
   const [activeCourseId, setActiveCourseId] = useState(officialCourses[0].id);
@@ -37,8 +49,8 @@ export default function CoursesPage() {
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'La scuola offre corsi standard, intensivi, individuali, estensivi, aggiornamento docenti e corsi su misura ad Ascoli Piceno o online.'
-              : 'The school offers standard, intensive, individual, extensive, teacher-refresher, and custom-made course formats in Ascoli Piceno or online.'}
+              ? 'La scuola offre corsi standard, intensivi, estensivi, individuali, aggiornamento docenti e corsi su misura ad Ascoli Piceno o online.'
+              : 'The school offers standard, intensive, extensive, individual, teacher-refresher, and tailor-made course formats in Ascoli Piceno or online.'}
           </p>
         </div>
       </section>
@@ -142,8 +154,8 @@ export default function CoursesPage() {
             </h2>
             <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'I moduli culturali e specialistici possono accompagnare lo studio standard o intensivo in base a date e obiettivi.'
-                : 'Cultural and specialist add-ons can be paired with standard or intensive study depending on dates and goals.'}
+                ? 'I moduli culturali e specialistici possono accompagnare lo studio standard o intensivo secondo formato e obiettivi del corso.'
+                : 'Cultural and specialist add-ons can be paired with standard or intensive study around the course format and student goals.'}
             </p>
           </div>
 
@@ -155,7 +167,7 @@ export default function CoursesPage() {
                   {language === 'IT' ? item.italianTitle : item.title}
                 </h4>
                 <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
-                  {language === 'IT' ? item.descriptionIT : item.description}
+                  {renderWithTomboloItalic(language === 'IT' ? item.descriptionIT : item.description)}
                 </p>
               </div>
             ))}

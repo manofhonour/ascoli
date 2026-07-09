@@ -29,7 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Italian Language School Since 1997',
     'hero.title_part1': 'Live Italy.',
     'hero.title_part2': 'Speak Italian.',
-    'hero.title_italic': 'Study in Ascoli.',
+    'hero.title_italic': 'Study in Ascoli Piceno.',
     'hero.desc':
       'A small Italian language school in Ascoli Piceno for adults who want lessons, local culture, and time to live the language.',
     'hero.explore_courses': 'Explore Courses',
@@ -39,7 +39,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.palazzo_class_title': 'Small Groups',
     'hero.palazzo_class_desc': 'Standard courses are designed for 3-6 students with a communicative method.',
     'hero.immersion_care_title': 'Culture Included',
-    'hero.immersion_care_desc': 'Cooking, wine, art, history, literature, exams, and custom courses can be added.',
+    'hero.immersion_care_desc': 'Cooking, wine, art, history, literature, exams, and tailor-made courses can be added.',
     'hero.scroll_down': 'Explore',
 
     'trust.established_label': 'Since 1997',
@@ -47,10 +47,10 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.cohorts_label': '3-6 Students',
     'trust.cohorts_detail': 'Small standard-course groups',
     'trust.global_label': 'International Students',
-    'trust.global_detail': 'Adult learners from many countries',
+    'trust.global_detail': 'Adult learners from several countries',
     'trust.sanctuaries_label': 'Ascoli Piceno',
-    'trust.sanctuaries_detail': 'A historic city in Le Marche',
-    'trust.staff_label': 'Qualified Teachers',
+    'trust.sanctuaries_detail': 'A historic city in the region Le Marche',
+    'trust.staff_label': 'Teaching Team',
     'trust.staff_detail': 'Flexible, communicative instruction',
 
     'why.philosophy_sub': 'Our Method',
@@ -58,29 +58,29 @@ const translations: Record<Language, Record<string, string>> = {
     'why.philosophy_title_italic': 'real conversation',
     'why.philosophy_title_part2': ', and Italian culture.',
     'why.philosophy_desc':
-      'Lessons are practical and personal. The city gives students the setting to use Italian in ordinary, memorable ways.',
-    'why.focus_1_title': 'Qualified Teachers',
+      'Lessons are practical and personal. The city gives students the setting to use Italian in authentic, memorable ways.',
+    'why.focus_1_title': 'The Best Teachers You can Have',
     'why.focus_1_desc':
-      'The school is directed by Dr. Antonella Valentini and works with qualified teachers.',
+      'The school is directed by Dr. Antonella Valentini and works with highly qualified and passionate teachers.',
     'why.focus_2_title': 'Flexible Formats',
     'why.focus_2_desc':
-      'Students can choose standard, intensive, individual, extensive, teacher-refresher, online, and custom courses.',
+      'Students can choose standard, intensive, extensive, individual, teacher-refresher, online, and tailor-made courses.',
     'why.focus_3_title': 'Communicative Method',
     'why.focus_3_desc':
-      'Lessons are designed around communication, level placement, and practical use of Italian.',
+      'Lessons are designed according to an accurate level placement process focused on communication and practical use of Italian.',
     'why.focus_4_title': 'Welcoming Study Environment',
     'why.focus_4_desc':
-      'Solo travellers, LGBTQ+ learners, older students, and visitors with accessibility needs can discuss practical arrangements before arrival.',
+      'Solo travellers, LGBTQ+ learners, older students, and visitors with accessibility needs are welcomed in a respectful learning environment.',
 
     'courses.sub': 'Courses',
     'courses.title_part1': 'Italian courses',
     'courses.title_italic': 'for real goals.',
-    'courses.desc': 'Small groups, individual lessons, teacher training, and custom study in Ascoli Piceno or online.',
+    'courses.desc': 'Small groups, individual lessons, teacher training, and tailor-made study in Ascoli Piceno or online.',
     'courses.section_tag': 'Course Formats',
     'courses.section_title_part1': 'Choose a rhythm',
     'courses.section_title_italic': 'for your stay.',
     'courses.section_desc':
-      'Course formats range from small standard groups to individual lessons and custom study for specific goals.',
+      'Course formats range from small standard groups to extensive courses, individual lessons, and tailor-made study for specific goals.',
     'courses.explore_details': 'View details',
     'courses.curriculum_highlights': 'Course details',
     'courses.enquire_now': 'Enquire now',
@@ -104,13 +104,13 @@ const translations: Record<Language, Record<string, string>> = {
       'Choose a host family, B&B, or hotel in town, and contact the school in advance to discuss solo travel, LGBTQ+ considerations, or accessibility needs.',
 
     'ascoli.section_tag': 'Ascoli Piceno',
-    'ascoli.section_title_part1': 'A historic city',
-    'ascoli.section_title_italic': 'for immersion',
-    'ascoli.section_title_part2': 'in Le Marche.',
+    'ascoli.section_title_part1': 'A hidden gem:',
+    'ascoli.section_title_italic': 'A fascinating historic city',
+    'ascoli.section_title_part2': 'for immersion in the region Le Marche.',
     'ascoli.section_desc':
-      'Ascoli Piceno combines history, art, food, festivals, mountains, rivers, and access to the wider Marche region.',
+      'Ascoli Piceno combines history, art, food, festivals, mountains, rivers, and access to the region Le Marche.',
     'ascoli.image_tag': 'Ascoli Piceno',
-    'ascoli.image_title': 'A historic city in Le Marche',
+    'ascoli.image_title': 'A hidden gem in the region Le Marche',
     'ascoli.image_desc':
       'A walkable city setting helps students use Italian in cafes, streets, markets, and cultural visits.',
     'ascoli.map_tag': 'City Route',
@@ -213,7 +213,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Scuola di italiano dal 1997',
     'hero.title_part1': 'Vivi l Italia.',
     'hero.title_part2': 'Parla italiano.',
-    'hero.title_italic': 'Studia ad Ascoli.',
+    'hero.title_italic': 'Studia ad Ascoli Piceno.',
     'hero.desc':
       'Una piccola scuola di italiano ad Ascoli Piceno per adulti che desiderano lezioni, cultura locale e tempo per vivere la lingua.',
     'hero.explore_courses': 'Esplora i Corsi',
@@ -248,7 +248,7 @@ const translations: Record<Language, Record<string, string>> = {
       'La scuola e diretta dalla Dr. Antonella Valentini e lavora con docenti qualificati.',
     'why.focus_2_title': 'Formati flessibili',
     'why.focus_2_desc':
-      'Corsi standard, intensivi, individuali, estensivi, aggiornamento docenti, online e su misura.',
+      'Corsi standard, intensivi, estensivi, individuali, aggiornamento docenti, online e su misura.',
     'why.focus_3_title': 'Metodo comunicativo',
     'why.focus_3_desc':
       'Le lezioni sono costruite su comunicazione, livello dello studente e uso pratico della lingua.',
