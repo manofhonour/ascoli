@@ -42,9 +42,9 @@ export default function FAQSection() {
           category: 'Alloggi',
         },
         {
-          question: 'La scuola accoglie chi viaggia da solo, studenti LGBTQ+ e persone con esigenze di accessibilità?',
+          question: 'La scuola accoglie chi viaggia da solo, persone LGBTQ+ e persone con esigenze di accessibilità?',
           answer:
-            'Sì. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilità o esigenze di accessibilità sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
+            'Sì. Chi viaggia da solo, persone LGBTQ+ e persone con disabilità o esigenze di accessibilità trovano un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
           category: 'Supporto studenti',
         },
         {

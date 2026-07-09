@@ -1,11 +1,18 @@
 {
+  "_framework-Cu7vBSsp.js": {
+    "file": "assets/framework-Cu7vBSsp.js",
+    "name": "framework"
+  },
   "index.html": {
-    "file": "assets/index-BAehGaY5.js",
+    "file": "assets/index-DYu1X7Y2.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
+    "imports": [
+      "_framework-Cu7vBSsp.js"
+    ],
     "css": [
-      "assets/index-Dks7WURz.css"
+      "assets/index-CFsr3NQB.css"
     ],
     "assets": [
       "assets/accademia-logo-G5QgtLrI.png",

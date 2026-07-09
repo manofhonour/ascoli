@@ -139,6 +139,7 @@ function extractHeadMarkup(html) {
   return headMatch[1]
     .replace(/<script[^>]*src="\.\/assets\/index-[^"]+\.js"[^>]*><\/script>\s*/gi, '')
     .replace(/<link[^>]*href="\.\/assets\/index-[^"]+\.css"[^>]*>\s*/gi, '')
+    .replace(/<link[^>]*rel="modulepreload"[^>]*>\s*/gi, '')
     .replace(/<link rel="icon"[^>]*>\s*/gi, '')
     .replace(/<meta name="viewport"[^>]*>\s*/gi, '')
     .replace(/<meta charset="UTF-8"\s*\/?>\s*/gi, '')

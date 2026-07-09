@@ -246,7 +246,7 @@ function accademia_ascoli_head_meta() {
     ?>
 <meta
       name="description"
-      content="Accademia Italiana is a boutique Italian language school in Ascoli Piceno, Italy, offering small-group, extensive, individual, cultural and tailor-made Italian courses for adult international learners."
+      content="Accademia Italiana is a boutique Italian language school in Ascoli Piceno, Italy, offering small-group, individual, extensive, cultural and tailor-made Italian courses for adult international learners."
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />

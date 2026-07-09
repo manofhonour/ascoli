@@ -42,17 +42,17 @@ export default function Hero({ onInquireClick }: HeroProps) {
             <div className="inline-flex w-full sm:w-auto max-w-[360px] sm:max-w-full items-center gap-3 border border-travertine-300/80 bg-travertine-50/85 px-3 py-2 shadow-sm">
               <img src={accademiaLogo} alt="Accademia Italiana logo" className="h-9 w-9 object-contain" />
               <div className="min-w-0">
-                <span className="block text-[9px] sm:text-[10px] font-bold tracking-[0.16em] sm:tracking-[0.24em] text-terracotta-600 uppercase leading-snug">
+                <span className="block text-[10px] sm:text-[11px] font-bold tracking-[0.14em] sm:tracking-[0.22em] text-terracotta-600 uppercase leading-snug">
                   {t('hero.subtitle')}
                 </span>
-                <span className="block text-[9px] sm:text-[10px] tracking-[0.1em] sm:tracking-[0.14em] text-olive-800 uppercase truncate">
+                <span className="block text-[10px] sm:text-[11px] tracking-[0.08em] sm:tracking-[0.12em] text-olive-800 uppercase truncate">
                   {contactInfo.addressLine1}, Ascoli Piceno
                 </span>
               </div>
             </div>
 
             <figure className="sm:hidden border border-travertine-300 bg-travertine-100 shadow-sm">
-              <div className="aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[16/10] overflow-hidden">
                 <img
                   src={images.groupLesson}
                   alt="Adults studying Italian in a small Accademia Italiana class"
@@ -62,6 +62,19 @@ export default function Hero({ onInquireClick }: HeroProps) {
                   decoding="async"
                   referrerPolicy="no-referrer"
                 />
+                <div className="absolute bottom-3 left-4 right-4 bg-olive-900 px-4 py-3 text-travertine-50 shadow-xl ring-1 ring-olive-800">
+                  <div className="flex items-center gap-3">
+                    <img src={accademiaLogo} alt="" className="h-9 w-9 object-contain bg-travertine-50 p-1" />
+                    <div className="min-w-0">
+                      <span className="block text-[9px] font-bold uppercase tracking-[0.16em] text-olive-200">
+                        {language === 'IT' ? 'Direzione' : 'Direction'}
+                      </span>
+                      <span className="block truncate font-serif text-sm text-travertine-50">
+                        {contactInfo.director}
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </figure>
             
@@ -158,20 +171,20 @@ export default function Hero({ onInquireClick }: HeroProps) {
               </div>
             </div>
 
-            <div className="absolute left-4 right-4 sm:left-auto sm:right-12 bottom-0 w-auto sm:w-[42%] sm:min-w-[190px] h-[30%] bg-olive-900 text-travertine-50 border border-olive-800 shadow-2xl p-5 md:p-6 flex flex-col justify-between">
+            <div className="absolute left-4 right-4 top-[43%] min-h-[188px] w-auto bg-olive-900 p-5 text-travertine-50 shadow-2xl ring-1 ring-olive-800 sm:left-[28%] sm:right-auto sm:w-[54%] sm:min-w-[230px] md:left-[32%] md:min-h-[198px] md:p-6 lg:left-[30%] lg:top-[37%] lg:w-[48%] xl:left-[32%] xl:top-[36%]">
               <div className="flex items-center gap-3">
                 <img src={accademiaLogo} alt="" className="h-11 w-11 object-contain bg-travertine-50 p-1.5" />
                 <div>
-                  <span className="block text-[9px] tracking-[0.22em] uppercase text-olive-200 font-bold">
+                  <span className="block text-[10px] tracking-[0.18em] uppercase text-olive-200 font-bold">
                     {language === 'IT' ? 'Direzione' : 'Direction'}
                   </span>
-                  <span className="block font-serif text-sm text-travertine-50">
+                  <span className="block font-serif text-base text-travertine-50">
                     {contactInfo.director}
                   </span>
                 </div>
               </div>
-              <div className="pt-5 border-t border-olive-700/60">
-                <span className="flex items-center gap-2 text-[10px] text-olive-100">
+              <div className="mt-10 border-t border-olive-700/60 pt-5">
+                <span className="flex items-center gap-2 text-xs text-olive-100">
                   <MessageCircle className="w-3.5 h-3.5 text-terracotta-300" />
                   {contactInfo.email}
                 </span>

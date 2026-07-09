@@ -66,7 +66,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
             <span className="truncate font-serif text-[0.92rem] font-normal uppercase tracking-[0.08em] text-charcoal-950 transition-colors duration-300 group-hover:text-olive-800 sm:text-xl sm:tracking-[0.12em]">
               Accademia Italiana
             </span>
-            <span className="truncate text-[8px] font-medium uppercase tracking-[0.18em] text-olive-700 sm:text-[9px]">
+            <span className="truncate text-[9px] font-medium uppercase tracking-[0.16em] text-olive-700 sm:text-[10px]">
               Ascoli Piceno - dal 1997
             </span>
           </span>
@@ -77,7 +77,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
             <button
               key={item.id}
               onClick={() => visitTab(item.id)}
-              className={`relative py-2 text-[11px] font-semibold uppercase tracking-[0.13em] transition-colors duration-300 ${
+              className={`relative py-2 text-xs font-semibold uppercase tracking-[0.12em] transition-colors duration-300 ${
                 currentTab === item.id ? 'text-olive-800' : 'text-charcoal-800 hover:text-charcoal-950'
               }`}
             >
@@ -94,7 +94,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
           <div className="relative">
             <button
               onClick={() => setShowMoreMenu((value) => !value)}
-              className="flex items-center gap-1.5 py-2 text-[11px] font-semibold uppercase tracking-[0.13em] text-charcoal-800 transition-colors duration-300 hover:text-charcoal-950"
+              className="flex items-center gap-1.5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-charcoal-800 transition-colors duration-300 hover:text-charcoal-950"
               aria-expanded={showMoreMenu}
               aria-controls="desktop-more-menu"
             >
@@ -116,7 +116,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
                       <button
                         key={item.id}
                         onClick={() => visitTab(item.id)}
-                        className={`w-full px-3 py-2.5 text-left text-[11px] font-semibold uppercase tracking-[0.12em] transition-colors ${
+                        className={`w-full px-3 py-2.5 text-left text-xs font-semibold uppercase tracking-[0.11em] transition-colors ${
                           currentTab === item.id
                             ? 'bg-travertine-100 text-olive-800'
                             : 'text-charcoal-800 hover:bg-travertine-100 hover:text-charcoal-950'
@@ -135,7 +135,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
         <div className="hidden items-center gap-4 xl:flex">
           <button
             onClick={switchLanguage}
-            className="flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.1em] text-charcoal-800 transition-colors duration-300 hover:text-terracotta-600"
+            className="flex items-center gap-1.5 text-xs font-semibold tracking-[0.09em] text-charcoal-800 transition-colors duration-300 hover:text-terracotta-600"
             aria-label={lang === 'EN' ? 'Switch to Italian' : 'Switch to English'}
           >
             <Globe className="h-3.5 w-3.5 stroke-[1.5]" />
@@ -144,7 +144,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
 
           <button
             onClick={onInquireClick}
-            className="border border-charcoal-950/70 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-charcoal-950 shadow-sm transition-all duration-300 hover:border-charcoal-950 hover:bg-charcoal-950 hover:text-travertine-50"
+            className="border border-charcoal-950/70 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.12em] text-charcoal-950 shadow-sm transition-all duration-300 hover:border-charcoal-950 hover:bg-charcoal-950 hover:text-travertine-50"
           >
             {t('nav.inquire')}
           </button>
@@ -153,7 +153,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
         <div className="flex items-center gap-3 xl:hidden">
           <button
             onClick={switchLanguage}
-            className="border border-travertine-300 px-3 py-2 text-[11px] font-bold tracking-[0.1em] text-charcoal-800"
+            className="border border-travertine-300 px-3 py-2 text-xs font-bold tracking-[0.08em] text-charcoal-800"
             aria-label={lang === 'EN' ? 'Switch to Italian' : 'Switch to English'}
           >
             {lang}
@@ -224,7 +224,7 @@ export default function Header({ currentTab, onTabChange, onInquireClick }: Head
                   setIsOpen(false);
                   onInquireClick();
                 }}
-                className="bg-olive-800 px-6 py-4 text-center text-[11px] font-semibold uppercase tracking-[0.16em] text-travertine-50 sm:col-span-2"
+                className="bg-olive-800 px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.14em] text-travertine-50 sm:col-span-2"
               >
                 {t('nav.inquire')}
               </button>

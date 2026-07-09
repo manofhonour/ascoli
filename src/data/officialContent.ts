@@ -123,6 +123,7 @@ export const photoGallery = [
   { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', titleIT: 'Laboratorio di pasta fresca', location: 'Italian cooking', locationIT: 'Cucina italiana', image: photo5, imagePosition: '50% 58%', aspect: 'portrait' },
   { id: 'teacher-student-portrait', category: 'study', title: 'Students and Teachers', titleIT: 'Studenti e docenti', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo6, imagePosition: '50% 48%' },
   { id: 'standard-group', category: 'study', title: 'Standard Course Group', titleIT: 'Gruppo del corso standard', location: 'Small course group', locationIT: 'Piccolo gruppo', image: photo7, imagePosition: '50% 46%' },
+  { id: 'teacher-refresher-gallery', category: 'study', title: 'Teacher Refresher Course', titleIT: 'Aggiornamento docenti', location: 'Teacher training', locationIT: 'Formazione docenti', image: refresherPhoto, imagePosition: '50% 50%', aspect: 'wide' },
   { id: 'round-table-lesson', category: 'study', title: 'Round-Table Lesson', titleIT: 'Lezione intorno al tavolo', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo8, imagePosition: '50% 46%', aspect: 'wide' },
   { id: 'whiteboard-smiles', category: 'study', title: 'Whiteboard Practice', titleIT: 'Pratica alla lavagna', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: photo9, imagePosition: '50% 48%' },
   { id: 'ascoli-piazza-night', category: 'ascoli', title: 'Piazza del Popolo by Night', titleIT: 'Piazza del Popolo di sera', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo10, imagePosition: '50% 50%', featured: true, aspect: 'wide' },
@@ -315,7 +316,7 @@ export const culturalOfferings = [
     tagline: 'A three-hour lesson in local wine culture',
     taglineIT: 'Una lezione di tre ore sulla cultura del vino',
     description:
-      'The wine-tasting lesson combines theory and practice with white, red, and rose wines, grape varieties, production methods, and local gastronomy.',
+      'The wine-tasting lesson combines theory and practice with white, red, and rosé wines, grape varieties, production methods, and local gastronomy.',
     descriptionIT:
       'La degustazione unisce teoria e pratica con vini bianchi, rossi e rosati, vitigni, metodi di produzione e gastronomia locale.',
     image: images.wine,

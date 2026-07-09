@@ -51,12 +51,12 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
                   {t('cta.desc')}
                 </p>
 
-                <div className="flex flex-col gap-4 sm:flex-row">
+                <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap lg:flex-nowrap">
                   <button
                     onClick={onInquireClick}
-                    className="inline-flex items-center justify-center gap-2 border border-olive-800 bg-olive-800 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-travertine-50 transition-all duration-300 hover:bg-olive-900"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 border border-olive-800 bg-olive-800 px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-travertine-50 transition-all duration-300 hover:bg-olive-900"
                   >
-                    <span>{t('cta.begin')}</span>
+                    <span className="whitespace-nowrap">{t('cta.begin')}</span>
                     <ArrowRight className="h-3.5 w-3.5" />
                   </button>
 
@@ -64,10 +64,10 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
                     href={contactInfo.whatsappHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 border border-charcoal-950/25 px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-charcoal-950 transition-all duration-300 hover:border-charcoal-950"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 border border-charcoal-950/25 px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-charcoal-950 transition-all duration-300 hover:border-charcoal-950"
                   >
                     <PhoneCall className="h-3.5 w-3.5 stroke-[1.5]" />
-                    <span>{t('cta.whatsapp')}</span>
+                    <span className="whitespace-nowrap">{t('cta.whatsapp')}</span>
                   </a>
                 </div>
 

@@ -9,6 +9,23 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     build: {
       manifest: 'manifest.json',
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (!id.includes('node_modules')) return undefined;
+            if (
+              id.includes('react') ||
+              id.includes('react-dom') ||
+              id.includes('scheduler') ||
+              id.includes('motion')
+            ) {
+              return 'framework';
+            }
+            if (id.includes('lucide-react')) return 'icons';
+            return 'vendor';
+          },
+        },
+      },
     },
     resolve: {
       alias: {

@@ -45,6 +45,10 @@ function dataUri(filePath) {
   return `data:${mime};base64,${fs.readFileSync(filePath).toString('base64')}`;
 }
 
+function textDataUri(content, mime) {
+  return `data:${mime};base64,${Buffer.from(content, 'utf8').toString('base64')}`;
+}
+
 function replaceAssetReferences(source, assetDataUris) {
   let result = source;
 
@@ -52,6 +56,7 @@ function replaceAssetReferences(source, assetDataUris) {
     const escapedName = escapeRegExp(fileName);
     const patterns = [
       new RegExp(`\\.\\/assets\\/${escapedName}`, 'g'),
+      new RegExp(`\\.\\/${escapedName}`, 'g'),
       new RegExp(`assets\\/${escapedName}`, 'g'),
       new RegExp(`\\/assets\\/${escapedName}`, 'g'),
       new RegExp(escapedName, 'g'),
@@ -63,6 +68,35 @@ function replaceAssetReferences(source, assetDataUris) {
   }
 
   return result;
+}
+
+function createScriptDataUris(mediaAssetDataUris) {
+  const scriptSources = new Map(
+    fs.readdirSync(assetsDir)
+      .filter((fileName) => path.extname(fileName).toLowerCase() === '.js')
+      .map((fileName) => {
+        const sourcePath = path.join(assetsDir, fileName);
+        const source = replaceAssetReferences(fs.readFileSync(sourcePath, 'utf8'), mediaAssetDataUris);
+        return [fileName, source];
+      }),
+  );
+
+  let scriptDataUris = new Map(
+    [...scriptSources].map(([fileName, source]) => [fileName, textDataUri(source, 'text/javascript')]),
+  );
+
+  for (let pass = 0; pass < 3; pass += 1) {
+    const nextScriptDataUris = new Map();
+
+    for (const [fileName, source] of scriptSources) {
+      const rewrittenSource = replaceAssetReferences(source, scriptDataUris);
+      nextScriptDataUris.set(fileName, textDataUri(rewrittenSource, 'text/javascript'));
+    }
+
+    scriptDataUris = nextScriptDataUris;
+  }
+
+  return scriptDataUris;
 }
 
 function inlineStyles(html, assetDataUris) {
@@ -77,13 +111,14 @@ function inlineStyles(html, assetDataUris) {
   );
 }
 
-function inlineScripts(html, assetDataUris) {
+function inlineScripts(html, mediaAssetDataUris, scriptDataUris) {
   return html.replace(
     /<script\s+type="module"[^>]*src="([^"]+)"[^>]*><\/script>/g,
     (_match, src) => {
       const filePath = path.join(distDir, src.replace(/^\.\//, ''));
       assertFile(filePath, `Missing script referenced by dist/index.html: ${src}`);
-      const js = replaceAssetReferences(fs.readFileSync(filePath, 'utf8'), assetDataUris);
+      const jsWithMedia = replaceAssetReferences(fs.readFileSync(filePath, 'utf8'), mediaAssetDataUris);
+      const js = replaceAssetReferences(jsWithMedia, scriptDataUris);
       return `<script type="module" data-offline-source="${path.basename(filePath)}">\n${js}\n</script>`;
     },
   );
@@ -132,10 +167,21 @@ const assetDataUris = fs.readdirSync(assetsDir)
     return mimeByExt.has(ext) && !['.js', '.css', '.json'].includes(ext);
   })
   .map((fileName) => [fileName, dataUri(path.join(assetsDir, fileName))]);
+assetDataUris.push(
+  ...fs.readdirSync(distDir)
+    .filter((fileName) => {
+      const filePath = path.join(distDir, fileName);
+      const ext = path.extname(fileName).toLowerCase();
+      return fs.statSync(filePath).isFile() && mimeByExt.has(ext) && !['.js', '.css', '.json'].includes(ext);
+    })
+    .map((fileName) => [fileName, dataUri(path.join(distDir, fileName))]),
+);
+const scriptDataUris = createScriptDataUris(assetDataUris);
 
 let html = fs.readFileSync(htmlPath, 'utf8');
 html = inlineStyles(html, assetDataUris);
-html = inlineScripts(html, assetDataUris);
+html = html.replace(/<link\s+rel="modulepreload"[^>]*>/g, '');
+html = inlineScripts(html, assetDataUris, scriptDataUris);
 html = replaceAssetReferences(html, assetDataUris);
 
 html = html.replace(

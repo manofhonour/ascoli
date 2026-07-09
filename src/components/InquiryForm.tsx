@@ -111,7 +111,7 @@ export default function InquiryForm() {
                 >
                   <div className="space-y-1">
                     <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal">
-                      {language === 'IT' ? 'Richiesta corso' : 'Course Inquiry'}
+                      {language === 'IT' ? 'Richiesta corso' : 'Course Enquiry'}
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
                       {language === 'IT'
@@ -243,7 +243,7 @@ export default function InquiryForm() {
                       Grazie, {formData.name}.
                     </span>
                     <h3 className="font-serif text-3xl text-charcoal-950 font-light">
-                      {language === 'IT' ? 'Richiesta annotata' : 'Inquiry Noted'}
+                      {language === 'IT' ? 'Richiesta annotata' : 'Enquiry Noted'}
                     </h3>
                     <p className="text-xs md:text-sm text-charcoal-800 font-light max-w-md leading-relaxed">
                       {language === 'IT' ? 'Contatta la scuola a ' : 'Please contact the school at '}
@@ -258,7 +258,7 @@ export default function InquiryForm() {
                     onClick={() => setFormSubmitted(false)}
                     className="text-xs tracking-widest font-semibold uppercase text-terracotta-600 hover:text-terracotta-700 underline underline-offset-4 decoration-1 mt-6"
                   >
-                    {language === 'IT' ? 'Modifica richiesta' : 'Modify inquiry'}
+                    {language === 'IT' ? 'Modifica richiesta' : 'Modify enquiry'}
                   </button>
                 </motion.div>
               )}

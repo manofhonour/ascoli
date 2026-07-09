@@ -54,9 +54,9 @@ export default function FaqPage() {
           {
             id: 'inclusive-support',
             category: 'Supporto studenti',
-            question: 'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilità sono benvenuti?',
+            question: 'La scuola è adatta a chi viaggia da solo, a persone LGBTQ+ e a persone con esigenze di accessibilità?',
             answer:
-              'Sì. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilità o esigenze di accessibilità sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
+              'Sì. Chi viaggia da solo, persone LGBTQ+ e persone con disabilità o esigenze di accessibilità trovano un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
           },
           {
             id: 'travel',

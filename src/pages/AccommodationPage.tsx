@@ -35,7 +35,7 @@ export default function AccommodationPage() {
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'La scuola può aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno. Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilità sono accolti e possono contattare la scuola prima dell\'arrivo.'
+              ? 'La scuola può aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno. Chi viaggia da solo, persone LGBTQ+ e persone con esigenze di accessibilità possono contattare la scuola prima dell\'arrivo.'
               : 'The school can help reserve host-family, B&B, or hotel accommodation in Ascoli Piceno. Students travelling alone, LGBTQ+ learners, and students with accessibility needs are welcomed and can contact the school before their arrival.'}
           </p>
         </div>

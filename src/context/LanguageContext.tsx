@@ -23,7 +23,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.blog': 'Notebook',
     'nav.contact': 'Contact',
     'nav.more': 'Experience',
-    'nav.inquire': 'Inquire',
+    'nav.inquire': 'Enquire',
     'nav.book_consultation': 'Book Consultation',
 
     'hero.subtitle': 'Italian Language School Since 1997',
@@ -59,7 +59,7 @@ const translations: Record<Language, Record<string, string>> = {
     'why.philosophy_title_part2': ', and Italian culture.',
     'why.philosophy_desc':
       'Lessons are practical and personal. The city gives students the setting to use Italian in authentic, memorable ways.',
-    'why.focus_1_title': 'The Best Teachers You can Have',
+    'why.focus_1_title': 'The Best Teachers You Can Have',
     'why.focus_1_desc':
       'The school is directed by Dr. Antonella Valentini and works with highly qualified and passionate teachers.',
     'why.focus_2_title': 'Flexible Formats',
@@ -164,12 +164,12 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.title_italic': 'Italian Stay.',
     'cta.desc':
       'Contact the school to discuss your level, dates, course format, accommodation, and the kind of stay you have in mind.',
-    'cta.begin': 'Send an Inquiry',
+    'cta.begin': 'Send an Enquiry',
     'cta.whatsapp': 'WhatsApp the School',
     'cta.booking_note': 'For booking conditions, contact the school office directly.',
 
-    'form.sub': 'Inquiry',
-    'form.title': 'Begin Your Inquiry',
+    'form.sub': 'Enquiry',
+    'form.title': 'Begin Your Enquiry',
     'form.desc': 'Tell the school your preferred dates, course format, Italian level, accommodation needs, and any practical support you would like to discuss.',
     'form.field_first_name': 'First Name',
     'form.field_last_name': 'Last Name',
@@ -187,11 +187,11 @@ const translations: Record<Language, Record<string, string>> = {
     'form.field_language_level_advanced': 'Advanced',
     'form.field_interest': 'Tell us about your goals',
     'form.field_interest_placeholder': 'Example: I would like a standard course in September, host-family accommodation, and information about accessibility or arrival support.',
-    'form.submit': 'Submit Inquiry',
+    'form.submit': 'Submit Enquiry',
     'form.success_title': 'Grazie',
-    'form.success_desc': 'Your inquiry has been noted. Please also contact the school directly for booking confirmation.',
+    'form.success_desc': 'Your enquiry has been noted. Please also contact the school directly for booking confirmation.',
     'form.success_cta': 'Review Courses',
-    'form.inquire_title': 'Inquire',
+    'form.inquire_title': 'Enquire',
   },
   IT: {
     'nav.home': 'La scuola',
@@ -254,7 +254,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Le lezioni sono costruite su comunicazione, livello dello studente e uso pratico della lingua.',
     'why.focus_4_title': 'Ambiente accogliente',
     'why.focus_4_desc':
-      'Chi viaggia da solo, studenti LGBTQ+, adulti e studenti con esigenze di accessibilità possono contattare la scuola in anticipo.',
+      'Chi viaggia da solo, persone LGBTQ+, adulti e persone con esigenze di accessibilità trovano un ambiente rispettoso e accogliente.',
 
     'courses.sub': 'Corsi',
     'courses.title_part1': 'Corsi di italiano',
@@ -285,7 +285,7 @@ const translations: Record<Language, Record<string, string>> = {
     'accommodation.section_title_part1': 'Soluzioni semplici',
     'accommodation.section_title_italic': 'per il soggiorno.',
     'accommodation.section_desc':
-      'Scegli famiglia ospitante, B&B o hotel e contatta la scuola in anticipo per esigenze personali o di accessibilità.',
+      'Scegli famiglia ospitante, B&B o hotel e contatta la scuola in anticipo per esigenze personali, LGBTQ+ o di accessibilità.',
 
     'ascoli.section_tag': 'Ascoli Piceno',
     'ascoli.section_title_part1': 'Una città storica',
