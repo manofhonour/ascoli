@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "build:wordpress": "npm run build && node scripts/build-wordpress-theme.mjs",
+    "build:wordpress": "npm run build && node scripts/build-wordpress-theme.mjs && node scripts/build-verified-offline.mjs",
+    "build:offline": "npm run build && node scripts/build-verified-offline.mjs",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"

@@ -25,7 +25,7 @@ export default function LifestyleGallery() {
     },
     {
       id: 2,
-      url: images.cookingWorkshop,
+      url: images.pastaGroupWorkshop,
       caption: 'Cooking and regional food vocabulary make language practice more physical and memorable.',
       captionIT: 'Cucina e lessico gastronomico rendono la pratica più concreta e memorabile.',
       span: 'md:col-span-5 md:mt-16',
@@ -41,7 +41,7 @@ export default function LifestyleGallery() {
     },
     {
       id: 4,
-      url: images.ascoliStreet,
+      url: images.bougainvillea,
       caption: 'Historic rooms, quiet streets, and local rituals give the language a setting.',
       captionIT: 'Sale storiche, strade tranquille e rituali locali danno un contesto alla lingua.',
       span: 'md:col-span-7 md:mt-[-40px]',

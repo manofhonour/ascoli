@@ -67,6 +67,10 @@ export const contactInfo = {
 
 export const images = {
   ascoli: picsAscoliPiazzaDay,
+  piazzaWide: extraPhoto('extra-piazza-del-popolo-wide.jpg'),
+  ascoliArcades: extraPhoto('extra-ascoli-arcades.jpg'),
+  ascoliView: extraPhoto('extra-ascoli-view.jpg'),
+  bougainvillea: extraPhoto('extra-bougainvillea.jpg'),
   classroom: picsCulturalClassroom,
   conversation: picsCommunicativeLesson,
   cooking: picsOliveAscolana,
@@ -75,6 +79,17 @@ export const images = {
   accommodation: picsBedBreakfast,
   piazza: picsAscoliPiazzaDay,
   cultureInterior: picsGalleryInterior,
+  seminarRoom: extraPhoto('extra-accademia-seminar-room.jpg'),
+  groupDiscussion: extraPhoto('extra-accademia-group-meeting.jpg'),
+  cookingTable: extraPhoto('extra-accademia-cooking-table.jpg'),
+  pastaHands: extraPhoto('extra-pasta-hands.jpg'),
+  pastaGroupWorkshop: extraPhoto('extra-pasta-group-workshop.jpg'),
+  studentBalcony: extraPhoto('extra-student-balcony.jpg'),
+  studentBreakfast: extraPhoto('extra-student-breakfast.jpg'),
+  hostFamily: extraPhoto('extra-student-breakfast.jpg'),
+  palmGarden: extraPhoto('extra-palm-garden.jpg'),
+  quintanaFlags: extraPhoto('extra-quintana-flags.jpg'),
+  quintanaProcession: extraPhoto('extra-quintana-procession.jpg'),
   groupLesson: photo1,
   whiteboardLesson: picsSpecialTopics,
   studentGroup: picsCulturalClassroom,
@@ -82,8 +97,8 @@ export const images = {
   foodCulture: picsOliveAscolana,
   classroomCollage: picsCultureCertificates,
   smallGroup: picsStandardGroup,
-  studyTable: picsCulturalClassroom,
-  studentPortrait: picsStandardGroup,
+  studyTable: photo8,
+  studentPortrait: photo6,
   socialTable: picsSocialTable,
   teacherRefresher: refresherPhoto,
   ascoliStreet: picsAscoliStreet,
@@ -213,8 +228,8 @@ export const officialCourses = [
     hoursPerWeekIT: '4-6 ore/settimana',
     price: 'EUR 10-14/hour',
     priceIT: 'EUR 10-14/ora',
-    image: images.culturalClassroom,
-    imagePosition: '50% 48%',
+    image: images.seminarRoom,
+    imagePosition: '50% 50%',
     description:
       'Extensive course for groups of 3-6 students, with 4-6 hours per week and one or two weekly meetings.',
     descriptionIT:
@@ -270,8 +285,8 @@ export const officialCourses = [
     hoursPerWeekIT: 'Su misura',
     price: 'Quote on request',
     priceIT: 'Preventivo su richiesta',
-    image: images.socialTable,
-    imagePosition: '50% 48%',
+    image: images.studyTable,
+    imagePosition: '50% 46%',
     description:
       'Tailor-made Italian study in Ascoli Piceno or online, prepared around level, dates, and personal goals.',
     descriptionIT:
@@ -291,8 +306,8 @@ export const culturalOfferings = [
       "Cooking sessions connect Italian vocabulary with regional food traditions, including Ascoli Piceno and Olive all'Ascolana (stuffed meat, fried olives).",
     descriptionIT:
       "I corsi di cultura italiana includono cucina e tradizioni gastronomiche locali; Ascoli Piceno è nota per le Olive all'Ascolana, olive ripiene di carne e fritte.",
-    image: images.cooking,
-    imagePosition: '50% 54%',
+    image: images.pastaHands,
+    imagePosition: '50% 52%',
   },
   {
     title: 'Wine Tasting',
@@ -327,7 +342,7 @@ export const culturalOfferings = [
       'Students can add business Italian, tourism and hotel management, university entrance preparation, history, art history, literature, and "Italy today".',
     descriptionIT:
       'Gli studenti possono aggiungere italiano commerciale, turismo e gestione alberghiera, preparazione universitaria, storia, storia dell\'arte, letteratura e "Italia oggi".',
-    image: images.whiteboardLesson,
+    image: images.cultureInterior,
     imagePosition: '50% 50%',
   },
 ];
@@ -366,8 +381,8 @@ export const accommodationOptions = [
     italianName: 'Famiglia ospitante',
     tagline: 'Stay with a host family',
     taglineIT: 'Soggiorno in famiglia ospitante',
-    image: images.socialTable,
-    imagePosition: '50% 48%',
+    image: images.hostFamily,
+    imagePosition: '50% 52%',
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
     descriptionIT:

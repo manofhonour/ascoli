@@ -54,7 +54,7 @@ export default function CulturePage() {
           <div className="lg:col-span-7">
             <div className="aspect-[16/10] bg-travertine-200 overflow-hidden shadow-2xl relative">
               <img
-                src={images.cookingWorkshop}
+                src={images.pastaGroupWorkshop}
                 alt="Italian culture workshop at Accademia Italiana"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}
@@ -126,7 +126,7 @@ export default function CulturePage() {
           <div className="lg:col-span-6 relative">
             <div className="aspect-[4/3] bg-travertine-200 overflow-hidden shadow-2xl">
               <img
-                src={images.whiteboardLesson}
+                src={images.cultureInterior}
                 alt="Specialist Italian topic lesson at Accademia Italiana"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: '50% 50%' }}

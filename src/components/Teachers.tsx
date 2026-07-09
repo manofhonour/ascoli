@@ -58,10 +58,10 @@ export default function Teachers() {
             <div className="grid grid-cols-1 gap-8">
               <div className="aspect-[16/9] overflow-hidden border border-travertine-300 bg-travertine-100">
                 <img
-                  src={images.studyTable}
+                  src={images.studentPortrait}
                   alt={language === 'IT' ? 'Studenti adulti in Accademia Italiana' : 'Adult learners at Accademia Italiana'}
                   className="h-full w-full object-cover grayscale-[12%]"
-                  style={{ objectPosition: '50% 44%' }}
+                  style={{ objectPosition: '50% 48%' }}
                   loading="lazy"
                   decoding="async"
                   referrerPolicy="no-referrer"

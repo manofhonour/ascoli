@@ -18,7 +18,7 @@ function renderWithTomboloItalic(text: string) {
 export default function BeyondClassroom() {
   const { language, t } = useLanguage();
   const heroExperience = culturalOfferings[0];
-  const supportingImages = culturalOfferings.slice(1, 3);
+  const supportingImages = culturalOfferings.slice(2, 4);
 
   return (
     <section id="beyond-classroom" className="bg-travertine-50 py-28 md:py-40">

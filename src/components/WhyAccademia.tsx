@@ -70,10 +70,10 @@ export default function WhyAccademia() {
               className="relative aspect-[16/10] md:aspect-[16/9] bg-travertine-200 overflow-hidden border border-travertine-300/80 shadow-xl"
             >
               <img
-                src={images.whiteboardLesson}
-                alt="Teacher-led Italian lesson at Accademia Italiana"
+                src={images.groupDiscussion}
+                alt="Adult learners in a group discussion at Accademia Italiana"
                 className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 hover:scale-102 transition-all duration-[1.2s]"
-                style={{ objectPosition: '54% 48%' }}
+                style={{ objectPosition: '50% 48%' }}
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"

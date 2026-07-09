@@ -15,19 +15,19 @@ export default function FinalCTA({ onInquireClick }: FinalCTAProps) {
     <section className="bg-travertine-100 py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 overflow-hidden border border-travertine-300 bg-travertine-50 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             <img
-              src={images.cooking}
-              alt="Olive all'Ascolana and local wine in Ascoli Piceno"
+              src={images.wine}
+              alt="Wine tasting with students in Ascoli Piceno"
               className="h-[360px] w-full object-cover grayscale-[12%] lg:h-full"
-              style={{ objectPosition: '50% 50%' }}
+              style={{ objectPosition: '50% 48%' }}
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"
             />
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div className="flex min-h-[480px] flex-col justify-center p-7 md:p-12 lg:p-16">
               <motion.div
                 initial={{ opacity: 0, y: 18 }}

@@ -40,7 +40,7 @@ export default function WhyAscoliPiceno() {
           >
             <div className="aspect-[16/11] overflow-hidden border border-travertine-300 bg-travertine-200 shadow-[0_22px_60px_rgba(43,41,38,0.12)]">
               <img
-                src={images.ascoli}
+                src={images.piazzaWide}
                 alt="Piazza del Popolo in Ascoli Piceno"
                 className="h-full w-full object-cover grayscale-[12%] transition duration-700 hover:grayscale-0"
                 style={{ objectPosition: '50% 50%' }}
@@ -98,9 +98,10 @@ export default function WhyAscoliPiceno() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           <img
-            src={images.ascoliStreet}
+            src={images.ascoliArcades}
             alt={language === 'IT' ? 'Strada storica ad Ascoli Piceno' : 'Historic street in Ascoli Piceno'}
             className="h-[300px] w-full border border-travertine-300 object-cover grayscale-[10%]"
+            style={{ objectPosition: '50% 50%' }}
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
@@ -109,6 +110,7 @@ export default function WhyAscoliPiceno() {
             src={images.rollingHills}
             alt={language === 'IT' ? 'Colline nella regione Le Marche vicino ad Ascoli Piceno' : 'Hills in the region Le Marche near Ascoli Piceno'}
             className="h-[300px] w-full border border-travertine-300 object-cover grayscale-[10%]"
+            style={{ objectPosition: '50% 50%' }}
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"

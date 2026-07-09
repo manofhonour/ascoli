@@ -52,10 +52,10 @@ export default function TestimonialsSection() {
           <div className="lg:col-span-7">
             <div className="aspect-[16/9] overflow-hidden border border-travertine-300 bg-travertine-200">
               <img
-                src={images.classroomCollage}
+                src={images.cookingTable}
                 alt={language === 'IT' ? 'Momento culturale in Accademia Italiana' : 'Cultural moment at Accademia Italiana'}
                 className="h-full w-full object-cover grayscale-[10%]"
-                style={{ objectPosition: '50% 46%' }}
+                style={{ objectPosition: '50% 50%' }}
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
