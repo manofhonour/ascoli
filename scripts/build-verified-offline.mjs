@@ -94,16 +94,28 @@ function createZip() {
     fs.rmSync(outputZip, { force: true });
   }
 
+  if (process.platform === 'win32') {
+    try {
+      execFileSync('powershell.exe', [
+        '-NoProfile',
+        '-ExecutionPolicy',
+        'Bypass',
+        '-Command',
+        `Compress-Archive -LiteralPath ${JSON.stringify(outputHtml)} -DestinationPath ${JSON.stringify(outputZip)} -Force`,
+      ], { stdio: 'inherit' });
+      return;
+    } catch (error) {
+      throw new Error(`Could not create offline ZIP package with PowerShell: ${error.message}`);
+    }
+  }
+
   try {
-    execFileSync('powershell.exe', [
-      '-NoProfile',
-      '-ExecutionPolicy',
-      'Bypass',
-      '-Command',
-      `Compress-Archive -LiteralPath ${JSON.stringify(outputHtml)} -DestinationPath ${JSON.stringify(outputZip)} -Force`,
-    ], { stdio: 'inherit' });
+    execFileSync('zip', ['-q', outputZip, path.basename(outputHtml)], {
+      cwd: downloadDir,
+      stdio: 'inherit',
+    });
   } catch (error) {
-    throw new Error(`Could not create offline ZIP package: ${error.message}`);
+    throw new Error(`Could not create offline ZIP package with zip: ${error.message}`);
   }
 }
 
