@@ -1,0 +1,102 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-check:
+    name: Build and WordPress checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript lint
+        run: npm run lint
+
+      - name: Build WordPress theme
+        run: npm run build:wordpress
+
+      - name: PHP syntax check
+        run: |
+          set -euo pipefail
+          php -l wordpress-theme/accademia-ascoli-preview/functions.php
+          php -l wordpress-theme/accademia-ascoli-preview/index.php
+          php -l wordpress-theme/accademia-ascoli-preview/react-shell.php
+          php -l wordpress-theme/accademia-ascoli-preview/front-page.php
+          php -l wordpress-theme/accademia-ascoli-preview/page-accademia-react-preview.php
+          php -l wordpress-theme/accademia-italiana-ascoli/functions.php
+          php -l wordpress-theme/accademia-italiana-ascoli/index.php
+          php -l wordpress-theme/accademia-italiana-ascoli/react-shell.php
+
+      - name: Verify WordPress ZIP packages
+        run: |
+          set -euo pipefail
+          python <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+          import zipfile
+
+          zip_paths = [
+              Path("download/accademia-ascoli-preview.zip"),
+              Path("download/accademia-italiana-ascoli-theme.zip"),
+              Path("download/accademia-italiana-ascoli-theme-1.zip"),
+          ]
+
+          required_files = {
+              "style.css",
+              "functions.php",
+              "manifest.json",
+          }
+
+          failed = False
+
+          for zip_path in zip_paths:
+              if not zip_path.exists():
+                  print(f"Missing ZIP package: {zip_path}", file=sys.stderr)
+                  failed = True
+                  continue
+
+              with zipfile.ZipFile(zip_path) as archive:
+                  names = set(archive.namelist())
+
+              missing = sorted(required_files - names)
+              has_asset_js = any(re.fullmatch(r"assets/index-[^/]+\.js", name) for name in names)
+              has_asset_css = any(re.fullmatch(r"assets/index-[^/]+\.css", name) for name in names)
+
+              if missing or not has_asset_js or not has_asset_css:
+                  print(f"Invalid WordPress ZIP package: {zip_path}", file=sys.stderr)
+                  for name in missing:
+                      print(f"  missing {name}", file=sys.stderr)
+                  if not has_asset_js:
+                      print("  missing assets/index-*.js", file=sys.stderr)
+                  if not has_asset_css:
+                      print("  missing assets/index-*.css", file=sys.stderr)
+                  failed = True
+              else:
+                  print(f"Verified {zip_path}")
+
+          if failed:
+              sys.exit(1)
+          PY
