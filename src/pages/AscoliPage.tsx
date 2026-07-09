@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { Landmark, Plane } from 'lucide-react';
 import { ascoliHighlights, images } from '../data/officialContent';
@@ -22,9 +22,9 @@ export default function AscoliPage() {
             Ascoli Piceno
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Una citta storica' : 'A hidden gem'} <br />
+            {language === 'IT' ? 'Una città storica' : 'A hidden gem'} <br />
             <span className="italic text-terracotta-600">
-              {language === 'IT' ? 'per l immersione in italiano.' : 'for Italian immersion.'}
+              {language === 'IT' ? 'per l\'immersione in italiano.' : 'for Italian immersion.'}
             </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
@@ -39,19 +39,19 @@ export default function AscoliPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-[10px] tracking-widest uppercase font-bold text-olive-800 block">
-              {language === 'IT' ? 'La citta' : 'The City'}
+              {language === 'IT' ? 'La città' : 'The City'}
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-snug">
               {language === 'IT'
                 ? 'Studio della lingua tra buon cibo, strade storiche, piazze medievali e ritmo locale.'
                 : 'Language study surrounded by delicious food, historical streets, medieval squares, and local rhythm.'}
             </h2>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
                 ? "Ascoli Piceno offre Piazza del Popolo, architettura storica, tracce romane, montagne e fiumi, piatti locali come le Olive all'Ascolana, due teatri, concerti e festival."
                 : "Ascoli Piceno offers Piazza del Popolo, historic architecture, Roman traces, mountains and rivers, local dishes such as Olive all'Ascolana (stuffed meat, fried olives), two theatres, concerts, and festivals."}
             </p>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
                 ? 'Le Marche aggiungono spiagge, colline morbide, vigneti, uliveti, chiese, musei, rovine romane e architettura rinascimentale.'
                 : 'In the region Le Marche, students find beaches, rolling hills, vineyards, olive groves, churches, museums, Roman ruins, and Renaissance architecture.'}
@@ -92,7 +92,7 @@ export default function AscoliPage() {
                 <h4 className="font-serif text-lg text-charcoal-950 font-normal">
                   {language === 'IT' ? hl.titleIT : hl.title}
                 </h4>
-                <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                <p className="text-sm text-charcoal-800 font-light leading-relaxed">
                   {language === 'IT' ? hl.descriptionIT : hl.description}
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function AscoliPage() {
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-tight">
               {language === 'IT' ? 'Arrivare ad Ascoli Piceno.' : 'Reaching Ascoli Piceno.'}
             </h2>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
                 ? 'Gli studenti possono pianificare il viaggio in autobus, auto e tramite aeroporti vicini. Gli orari aggiornati vanno controllati prima della partenza.'
                 : 'Students can plan routes by bus, car, and nearby airports. Current timetables should be checked before travelling.'}
@@ -123,9 +123,9 @@ export default function AscoliPage() {
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
                 {language === 'IT' ? 'Da Roma' : 'From Rome'}
               </h4>
-              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+              <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT'
-                  ? 'In autobus o auto, Roma e a circa 3 ore da Ascoli Piceno, con percorsi via S4 o A24/E80.'
+                  ? 'In autobus o auto, Roma è a circa 3 ore da Ascoli Piceno, con percorsi via S4 o A24/E80.'
                   : 'By bus or car, Rome to Ascoli Piceno is about 3 hours, with routes via S4 or A24/E80.'}
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function AscoliPage() {
               <h4 className="font-serif text-sm text-charcoal-950 font-semibold">
                 {language === 'IT' ? 'Aeroporti' : 'Airports'}
               </h4>
-              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+              <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT'
                   ? 'Ancona-Falconara dista circa 130 km e Pescara circa 90 km.'
                   : 'Ancona-Falconara is about 130 km away and Pescara is about 90 km away.'}

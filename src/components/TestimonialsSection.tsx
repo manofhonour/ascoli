@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Languages, MessageCircle, Quote } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { contactInfo, directorQuote, directorQuoteIT, images, services } from '../data/officialContent';
@@ -13,13 +13,13 @@ const schoolNotes = [
   },
   {
     title: 'A small institutional footprint',
-    titleIT: 'Una realta piccola e concreta',
+    titleIT: 'Una realtà piccola e concreta',
     detail: 'Accademia Internazionale connects teaching with translation, interpreting, and exam preparation.',
     detailIT: 'Accademia Internazionale collega didattica, traduzione, interpretariato e preparazione agli esami.',
   },
   {
     title: 'Careful planning before arrival',
-    titleIT: 'Organizzazione attenta prima dell arrivo',
+    titleIT: 'Organizzazione attenta prima dell\'arrivo',
     detail: 'Students can discuss timing, accommodation, level, and practical needs before booking.',
     detailIT: 'Gli studenti possono parlare di date, alloggio, livello ed esigenze pratiche prima della prenotazione.',
   },

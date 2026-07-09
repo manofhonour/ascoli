@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { Quote, User } from 'lucide-react';
 import { contactInfo, directorQuote, directorQuoteIT, services } from '../data/officialContent';
@@ -14,7 +14,7 @@ export default function TestimonialsPage() {
       role: language === 'IT' ? 'Principio didattico' : 'Teaching principle',
       quote:
         language === 'IT'
-          ? 'La scuola valorizza comunicazione, flessibilita, docenti qualificati e materiali autentici.'
+          ? 'La scuola valorizza comunicazione, flessibilità, docenti qualificati e materiali autentici.'
           : 'The school highlights communication, flexibility, passionate teachers, and authentic teaching material.',
     },
     {
@@ -23,8 +23,8 @@ export default function TestimonialsPage() {
       role: language === 'IT' ? 'Percorso studente' : 'Student pathway',
       quote:
         language === 'IT'
-          ? 'L offerta include corsi standard, intensivi, estensivi, individuali, aggiornamento docenti, online e su misura.'
-          : 'The course offer includes standard, intensive, extensive, individual, teacher-refresher, online, and tailor-made formats.',
+          ? 'L\'offerta include corsi standard, intensivi, individuali, estensivi, aggiornamento docenti, online e su misura.'
+          : 'The course offer includes standard, intensive, individual, extensive, teacher-refresher, online, and tailor-made formats.',
     },
     {
       id: 'services',
@@ -32,7 +32,7 @@ export default function TestimonialsPage() {
       role: 'Accademia Internazionale',
       quote:
         language === 'IT'
-          ? 'L istituzione presenta anche traduzione, interpretariato, preparazione esami, tutoraggio e supporto Erasmus.'
+          ? 'L\'istituzione presenta anche traduzione, interpretariato, preparazione esami, tutoraggio e supporto Erasmus.'
           : 'The wider institution also presents translation, interpreting, exam preparation, tutoring, and Erasmus support.',
     },
   ];
@@ -55,7 +55,7 @@ export default function TestimonialsPage() {
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             {language === 'IT' ? 'Messaggi' : 'Messages from'} <br />
             <span className="italic text-olive-800">
-              {language === 'IT' ? 'dell Accademia.' : 'the Accademia.'}
+              {language === 'IT' ? 'dell\'Accademia.' : 'the Accademia.'}
             </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
@@ -94,7 +94,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div>
                   <h4 className="font-serif text-sm text-charcoal-950 font-semibold">{rev.name}</h4>
-                  <p className="text-[10px] text-charcoal-800 font-light leading-relaxed mt-0.5">
+                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-0.5">
                     {rev.role}
                   </p>
                 </div>
@@ -109,7 +109,7 @@ export default function TestimonialsPage() {
               <h3 className="font-serif text-base text-charcoal-950">
                 {language === 'IT' ? service.titleIT : service.title}
               </h3>
-              <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+              <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT' ? service.descriptionIT : service.description}
               </p>
             </div>

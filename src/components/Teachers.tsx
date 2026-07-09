@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
 import { contactInfo, images, services } from '../data/officialContent';
@@ -47,7 +47,7 @@ export default function Teachers() {
                 </div>
                 <p className="mt-5 text-sm font-light leading-relaxed text-charcoal-800">
                   {language === 'IT'
-                    ? 'Una scuola piccola permette di parlare via WhatsApp prima dell arrivo, chiarire il livello e preparare un soggiorno adatto.'
+                    ? 'Una scuola piccola permette di parlare via WhatsApp prima dell\'arrivo, chiarire il livello e preparare un soggiorno adatto.'
                     : 'A small school means you can have a WhatsApp conversation before arrival, clarify your level, and plan a stay that feels manageable.'}
                 </p>
               </div>

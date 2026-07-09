@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, Calendar, Euro, Compass, Award, Star } from 'lucide-react';
 import { officialCourses, culturalOfferings } from '../data/officialContent';
@@ -39,7 +39,7 @@ export default function CoursesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.08] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            {language === 'IT' ? 'Offerta corsi' : 'Course Offer'}
+            {language === 'IT' ? 'Offerta dei corsi' : 'Course Offer'}
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             {language === 'IT' ? 'Corsi di italiano pensati' : 'Italian courses shaped'} <br />
@@ -49,8 +49,8 @@ export default function CoursesPage() {
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'La scuola offre corsi standard, intensivi, estensivi, individuali, aggiornamento docenti e corsi su misura ad Ascoli Piceno o online.'
-              : 'The school offers standard, intensive, extensive, individual, teacher-refresher, and tailor-made course formats in Ascoli Piceno or online.'}
+              ? 'La scuola offre corsi standard, intensivi, individuali, estensivi, aggiornamento docenti e corsi su misura ad Ascoli Piceno o online.'
+              : 'The school offers standard, intensive, individual, extensive, teacher-refresher, and tailor-made course formats in Ascoli Piceno or online.'}
           </p>
         </div>
       </section>
@@ -77,24 +77,24 @@ export default function CoursesPage() {
             <div className="space-y-4">
               <span className="font-serif italic text-base text-terracotta-600">{activeCourse.italianName}</span>
               <h2 className="font-serif text-3xl md:text-5xl font-light text-charcoal-950">{activeName}</h2>
-              <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{activeDescription}</p>
+              <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">{activeDescription}</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-travertine-200">
               <div className="space-y-2">
                 <Calendar className="w-5 h-5 text-olive-800" />
                 <h4 className="font-serif text-sm text-charcoal-950">{language === 'IT' ? 'Durata' : 'Duration'}</h4>
-                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">{activeDuration}</p>
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{activeDuration}</p>
               </div>
               <div className="space-y-2">
                 <Compass className="w-5 h-5 text-olive-800" />
                 <h4 className="font-serif text-sm text-charcoal-950">{language === 'IT' ? 'Ritmo settimanale' : 'Weekly Rhythm'}</h4>
-                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">{activeHours}</p>
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{activeHours}</p>
               </div>
               <div className="space-y-2">
                 <Euro className="w-5 h-5 text-olive-800" />
                 <h4 className="font-serif text-sm text-charcoal-950">{language === 'IT' ? 'Prezzo' : 'Price'}</h4>
-                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">{activePrice}</p>
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">{activePrice}</p>
               </div>
             </div>
 
@@ -127,7 +127,7 @@ export default function CoursesPage() {
               {activeHighlights.map((detail) => (
                 <div key={detail} className="flex gap-3 items-start border-b border-travertine-200/50 pb-4 last:border-0 last:pb-0">
                   <Check className="w-4 h-4 text-olive-800 mt-0.5 shrink-0 stroke-[2]" />
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">{detail}</p>
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed">{detail}</p>
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ export default function CoursesPage() {
             <div className="bg-olive-50 p-4 border border-olive-200 mt-6">
               <p className="text-[11px] text-olive-900 font-light leading-relaxed">
                 {language === 'IT'
-                  ? 'Contatta la segreteria per date aggiornate, livello, disponibilita e condizioni di prenotazione.'
+                  ? 'Contatta la segreteria per date aggiornate, livello, disponibilità e condizioni di prenotazione.'
                   : 'Contact the school office for current dates, level placement, availability, and booking conditions.'}
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function CoursesPage() {
             <h2 className="font-serif text-2xl md:text-4xl font-light text-charcoal-950">
               {language === 'IT' ? 'Cultura e temi speciali.' : 'Culture and special topics.'}
             </h2>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
                 ? 'I moduli culturali e specialistici possono accompagnare lo studio standard o intensivo secondo formato e obiettivi del corso.'
                 : 'Cultural and specialist add-ons can be paired with standard or intensive study around the course format and student goals.'}
@@ -166,7 +166,7 @@ export default function CoursesPage() {
                 <h4 className="font-serif text-base text-charcoal-950 font-semibold">
                   {language === 'IT' ? item.italianTitle : item.title}
                 </h4>
-                <p className="text-[11px] text-charcoal-800 font-light leading-relaxed">
+                <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
                   {renderWithTomboloItalic(language === 'IT' ? item.descriptionIT : item.description)}
                 </p>
               </div>

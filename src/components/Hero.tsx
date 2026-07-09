@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -112,7 +112,7 @@ export default function Hero({ onInquireClick }: HeroProps) {
             {proofPoints.map((point) => (
               <div key={point.label} className="border-t border-travertine-300/80 pt-3">
                 <span className="block font-serif text-xl text-charcoal-950 leading-none">{point.label}</span>
-                <span className="block text-[10px] text-charcoal-800 leading-snug mt-1">{point.detail}</span>
+                <span className="block text-xs text-charcoal-800 leading-snug mt-1">{point.detail}</span>
               </div>
             ))}
           </motion.div>

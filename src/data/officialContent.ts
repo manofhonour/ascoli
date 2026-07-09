@@ -1,6 +1,19 @@
-import photo1 from '../assets/photos/accademia-01.jpg';
+﻿import photo1 from '../assets/photos/accademia-01.jpg';
+import photo2 from '../assets/photos/accademia-02.jpg';
+import photo3 from '../assets/photos/accademia-03.jpg';
+import photo4 from '../assets/photos/accademia-04.jpg';
+import photo5 from '../assets/photos/accademia-05.jpg';
+import photo6 from '../assets/photos/accademia-06.jpg';
+import photo7 from '../assets/photos/accademia-07.jpg';
+import photo8 from '../assets/photos/accademia-08.jpg';
+import photo9 from '../assets/photos/accademia-09.jpg';
 import photo10 from '../assets/photos/accademia-10.jpg';
+import photo11 from '../assets/photos/accademia-11.jpg';
 import photo12 from '../assets/photos/accademia-12.jpg';
+import photo13 from '../assets/photos/accademia-13.jpg';
+import photo14 from '../assets/photos/accademia-14.jpg';
+import photo15 from '../assets/photos/accademia-15.jpg';
+import photo16 from '../assets/photos/accademia-16.jpg';
 import refresherPhoto from '../assets/photos/refresher-course.jpeg';
 import picsAscoliPiazzaDay from '../assets/photos/pics-ascoli-piazza-day.jpg';
 import picsAscoliStreet from '../assets/photos/pics-ascoli-street.jpg';
@@ -21,6 +34,21 @@ import picsSpecialTopics from '../assets/photos/pics-special-topics.jpg';
 import picsStandardGroup from '../assets/photos/pics-standard-group.jpg';
 import picsWineTasting from '../assets/photos/pics-wine-tasting.jpg';
 
+const extraPhotoModules = import.meta.glob<string>('../assets/photos/extras/*.jpg', {
+  eager: true,
+  import: 'default',
+});
+
+function extraPhoto(fileName: string) {
+  const image = extraPhotoModules[`../assets/photos/extras/${fileName}`];
+
+  if (!image) {
+    throw new Error(`Missing gallery photo: ${fileName}`);
+  }
+
+  return image;
+}
+
 export const contactInfo = {
   schoolName: 'Accademia Italiana',
   networkName: 'Accademia Internazionale',
@@ -32,7 +60,7 @@ export const contactInfo = {
   email: 'info@accademia-italiana.com',
   internationalEmail: 'info@accademiainternazionale.it',
   hours: 'Monday to Friday: 10:00-13:00 and 16:00-19:00',
-  hoursIT: 'Lunedi-venerdi: 10:00-13:00 e 16:00-19:00',
+  hoursIT: 'Lunedì-venerdì: 10:00-13:00 e 16:00-19:00',
   founded: '1997',
   director: 'Dr. Antonella Valentini',
 };
@@ -73,26 +101,69 @@ export const images = {
 };
 
 export const photoGallery = [
-  { id: 'group-lesson-book', category: 'study', title: 'Small-Group Lesson', titleIT: 'Lezione in piccolo gruppo', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: photo1, imagePosition: '50% 44%' },
-  { id: 'standard-group', category: 'study', title: 'Small Course Group', titleIT: 'Piccolo gruppo di corso', location: 'Accademia classroom', locationIT: 'Aula Accademia', image: picsStandardGroup, imagePosition: '50% 46%' },
-  { id: 'conversation-class', category: 'study', title: 'Conversation Practice', titleIT: 'Pratica di conversazione', location: 'Classroom activity', locationIT: 'Attivita in aula', image: picsCommunicativeLesson, imagePosition: '52% 48%' },
-  { id: 'special-topic-board', category: 'study', title: 'Teacher-Led Practice', titleIT: 'Pratica guidata', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: picsSpecialTopics, imagePosition: '50% 50%' },
-  { id: 'cultural-classroom', category: 'study', title: 'International Classroom', titleIT: 'Aula internazionale', location: 'Small course group', locationIT: 'Piccolo gruppo', image: picsCulturalClassroom, imagePosition: '50% 48%' },
-  { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', titleIT: 'Laboratorio di pasta fresca', location: 'Italian cooking', locationIT: 'Cucina italiana', image: picsPastaWorkshop, imagePosition: '50% 56%' },
-  { id: 'olive-ascolana', category: 'culture', title: "Olive all'Ascolana", titleIT: "Olive all'Ascolana", location: 'Local food culture', locationIT: 'Cultura gastronomica locale', image: picsOliveAscolana, imagePosition: '50% 50%' },
-  { id: 'wine-tasting', category: 'culture', title: 'Wine Tasting', titleIT: 'Degustazione di vini', location: 'Culture lesson', locationIT: 'Lezione di cultura', image: picsWineTasting, imagePosition: '50% 48%' },
-  { id: 'culture-fans', category: 'culture', title: 'Cultural Workshop', titleIT: 'Laboratorio culturale', location: 'Accademia event', locationIT: 'Evento Accademia', image: picsCultureFans, imagePosition: '50% 46%' },
-  { id: 'ascoli-piazza-day', category: 'ascoli', title: 'Piazza del Popolo by Day', titleIT: 'Piazza del Popolo di giorno', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: picsAscoliPiazzaDay, imagePosition: '50% 50%' },
-  { id: 'ascoli-piazza-night', category: 'ascoli', title: 'Piazza del Popolo by Night', titleIT: 'Piazza del Popolo di sera', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo10, imagePosition: '50% 50%' },
-  { id: 'ascoli-street', category: 'ascoli', title: 'Historic Streets', titleIT: 'Strade storiche', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: picsAscoliStreet, imagePosition: '50% 50%' },
-  { id: 'heritage-interior', category: 'ascoli', title: 'Historic Interior', titleIT: 'Interno storico', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: picsGalleryInterior, imagePosition: '50% 50%' },
-  { id: 'local-cafe', category: 'ascoli', title: 'Local Cafe Atmosphere', titleIT: 'Atmosfera di caffe', location: 'Town-centre life', locationIT: 'Vita del centro', image: photo12, imagePosition: '50% 50%' },
-  { id: 'quintana-drummers', category: 'culture', title: 'La Quintana', titleIT: 'La Quintana', location: 'City traditions', locationIT: 'Tradizioni cittadine', image: picsQuintanaDrummers, imagePosition: '50% 50%' },
-  { id: 'marche-hills', category: 'ascoli', title: 'Hills around Ascoli', titleIT: 'Colline intorno ad Ascoli', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: picsRollingHills, imagePosition: '50% 50%' },
-  { id: 'marche-walk', category: 'ascoli', title: 'Nature Walks', titleIT: 'Passeggiate nella natura', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: picsMarcheWalk, imagePosition: '50% 50%' },
+  { id: 'group-lesson-book', category: 'study', title: 'Small-Group Lesson', titleIT: 'Lezione in piccolo gruppo', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo1, imagePosition: '50% 44%', featured: true, aspect: 'wide' },
+  { id: 'cooking-class-table', category: 'culture', title: 'Cooking Lesson', titleIT: 'Lezione di cucina', location: 'Cultural activity', locationIT: 'Attività culturale', image: photo2, imagePosition: '50% 48%', aspect: 'portrait' },
+  { id: 'communicative-lesson', category: 'study', title: 'Communicative Lesson', titleIT: 'Lezione comunicativa', location: 'Classroom practice', locationIT: 'Pratica in aula', image: photo3, imagePosition: '52% 48%' },
+  { id: 'special-topic-board', category: 'study', title: 'Teacher-Led Practice', titleIT: 'Pratica guidata', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: photo4, imagePosition: '50% 50%' },
+  { id: 'pasta-workshop', category: 'culture', title: 'Fresh Pasta Workshop', titleIT: 'Laboratorio di pasta fresca', location: 'Italian cooking', locationIT: 'Cucina italiana', image: photo5, imagePosition: '50% 58%', aspect: 'portrait' },
+  { id: 'teacher-student-portrait', category: 'study', title: 'Students and Teachers', titleIT: 'Studenti e docenti', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo6, imagePosition: '50% 48%' },
+  { id: 'standard-group', category: 'study', title: 'Standard Course Group', titleIT: 'Gruppo del corso standard', location: 'Small course group', locationIT: 'Piccolo gruppo', image: photo7, imagePosition: '50% 46%' },
+  { id: 'round-table-lesson', category: 'study', title: 'Round-Table Lesson', titleIT: 'Lezione intorno al tavolo', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo8, imagePosition: '50% 46%', aspect: 'wide' },
+  { id: 'whiteboard-smiles', category: 'study', title: 'Whiteboard Practice', titleIT: 'Pratica alla lavagna', location: 'Italian lesson', locationIT: 'Lezione di italiano', image: photo9, imagePosition: '50% 48%' },
+  { id: 'ascoli-piazza-night', category: 'ascoli', title: 'Piazza del Popolo by Night', titleIT: 'Piazza del Popolo di sera', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo10, imagePosition: '50% 50%', featured: true, aspect: 'wide' },
+  { id: 'historic-gallery', category: 'ascoli', title: 'Historic Gallery', titleIT: 'Galleria storica', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: photo11, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'local-cafe', category: 'ascoli', title: 'Local Cafe Atmosphere', titleIT: 'Atmosfera di caffè', location: 'Town-centre life', locationIT: 'Vita del centro', image: photo12, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'teacher-at-board', category: 'study', title: 'A Moment in Class', titleIT: 'Un momento in classe', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo13, imagePosition: '50% 48%' },
+  { id: 'group-lesson-table', category: 'study', title: 'Shared Lesson Table', titleIT: 'Tavolo di lezione condiviso', location: 'Small course group', locationIT: 'Piccolo gruppo', image: photo14, imagePosition: '50% 45%' },
+  { id: 'student-social-table', category: 'study', title: 'Student Table', titleIT: 'Tavolo degli studenti', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo15, imagePosition: '50% 48%' },
+  { id: 'classroom-collage', category: 'study', title: 'Classroom Moments', titleIT: 'Momenti in aula', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: photo16, imagePosition: '50% 48%' },
+  { id: 'ascoli-piazza-day', category: 'ascoli', title: 'Piazza del Popolo by Day', titleIT: 'Piazza del Popolo di giorno', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: picsAscoliPiazzaDay, imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'ascoli-street', category: 'ascoli', title: 'Historic Streets', titleIT: 'Strade storiche', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: picsAscoliStreet, imagePosition: '50% 50%', aspect: 'portrait' },
   { id: 'bed-and-breakfast', category: 'ascoli', title: 'Bed and Breakfast Stay', titleIT: 'Soggiorno in B&B', location: 'Town-centre accommodation', locationIT: 'Alloggio in centro', image: picsBedBreakfast, imagePosition: '50% 50%' },
+  { id: 'cultural-classroom', category: 'study', title: 'International Classroom', titleIT: 'Aula internazionale', location: 'Small course group', locationIT: 'Piccolo gruppo', image: picsCulturalClassroom, imagePosition: '50% 48%' },
+  { id: 'culture-certificates', category: 'culture', title: 'Cultural Course Certificates', titleIT: 'Certificati del corso culturale', location: 'Accademia event', locationIT: 'Evento dell\'Accademia', image: picsCultureCertificates, imagePosition: '50% 48%', aspect: 'wide' },
+  { id: 'culture-fans', category: 'culture', title: 'Cultural Workshop', titleIT: 'Laboratorio culturale', location: 'Accademia event', locationIT: 'Evento dell\'Accademia', image: picsCultureFans, imagePosition: '50% 46%' },
+  { id: 'hotel-entrance', category: 'ascoli', title: 'Hotel Option', titleIT: 'Soluzione in hotel', location: 'Town-centre accommodation', locationIT: 'Alloggio in centro', image: picsHotel, imagePosition: '50% 50%' },
+  { id: 'marche-walk', category: 'ascoli', title: 'Nature Walks', titleIT: 'Passeggiate nella natura', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: picsMarcheWalk, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'olive-ascolana', category: 'culture', title: "Olive all'Ascolana", titleIT: "Olive all'Ascolana", location: 'Local food culture', locationIT: 'Cultura gastronomica locale', image: picsOliveAscolana, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'quintana-drummers', category: 'culture', title: 'La Quintana', titleIT: 'La Quintana', location: 'City traditions', locationIT: 'Tradizioni cittadine', image: picsQuintanaDrummers, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'marche-hills', category: 'ascoli', title: 'Hills around Ascoli', titleIT: 'Colline intorno ad Ascoli', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: picsRollingHills, imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'wine-tasting', category: 'culture', title: 'Wine Tasting', titleIT: 'Degustazione di vini', location: 'Culture lesson', locationIT: 'Lezione di cultura', image: picsWineTasting, imagePosition: '50% 48%' },
+  { id: 'accademia-seminar-room', category: 'study', title: 'Seminar Room', titleIT: 'Sala seminari', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: extraPhoto('extra-accademia-seminar-room.jpg'), imagePosition: '50% 48%', aspect: 'wide' },
+  { id: 'accademia-group-meeting', category: 'study', title: 'Group Discussion', titleIT: 'Discussione di gruppo', location: 'Accademia classroom', locationIT: 'Aula dell\'Accademia', image: extraPhoto('extra-accademia-group-meeting.jpg'), imagePosition: '50% 48%' },
+  { id: 'accademia-cooking-table', category: 'culture', title: 'Cooking Table', titleIT: 'Tavolo di cucina', location: 'Italian cooking', locationIT: 'Cucina italiana', image: extraPhoto('extra-accademia-cooking-table.jpg'), imagePosition: '50% 48%' },
+  { id: 'flamenco-performance', category: 'culture', title: 'Evening Performance', titleIT: 'Spettacolo serale', location: 'Cultural programme', locationIT: 'Programma culturale', image: extraPhoto('extra-flamenco-performance.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'student-breakfast', category: 'culture', title: 'Breakfast Together', titleIT: 'Colazione insieme', location: 'Student life', locationIT: 'Vita studentesca', image: extraPhoto('extra-student-breakfast.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'river-walk', category: 'ascoli', title: 'River Walk', titleIT: 'Passeggiata lungo il fiume', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-river-walk.jpg'), imagePosition: '50% 50%' },
+  { id: 'quintana-children', category: 'culture', title: 'Young Flag Bearers', titleIT: 'Giovani sbandieratori', location: 'La Quintana', locationIT: 'La Quintana', image: extraPhoto('extra-quintana-children.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'quintana-costume-detail', category: 'culture', title: 'Quintana Costume Detail', titleIT: 'Dettaglio di costume della Quintana', location: 'La Quintana', locationIT: 'La Quintana', image: extraPhoto('extra-quintana-costume-detail.jpg'), imagePosition: '50% 50%' },
+  { id: 'quintana-procession', category: 'culture', title: 'Historic Procession', titleIT: 'Corteo storico', location: 'La Quintana', locationIT: 'La Quintana', image: extraPhoto('extra-quintana-procession.jpg'), imagePosition: '50% 50%' },
+  { id: 'quintana-street', category: 'culture', title: 'Quintana in the Streets', titleIT: 'La Quintana nelle strade', location: 'City traditions', locationIT: 'Tradizioni cittadine', image: extraPhoto('extra-quintana-street.jpg'), imagePosition: '50% 50%' },
+  { id: 'quintana-arch', category: 'culture', title: 'Procession under the Arch', titleIT: 'Corteo sotto l\'arco', location: 'City traditions', locationIT: 'Tradizioni cittadine', image: extraPhoto('extra-quintana-arch.jpg'), imagePosition: '50% 50%' },
+  { id: 'ascoli-arcades', category: 'ascoli', title: 'Ascoli Arcades', titleIT: 'Portici di Ascoli', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-ascoli-arcades.jpg'), imagePosition: '50% 50%' },
+  { id: 'piazza-del-popolo-wide', category: 'ascoli', title: 'Piazza del Popolo', titleIT: 'Piazza del Popolo', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-piazza-del-popolo-wide.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'bougainvillea', category: 'ascoli', title: 'Colour in the Historic Centre', titleIT: 'Colore nel centro storico', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-bougainvillea.jpg'), imagePosition: '50% 50%' },
+  { id: 'student-balcony', category: 'culture', title: 'A Small Arrival Moment', titleIT: 'Un piccolo momento di arrivo', location: 'Student life', locationIT: 'Vita studentesca', image: extraPhoto('extra-student-balcony.jpg'), imagePosition: '50% 48%', aspect: 'portrait' },
+  { id: 'pasta-hands', category: 'culture', title: 'Pasta by Hand', titleIT: 'Pasta fatta a mano', location: 'Italian cooking', locationIT: 'Cucina italiana', image: extraPhoto('extra-pasta-hands.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'pasta-group-workshop', category: 'culture', title: 'Cooking Workshop Group', titleIT: 'Gruppo del laboratorio di cucina', location: 'Italian cooking', locationIT: 'Cucina italiana', image: extraPhoto('extra-pasta-group-workshop.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'waterfall-swim', category: 'ascoli', title: 'Clear Water Nearby', titleIT: 'Acque limpide nei dintorni', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-waterfall-swim.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'river-waterfall', category: 'ascoli', title: 'River Falls', titleIT: 'Cascate sul fiume', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-river-waterfall.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'nature-guide', category: 'ascoli', title: 'Guided Nature Walk', titleIT: 'Passeggiata guidata nella natura', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-nature-guide.jpg'), imagePosition: '50% 46%' },
+  { id: 'student-walk-selfie', category: 'ascoli', title: 'Students on a Walk', titleIT: 'Studenti in passeggiata', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-student-walk-selfie.jpg'), imagePosition: '50% 48%' },
+  { id: 'river-pool', category: 'ascoli', title: 'River Pool', titleIT: 'Piscina naturale', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-river-pool.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'clear-water-cascade', category: 'ascoli', title: 'Clear-Water Cascade', titleIT: 'Cascata di acqua limpida', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-clear-water-cascade.jpg'), imagePosition: '50% 50%' },
+  { id: 'church-facade', category: 'ascoli', title: 'Church Facade', titleIT: 'Facciata di una chiesa', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-church-facade.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'stone-courtyard', category: 'ascoli', title: 'Stone Courtyard', titleIT: 'Cortile in pietra', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-stone-courtyard.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'olive-tree', category: 'ascoli', title: 'Olive Trees', titleIT: 'Ulivi', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-olive-tree.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'statue-square', category: 'ascoli', title: 'City Square', titleIT: 'Piazza cittadina', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-statue-square.jpg'), imagePosition: '50% 50%' },
+  { id: 'church-interior', category: 'ascoli', title: 'Church Interior', titleIT: 'Interno di una chiesa', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-church-interior.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'palm-garden', category: 'ascoli', title: 'Garden Walk', titleIT: 'Passeggiata in giardino', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-palm-garden.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'ascoli-view', category: 'ascoli', title: 'View over Ascoli', titleIT: 'Vista su Ascoli', location: 'Ascoli Piceno', locationIT: 'Ascoli Piceno', image: extraPhoto('extra-ascoli-view.jpg'), imagePosition: '50% 50%', aspect: 'portrait' },
+  { id: 'sunset-olive-tree', category: 'ascoli', title: 'Olive Tree at Sunset', titleIT: 'Ulivo al tramonto', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-sunset-olive-tree.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'river-guide', category: 'ascoli', title: 'Guide by the River', titleIT: 'Guida lungo il fiume', location: 'In the region Le Marche', locationIT: 'Nelle Marche', image: extraPhoto('extra-river-guide.jpg'), imagePosition: '50% 50%', aspect: 'wide' },
+  { id: 'quintana-costumes', category: 'culture', title: 'Quintana Costumes', titleIT: 'Costumi della Quintana', location: 'La Quintana', locationIT: 'La Quintana', image: extraPhoto('extra-quintana-costumes.jpg'), imagePosition: '50% 50%' },
+  { id: 'quintana-flags', category: 'culture', title: 'Flags in the Piazza', titleIT: 'Bandiere in piazza', location: 'La Quintana', locationIT: 'La Quintana', image: extraPhoto('extra-quintana-flags.jpg'), imagePosition: '50% 50%' },
 ];
-
 export const officialCourses = [
   {
     id: 'standard',
@@ -130,7 +201,7 @@ export const officialCourses = [
     descriptionIT:
       'Corso intensivo con 20 ore di gruppo e 5 ore individuali ogni settimana.',
     highlights: ['20 group hours plus 5 individual hours', '1 week EUR 370', '2 weeks EUR 700', 'Additional weeks EUR 330'],
-    highlightsIT: ['20 ore di gruppo piu 5 ore individuali', '1 settimana EUR 370', '2 settimane EUR 700', 'Settimane aggiuntive EUR 330'],
+    highlightsIT: ['20 ore di gruppo più 5 ore individuali', '1 settimana EUR 370', '2 settimane EUR 700', 'Settimane aggiuntive EUR 330'],
   },
   {
     id: 'extensive',
@@ -149,12 +220,12 @@ export const officialCourses = [
     descriptionIT:
       'Corso estensivo per gruppi di 3-6 studenti, con 4-6 ore a settimana e uno o due incontri settimanali.',
     highlights: ['3-6 students per group', '4-6 hours per week', '1-2 meetings each week', 'EUR 10-14 per hour'],
-    highlightsIT: ['3-6 studenti per gruppo', '4-6 ore a settimana', '1-2 incontri ogni settimana', 'EUR 10-14 all ora'],
+    highlightsIT: ['3-6 studenti per gruppo', '4-6 ore a settimana', '1-2 incontri ogni settimana', 'EUR 10-14 all\'ora'],
   },
   {
     id: 'individual',
     name: 'Individual Lessons',
-    italianName: 'Lezioni Individuali',
+    italianName: 'Lezioni individuali',
     duration: 'Flexible',
     durationIT: 'Flessibile',
     hoursPerWeek: 'By appointment',
@@ -173,7 +244,7 @@ export const officialCourses = [
   {
     id: 'teacher-refresher',
     name: 'Refresher Course for Teachers',
-    italianName: 'Aggiornamento Docenti',
+    italianName: 'Aggiornamento docenti',
     duration: '1-2 weeks',
     durationIT: '1-2 settimane',
     hoursPerWeek: '30 hours/week',
@@ -192,7 +263,7 @@ export const officialCourses = [
   {
     id: 'tailor-made',
     name: 'Tailor-Made Course',
-    italianName: 'Corso Su Misura',
+    italianName: 'Corso su misura',
     duration: 'Tailor-made',
     durationIT: 'Su misura',
     hoursPerWeek: 'Tailor-made',
@@ -213,49 +284,49 @@ export const officialCourses = [
 export const culturalOfferings = [
   {
     title: 'Italian Cooking',
-    italianTitle: 'Cucina Italiana',
+    italianTitle: 'Cucina italiana',
     tagline: 'Regional food as language practice',
     taglineIT: 'Cibo regionale come pratica linguistica',
     description:
       "Cooking sessions connect Italian vocabulary with regional food traditions, including Ascoli Piceno and Olive all'Ascolana (stuffed meat, fried olives).",
     descriptionIT:
-      "I corsi di cultura italiana includono cucina e tradizioni gastronomiche locali; Ascoli Piceno e nota per le Olive all'Ascolana, olive ripiene di carne e fritte.",
+      "I corsi di cultura italiana includono cucina e tradizioni gastronomiche locali; Ascoli Piceno è nota per le Olive all'Ascolana, olive ripiene di carne e fritte.",
     image: images.cooking,
     imagePosition: '50% 54%',
   },
   {
     title: 'Wine Tasting',
-    italianTitle: 'Degustazione di Vini',
+    italianTitle: 'Degustazione di vini',
     tagline: 'A three-hour lesson in local wine culture',
     taglineIT: 'Una lezione di tre ore sulla cultura del vino',
     description:
       'The wine-tasting lesson combines theory and practice with white, red, and rose wines, grape varieties, production methods, and local gastronomy.',
     descriptionIT:
-      'La degustazione unisce teoria e pratica con vini bianchi, rossi e rose, vitigni, metodi di produzione e gastronomia locale.',
+      'La degustazione unisce teoria e pratica con vini bianchi, rossi e rosati, vitigni, metodi di produzione e gastronomia locale.',
     image: images.wine,
     imagePosition: '50% 50%',
   },
   {
     title: 'Arts and Handcrafts',
-    italianTitle: 'Arti e Tradizioni',
+    italianTitle: 'Arti e tradizioni',
     tagline: 'Opera, ceramics, painting, Tombolo and olive oil',
-    taglineIT: 'Opera, ceramica, pittura, Tombolo e olio',
+    taglineIT: 'Opera, ceramica, pittura, merletto a tombolo e olio',
     description:
       'Add-on culture options include opera, olive oil, ceramics, painting, and Tombolo pillow lace.',
     descriptionIT:
-      'Le opzioni culturali includono opera, olio, ceramica, pittura e Tombolo.',
+      'Le opzioni culturali includono opera, olio, ceramica, pittura e merletto a tombolo.',
     image: images.cultureFans,
     imagePosition: '50% 46%',
   },
   {
     title: 'Special Italian Topics',
-    italianTitle: 'Temi Specialistici',
+    italianTitle: 'Temi specialistici',
     tagline: 'Business, tourism, history and culture',
     taglineIT: 'Business, turismo, storia e cultura',
     description:
       'Students can add business Italian, tourism and hotel management, university entrance preparation, history, art history, literature, and "Italy today".',
     descriptionIT:
-      'Gli studenti possono aggiungere italiano commerciale, turismo e hotel management, preparazione universitaria, storia, storia dell arte, letteratura e "Italia oggi".',
+      'Gli studenti possono aggiungere italiano commerciale, turismo e gestione alberghiera, preparazione universitaria, storia, storia dell\'arte, letteratura e "Italia oggi".',
     image: images.whiteboardLesson,
     imagePosition: '50% 50%',
   },
@@ -284,7 +355,7 @@ export const services = [
     title: 'School tutoring and Erasmus support',
     titleIT: 'Tutoraggio scolastico e supporto Erasmus',
     description: 'The wider Accademia Internazionale offer includes school support and services for Erasmus students.',
-    descriptionIT: 'L offerta di Accademia Internazionale include supporto scolastico e servizi per studenti Erasmus.',
+    descriptionIT: 'L\'offerta di Accademia Internazionale include supporto scolastico e servizi per studenti Erasmus.',
   },
 ];
 
@@ -292,7 +363,7 @@ export const accommodationOptions = [
   {
     id: 'host-family',
     name: 'Host Family',
-    italianName: 'Famiglia Ospitante',
+    italianName: 'Famiglia ospitante',
     tagline: 'Stay with a host family',
     taglineIT: 'Soggiorno in famiglia ospitante',
     image: images.socialTable,
@@ -300,7 +371,7 @@ export const accommodationOptions = [
     description:
       'Students may stay with a local host family. The school can help reserve this option without additional reservation cost.',
     descriptionIT:
-      'Gli studenti possono soggiornare presso una famiglia ospitante. La scuola puo aiutare a prenotare questa opzione senza costi di prenotazione aggiuntivi.',
+      'Gli studenti possono soggiornare presso una famiglia ospitante. La scuola può aiutare a prenotare questa opzione senza costi di prenotazione aggiuntivi.',
     features: [
       'Single room with breakfast: EUR 170/week',
       'Single room with half board: EUR 230/week',
@@ -329,7 +400,7 @@ export const accommodationOptions = [
     description:
       'B&B accommodation in the town centre can be requested through the school, with pricing on request.',
     descriptionIT:
-      'Il B&B in centro puo essere richiesto tramite la scuola, con prezzi su richiesta.',
+      'Il B&B in centro può essere richiesto tramite la scuola, con prezzi su richiesta.',
     features: ['Town-centre options', 'Prices on request', 'Reservation support through the school'],
     featuresIT: ['Soluzioni in centro', 'Prezzi su richiesta', 'Supporto alla prenotazione tramite la scuola'],
   },
@@ -338,15 +409,15 @@ export const accommodationOptions = [
     name: 'Hotel',
     italianName: 'Hotel',
     tagline: 'Hotel stay in town',
-    taglineIT: 'Soggiorno in hotel in citta',
+    taglineIT: 'Soggiorno in hotel in città',
     image: images.hotel,
     imagePosition: '50% 50%',
     description:
       'Hotel accommodation in the town centre can be arranged on request for students who prefer a more conventional stay.',
     descriptionIT:
-      'L alloggio in hotel in centro puo essere organizzato su richiesta per studenti che preferiscono una soluzione piu tradizionale.',
+      'L\'alloggio in hotel in centro può essere organizzato su richiesta per studenti che preferiscono una soluzione più tradizionale.',
     features: ['Central Ascoli Piceno', 'Prices on request', 'Reservation support through the school'],
-    featuresIT: ['Ascoli Piceno centrale', 'Prezzi su richiesta', 'Supporto alla prenotazione tramite la scuola'],
+    featuresIT: ['Centro di Ascoli Piceno', 'Prezzi su richiesta', 'Supporto alla prenotazione tramite la scuola'],
   },
 ];
 
@@ -359,7 +430,7 @@ export const ascoliHighlights = [
     description:
       'The travertine heart of Ascoli Piceno and one of the city landmarks.',
     descriptionIT:
-      'Il cuore in travertino di Ascoli Piceno e uno dei luoghi simbolo della citta.',
+      'Il cuore in travertino di Ascoli Piceno è uno dei luoghi simbolo della città.',
   },
   {
     title: 'History, art and theatre',
@@ -404,19 +475,19 @@ export const inclusiveSupport = [
   },
   {
     title: 'LGBTQ+ Community',
-    titleIT: 'Comunita LGBTQ+',
+    titleIT: 'Comunità LGBTQ+',
     description:
       'LGBTQ+ learners are welcome to contact the school with any personal considerations before their arrival.',
     descriptionIT:
-      'Gli studenti LGBTQ+ sono invitati a contattare la scuola prima dell arrivo per eventuali esigenze personali.',
+      'Le persone LGBTQ+ sono benvenute e possono contattare la scuola prima dell\'arrivo per eventuali esigenze personali.',
   },
   {
     title: 'Accessibility Needs',
-    titleIT: 'Esigenze di accessibilita',
+    titleIT: 'Esigenze di accessibilità',
     description:
       'Students with disabilities or accessibility needs should contact the school in advance so practical arrangements can be discussed.',
     descriptionIT:
-      'Gli studenti con disabilita o esigenze di accessibilita devono contattare la scuola in anticipo per discutere gli aspetti pratici.',
+      'Gli studenti con disabilità o esigenze di accessibilità possono contattare la scuola in anticipo per discutere gli aspetti pratici.',
   },
 ];
 
@@ -424,4 +495,4 @@ export const directorQuote =
   'Come to the Accademia and discover that learning languages can be easy and enjoyable.';
 
 export const directorQuoteIT =
-  'Venite all Accademia e scoprirete che imparare le lingue puo essere facile e divertente.';
+  'Venite all\'Accademia e scoprirete che imparare le lingue può essere facile e divertente.';

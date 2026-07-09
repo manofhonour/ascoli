@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -32,13 +32,58 @@ import FaqPage from './pages/FaqPage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 
+const validTabs = new Set([
+  'home',
+  'about',
+  'courses',
+  'accommodation',
+  'student-life',
+  'ascoli',
+  'culture',
+  'gallery',
+  'testimonials',
+  'faq',
+  'blog',
+  'contact',
+]);
+
+function getTabFromUrl() {
+  if (typeof window === 'undefined') return 'home';
+
+  const tab = new URLSearchParams(window.location.search).get('tab');
+  return tab && validTabs.has(tab) ? tab : 'home';
+}
+
 export default function App() {
-  const [currentTab, setCurrentTab] = useState<string>('home');
+  const [currentTab, setCurrentTab] = useState<string>(getTabFromUrl);
+
+  useEffect(() => {
+    const syncTabFromUrl = () => setCurrentTab(getTabFromUrl());
+    window.addEventListener('popstate', syncTabFromUrl);
+    return () => window.removeEventListener('popstate', syncTabFromUrl);
+  }, []);
+
+  const handleTabChange = (tabId: string) => {
+    if (!validTabs.has(tabId)) return;
+
+    setCurrentTab(tabId);
+
+    const nextUrl = new URL(window.location.href);
+    nextUrl.hash = '';
+
+    if (tabId === 'home') {
+      nextUrl.searchParams.delete('tab');
+    } else {
+      nextUrl.searchParams.set('tab', tabId);
+    }
+
+    window.history.pushState({}, '', nextUrl);
+  };
 
   const scrollToInquire = () => {
     // If we're not on Home page or Contact page, switch to contact page tab!
     if (currentTab !== 'home' && currentTab !== 'contact') {
-      setCurrentTab('contact');
+      handleTabChange('contact');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (currentTab === 'contact') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -48,10 +93,6 @@ export default function App() {
         el.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  };
-
-  const handleTabChange = (tabId: string) => {
-    setCurrentTab(tabId);
   };
 
   return (

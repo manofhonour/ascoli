@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -8,7 +8,7 @@ export default function WhyAscoliPiceno() {
   const { language, t } = useLanguage();
 
   const rhythms = language === 'IT'
-    ? ['Lezione al mattino', 'Caffe in centro', 'Pranzo lento', 'Passeggiata nelle piazze']
+    ? ['Lezione al mattino', 'Caffè in centro', 'Pranzo lento', 'Passeggiata nelle piazze']
     : ['Morning lesson', 'Coffee in the centre', 'A slow lunch', 'A walk through the piazzas'];
 
   return (
@@ -61,7 +61,7 @@ export default function WhyAscoliPiceno() {
           <div className="lg:col-span-5">
             <div className="border border-travertine-300 bg-travertine-50 p-6 md:p-8">
               <h3 className="font-serif text-3xl font-normal text-charcoal-950">
-                {language === 'IT' ? 'Una citta che aiuta a parlare.' : 'A city that helps you speak.'}
+                {language === 'IT' ? 'Una città che aiuta a parlare.' : 'A city that helps you speak.'}
               </h3>
               <p className="mt-4 text-sm font-light leading-relaxed text-charcoal-800">
                 {t('ascoli.purity_desc')}

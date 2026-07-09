@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Calendar, User, ArrowLeft, ArrowRight, Share2 } from 'lucide-react';
 import { ascoliHighlights, contactInfo, culturalOfferings, images, officialCourses } from '../data/officialContent';
@@ -42,8 +42,8 @@ export default function BlogPage() {
           : 'Choosing the right Italian course in Ascoli Piceno',
       excerpt:
         language === 'IT'
-          ? 'Una guida essenziale a corsi standard, intensivi, estensivi, individuali, aggiornamento docenti e percorsi su misura.'
-          : 'A concise guide to standard, intensive, extensive, individual, teacher-refresher, and tailor-made course formats.',
+          ? 'Una guida essenziale a corsi standard, intensivi, individuali, estensivi, aggiornamento docenti e percorsi su misura.'
+          : 'A concise guide to standard, intensive, individual, extensive, teacher-refresher, and tailor-made course formats.',
       category: language === 'IT' ? 'Corsi' : 'Courses',
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
@@ -54,8 +54,8 @@ export default function BlogPage() {
         language === 'IT'
           ? [
               'Accademia Italiana offre formati di corso flessibili per studenti con obiettivi e calendari diversi.',
-              'Il corso standard e in piccolo gruppo, mentre lo studio intensivo aggiunge ore individuali. Chi ha bisogno di un calendario personalizzato puo scegliere lezioni individuali o corsi su misura.',
-              'La scelta giusta dipende da livello, date, ritmo e dall interesse per moduli culturali o preparazione agli esami.',
+              'Il corso standard è in piccolo gruppo, mentre lo studio intensivo aggiunge ore individuali. Chi ha bisogno di un calendario personalizzato può scegliere lezioni individuali o corsi su misura.',
+              'La scelta giusta dipende da livello, date, ritmo e dall\'interesse per moduli culturali o preparazione agli esami.',
             ]
           : [
               'Accademia Italiana offers flexible course formats for students with different goals and schedules.',
@@ -71,7 +71,7 @@ export default function BlogPage() {
           : 'Culture add-ons: food, wine, art, and history',
       excerpt:
         language === 'IT'
-          ? 'Temi culturali e specialistici possono ampliare lo studio dell italiano.'
+          ? 'Temi culturali e specialistici possono ampliare lo studio dell\'italiano.'
           : 'Cultural and specialist topics can extend Italian language study.',
       category: language === 'IT' ? 'Cultura' : 'Culture',
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
@@ -82,8 +82,8 @@ export default function BlogPage() {
       content:
         language === 'IT'
           ? [
-              'L apprendimento dell italiano diventa piu forte quando il vocabolario e collegato a contesti vissuti.',
-              'I moduli includono cucina, degustazione vini, opera, olio d oliva, ceramica, pittura, Tombolo, italiano per il business, turismo, preparazione universitaria, storia, storia dell arte, letteratura e "Italia oggi".',
+              'L\'apprendimento dell\'italiano diventa più forte quando il vocabolario è collegato a contesti vissuti.',
+              'I moduli includono cucina, degustazione di vini, opera, olio d\'oliva, ceramica, pittura, merletto a tombolo, italiano commerciale, turismo, preparazione universitaria, storia, storia dell\'arte, letteratura e "Italia oggi".',
               'I moduli sono organizzati intorno al formato del corso e agli obiettivi degli studenti.',
             ]
           : [
@@ -96,7 +96,7 @@ export default function BlogPage() {
       id: 'ascoli',
       title:
         language === 'IT'
-          ? 'Perche Ascoli Piceno funziona come contesto linguistico'
+          ? 'Perché Ascoli Piceno funziona come contesto linguistico'
           : 'Why Ascoli Piceno works as a language setting',
       excerpt:
         language === 'IT'
@@ -111,8 +111,8 @@ export default function BlogPage() {
       content:
         language === 'IT'
           ? [
-              'Ascoli Piceno offre agli studenti un contesto storico e compatto per usare l italiano ogni giorno.',
-              `${ascoliHighlights[0].titleIT}, tradizioni gastronomiche locali, eventi come la Quintana e il paesaggio marchigiano sostengono l immersione culturale.`,
+              'Ascoli Piceno offre agli studenti un contesto storico e compatto per usare l\'italiano ogni giorno.',
+              `${ascoliHighlights[0].titleIT}, tradizioni gastronomiche locali, eventi come la Quintana e il paesaggio marchigiano sostengono l\'immersione culturale.`,
               `La scuola si trova in ${contactInfo.addressLine1}, vicino alla vita del centro storico.`,
             ]
           : [
@@ -188,7 +188,7 @@ export default function BlogPage() {
                         <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal leading-snug group-hover:text-olive-800 transition-colors">
                           {post.title}
                         </h3>
-                        <p className="text-xs text-charcoal-800 font-light leading-relaxed">{post.excerpt}</p>
+                        <p className="text-sm text-charcoal-800 font-light leading-relaxed">{post.excerpt}</p>
                       </div>
                     </div>
 

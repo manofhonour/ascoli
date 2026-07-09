@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { images } from '../data/officialContent';
 
@@ -19,7 +19,7 @@ export default function LifestyleGallery() {
       id: 1,
       url: images.foodCulture,
       caption: 'Food, conversation, and small rituals make the language easier to remember.',
-      captionIT: 'Cibo, conversazione e piccoli rituali rendono la lingua piu facile da ricordare.',
+      captionIT: 'Cibo, conversazione e piccoli rituali rendono la lingua più facile da ricordare.',
       span: 'md:col-span-7',
       position: '50% 50%',
     },
@@ -27,7 +27,7 @@ export default function LifestyleGallery() {
       id: 2,
       url: images.cookingWorkshop,
       caption: 'Cooking and regional food vocabulary make language practice more physical and memorable.',
-      captionIT: 'Cucina e lessico gastronomico rendono la pratica piu concreta e memorabile.',
+      captionIT: 'Cucina e lessico gastronomico rendono la pratica più concreta e memorabile.',
       span: 'md:col-span-5 md:mt-16',
       position: '50% 50%',
     },

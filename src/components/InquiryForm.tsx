@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -115,7 +115,7 @@ export default function InquiryForm() {
                     </h3>
                     <p className="text-xs text-charcoal-800 font-light">
                       {language === 'IT'
-                        ? 'Questo modulo prepara il messaggio. Puoi includere viaggio individuale, esigenze LGBTQ+, accessibilita o dettagli di arrivo.'
+                        ? 'Questo modulo prepara il messaggio. Puoi includere viaggio individuale, esigenze LGBTQ+, accessibilità o dettagli di arrivo.'
                         : 'This form prepares your message. You can include solo travel, LGBTQ+ considerations, accessibility needs, or arrival details.'}
                     </p>
                   </div>

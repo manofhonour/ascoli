@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Camera } from 'lucide-react';
 import { photoGallery } from '../data/officialContent';
@@ -13,7 +13,7 @@ export default function GalleryPage() {
   const filteredPhotos = filter === 'all' ? photoGallery : photoGallery.filter((p) => p.category === filter);
 
   const filters: { id: Filter; label: string }[] = [
-    { id: 'all', label: language === 'IT' ? 'Tutto' : 'All' },
+    { id: 'all', label: language === 'IT' ? 'Tutte' : 'All' },
     { id: 'study', label: language === 'IT' ? 'Studio' : 'Study' },
     { id: 'culture', label: language === 'IT' ? 'Cultura' : 'Culture' },
     { id: 'ascoli', label: 'Ascoli' },
@@ -40,12 +40,12 @@ export default function GalleryPage() {
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             {language === 'IT' ? 'Ascoli, cultura,' : 'Ascoli, culture,'} <br />
             <span className="italic text-terracotta-600">
-              {language === 'IT' ? 'e studio dell italiano.' : 'and Italian study.'}
+              {language === 'IT' ? 'e studio dell\'italiano.' : 'and Italian study.'}
             </span>
           </h1>
-          <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'Foto reali dell Accademia tra lezioni, attivita culturali, momenti degli studenti e Ascoli Piceno.'
+              ? 'Foto reali dell\'Accademia tra lezioni, attività culturali, momenti degli studenti e Ascoli Piceno.'
               : 'Real Accademia photos from lessons, cultural activities, student moments, and Ascoli Piceno.'}
           </p>
         </div>
@@ -68,43 +68,52 @@ export default function GalleryPage() {
           ))}
         </div>
 
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start">
           <AnimatePresence mode="popLayout">
-            {filteredPhotos.map((photo, index) => (
-              <motion.div
-                key={photo.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-                className={`bg-travertine-100 border border-travertine-200 p-4 hover:shadow-2xl transition-all duration-500 space-y-4 group ${
-                  index === 0 || index === 9 ? 'lg:col-span-2' : ''
-                }`}
-              >
-                <div className={`${index === 0 || index === 9 ? 'aspect-[16/9]' : 'aspect-[4/3]'} bg-travertine-200 overflow-hidden relative shadow-sm`}>
-                  <img
-                    src={photo.image}
-                    alt={language === 'IT' ? photo.titleIT : photo.title}
-                    className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
-                    style={{ objectPosition: photo.imagePosition }}
-                    loading="lazy"
-                    decoding="async"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
+            {filteredPhotos.map((photo) => {
+              const aspectClass =
+                photo.aspect === 'wide'
+                  ? 'aspect-[16/10]'
+                  : photo.aspect === 'portrait'
+                    ? 'aspect-[3/4]'
+                    : 'aspect-[4/3]';
 
-                <div className="space-y-1">
-                  <span className="text-[10px] tracking-wider uppercase font-bold text-olive-800 flex items-center gap-1.5">
-                    <Camera className="w-3.5 h-3.5 stroke-[1.5]" />
-                    {categoryLabel[photo.category]} / {language === 'IT' ? photo.locationIT : photo.location}
-                  </span>
-                  <h3 className="font-serif text-base text-charcoal-950 font-normal">
-                    {language === 'IT' ? photo.titleIT : photo.title}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
+              return (
+                <motion.div
+                  key={photo.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.97 }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  className={`bg-travertine-100 border border-travertine-200 p-3 md:p-4 hover:shadow-xl transition-all duration-500 space-y-4 group ${
+                    photo.featured ? 'lg:col-span-2' : ''
+                  }`}
+                >
+                  <div className={`${aspectClass} bg-travertine-200 overflow-hidden relative shadow-sm`}>
+                    <img
+                      src={photo.image}
+                      alt={language === 'IT' ? photo.titleIT : photo.title}
+                      className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
+                      style={{ objectPosition: photo.imagePosition }}
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] tracking-wider uppercase font-bold text-olive-800 flex items-start gap-1.5 leading-snug">
+                      <Camera className="w-3.5 h-3.5 stroke-[1.5] mt-0.5 shrink-0" />
+                      <span>{categoryLabel[photo.category]} / {language === 'IT' ? photo.locationIT : photo.location}</span>
+                    </span>
+                    <h3 className="font-serif text-lg text-charcoal-950 font-normal leading-snug">
+                      {language === 'IT' ? photo.titleIT : photo.title}
+                    </h3>
+                  </div>
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </motion.div>
       </section>

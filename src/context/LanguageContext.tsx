@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+﻿import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'EN' | 'IT';
 
@@ -64,7 +64,7 @@ const translations: Record<Language, Record<string, string>> = {
       'The school is directed by Dr. Antonella Valentini and works with highly qualified and passionate teachers.',
     'why.focus_2_title': 'Flexible Formats',
     'why.focus_2_desc':
-      'Students can choose standard, intensive, extensive, individual, teacher-refresher, online, and tailor-made courses.',
+      'Students can choose standard, intensive, individual, extensive, teacher-refresher, online, and tailor-made courses.',
     'why.focus_3_title': 'Communicative Method',
     'why.focus_3_desc':
       'Lessons are designed according to an accurate level placement process focused on communication and practical use of Italian.',
@@ -80,7 +80,7 @@ const translations: Record<Language, Record<string, string>> = {
     'courses.section_title_part1': 'Choose a rhythm',
     'courses.section_title_italic': 'for your stay.',
     'courses.section_desc':
-      'Course formats range from small standard groups to extensive courses, individual lessons, and tailor-made study for specific goals.',
+      'Course formats range from small standard groups to individual lessons, extensive courses, and tailor-made study for specific goals.',
     'courses.explore_details': 'View details',
     'courses.curriculum_highlights': 'Course details',
     'courses.enquire_now': 'Enquire now',
@@ -195,29 +195,29 @@ const translations: Record<Language, Record<string, string>> = {
   },
   IT: {
     'nav.home': 'La scuola',
-    'nav.about': 'Chi Siamo',
+    'nav.about': 'Chi siamo',
     'nav.courses': 'Corsi',
     'nav.accommodation': 'Alloggi',
     'nav.ascoli': 'Ascoli Piceno',
-    'nav.student-life': 'Vita Studentesca',
-    'nav.culture': 'Cultura Italiana',
+    'nav.student-life': 'Vita studentesca',
+    'nav.culture': 'Cultura italiana',
     'nav.gallery': 'Galleria',
     'nav.testimonials': 'Metodo',
     'nav.faq': 'FAQ',
     'nav.blog': 'Note',
     'nav.contact': 'Contatti',
     'nav.more': 'Esperienze',
-    'nav.inquire': 'Richiedi Info',
-    'nav.book_consultation': 'Contatta la Scuola',
+    'nav.inquire': 'Richiedi info',
+    'nav.book_consultation': 'Contatta la scuola',
 
     'hero.subtitle': 'Scuola di italiano dal 1997',
-    'hero.title_part1': 'Vivi l Italia.',
+    'hero.title_part1': 'Vivi l\'Italia.',
     'hero.title_part2': 'Parla italiano.',
     'hero.title_italic': 'Studia ad Ascoli Piceno.',
     'hero.desc':
       'Una piccola scuola di italiano ad Ascoli Piceno per adulti che desiderano lezioni, cultura locale e tempo per vivere la lingua.',
-    'hero.explore_courses': 'Esplora i Corsi',
-    'hero.book_consultation': 'Contatta la Scuola',
+    'hero.explore_courses': 'Esplora i corsi',
+    'hero.book_consultation': 'Contatta la scuola',
     'hero.salon_title': 'Indirizzo',
     'hero.salon_desc': 'Corso Vittorio Emanuele, 27 - 63100 Ascoli Piceno, Italia.',
     'hero.palazzo_class_title': 'Piccoli gruppi',
@@ -231,30 +231,30 @@ const translations: Record<Language, Record<string, string>> = {
     'trust.cohorts_label': '3-6 studenti',
     'trust.cohorts_detail': 'Piccoli gruppi nei corsi standard',
     'trust.global_label': 'Studenti internazionali',
-    'trust.global_detail': 'Adulti da molti paesi',
+    'trust.global_detail': 'Adulti da diversi Paesi',
     'trust.sanctuaries_label': 'Ascoli Piceno',
-    'trust.sanctuaries_detail': 'Citta storica nelle Marche',
+    'trust.sanctuaries_detail': 'Città storica nelle Marche',
     'trust.staff_label': 'Docenti qualificati',
     'trust.staff_detail': 'Metodo flessibile e comunicativo',
 
-    'why.philosophy_sub': 'Il Metodo',
+    'why.philosophy_sub': 'Il metodo',
     'why.philosophy_title_part1': 'Didattica precisa,',
     'why.philosophy_title_italic': 'conversazione reale',
     'why.philosophy_title_part2': ' e cultura italiana.',
     'why.philosophy_desc':
-      'Le lezioni sono pratiche e personali. La citta offre occasioni quotidiane per usare l italiano.',
-    'why.focus_1_title': 'Docenti qualificati',
+      'Le lezioni sono pratiche e personali. La città offre occasioni autentiche per usare l\'italiano.',
+    'why.focus_1_title': 'I migliori docenti per il tuo percorso',
     'why.focus_1_desc':
-      'La scuola e diretta dalla Dr. Antonella Valentini e lavora con docenti qualificati.',
+      'La scuola è diretta dalla Dott.ssa Antonella Valentini e lavora con docenti altamente qualificati e appassionati.',
     'why.focus_2_title': 'Formati flessibili',
     'why.focus_2_desc':
-      'Corsi standard, intensivi, estensivi, individuali, aggiornamento docenti, online e su misura.',
+      'Corsi standard, intensivi, individuali, estensivi, aggiornamento docenti, online e su misura.',
     'why.focus_3_title': 'Metodo comunicativo',
     'why.focus_3_desc':
       'Le lezioni sono costruite su comunicazione, livello dello studente e uso pratico della lingua.',
     'why.focus_4_title': 'Ambiente accogliente',
     'why.focus_4_desc':
-      'Chi viaggia da solo, studenti LGBTQ+, adulti e studenti con esigenze di accessibilita possono contattare la scuola in anticipo.',
+      'Chi viaggia da solo, studenti LGBTQ+, adulti e studenti con esigenze di accessibilità possono contattare la scuola in anticipo.',
 
     'courses.sub': 'Corsi',
     'courses.title_part1': 'Corsi di italiano',
@@ -273,36 +273,36 @@ const translations: Record<Language, Record<string, string>> = {
     'beyond.section_title_part1': 'Pratica italiano con',
     'beyond.section_title_italic': 'la cultura locale.',
     'beyond.section_desc':
-      'L italiano continua fuori dall aula con cucina, vino, arte, storia, letteratura e vita quotidiana ad Ascoli.',
+      'L\'italiano continua fuori dall\'aula con cucina, vino, arte, storia, letteratura e vita quotidiana ad Ascoli.',
 
     'accommodation.sub': 'Alloggi',
     'accommodation.title_part1': 'Alloggia vicino',
     'accommodation.title_italic': 'alla scuola.',
     'accommodation.desc':
-      'La scuola puo aiutare a prenotare famiglia ospitante, B&B e hotel ad Ascoli Piceno senza costo di prenotazione aggiuntivo.',
+      'La scuola può aiutare a prenotare famiglia ospitante, B&B e hotel ad Ascoli Piceno senza costo di prenotazione aggiuntivo.',
     'accommodation.location': 'Posizione',
     'accommodation.section_tag': 'Alloggi',
     'accommodation.section_title_part1': 'Soluzioni semplici',
     'accommodation.section_title_italic': 'per il soggiorno.',
     'accommodation.section_desc':
-      'Scegli famiglia ospitante, B&B o hotel e contatta la scuola in anticipo per esigenze personali o di accessibilita.',
+      'Scegli famiglia ospitante, B&B o hotel e contatta la scuola in anticipo per esigenze personali o di accessibilità.',
 
     'ascoli.section_tag': 'Ascoli Piceno',
-    'ascoli.section_title_part1': 'Una citta storica',
-    'ascoli.section_title_italic': 'per immersione',
+    'ascoli.section_title_part1': 'Una città storica',
+    'ascoli.section_title_italic': 'per l\'immersione',
     'ascoli.section_title_part2': 'nelle Marche.',
     'ascoli.section_desc':
       'Ascoli Piceno unisce storia, arte, cucina, feste, montagne, fiumi e collegamenti con le Marche.',
     'ascoli.image_tag': 'Ascoli Piceno',
-    'ascoli.image_title': 'Una citta storica nelle Marche',
-    'ascoli.image_desc': 'Un contesto a misura d uomo aiuta a usare l italiano in caffe, strade, mercati e visite culturali.',
+    'ascoli.image_title': 'Una città storica nelle Marche',
+    'ascoli.image_desc': 'Un contesto a misura d\'uomo aiuta a usare l\'italiano in caffè, strade, mercati e visite culturali.',
     'ascoli.map_tag': 'Percorso cittadino',
     'ascoli.map_title': 'Un contesto compatto per studiare',
     'ascoli.map_desc': 'La scuola si trova in Corso Vittorio Emanuele, vicino alla vita del centro storico.',
     'ascoli.gems_tag': 'Luoghi principali',
     'ascoli.gems_title': 'Luoghi e tradizioni',
-    'ascoli.purity_title': 'Perche Ascoli funziona per lo studio',
-    'ascoli.purity_desc': 'La citta offre cultura e servizi, ma resta abbastanza calma per studio e conversazione quotidiana.',
+    'ascoli.purity_title': 'Perché Ascoli funziona per lo studio',
+    'ascoli.purity_desc': 'La città offre cultura e servizi, ma resta abbastanza calma per studio e conversazione quotidiana.',
 
     'teachers.section_tag': 'Team e servizi',
     'teachers.section_title_part1': 'Guidati da',
@@ -328,7 +328,7 @@ const translations: Record<Language, Record<string, string>> = {
     'testimonials.video_diary': 'Accademia',
     'testimonials.video_quote': '"Apriti al mondo"',
     'testimonials.story_label': 'Citazione della direttrice',
-    'testimonials.story_text': '"Venite all Accademia e scoprirete che imparare le lingue puo essere facile e divertente."',
+    'testimonials.story_text': '"Venite all\'Accademia e scoprirete che imparare le lingue può essere facile e divertente."',
     'testimonials.close_video': 'Chiudi',
 
     'faq.sub': 'FAQ',
@@ -346,7 +346,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cta.desc':
       'Contatta la scuola per parlare di livello, date, corso, alloggio e del tipo di soggiorno che immagini.',
     'cta.begin': 'Invia richiesta',
-    'cta.whatsapp': 'WhatsApp scuola',
+    'cta.whatsapp': 'Scrivi su WhatsApp',
     'cta.booking_note': 'Per condizioni di prenotazione, contatta direttamente la segreteria.',
 
     'form.sub': 'Richiesta',
@@ -367,10 +367,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.field_language_level_intermediate': 'Intermedio',
     'form.field_language_level_advanced': 'Avanzato',
     'form.field_interest': 'Parlaci dei tuoi obiettivi',
-    'form.field_interest_placeholder': 'Esempio: corso standard a settembre, alloggio in famiglia e informazioni su accessibilita o arrivo.',
+    'form.field_interest_placeholder': 'Esempio: corso standard a settembre, alloggio in famiglia e informazioni su accessibilità o arrivo.',
     'form.submit': 'Invia richiesta',
     'form.success_title': 'Grazie',
-    'form.success_desc': 'La richiesta e stata annotata. Contatta anche la scuola per conferma della prenotazione.',
+    'form.success_desc': 'La richiesta è stata annotata. Contatta anche la scuola per conferma della prenotazione.',
     'form.success_cta': 'Rivedi i corsi',
     'form.inquire_title': 'Richiedi info',
   },

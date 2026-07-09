@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Minus, Heart } from 'lucide-react';
 import { contactInfo } from '../data/officialContent';
@@ -35,28 +35,28 @@ export default function FaqPage() {
             category: 'Corsi',
             question: 'Quali corsi di italiano offre la scuola?',
             answer:
-              'L offerta include corsi standard, intensivi, corsi estensivi, lezioni individuali, aggiornamento per docenti e corsi su misura ad Ascoli Piceno o online.',
+              'L\'offerta include corsi standard, intensivi, lezioni individuali, corsi estensivi, aggiornamento per docenti e corsi su misura ad Ascoli Piceno o online.',
           },
           {
             id: 'prices',
             category: 'Prezzi',
             question: 'Quali sono i prezzi?',
             answer:
-              'I prezzi indicati includono corso standard a EUR 220 a settimana, lezioni individuali a EUR 30 l ora, 20 ore individuali a EUR 550 e corsi intensivi da EUR 370 per una settimana. Contatta la scuola per disponibilita aggiornata.',
+              'I prezzi indicati includono corso standard a EUR 220 a settimana, lezioni individuali a EUR 30 l\'ora, 20 ore individuali a EUR 550 e corsi intensivi da EUR 370 per una settimana. Contatta la scuola per disponibilità aggiornata.',
           },
           {
             id: 'accommodation',
             category: 'Alloggi',
-            question: 'Quali alloggi puo prenotare la scuola?',
+            question: 'Quali alloggi può prenotare la scuola?',
             answer:
-              'La scuola puo aiutare a prenotare famiglia ospitante, B&B e hotel ad Ascoli Piceno. I prezzi settimanali della famiglia ospitante sono indicati, mentre B&B e hotel sono su richiesta.',
+              'La scuola può aiutare a prenotare famiglia ospitante, B&B e hotel ad Ascoli Piceno. I prezzi settimanali della famiglia ospitante sono indicati, mentre B&B e hotel sono su richiesta.',
           },
           {
             id: 'inclusive-support',
             category: 'Supporto studenti',
-            question: 'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilita sono benvenuti?',
+            question: 'Chi viaggia da solo, studenti LGBTQ+ e studenti con esigenze di accessibilità sono benvenuti?',
             answer:
-              'Si. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilita o esigenze di accessibilita sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell arrivo per indicazioni pratiche.',
+              'Sì. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilità o esigenze di accessibilità sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
           },
           {
             id: 'travel',
@@ -70,7 +70,7 @@ export default function FaqPage() {
             category: 'Cultura',
             question: 'Quali corsi culturali o moduli aggiuntivi sono disponibili?',
             answer:
-              'I moduli includono cucina italiana, degustazione vini, opera, olio d oliva, ceramica, pittura, Tombolo, italiano per il business, turismo e hotel management, preparazione universitaria, storia, storia dell arte, letteratura e "Italia oggi".',
+              'I moduli includono cucina italiana, degustazione di vini, opera, olio d\'oliva, ceramica, pittura, merletto a tombolo, italiano commerciale, turismo e gestione alberghiera, preparazione universitaria, storia, storia dell\'arte, letteratura e "Italia oggi".',
           },
           {
             id: 'contact',
@@ -85,7 +85,7 @@ export default function FaqPage() {
             category: 'Courses',
             question: 'Which Italian courses does the school offer?',
             answer:
-              'The course offer includes standard courses, intensive courses, extensive courses, individual lessons, refresher courses for teachers, and tailor-made courses in Ascoli Piceno or online.',
+              'The course offer includes standard courses, intensive courses, individual lessons, extensive courses, refresher courses for teachers, and tailor-made courses in Ascoli Piceno or online.',
           },
           {
             id: 'prices',
@@ -144,7 +144,7 @@ export default function FaqPage() {
         <div className="absolute inset-0 bg-[radial-gradient(#384232_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.06] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-olive-800 uppercase block">
-            Domande Frequenti
+            Domande frequenti
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             {language === 'IT' ? 'Risposte pratiche' : 'Practical answers'} <br />

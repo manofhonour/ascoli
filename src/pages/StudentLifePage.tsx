@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { Accessibility, Coffee, HeartHandshake, UserRound } from 'lucide-react';
 import { culturalOfferings, images, inclusiveSupport } from '../data/officialContent';
@@ -12,10 +12,10 @@ export default function StudentLifePage() {
     {
       id: 'conversation',
       title: language === 'IT' ? 'Conversazione quotidiana ad Ascoli' : 'Daily Conversation in Ascoli',
-      tagline: language === 'IT' ? 'Caffe, strade e italiano pratico' : 'Cafes, streets, and practical Italian',
+      tagline: language === 'IT' ? 'Caffè, strade e italiano pratico' : 'Cafes, streets, and practical Italian',
       description:
         language === 'IT'
-          ? 'La scuola nel centro storico rende naturale usare l italiano per saluti, indicazioni, cibo, cultura e scambi quotidiani.'
+          ? 'La scuola nel centro storico rende naturale usare l\'italiano per saluti, indicazioni, cibo, cultura e scambi quotidiani.'
           : 'The school setting in the historic centre makes it natural to use Italian for greetings, directions, food, culture, and everyday exchanges.',
       image: images.socialTable,
       imagePosition: '50% 48%',
@@ -42,17 +42,17 @@ export default function StudentLifePage() {
         <div className="absolute inset-0 bg-[radial-gradient(#CE6A4E_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.08] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-6 text-center space-y-6">
           <span className="text-xs font-bold tracking-[0.25em] text-terracotta-600 uppercase block">
-            Vita da Studente
+            Vita da studente
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
             {language === 'IT' ? 'Vita studentesca costruita' : 'Student life built'} <br />
             <span className="italic text-olive-800">
-              {language === 'IT' ? 'intorno all italiano reale.' : 'around real Italian.'}
+              {language === 'IT' ? 'intorno all\'italiano reale.' : 'around real Italian.'}
             </span>
           </h1>
           <p className="text-sm md:text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'La vita studentesca all Accademia Italiana ruota intorno a lezioni, conversazione, Ascoli Piceno e corsi culturali opzionali.'
+              ? 'La vita studentesca all\'Accademia Italiana ruota intorno a lezioni, conversazione, Ascoli Piceno e corsi culturali opzionali.'
               : 'Student life at Accademia Italiana centres on lessons, conversation, Ascoli Piceno, and optional cultural courses.'}
           </p>
         </div>
@@ -68,9 +68,9 @@ export default function StudentLifePage() {
               ? 'Piccoli gruppi, contesto locale e cultura opzionale.'
               : 'Small classes, local context, and optional culture.'}
           </h2>
-          <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+          <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
-              ? 'L esperienza degli studenti unisce formati di corso, conversazione locale e studio culturale opzionale.'
+              ? 'L\'esperienza degli studenti unisce formati di corso, conversazione locale e studio culturale opzionale.'
               : 'The student experience centres on course formats, local conversation, and optional cultural study.'}
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function StudentLifePage() {
                   <h3 className="font-serif text-lg text-charcoal-950 font-normal">
                     {language === 'IT' ? item.titleIT : item.title}
                   </h3>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed">
                     {language === 'IT' ? item.descriptionIT : item.description}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ export default function StudentLifePage() {
                     {event.tagline}
                   </span>
                   <h3 className="font-serif text-2xl text-charcoal-950 font-normal">{event.title}</h3>
-                  <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+                  <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
                     {event.description}
                   </p>
                 </div>
@@ -134,7 +134,7 @@ export default function StudentLifePage() {
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <Coffee className="w-8 h-8 text-terracotta-600 mx-auto stroke-[1.25]" />
           <p className="font-serif text-xl md:text-2xl text-charcoal-900 italic font-light leading-relaxed">
-            {language === 'IT' ? '"Vivi l Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
+            {language === 'IT' ? '"Vivi l\'Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
           </p>
           <span className="block text-[10px] tracking-wider uppercase text-olive-800 font-bold">
             Accademia Italiana

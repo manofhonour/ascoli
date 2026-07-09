@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Minus, Search } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -18,9 +18,9 @@ export default function FAQSection() {
   const faqs: FAQ[] = language === 'IT'
     ? [
         {
-          question: 'Serve conoscere gia l italiano?',
+          question: 'Serve conoscere già l\'italiano?',
           answer:
-            'No. I corsi possono essere organizzati per diversi livelli, dai principianti agli studenti avanzati. La scuola puo consigliare il formato piu adatto prima dell iscrizione.',
+            'No. I corsi possono essere organizzati per diversi livelli, dai principianti agli studenti avanzati. La scuola può consigliare il formato più adatto prima dell\'iscrizione.',
           category: 'Livelli',
         },
         {
@@ -32,19 +32,19 @@ export default function FAQSection() {
         {
           question: 'Quali sono i principali prezzi dei corsi?',
           answer:
-            'Il corso standard costa EUR 220 a settimana, il corso intensivo parte da EUR 370 per una settimana e le lezioni individuali costano EUR 30 all ora, con pacchetti disponibili.',
+            'Il corso standard costa EUR 220 a settimana, il corso intensivo parte da EUR 370 per una settimana e le lezioni individuali costano EUR 30 all\'ora, con pacchetti disponibili.',
           category: 'Prezzi',
         },
         {
-          question: 'La scuola puo aiutare con l alloggio?',
+          question: 'La scuola può aiutare con l\'alloggio?',
           answer:
-            'Si. La scuola puo aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno senza costo di prenotazione aggiuntivo. I prezzi della famiglia ospitante sono indicati; B&B e hotel sono su richiesta.',
+            'Sì. La scuola può aiutare a prenotare famiglia ospitante, B&B o hotel ad Ascoli Piceno senza costo di prenotazione aggiuntivo. I prezzi della famiglia ospitante sono indicati; B&B e hotel sono su richiesta.',
           category: 'Alloggi',
         },
         {
-          question: 'La scuola accoglie chi viaggia da solo, studenti LGBTQ+ e persone con esigenze di accessibilita?',
+          question: 'La scuola accoglie chi viaggia da solo, studenti LGBTQ+ e persone con esigenze di accessibilità?',
           answer:
-            'Si. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilita o esigenze di accessibilita sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell arrivo per indicazioni pratiche.',
+            'Sì. Chi viaggia da solo, studenti LGBTQ+ e studenti con disabilità o esigenze di accessibilità sono accolti in un ambiente rispettoso e possono contattare la scuola prima dell\'arrivo per indicazioni pratiche.',
           category: 'Supporto studenti',
         },
         {

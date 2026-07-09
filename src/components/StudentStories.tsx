@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { images } from '../data/officialContent';
 
@@ -9,13 +9,13 @@ const stays = [
     focus: 'Standard course plus local life',
     focusIT: 'Corso standard e vita locale',
     text: 'For travellers who want morning lessons, afternoons in Ascoli, and enough space to enjoy the city slowly.',
-    textIT: 'Per chi desidera lezioni al mattino, pomeriggi ad Ascoli e tempo per vivere la citta con calma.',
+    textIT: 'Per chi desidera lezioni al mattino, pomeriggi ad Ascoli e tempo per vivere la città con calma.',
     image: images.quintana,
     position: '50% 50%',
   },
   {
     title: 'A longer stay before a move',
-    titleIT: 'Un soggiorno piu lungo prima di trasferirsi',
+    titleIT: 'Un soggiorno più lungo prima di trasferirsi',
     focus: 'Conversation, practical Italian, routine',
     focusIT: 'Conversazione, italiano pratico, routine',
     text: 'Useful for adults relocating to Italy, buying a home, or testing the rhythm of everyday life before a bigger decision.',
@@ -39,7 +39,7 @@ const stays = [
     focus: 'Planning before travel',
     focusIT: 'Organizzazione prima del viaggio',
     text: 'Solo travellers, women travelling alone, LGBTQ+ visitors, older learners, and students with accessibility needs are welcomed in a respectful learning environment.',
-    textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilita sono accolti in un ambiente rispettoso.',
+    textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilità sono accolti in un ambiente rispettoso.',
     image: images.bnb,
     position: '50% 50%',
   },
@@ -101,7 +101,7 @@ export default function StudentStories() {
 
         <div className="mt-12 border-l border-olive-700 bg-travertine-50 px-6 py-5 text-sm font-light leading-relaxed text-charcoal-800 md:max-w-3xl">
           {language === 'IT'
-            ? 'L accoglienza e semplice e concreta: piccoli gruppi, comunicazione chiara prima dell arrivo e rispetto per il ritmo di ogni studente.'
+            ? 'L\'accoglienza è semplice e concreta: piccoli gruppi, comunicazione chiara prima dell\'arrivo e rispetto per il ritmo di ogni studente.'
             : "The welcome is simple and practical: small groups, clear communication before their arrival, and respect for each learner's rhythm."}
         </div>
       </div>

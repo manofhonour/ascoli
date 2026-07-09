@@ -1,35 +1,76 @@
 {
   "index.html": {
-    "file": "assets/index-Bw6b5pu0.js",
+    "file": "assets/index-CUZs0QUs.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "css": [
-      "assets/index-y_SY-ngX.css"
+      "assets/index-xRYZ3Qm9.css"
     ],
     "assets": [
       "assets/accademia-logo-G5QgtLrI.png",
+      "assets/extra-accademia-cooking-table-CjDpwp4u.jpg",
+      "assets/extra-accademia-group-meeting-BXWz41yo.jpg",
+      "assets/extra-accademia-seminar-room-C9Bul1Cn.jpg",
+      "assets/extra-ascoli-arcades-BxD7ThXD.jpg",
+      "assets/extra-ascoli-view-D78v0Ob_.jpg",
+      "assets/extra-bougainvillea-Ln1tHo9W.jpg",
+      "assets/extra-church-facade-v87JQiS2.jpg",
+      "assets/extra-church-interior-DNU15OB2.jpg",
+      "assets/extra-clear-water-cascade-DZLh5vim.jpg",
+      "assets/extra-flamenco-performance-B2A94O8I.jpg",
+      "assets/extra-nature-guide-o0Au8Ahu.jpg",
+      "assets/extra-olive-tree-Z_g22oE0.jpg",
+      "assets/extra-palm-garden-KkZVlhyq.jpg",
+      "assets/extra-pasta-group-workshop-D98KGgzF.jpg",
+      "assets/extra-pasta-hands-DcYDvaiZ.jpg",
+      "assets/extra-piazza-del-popolo-wide-Dc9qBXcJ.jpg",
+      "assets/extra-quintana-arch-PjboTkZK.jpg",
+      "assets/extra-quintana-children-CB8EBv3n.jpg",
+      "assets/extra-quintana-costume-detail-DYhHbsUy.jpg",
+      "assets/extra-quintana-costumes-CxraWgrV.jpg",
+      "assets/extra-quintana-flags-Bq_wZZMi.jpg",
+      "assets/extra-quintana-procession-CwHezqnO.jpg",
+      "assets/extra-quintana-street-DS6EVl_s.jpg",
+      "assets/extra-river-guide-SSzrsG7Q.jpg",
+      "assets/extra-river-pool-ChANVwVy.jpg",
+      "assets/extra-river-walk-BYIrDaHd.jpg",
+      "assets/extra-river-waterfall-B7sGhrlO.jpg",
+      "assets/extra-statue-square-aZY1eBQY.jpg",
+      "assets/extra-stone-courtyard-BliqJmuX.jpg",
+      "assets/extra-student-balcony-B-WHTy5J.jpg",
+      "assets/extra-student-breakfast-CM-q7LlT.jpg",
+      "assets/extra-student-walk-selfie-DT8nzqFO.jpg",
+      "assets/extra-sunset-olive-tree-CcOALQon.jpg",
+      "assets/extra-waterfall-swim-DTAP_uGZ.jpg",
       "assets/accademia-01-BKtqVdIk.jpg",
+      "assets/accademia-02-kTadVHat.jpg",
+      "assets/accademia-03-BMueHIhk.jpg",
+      "assets/accademia-04-sSUy4rWD.jpg",
+      "assets/accademia-05-Cfp8gfJt.jpg",
+      "assets/accademia-06-CFrnuzDU.jpg",
+      "assets/accademia-07-REFIfQZn.jpg",
+      "assets/accademia-08-7wbsnLaK.jpg",
+      "assets/accademia-09-Ums57dMc.jpg",
       "assets/accademia-10-Cqd8pv8f.jpg",
+      "assets/accademia-11-Be6627Ux.jpg",
       "assets/accademia-12-EkdKIZ8b.jpg",
+      "assets/accademia-13-BRPKTfHy.jpg",
+      "assets/accademia-14-CHdSFWlT.jpg",
+      "assets/accademia-15-DPstBvmP.jpg",
+      "assets/accademia-16-WEf_8wPO.jpg",
       "assets/refresher-course-aBcRparE.jpeg",
       "assets/pics-ascoli-piazza-day-DtLaU2lM.jpg",
       "assets/pics-ascoli-street-CQKM_aMp.jpg",
       "assets/pics-bed-breakfast-BAn2cp_1.jpg",
-      "assets/pics-communicative-lesson-BMueHIhk.jpg",
       "assets/pics-cultural-classroom-B-HSTsHy.jpg",
       "assets/pics-culture-certificates-DYe2Asa3.jpg",
       "assets/pics-culture-fans-1LqDrI6v.jpg",
-      "assets/pics-gallery-interior-Be6627Ux.jpg",
       "assets/pics-hotel-Gbh1R3jE.jpg",
       "assets/pics-marche-walk-ZaforiAY.jpg",
       "assets/pics-olive-ascolana-qHhG0o6i.jpg",
-      "assets/pics-pasta-workshop-Cfp8gfJt.jpg",
       "assets/pics-quintana-drummers-CiS5Ka6-.jpg",
       "assets/pics-rolling-hills-CFSTxIqJ.jpg",
-      "assets/pics-social-table-DPstBvmP.jpg",
-      "assets/pics-special-topics-sSUy4rWD.jpg",
-      "assets/pics-standard-group-REFIfQZn.jpg",
       "assets/pics-wine-tasting-DleCHEp8.jpg"
     ]
   },
@@ -41,13 +82,201 @@
     "file": "assets/accademia-01-BKtqVdIk.jpg",
     "src": "src/assets/photos/accademia-01.jpg"
   },
+  "src/assets/photos/accademia-02.jpg": {
+    "file": "assets/accademia-02-kTadVHat.jpg",
+    "src": "src/assets/photos/accademia-02.jpg"
+  },
+  "src/assets/photos/accademia-03.jpg": {
+    "file": "assets/accademia-03-BMueHIhk.jpg",
+    "src": "src/assets/photos/accademia-03.jpg"
+  },
+  "src/assets/photos/accademia-04.jpg": {
+    "file": "assets/accademia-04-sSUy4rWD.jpg",
+    "src": "src/assets/photos/accademia-04.jpg"
+  },
+  "src/assets/photos/accademia-05.jpg": {
+    "file": "assets/accademia-05-Cfp8gfJt.jpg",
+    "src": "src/assets/photos/accademia-05.jpg"
+  },
+  "src/assets/photos/accademia-06.jpg": {
+    "file": "assets/accademia-06-CFrnuzDU.jpg",
+    "src": "src/assets/photos/accademia-06.jpg"
+  },
+  "src/assets/photos/accademia-07.jpg": {
+    "file": "assets/accademia-07-REFIfQZn.jpg",
+    "src": "src/assets/photos/accademia-07.jpg"
+  },
+  "src/assets/photos/accademia-08.jpg": {
+    "file": "assets/accademia-08-7wbsnLaK.jpg",
+    "src": "src/assets/photos/accademia-08.jpg"
+  },
+  "src/assets/photos/accademia-09.jpg": {
+    "file": "assets/accademia-09-Ums57dMc.jpg",
+    "src": "src/assets/photos/accademia-09.jpg"
+  },
   "src/assets/photos/accademia-10.jpg": {
     "file": "assets/accademia-10-Cqd8pv8f.jpg",
     "src": "src/assets/photos/accademia-10.jpg"
   },
+  "src/assets/photos/accademia-11.jpg": {
+    "file": "assets/accademia-11-Be6627Ux.jpg",
+    "src": "src/assets/photos/accademia-11.jpg"
+  },
   "src/assets/photos/accademia-12.jpg": {
     "file": "assets/accademia-12-EkdKIZ8b.jpg",
     "src": "src/assets/photos/accademia-12.jpg"
+  },
+  "src/assets/photos/accademia-13.jpg": {
+    "file": "assets/accademia-13-BRPKTfHy.jpg",
+    "src": "src/assets/photos/accademia-13.jpg"
+  },
+  "src/assets/photos/accademia-14.jpg": {
+    "file": "assets/accademia-14-CHdSFWlT.jpg",
+    "src": "src/assets/photos/accademia-14.jpg"
+  },
+  "src/assets/photos/accademia-15.jpg": {
+    "file": "assets/accademia-15-DPstBvmP.jpg",
+    "src": "src/assets/photos/accademia-15.jpg"
+  },
+  "src/assets/photos/accademia-16.jpg": {
+    "file": "assets/accademia-16-WEf_8wPO.jpg",
+    "src": "src/assets/photos/accademia-16.jpg"
+  },
+  "src/assets/photos/extras/extra-accademia-cooking-table.jpg": {
+    "file": "assets/extra-accademia-cooking-table-CjDpwp4u.jpg",
+    "src": "src/assets/photos/extras/extra-accademia-cooking-table.jpg"
+  },
+  "src/assets/photos/extras/extra-accademia-group-meeting.jpg": {
+    "file": "assets/extra-accademia-group-meeting-BXWz41yo.jpg",
+    "src": "src/assets/photos/extras/extra-accademia-group-meeting.jpg"
+  },
+  "src/assets/photos/extras/extra-accademia-seminar-room.jpg": {
+    "file": "assets/extra-accademia-seminar-room-C9Bul1Cn.jpg",
+    "src": "src/assets/photos/extras/extra-accademia-seminar-room.jpg"
+  },
+  "src/assets/photos/extras/extra-ascoli-arcades.jpg": {
+    "file": "assets/extra-ascoli-arcades-BxD7ThXD.jpg",
+    "src": "src/assets/photos/extras/extra-ascoli-arcades.jpg"
+  },
+  "src/assets/photos/extras/extra-ascoli-view.jpg": {
+    "file": "assets/extra-ascoli-view-D78v0Ob_.jpg",
+    "src": "src/assets/photos/extras/extra-ascoli-view.jpg"
+  },
+  "src/assets/photos/extras/extra-bougainvillea.jpg": {
+    "file": "assets/extra-bougainvillea-Ln1tHo9W.jpg",
+    "src": "src/assets/photos/extras/extra-bougainvillea.jpg"
+  },
+  "src/assets/photos/extras/extra-church-facade.jpg": {
+    "file": "assets/extra-church-facade-v87JQiS2.jpg",
+    "src": "src/assets/photos/extras/extra-church-facade.jpg"
+  },
+  "src/assets/photos/extras/extra-church-interior.jpg": {
+    "file": "assets/extra-church-interior-DNU15OB2.jpg",
+    "src": "src/assets/photos/extras/extra-church-interior.jpg"
+  },
+  "src/assets/photos/extras/extra-clear-water-cascade.jpg": {
+    "file": "assets/extra-clear-water-cascade-DZLh5vim.jpg",
+    "src": "src/assets/photos/extras/extra-clear-water-cascade.jpg"
+  },
+  "src/assets/photos/extras/extra-flamenco-performance.jpg": {
+    "file": "assets/extra-flamenco-performance-B2A94O8I.jpg",
+    "src": "src/assets/photos/extras/extra-flamenco-performance.jpg"
+  },
+  "src/assets/photos/extras/extra-nature-guide.jpg": {
+    "file": "assets/extra-nature-guide-o0Au8Ahu.jpg",
+    "src": "src/assets/photos/extras/extra-nature-guide.jpg"
+  },
+  "src/assets/photos/extras/extra-olive-tree.jpg": {
+    "file": "assets/extra-olive-tree-Z_g22oE0.jpg",
+    "src": "src/assets/photos/extras/extra-olive-tree.jpg"
+  },
+  "src/assets/photos/extras/extra-palm-garden.jpg": {
+    "file": "assets/extra-palm-garden-KkZVlhyq.jpg",
+    "src": "src/assets/photos/extras/extra-palm-garden.jpg"
+  },
+  "src/assets/photos/extras/extra-pasta-group-workshop.jpg": {
+    "file": "assets/extra-pasta-group-workshop-D98KGgzF.jpg",
+    "src": "src/assets/photos/extras/extra-pasta-group-workshop.jpg"
+  },
+  "src/assets/photos/extras/extra-pasta-hands.jpg": {
+    "file": "assets/extra-pasta-hands-DcYDvaiZ.jpg",
+    "src": "src/assets/photos/extras/extra-pasta-hands.jpg"
+  },
+  "src/assets/photos/extras/extra-piazza-del-popolo-wide.jpg": {
+    "file": "assets/extra-piazza-del-popolo-wide-Dc9qBXcJ.jpg",
+    "src": "src/assets/photos/extras/extra-piazza-del-popolo-wide.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-arch.jpg": {
+    "file": "assets/extra-quintana-arch-PjboTkZK.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-arch.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-children.jpg": {
+    "file": "assets/extra-quintana-children-CB8EBv3n.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-children.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-costume-detail.jpg": {
+    "file": "assets/extra-quintana-costume-detail-DYhHbsUy.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-costume-detail.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-costumes.jpg": {
+    "file": "assets/extra-quintana-costumes-CxraWgrV.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-costumes.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-flags.jpg": {
+    "file": "assets/extra-quintana-flags-Bq_wZZMi.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-flags.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-procession.jpg": {
+    "file": "assets/extra-quintana-procession-CwHezqnO.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-procession.jpg"
+  },
+  "src/assets/photos/extras/extra-quintana-street.jpg": {
+    "file": "assets/extra-quintana-street-DS6EVl_s.jpg",
+    "src": "src/assets/photos/extras/extra-quintana-street.jpg"
+  },
+  "src/assets/photos/extras/extra-river-guide.jpg": {
+    "file": "assets/extra-river-guide-SSzrsG7Q.jpg",
+    "src": "src/assets/photos/extras/extra-river-guide.jpg"
+  },
+  "src/assets/photos/extras/extra-river-pool.jpg": {
+    "file": "assets/extra-river-pool-ChANVwVy.jpg",
+    "src": "src/assets/photos/extras/extra-river-pool.jpg"
+  },
+  "src/assets/photos/extras/extra-river-walk.jpg": {
+    "file": "assets/extra-river-walk-BYIrDaHd.jpg",
+    "src": "src/assets/photos/extras/extra-river-walk.jpg"
+  },
+  "src/assets/photos/extras/extra-river-waterfall.jpg": {
+    "file": "assets/extra-river-waterfall-B7sGhrlO.jpg",
+    "src": "src/assets/photos/extras/extra-river-waterfall.jpg"
+  },
+  "src/assets/photos/extras/extra-statue-square.jpg": {
+    "file": "assets/extra-statue-square-aZY1eBQY.jpg",
+    "src": "src/assets/photos/extras/extra-statue-square.jpg"
+  },
+  "src/assets/photos/extras/extra-stone-courtyard.jpg": {
+    "file": "assets/extra-stone-courtyard-BliqJmuX.jpg",
+    "src": "src/assets/photos/extras/extra-stone-courtyard.jpg"
+  },
+  "src/assets/photos/extras/extra-student-balcony.jpg": {
+    "file": "assets/extra-student-balcony-B-WHTy5J.jpg",
+    "src": "src/assets/photos/extras/extra-student-balcony.jpg"
+  },
+  "src/assets/photos/extras/extra-student-breakfast.jpg": {
+    "file": "assets/extra-student-breakfast-CM-q7LlT.jpg",
+    "src": "src/assets/photos/extras/extra-student-breakfast.jpg"
+  },
+  "src/assets/photos/extras/extra-student-walk-selfie.jpg": {
+    "file": "assets/extra-student-walk-selfie-DT8nzqFO.jpg",
+    "src": "src/assets/photos/extras/extra-student-walk-selfie.jpg"
+  },
+  "src/assets/photos/extras/extra-sunset-olive-tree.jpg": {
+    "file": "assets/extra-sunset-olive-tree-CcOALQon.jpg",
+    "src": "src/assets/photos/extras/extra-sunset-olive-tree.jpg"
+  },
+  "src/assets/photos/extras/extra-waterfall-swim.jpg": {
+    "file": "assets/extra-waterfall-swim-DTAP_uGZ.jpg",
+    "src": "src/assets/photos/extras/extra-waterfall-swim.jpg"
   },
   "src/assets/photos/pics-ascoli-piazza-day.jpg": {
     "file": "assets/pics-ascoli-piazza-day-DtLaU2lM.jpg",
@@ -62,8 +291,8 @@
     "src": "src/assets/photos/pics-bed-breakfast.jpg"
   },
   "src/assets/photos/pics-communicative-lesson.jpg": {
-    "file": "assets/pics-communicative-lesson-BMueHIhk.jpg",
-    "src": "src/assets/photos/pics-communicative-lesson.jpg"
+    "file": "assets/accademia-03-BMueHIhk.jpg",
+    "src": "src/assets/photos/accademia-03.jpg"
   },
   "src/assets/photos/pics-cultural-classroom.jpg": {
     "file": "assets/pics-cultural-classroom-B-HSTsHy.jpg",
@@ -78,8 +307,8 @@
     "src": "src/assets/photos/pics-culture-fans.jpg"
   },
   "src/assets/photos/pics-gallery-interior.jpg": {
-    "file": "assets/pics-gallery-interior-Be6627Ux.jpg",
-    "src": "src/assets/photos/pics-gallery-interior.jpg"
+    "file": "assets/accademia-11-Be6627Ux.jpg",
+    "src": "src/assets/photos/accademia-11.jpg"
   },
   "src/assets/photos/pics-hotel.jpg": {
     "file": "assets/pics-hotel-Gbh1R3jE.jpg",
@@ -94,8 +323,8 @@
     "src": "src/assets/photos/pics-olive-ascolana.jpg"
   },
   "src/assets/photos/pics-pasta-workshop.jpg": {
-    "file": "assets/pics-pasta-workshop-Cfp8gfJt.jpg",
-    "src": "src/assets/photos/pics-pasta-workshop.jpg"
+    "file": "assets/accademia-05-Cfp8gfJt.jpg",
+    "src": "src/assets/photos/accademia-05.jpg"
   },
   "src/assets/photos/pics-quintana-drummers.jpg": {
     "file": "assets/pics-quintana-drummers-CiS5Ka6-.jpg",
@@ -106,16 +335,16 @@
     "src": "src/assets/photos/pics-rolling-hills.jpg"
   },
   "src/assets/photos/pics-social-table.jpg": {
-    "file": "assets/pics-social-table-DPstBvmP.jpg",
-    "src": "src/assets/photos/pics-social-table.jpg"
+    "file": "assets/accademia-15-DPstBvmP.jpg",
+    "src": "src/assets/photos/accademia-15.jpg"
   },
   "src/assets/photos/pics-special-topics.jpg": {
-    "file": "assets/pics-special-topics-sSUy4rWD.jpg",
-    "src": "src/assets/photos/pics-special-topics.jpg"
+    "file": "assets/accademia-04-sSUy4rWD.jpg",
+    "src": "src/assets/photos/accademia-04.jpg"
   },
   "src/assets/photos/pics-standard-group.jpg": {
-    "file": "assets/pics-standard-group-REFIfQZn.jpg",
-    "src": "src/assets/photos/pics-standard-group.jpg"
+    "file": "assets/accademia-07-REFIfQZn.jpg",
+    "src": "src/assets/photos/accademia-07.jpg"
   },
   "src/assets/photos/pics-wine-tasting.jpg": {
     "file": "assets/pics-wine-tasting-DleCHEp8.jpg",

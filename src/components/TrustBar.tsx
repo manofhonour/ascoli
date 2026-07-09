@@ -26,7 +26,7 @@ export default function TrustBar() {
                 ? 'Una scuola concreta, centrale e riconoscibile.'
                 : 'A small school with a real local life around it.'}
             </p>
-            <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-4 max-w-sm">
+            <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-4 max-w-sm">
               {language === 'IT'
                 ? `${contactInfo.schoolName} combina piccoli gruppi, docenti qualificati e vita quotidiana ad Ascoli Piceno.`
                 : `${contactInfo.schoolName} combines small groups, passionate teachers, and daily life in Ascoli Piceno.`}
@@ -39,7 +39,7 @@ export default function TrustBar() {
                 <span className="block min-w-0 max-w-full font-serif text-xl md:text-[1.4rem] xl:text-[1.12rem] 2xl:text-[1.35rem] text-olive-800 font-light leading-[1.08]">
                   {item.value}
                 </span>
-                <span className="block text-[11px] text-charcoal-800 font-light leading-snug">
+                <span className="block text-xs text-charcoal-800 font-light leading-snug">
                   {item.detail}
                 </span>
               </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { Library, Palette, Wine, Utensils } from 'lucide-react';
 import { culturalOfferings, images } from '../data/officialContent';
@@ -71,10 +71,10 @@ export default function CulturePage() {
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-snug">
               {language === 'IT'
-                ? 'Dalla grammatica ai luoghi, al cibo, all arte e alla societa.'
+                ? 'Dalla grammatica ai luoghi, al cibo, all\'arte e alla società.'
                 : 'From grammar to place, food, art, and society.'}
             </h2>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
                 ? 'Le lezioni culturali trasformano il vocabolario in lingua utilizzabile. Gli studenti possono parlare di cibo, vino, storia locale, arte, letteratura, contesti professionali, turismo e Italia contemporanea.'
                 : 'Cultural lessons turn vocabulary into usable language. Students can discuss food, wine, local history, art, literature, business contexts, tourism, and contemporary Italy.'}
@@ -96,7 +96,7 @@ export default function CulturePage() {
                   {language === 'IT' ? cat.italianTitle : cat.title}
                 </h3>
                 </div>
-                <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+                <p className="text-sm text-charcoal-800 font-light leading-relaxed">
                   {renderWithTomboloItalic(language === 'IT' ? cat.descriptionIT : cat.description)}
                 </p>
               </div>
@@ -113,12 +113,12 @@ export default function CulturePage() {
             </span>
             <h2 className="font-serif text-3xl font-light text-charcoal-950 leading-tight">
               {language === 'IT'
-                ? 'Business, turismo, esami, universita e cultura italiana.'
+                ? 'Business, turismo, esami, università e cultura italiana.'
                 : 'Business, tourism, exams, university, and Italian culture.'}
             </h2>
-            <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+            <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
               {language === 'IT'
-                ? 'I moduli includono italiano per il business, turismo e hotel management, preparazione universitaria, storia italiana, storia dell arte, letteratura e "Italia oggi".'
+                ? 'I moduli includono italiano commerciale, turismo e gestione alberghiera, preparazione universitaria, storia italiana, storia dell\'arte, letteratura e "Italia oggi".'
                 : 'Add-ons include business Italian, tourism and hotel management, university admission preparation, Italian history, art history, literature, and "Italy today".'}
             </p>
           </div>

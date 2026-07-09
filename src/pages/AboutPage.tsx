@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, Heart, Sparkles, Compass } from 'lucide-react';
 import { contactInfo, images, services } from '../data/officialContent';
@@ -18,10 +18,10 @@ export default function AboutPage() {
     },
     {
       icon: ShieldCheck,
-      title: language === 'IT' ? 'Direzione della Dr. Antonella Valentini' : 'Directed by Dr. Antonella Valentini',
+      title: language === 'IT' ? 'Direzione della Dott.ssa Antonella Valentini' : 'Directed by Dr. Antonella Valentini',
       text:
         language === 'IT'
-          ? 'La scuola e diretta dalla Dr. Antonella Valentini e supportata da docenti qualificati.'
+          ? 'La scuola è diretta dalla Dott.ssa Antonella Valentini ed è supportata da docenti qualificati e appassionati.'
           : 'The school is directed by Dr. Antonella Valentini and supported by highly qualified and passionate teachers.',
     },
     {
@@ -37,7 +37,7 @@ export default function AboutPage() {
       title: language === 'IT' ? 'Cultura italiana nel contesto' : 'Italian Culture in Context',
       text:
         language === 'IT'
-          ? 'Lo studio della lingua puo collegarsi ad Ascoli Piceno, cucina, vino, olio d oliva, arte, letteratura, storia e tradizioni locali.'
+          ? 'Lo studio della lingua può collegarsi ad Ascoli Piceno, cucina, vino, olio d\'oliva, arte, letteratura, storia e tradizioni locali.'
           : 'Language study can connect with Ascoli Piceno, food, wine, olive oil, art, literature, history, and local traditions.',
     },
   ];
@@ -58,7 +58,7 @@ export default function AboutPage() {
             Chi siamo
           </span>
           <h1 className="font-serif text-4xl md:text-6xl font-light text-charcoal-950 leading-tight">
-            {language === 'IT' ? 'Insegnamento dell italiano e servizi linguistici' : 'Italian teaching and language services'} <br />
+            {language === 'IT' ? 'Insegnamento dell\'italiano e servizi linguistici' : 'Italian teaching and language services'} <br />
             <span className="italic text-olive-800">
               {language === 'IT' ? 'ad Ascoli Piceno.' : 'in Ascoli Piceno.'}
             </span>
@@ -81,15 +81,15 @@ export default function AboutPage() {
               ? `Un centro linguistico storico diretto da ${contactInfo.director}.`
               : `A long-standing language centre led by ${contactInfo.director}.`}
           </h2>
-          <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+          <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
-              ? 'L istituzione e dedicata ai servizi linguistici dal 1997, con corsi di lingue straniere, corsi di italiano, formazione docenti, tutoraggio, preparazione esami e supporto internazionale.'
+              ? 'L\'istituzione è dedicata ai servizi linguistici dal 1997, con corsi di lingue straniere, corsi di italiano, formazione docenti, tutoraggio, preparazione esami e supporto internazionale.'
               : 'The institution has been dedicated to language services since 1997, with foreign language courses, Italian courses, teacher training, tutoring, exam preparation, and international support.'}
           </p>
-          <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+          <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
-              ? 'L offerta di italiano e pratica e flessibile: piccoli gruppi standard, corsi intensivi, lezioni individuali, corsi estensivi, aggiornamento docenti e percorsi su misura ad Ascoli Piceno o online.'
-              : 'The Italian course offer is practical and flexible: small standard groups, intensive courses, extensive courses, individual lessons, teacher-refreshers, and tailor-made study plans in Ascoli Piceno or online.'}
+              ? 'L\'offerta di italiano è pratica e flessibile: piccoli gruppi standard, corsi intensivi, lezioni individuali, corsi estensivi, aggiornamento docenti e percorsi su misura ad Ascoli Piceno o online.'
+              : 'The Italian course offer is practical and flexible: small standard groups, intensive courses, individual lessons, extensive courses, teacher-refreshers, and tailor-made study plans in Ascoli Piceno or online.'}
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function AboutPage() {
           </div>
           <div className="absolute -bottom-6 -left-6 bg-olive-900 text-travertine-50 p-6 max-w-xs shadow-xl hidden md:block">
             <span className="font-serif text-sm italic font-light block leading-relaxed">
-              {language === 'IT' ? '"Vivi l Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
+              {language === 'IT' ? '"Vivi l\'Italia, parla italiano."' : '"Live Italy, Speak Italian."'}
             </span>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <div key={pillar.title} className="bg-travertine-50 p-8 border border-travertine-200/60 space-y-4">
                   <Icon className="w-6 h-6 text-olive-800 stroke-[1.25]" />
                   <h3 className="font-serif text-lg text-charcoal-950">{pillar.title}</h3>
-                  <p className="text-xs text-charcoal-800 leading-relaxed font-light">{pillar.text}</p>
+                  <p className="text-sm text-charcoal-800 leading-relaxed font-light">{pillar.text}</p>
                 </div>
               );
             })}
@@ -147,9 +147,9 @@ export default function AboutPage() {
           <h2 className="font-serif text-3xl md:text-5xl font-light text-charcoal-950">
             Accademia Italiana - Accademia Internazionale.
           </h2>
-          <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+          <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
             {language === 'IT'
-              ? 'L istituzione unisce insegnamento dell italiano e una piu ampia offerta di servizi linguistici.'
+              ? 'L\'istituzione unisce insegnamento dell\'italiano e una più ampia offerta di servizi linguistici.'
               : 'The institution combines Italian teaching with a wider language-services offer.'}
           </p>
         </div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
               <h3 className="font-serif text-xl text-charcoal-950 font-normal">
                 {language === 'IT' ? service.titleIT : service.title}
               </h3>
-              <p className="text-xs text-charcoal-800 font-light leading-relaxed">
+              <p className="text-sm text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT' ? service.descriptionIT : service.description}
               </p>
             </div>

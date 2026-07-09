@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock } from 'lucide-react';
 import { contactInfo } from '../data/officialContent';
@@ -58,7 +58,7 @@ export default function ContactPage() {
               <h2 className="font-serif text-2xl md:text-4xl text-charcoal-950 font-light leading-snug">
                 {contactInfo.schoolName}
               </h2>
-              <p className="text-xs md:text-sm text-charcoal-800 font-light leading-relaxed">
+              <p className="text-sm md:text-base text-charcoal-800 font-light leading-relaxed">
                 {language === 'IT'
                   ? 'La segreteria si trova nel centro di Ascoli Piceno, in Corso Vittorio Emanuele.'
                   : 'The school office is based in central Ascoli Piceno on Corso Vittorio Emanuele.'}
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <h4 className="font-serif text-sm font-semibold text-charcoal-950">
                     {language === 'IT' ? 'Indirizzo' : 'Address'}
                   </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-1">
                     {contactInfo.addressLine1} <br />
                     {contactInfo.cityLine}
                   </p>
@@ -87,10 +87,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-serif text-sm font-semibold text-charcoal-950">Email</h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
                     {contactInfo.email}
                   </p>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-1 hover:text-terracotta-600 transition-colors">
                     {contactInfo.internationalEmail}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   <h4 className="font-serif text-sm font-semibold text-charcoal-950">
                     {language === 'IT' ? 'Telefono e WhatsApp' : 'Phone and WhatsApp'}
                   </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-1">
                     {contactInfo.phone}
                     <br />
                     WhatsApp {contactInfo.whatsapp}
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   <h4 className="font-serif text-sm font-semibold text-charcoal-950">
                     {language === 'IT' ? 'Orari segreteria' : 'Office Hours'}
                   </h4>
-                  <p className="text-xs text-charcoal-800 font-light leading-relaxed mt-1">
+                  <p className="text-sm text-charcoal-800 font-light leading-relaxed mt-1">
                     {language === 'IT' ? contactInfo.hoursIT : contactInfo.hours}
                   </p>
                 </div>
@@ -143,9 +143,9 @@ export default function ContactPage() {
                     <h3 className="font-serif text-xl md:text-2xl text-charcoal-950 font-normal">
                       {language === 'IT' ? 'Anteprima messaggio' : 'Message Preview'}
                     </h3>
-                    <p className="text-xs text-charcoal-800 font-light">
+                    <p className="text-sm text-charcoal-800 font-light leading-relaxed">
                       {language === 'IT'
-                        ? 'Questo modulo nella pagina e un aiuto visivo. Indica viaggio individuale, esigenze LGBTQ+ o accessibilita se vuoi discuterne con la scuola.'
+                        ? 'Questo modulo nella pagina è un aiuto visivo. Indica viaggio individuale, esigenze LGBTQ+ o accessibilità se vuoi discuterne con la scuola.'
                         : 'This on-page form is a visual aid. Mention solo travel, LGBTQ+ considerations, or accessibility needs if you would like the school to discuss them with you.'}
                     </p>
                   </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder={
                         language === 'IT'
-                          ? 'Indica date del corso, livello attuale, preferenza di alloggio ed eventuali esigenze di arrivo o accessibilita.'
+                          ? 'Indica date del corso, livello attuale, preferenza di alloggio ed eventuali esigenze di arrivo o accessibilità.'
                           : 'Share your course dates, current level, accommodation preference, and any arrival or accessibility needs.'
                       }
                       className="w-full bg-travertine-50 border border-travertine-300 px-4 py-3 text-xs md:text-sm text-charcoal-950 focus:outline-none focus:border-olive-800 transition-colors rounded-none placeholder-charcoal-800/40 resize-none"
