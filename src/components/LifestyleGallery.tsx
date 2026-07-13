@@ -37,7 +37,7 @@ export default function LifestyleGallery() {
       caption: 'International learners bring different stories into the same small classroom.',
       captionIT: 'Studenti internazionali portano storie diverse nella stessa piccola aula.',
       span: 'md:col-span-5',
-      position: '52% 48%',
+      position: '50% 50%',
     },
     {
       id: 4,

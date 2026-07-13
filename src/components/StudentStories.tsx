@@ -30,8 +30,8 @@ const stays = [
     focusIT: 'Lezioni individuali o su misura',
     text: 'For professionals and digital nomads who need flexible timing, sector vocabulary, or confidence in spoken Italian.',
     textIT: 'Per professionisti e nomadi digitali che cercano orari flessibili, lessico di settore o sicurezza nel parlato.',
-    image: images.cultureCertificates,
-    position: '50% 48%',
+    image: images.professionalLesson,
+    position: '50% 44%',
   },
   {
     title: 'A supported arrival and staying',
@@ -40,8 +40,8 @@ const stays = [
     focusIT: 'Organizzazione prima del viaggio',
     text: 'Solo travellers, women travelling alone, LGBTQ+ visitors, older learners, and students with accessibility needs are welcomed in a respectful learning environment.',
     textIT: 'Chi viaggia da solo, donne sole, visitatori LGBTQ+, adulti e studenti con esigenze di accessibilità sono accolti in un ambiente rispettoso.',
-    image: images.bnb,
-    position: '50% 50%',
+    image: images.arrivalCourtyard,
+    position: '50% 46%',
   },
 ];
 

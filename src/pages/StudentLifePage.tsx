@@ -25,8 +25,8 @@ export default function StudentLifePage() {
       title: language === 'IT' ? item.italianTitle : item.title,
       tagline: language === 'IT' ? item.taglineIT : item.tagline,
       description: language === 'IT' ? item.descriptionIT : item.description,
-      image: item.image,
-      imagePosition: item.imagePosition,
+      image: item.pageImage,
+      imagePosition: item.pageImagePosition,
     })),
   ];
 

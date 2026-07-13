@@ -61,7 +61,7 @@ export default function Teachers() {
                   src={images.studentPortrait}
                   alt={language === 'IT' ? 'Studenti adulti in Accademia Italiana' : 'Adult learners at Accademia Italiana'}
                   className="h-full w-full object-cover grayscale-[12%]"
-                  style={{ objectPosition: '50% 48%' }}
+                  style={{ objectPosition: '50% 18%' }}
                   loading="lazy"
                   decoding="async"
                   referrerPolicy="no-referrer"

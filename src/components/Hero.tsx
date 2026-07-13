@@ -51,8 +51,8 @@ export default function Hero({ onInquireClick }: HeroProps) {
               </div>
             </div>
 
-            <figure className="sm:hidden border border-travertine-300 bg-travertine-100 shadow-sm">
-              <div className="relative aspect-[16/10] overflow-hidden">
+            <figure className="sm:hidden bg-travertine-100 shadow-sm">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={images.groupLesson}
                   alt="Adults studying Italian in a small Accademia Italiana class"
@@ -62,20 +62,20 @@ export default function Hero({ onInquireClick }: HeroProps) {
                   decoding="async"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute bottom-3 left-4 right-4 bg-olive-900 px-4 py-3 text-travertine-50 shadow-xl ring-1 ring-olive-800">
-                  <div className="flex items-center gap-3">
-                    <img src={accademiaLogo} alt="" className="h-9 w-9 object-contain bg-travertine-50 p-1" />
-                    <div className="min-w-0">
-                      <span className="block text-[9px] font-bold uppercase tracking-[0.16em] text-olive-200">
-                        {language === 'IT' ? 'Direzione' : 'Direction'}
-                      </span>
-                      <span className="block truncate font-serif text-sm text-travertine-50">
-                        {contactInfo.director}
-                      </span>
-                    </div>
+              </div>
+              <figcaption className="border border-olive-800 bg-olive-900 px-4 py-4 text-travertine-50">
+                <div className="flex items-center gap-3">
+                  <img src={accademiaLogo} alt="" className="h-9 w-9 object-contain bg-travertine-50 p-1" />
+                  <div className="min-w-0">
+                    <span className="block text-[9px] font-bold uppercase tracking-[0.16em] text-olive-200">
+                      {language === 'IT' ? 'Direzione' : 'Direction'}
+                    </span>
+                    <span className="block font-serif text-sm text-travertine-50">
+                      {contactInfo.director}
+                    </span>
                   </div>
                 </div>
-              </div>
+              </figcaption>
             </figure>
             
             <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.15rem] xl:text-[5.8rem] font-normal text-charcoal-950 leading-[1.02] tracking-tight max-w-full text-balance">
@@ -136,9 +136,9 @@ export default function Hero({ onInquireClick }: HeroProps) {
             initial={{ opacity: 0, scale: 0.99 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1] }}
-            className="relative min-h-[460px] sm:min-h-[520px] md:min-h-[620px] lg:min-h-[660px]"
+            className="flex min-h-[520px] flex-col gap-5 md:min-h-[620px] lg:min-h-[660px]"
           >
-            <div className="absolute left-0 sm:left-auto right-0 top-0 w-full sm:w-[88%] md:w-[82%] h-[56%] md:h-[58%] bg-travertine-100 overflow-hidden shadow-2xl border border-travertine-300/70">
+            <div className="relative ml-auto aspect-[4/3] w-[88%] shrink-0 overflow-hidden border border-travertine-300/70 bg-travertine-100 shadow-2xl md:w-[82%]">
               <img
                 src={images.groupLesson}
                 alt="Accademia Italiana students in a small group lesson"
@@ -152,42 +152,44 @@ export default function Hero({ onInquireClick }: HeroProps) {
               <div className="absolute inset-0 border border-white/15 pointer-events-none m-4" />
             </div>
 
-            <div className="absolute left-0 bottom-0 w-[48%] min-w-[210px] h-[34%] bg-travertine-100 overflow-hidden shadow-xl border border-travertine-300/70 hidden sm:block">
-              <img
-                src={images.ascoli}
-                alt="Piazza del Popolo in Ascoli Piceno"
-                className="w-full h-full object-cover"
-                style={{ objectPosition: '50% 50%' }}
-                loading="lazy"
-                decoding="async"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/55 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-travertine-50">
-                <span className="flex items-center gap-2 text-[9px] tracking-widest uppercase font-bold">
-                  <MapPin className="w-3.5 h-3.5 text-terracotta-300" />
-                  Ascoli Piceno
-                </span>
-              </div>
-            </div>
-
-            <div className="absolute left-4 right-4 top-[43%] min-h-[188px] w-auto bg-olive-900 p-5 text-travertine-50 shadow-2xl ring-1 ring-olive-800 sm:left-[28%] sm:right-auto sm:w-[54%] sm:min-w-[230px] md:left-[32%] md:min-h-[198px] md:p-6 lg:left-[30%] lg:top-[37%] lg:w-[48%] xl:left-[32%] xl:top-[36%]">
-              <div className="flex items-center gap-3">
-                <img src={accademiaLogo} alt="" className="h-11 w-11 object-contain bg-travertine-50 p-1.5" />
-                <div>
-                  <span className="block text-[10px] tracking-[0.18em] uppercase text-olive-200 font-bold">
-                    {language === 'IT' ? 'Direzione' : 'Direction'}
-                  </span>
-                  <span className="block font-serif text-base text-travertine-50">
-                    {contactInfo.director}
+            <div className="grid min-h-[188px] min-w-0 flex-1 grid-cols-[minmax(0,0.9fr)_minmax(230px,1.1fr)] items-stretch gap-5">
+              <div className="relative min-w-0 overflow-hidden border border-travertine-300/70 bg-travertine-100 shadow-xl">
+                <img
+                  src={images.ascoli}
+                  alt="Piazza del Popolo in Ascoli Piceno"
+                  className="h-full w-full object-cover"
+                  style={{ objectPosition: '50% 50%' }}
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/55 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-travertine-50">
+                  <span className="flex items-center gap-2 text-[9px] font-bold uppercase tracking-widest">
+                    <MapPin className="h-3.5 w-3.5 text-terracotta-300" />
+                    Ascoli Piceno
                   </span>
                 </div>
               </div>
-              <div className="mt-10 border-t border-olive-700/60 pt-5">
-                <span className="flex items-center gap-2 text-xs text-olive-100">
-                  <MessageCircle className="w-3.5 h-3.5 text-terracotta-300" />
-                  {contactInfo.email}
-                </span>
+
+              <div className="min-w-0 bg-olive-900 p-5 text-travertine-50 shadow-2xl ring-1 ring-olive-800 md:p-6">
+                <div className="flex items-center gap-3">
+                  <img src={accademiaLogo} alt="" className="h-11 w-11 shrink-0 bg-travertine-50 object-contain p-1.5" />
+                  <div className="min-w-0">
+                    <span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-olive-200">
+                      {language === 'IT' ? 'Direzione' : 'Direction'}
+                    </span>
+                    <span className="block font-serif text-base text-travertine-50">
+                      {contactInfo.director}
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-8 border-t border-olive-700/60 pt-5 md:mt-10">
+                  <span className="flex items-center gap-2 text-[11px] text-olive-100 md:text-xs">
+                    <MessageCircle className="h-3.5 w-3.5 shrink-0 text-terracotta-300" />
+                    <span className="break-all">{contactInfo.email}</span>
+                  </span>
+                </div>
               </div>
             </div>
           </motion.div>

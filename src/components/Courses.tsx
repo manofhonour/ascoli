@@ -43,7 +43,7 @@ export default function Courses() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.9, ease: [0.19, 1, 0.22, 1] }}
-            className="lg:col-span-7 bg-travertine-50 border border-travertine-300/80 shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2 min-h-[560px]"
+            className="grid min-h-[560px] grid-cols-1 overflow-hidden border border-travertine-300/80 bg-travertine-50 shadow-xl md:grid-cols-[3fr_2fr] lg:col-span-8"
           >
             <div className="relative min-h-[320px] md:min-h-full overflow-hidden bg-travertine-200">
               <img
@@ -94,7 +94,7 @@ export default function Courses() {
             </div>
           </motion.div>
 
-          <div className="lg:col-span-5 border-t border-l border-travertine-300/80 bg-travertine-50">
+          <div className="border-l border-t border-travertine-300/80 bg-travertine-50 lg:col-span-4">
             {secondaryCourses.map((course, index) => {
               const copy = getCourseCopy(course);
               return (

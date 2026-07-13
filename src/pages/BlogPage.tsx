@@ -48,8 +48,8 @@ export default function BlogPage() {
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '4 min lettura' : '4 min read',
-      image: officialCourses[0].image,
-      imagePosition: officialCourses[0].imagePosition,
+      image: images.culturalClassroomCollage,
+      imagePosition: '50% 42%',
       content:
         language === 'IT'
           ? [
@@ -77,8 +77,8 @@ export default function BlogPage() {
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '3 min lettura' : '3 min read',
-      image: culturalOfferings[0].image,
-      imagePosition: culturalOfferings[0].imagePosition,
+      image: images.cookingWorkshop,
+      imagePosition: '50% 58%',
       content:
         language === 'IT'
           ? [
@@ -106,7 +106,7 @@ export default function BlogPage() {
       date: language === 'IT' ? 'Aggiornato 2026' : 'Updated 2026',
       author: 'Accademia Italiana',
       readTime: language === 'IT' ? '4 min lettura' : '4 min read',
-      image: images.ascoli,
+      image: images.ascoliStreet,
       imagePosition: '50% 50%',
       content:
         language === 'IT'

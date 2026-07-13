@@ -45,8 +45,8 @@ export default function GalleryPage() {
           </h1>
           <p className="text-base text-charcoal-800 font-light max-w-2xl mx-auto leading-relaxed">
             {language === 'IT'
-              ? 'Foto reali dell\'Accademia tra lezioni, attività culturali, momenti degli studenti e Ascoli Piceno.'
-              : 'Real Accademia photos from lessons, cultural activities, student moments, and Ascoli Piceno.'}
+              ? 'Una selezione di lezioni, attività culturali, momenti degli studenti e luoghi di Ascoli Piceno.'
+              : 'A selection of lessons, cultural activities, student moments, and places in Ascoli Piceno.'}
           </p>
         </div>
       </section>
